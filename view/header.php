@@ -26,8 +26,8 @@
         </div>
     
     <div class="menu">
-        <li><a href=""><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
-        <li><a href=""><i class="fa-solid fa-person"></i> Hội viên</a></li>
+        <li><a href="test1.php"><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
+        <li><a href="test2.php"><i class="fa-solid fa-person"></i> Hội viên</a></li>
         <li><a href=""><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
         <li><a href=""><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
         <li><a href=""><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
