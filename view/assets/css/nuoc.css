@@ -100,7 +100,7 @@ table.nuoc__table--addform {
     margin-top: 94px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 21px;
+    font-size: 20px;
     background-color: lightblue;
     
 }
@@ -119,16 +119,7 @@ table.nuoc__table--addform {
     background-color: red;
 }
 .nuoc__table--add_input{
-    height: 25px
-}
-select.nuoc__table--add_input {
-    border-width: 3px;
-    border-radius: 10px;
-    background-color: #2F528F;
-    color: white;
-    height: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    height: 20px;
 }
 
 /* css của button thêm sửa xóa */
