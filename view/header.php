@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style1.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     <title>GYM HUCE N6 PM1</title>
 </head>
@@ -26,10 +26,10 @@
         </div>
     
     <div class="menu">
-        <li><a href="test1.php"><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
-        <li><a href="test2.php"><i class="fa-solid fa-person"></i> Hội viên</a></li>
-        <li><a href=""><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
-        <li><a href=""><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
+        <li><a href=""><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
+        <li><a href=""><i class="fa-solid fa-person"></i> Hội viên</a></li>
+        <li><a href="the.php"><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
+        <li><a href="nuoc.php"><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
         <li><a href=""><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
         <li><a href=""><i class="fa-solid fa-database"></i> Cơ sở vật chất</a></li>
         <li><a href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>

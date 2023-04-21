@@ -1,6 +1,5 @@
 *{
     margin:0;
-    padding:0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -36,7 +35,7 @@ a{
     font-size: 30px;
 }
 .logout>li>a:hover{
-    color: rgb(255, 166, 71);
+    color: rgb(55, 166, 71);
 }
 .logout>li>a>i{
     font-size: 30px;
