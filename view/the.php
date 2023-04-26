@@ -1,7 +1,8 @@
+
 <?php
 include "header.php";
 ?>
-<link rel="stylesheet" href="./assets/css/the1.css">
+<link rel="stylesheet" href="./assets/css/the.css">
 
 <?php
 include "the_hien_thi.php"

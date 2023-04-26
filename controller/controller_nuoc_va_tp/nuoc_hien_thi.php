@@ -13,7 +13,7 @@
             <th class='nuoc__table--pass_tap'><a href="#">Nước</a></th>
             <th class='nuoc__table--pass_tap'><a href="">Thực phẩm chức năng</a></th>
         </tr>
-        <tr class='nuoc__table_row--hienthi nuoc__table--Tieu_de'>
+        <tr class="nuoc__table_row--hienthi nuoc__table--Tieu_de">
             <th>ID Nước</th>
             <th>TÊN</th>
             <th>LOẠI</th>
@@ -32,7 +32,7 @@
        {
         ?>
         <tr class='nuoc__table_row--hienthi'>
-            <td><?php echo $row["id_nuoc_va_tp"]?></td>
+            <td><?php echo $row["id_nuoc_va_tp"]?><?php $a = $row["id_nuoc_va_tp"]?></td>
             <td><?php echo $row["name"]?></td>
             <td><?php echo $row["loai_tp"]?></td>
             <td><?php echo $row["gia_ban"]?></td>

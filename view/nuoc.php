@@ -7,9 +7,9 @@ include "header.php";
 <!-- tạo giao diện sắp xếp -->
 <div>
     <select id='nuoc__select'>
-    <option class='nuoc__select--sap_xep' value=0>Sắp xếp</option>
-    <option class='nuoc__select--ss_ten' value=0>Tên</option>
-    <option class='nuoc__select--ss_gia_ban' value=0>Giá bán</option>
+        <option class='nuoc__select--sap_xep' value=0>Sắp xếp</option>
+        <option class='nuoc__select--ss_ten' value=0>Tên</option>
+        <option class='nuoc__select--ss_gia_ban' value=0>Giá bán</option>
     </select>
 </div>
 
@@ -27,7 +27,6 @@ include "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
 <!-- Thêm nước -->
 
 
-
 <!-- bắt sự kiện nút thêm ở ngoài giao diện chính-->
 <script src="../controller/controller_nuoc_va_tp/nuoc_add.js">
 </script>
@@ -36,4 +35,5 @@ include "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
 
 
 </body>
+
 </html>
