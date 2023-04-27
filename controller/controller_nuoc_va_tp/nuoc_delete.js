@@ -1,5 +1,7 @@
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 // Lấy tất cả các hàng trong bảng
-var rows = document.getElementsByTagName("tr");
+var rows = $$('.nuoc__table_row--hienthi');
 
 // Biến lưu trữ trạng thái hiện tại của bảng
 var currentRow = null;
@@ -18,41 +20,36 @@ for (var i = 0; i < rows.length; i++) {
     currentRow = this;
     this.style.backgroundColor = "yellow";
 
-  //   // Tạo đối tượng XMLHttpRequest
-  //   var xhttp = new XMLHttpRequest();
+    // Tạo đối tượng XMLHttpRequest
+    var xhttp = new XMLHttpRequest();
 
-  //   // Định nghĩa callback function để xử lý kết quả trả về từ máy chủ
-  //   xhttp.onreadystatechange = function() {
-  //     if (this.readyState == 4 && this.status == 200) {
-  //       console.log("Dữ liệu đã được gửi thành công!");
-  //     }
-  //   };
+    // Định nghĩa callback function để xử lý kết quả trả về từ máy chủ
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log("Dữ liệu đã được gửi thành công!");
+      }
+    };
 
-  //   // Chỉ định URL và phương thức HTTP
-  //   var url = "../controller/controller_nuoc_va_tp/nuoc_xoa.php";
-  //   var method = "POST";
+    // Chỉ định URL và phương thức HTTP
+    var url = "../controller/controller_nuoc_va_tp/nuoc_xoa.php";
+    var method = "POST";
 
-  //   // Chỉ định các tham số để gửi dữ liệu
-  //   var params = "nuocID=" + cellID;
-  //   console.log(params);
+    // Chỉ định các tham số để gửi dữ liệu
+    var params = "nuocID=" + cellID;
 
-  //   // Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
-  //   xhttp.open(method, url, true);
-  //   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  //   xhttp.send(params);
+    // Bắt sự kiện xóa
+    var xoa = $('.js-xoa');
+    xoa.onclick = function(e){
+    if(confirm("Bạn có chắc muốn xóa ID "+cellID+" không?")){
+      // Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
+      xhttp.open(method, url, true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhttp.send(params);
+      // Refresh lại trang
+      location.reload(true)
+    }
+    }
+    
   }
 }
 
-//     const nuocXoa = document.querySelectorAll('.js-xoa')
-//     function xoaNuoc() {
-//     var xhttp = new XMLHttpRequest();
-//     xhttp.onreadystatechange = function() {
-//     if (this.readyState == 4 && this.status == 200) {
-//       // Xử lý kết quả trả về từ file PHP
-//       console.log(this.responseText);
-//     }
-//   };
-//     xhttp.open("POST", "../controller/controller_nuoc_va_tp/nuoc_xoa.php", true);
-//     xhttp.send();
-// }
-//     nuocXoa[0].addEventListener('click',xoaNuoc)
