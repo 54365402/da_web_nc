@@ -34,7 +34,7 @@ include "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
 </div>
 
 <!-- bắt sự kiện nút thêm ở ngoài giao diện chính-->
-<<<<<<< HEAD
+
 <script>
 // document là đại diện cho trang web, muốn lấy gì ở web thì phải qua document
 const nuocThem = document.querySelectorAll('.js-them')
@@ -120,13 +120,11 @@ for (var i = 0; i < rows.length; i++) {
 // }
 //     nuocXoa[0].addEventListener('click',xoaNuoc)
 </script>
-=======
+
 <script src="../controller/controller_nuoc_va_tp/nuoc_add.js">
 </script>
 
 <script src="../controller/controller_nuoc_va_tp/nuoc_delete.js"></script>
->>>>>>> c19708ecbbdb2985035b2b7b582e3ecf717ab2fc
-
 
 </body>
 

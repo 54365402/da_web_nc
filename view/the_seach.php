@@ -1,34 +1,19 @@
 <?php
-// Kết nối cơ sở dữ liệu
-//$servername = "localhost";
-//$username = "username";
-//$password = "password";
-$dbname = "card";
-
-$conn = mysqli_connect( $dbname);
-
-// Kiểm tra kết nối
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-// Lấy dữ liệu từ ô nhập liệu
-$cardsearch = $_GET['cardsearch'];
-
-// Thực hiện tìm kiếm dữ liệu
-$sql3 = "SELECT * FROM card WHERE types_room LIKE '%".$cardsearch."%'";
-$result = mysqli_cardsearch($conn, $sql3);
-
-// Hiển thị kết quả tìm kiếm trên trang web của mình
-if (mysqli_num_rows($result) > 0) {
-    // Hiển thị kết quả tìm kiếm
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "ID: " . $row["card_id"]. " - Name: " . $row["types_room"]. "<br>";
+    // Nếu có giá trị tìm kiếm
+    if(isset($_GET['cardsearch'])) {
+        $search_value = $_GET['cardsearch'];
+        // Câu truy vấn SQL với điều kiện tìm kiếm
+        $sqlthe1 = "SELECT * FROM card WHERE card_id LIKE '%$search_value%' OR types_room LIKE '%$search_value%' ORDER BY card_id DESC LIMIT $start, $limit";
+    } else {
+        // Câu truy vấn SQL mặc định
+        $sqlthe1 = "SELECT * FROM card ORDER BY card_id DESC LIMIT $start, $limit";
     }
-} else {
-    echo "Không tìm thấy kết quả phù hợp.";
-}
 
-// Đóng kết nối
-mysqli_close($conn);
+    // Thực thi câu truy vấn
+    $query = mysqli_query($mysqli, $sqlthe1);
+
+    // Duyệt qua các phần tử trong bảng
+    while($row = mysqli_fetch_array($query)) {
+        // Code hiển thị dữ liệu trong bảng
+    }
 ?>
