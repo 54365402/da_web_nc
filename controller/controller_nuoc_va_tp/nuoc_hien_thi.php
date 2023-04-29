@@ -1,7 +1,10 @@
 <!-- Kết nối CSDL -->
 <?php
     include "../controller/connection.php";
-    $sql = "SELECT * FROM tbl_nuoc_va_thuc_pham ORDER BY id_nuoc_va_tp DESC";
+    $nuoc_orderBy =" id_nuoc_va_tp";
+    $nuoc_orderBy = $_POST['nuoc_orderBy'];
+    echo $nuoc_orderBy;
+    $sql = "SELECT * FROM tbl_nuoc_va_thuc_pham ORDER BY '".$nuoc_orderBy."' DESC";
     $query = mysqli_query($mysqli,$sql);
 ?>
 
@@ -32,17 +35,17 @@
        {
         ?>
         <tr class='nuoc__table_row--hienthi'>
-            <td><?php echo $row["id_nuoc_va_tp"]?><?php $a = $row["id_nuoc_va_tp"]?></td>
-            <td><?php echo $row["name"]?></td>
-            <td><?php echo $row["loai_tp"]?></td>
-            <td><?php echo $row["gia_ban"]?></td>
-            <td><?php echo $row["gia_nhap"]?></td>
-            <td><?php echo $row["so_luong_nhap"]?></td>
-            <td><?php echo $row["so_luong_ton"]?></td>
-            <td><?php echo $row["nha_cung_cap"]?></td>
-            <td><?php echo $row["ngay_nhap"]?></td>
-            <td><?php echo $row["ngay_het_han"]?></td>
-            <td><?php echo $row["tong_tien"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["id_nuoc_va_tp"]?><?php $a = $row["id_nuoc_va_tp"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["name"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["loai_tp"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["gia_ban"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["gia_nhap"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["so_luong_nhap"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["so_luong_ton"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["nha_cung_cap"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["ngay_nhap"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["ngay_het_han"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["tong_tien"]?></td>
         <?php
        }
         ?>    
