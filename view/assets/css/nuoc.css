@@ -144,23 +144,25 @@ table.nuoc__table--addform {
     background-color: red;
 }
 
-/* css của xóa */
-/* 
-
-table.table-add-form {
-    margin-top: 94px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 21px;
-    background-color: lightblue;
-    
+input.nuoc--page {
+    margin-left: 5px;
 }
 
-table.table-add-form {
-    margin-top: 94px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 21px;
-    background-color: yellow;
-    
-} */
+.nuoc__div--tap {
+    display: flex;
+    margin-left: 7%;
+}
+
+li.nuoc__div {
+    border: 1px solid #2F528F;
+    border-radius: 10px;
+    font-size: 20px;
+    border-width: 5px;
+    padding: 2px;
+    background-color: #daeaf3;
+    margin-right: 5px;
+}
+
+.nuoc__form--page{
+    margin-top: 5px;
+}

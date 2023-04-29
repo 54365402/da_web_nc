@@ -10,6 +10,7 @@ li{
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 .active{
@@ -67,3 +68,5 @@ a{
     background-color: rgb(68, 84, 106);
     cursor: pointer;
 }
+
+

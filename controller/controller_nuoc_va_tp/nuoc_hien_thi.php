@@ -1,21 +1,16 @@
 <!-- Kết nối CSDL -->
 <?php
-    include "../controller/connection.php";
-    $nuoc_orderBy =" id_nuoc_va_tp";
-    $nuoc_orderBy = $_POST['nuoc_orderBy'];
-    echo $nuoc_orderBy;
-    $sql = "SELECT * FROM tbl_nuoc_va_thuc_pham ORDER BY '".$nuoc_orderBy."' DESC";
-    $query = mysqli_query($mysqli,$sql);
+    include "nuoc_pages.php";
 ?>
 
 <!-- Hien thi bang -->
+
 <div class = "nuoc__div--hienthi">
+<div  class='nuoc__div--tap'>
+    <li class="nuoc__div nuoc__div--tnuoc"><a href="../view/nuoc.php">Nước</a></th></li>
+    <li class="nuoc__div nuoc__div--ttpcn"><a href="../view/thuc_pham_chuc_nang.php">Thực phẩm chức năng</a></li>
+</div>
     <table class="nuoc__table--hienthi">
-        <tr class='nuoc__table_row--hienthi'>
-            <th class='nuoc__table--pass'></th>
-            <th class='nuoc__table--pass_tap'><a href="#">Nước</a></th>
-            <th class='nuoc__table--pass_tap'><a href="">Thực phẩm chức năng</a></th>
-        </tr>
         <tr class="nuoc__table_row--hienthi nuoc__table--Tieu_de">
             <th>ID Nước</th>
             <th>TÊN</th>
