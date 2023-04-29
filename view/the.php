@@ -14,6 +14,7 @@ include "the_hien_thi.php"
 
 <!-- tạo giao diện sắp xếp -->
 <div>
+    
 <?php
 include "the_sap_xep.php"
 ?>
