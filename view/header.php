@@ -35,6 +35,7 @@
         <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-database"></i> Cơ sở vật chất</a></li>
         <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
         <li class="menu-li"><a class="menu-a" href=""><i class="fa-sharp fa-solid fa-money-check"></i> Thống kê</a></li>
+
     </div>
     </div>
     <!-- <script src='../controller/controller_header/active_click.js'></script> -->

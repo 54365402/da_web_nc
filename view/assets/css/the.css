@@ -4,8 +4,7 @@ html{
     
 }
 
-
-
+/*CSS của căn chỉnh */
 .the_table-hienthi2{
     height: 100px;
     outline: auto;
@@ -14,24 +13,27 @@ html{
 
 .the_box_types_room1{
    float: left;
-    
+   padding: 10px;
    width: 50%;; 
 }   
 
 .the_box_types_room2{
     float: right;
-  
+    padding: 10px;
     width: 50%;; 
  } 
 
 .the_table-hienthi1{ 
+  /*  border-radius: 19px;*/
+    padding: 10px;
     width: 100%;
     height: 100px;   
     outline: auto;
-    margin-top: 15px;
+    
 }
 
 .the_table-hienthi3{
+    padding: 10px;
     width: 100%;
     margin-top: 5px;
     display: inline-block;
@@ -58,8 +60,9 @@ html{
 .the_ten-up {
     margin-left: 20px;
     margin-top: 4px;
-    height: 24px;
-    font-size: 20px;
+    height: 25px;
+    width: 245px;
+    font-size: 18px;
 }
 /* css của sắp xếp */
 #the_select {
@@ -78,6 +81,8 @@ html{
 
 /* CSS của hiển thị */
 .the_div-hienthi{
+    padding: 10px;
+    border-collapse: collapse;
     margin-left: 10px;
     width: 60%;
     border: 1px solid white;
@@ -86,6 +91,7 @@ html{
     display: flex;
 }
 .the_div-hienthi1{
+    margin-top: 23px;
     width: 39%;
     margin-right: 10px;
     border: 1px solid white;
@@ -133,7 +139,7 @@ table.the_table-hienthi {
     background-color: white;
 }
 
-/* them--popup */
+/* them-popup */
 .the_modal-popup {
     top: 0;
     position: fixed;
@@ -218,24 +224,3 @@ select.the_table-add_input {
     margin-right: 30px;
     background-color: red;
 }
-
-/* css của xóa */
-/* 
-
-table.table-add-form {
-    margin-top: 94px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 21px;
-    background-color: lightblue;
-    
-}
-
-table.table-add-form {
-    margin-top: 94px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 21px;
-    background-color: yellow;
-    
-} */
