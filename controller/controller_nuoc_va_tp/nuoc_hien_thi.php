@@ -30,7 +30,7 @@
        {
         ?>
         <tr class='nuoc__table_row--hienthi'>
-            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["id_nuoc_va_tp"]?><?php $a = $row["id_nuoc_va_tp"]?></td>
+            <td  class="nuoc__table_td--hienthi-td"><?php echo $row["id_nuoc_va_tp"]?></td>
             <td  class="nuoc__table_td--hienthi-td"><?php echo $row["name"]?></td>
             <td  class="nuoc__table_td--hienthi-td"><?php echo $row["loai_tp"]?></td>
             <td  class="nuoc__table_td--hienthi-td"><?php echo $row["gia_ban"]?></td>

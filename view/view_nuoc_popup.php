@@ -7,6 +7,13 @@
             <tr>
                 <td><label for="fname">Tên:</label></td>
                 <td><input class='nuoc__table--add_input' type="text"  name="nuoc__table--add_ten"></td>
+                
+                <?php 
+                if(!empty($nuoc_error))
+                {
+                    echo $nuoc_error;
+                }
+                 ?>
             </tr>
             <tr>
                 <td><label for="lname">Loại sản phẩm:</label></td>

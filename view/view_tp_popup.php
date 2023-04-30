@@ -7,6 +7,7 @@
             <tr>
                 <td><label for="fname">Tên:</label></td>
                 <td><input class='tp__table--add_input' type="text"  name="tp__table--add_ten"></td>
+                
             </tr>
             <tr>
                 <td><label for="lname">Loại sản phẩm:</label></td>

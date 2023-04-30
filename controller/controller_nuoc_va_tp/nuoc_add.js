@@ -8,13 +8,13 @@ function showAdd() {
 }
 nuocThem[0].addEventListener('click',showAdd)
 
-// bắt sự kiện nút hủy ở trong popup
+// bắt sự kiện nút ở trong popup
 function close() {
     nuocModal.classList.remove('nuoc__modal--popup--open')
 }
 nuocClose[0].addEventListener('click',close)
 
-function themPupUp() {
+function themPupUp(e) {
     nuocModal.classList.remove('nuoc__modal--popup--open')
 }
 
