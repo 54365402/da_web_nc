@@ -38,6 +38,7 @@ for (var i = 0; i < rows.length; i++) {
 
     // Chỉ định các tham số để gửi dữ liệu
     var params = "nuocID=" + cellID;
+   
     // Bắt sự kiện xóa
     var nuocXoa = $('.js-xoa');
     nuocXoa.onclick = function(e){

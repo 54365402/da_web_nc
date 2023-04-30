@@ -6,11 +6,12 @@ include "header.php";
 
 <!-- tạo giao diện sắp xếp -->
 <div>
-    <select id='nuoc__select'>
+    <select id='nuoc__select' name='nuocSelectName'>
         <option class='nuoc__select--sap_xep' value=0>Sắp xếp</option>
         <option class='nuoc__select--ss_ten' value=1>Tên</option>
         <option class='nuoc__select--ss_gia_ban' value=2>Giá bán</option>
     </select>
+
 </div>
 
 <?php
@@ -21,7 +22,6 @@ include "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
 
 <!-- tạo chỉ mục trang -->
 <form class="nuoc__form--page" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-
     <center>
     <?php
     echo $listPages;
