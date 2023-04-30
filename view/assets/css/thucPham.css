@@ -7,6 +7,10 @@ html{
     clear: both;
 }
 
+li.menu-li.menu-li-nuoc {
+    background-color: rgb(68, 84, 106);
+}
+
 /* css của sắp xếp */
 select#tp__select {
     margin-top: 10px;
@@ -153,14 +157,20 @@ input.tp--page {
     margin-left: 7%;
 }
 
-li.tp__div {
+li.nuoc__div {
     border: 1px solid #2F528F;
     border-radius: 10px;
     font-size: 20px;
     border-width: 5px;
     padding: 2px;
-    background-color: #daeaf3;
     margin-right: 5px;
+}
+
+.tp__div--tnuoc{
+    background-color: #daeaf3;
+}
+.tp__div--ttpcn{
+    background-color: rgb(68, 84, 106);
 }
 
 .tp__form--page{

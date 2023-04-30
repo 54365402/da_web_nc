@@ -53,6 +53,7 @@
     </div>
 
 </div>
+<script src='../controller/controller_nuoc_va_tp/tap.js' ></script>
 <?php
 $mysqli -> close();
 ?>

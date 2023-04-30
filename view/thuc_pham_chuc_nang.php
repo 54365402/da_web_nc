@@ -37,7 +37,7 @@ include "../controller/controller_nuoc_va_tp/tp_hien_thi.php"
 </script>
 
 <script src="../controller/controller_nuoc_va_tp/tp_delete_update.js"></script>
-<script src="../controller/controller_nuoc_va_tp/tp_sort.js"></script>
+<!-- <script src="../controller/controller_nuoc_va_tp/tp_sort.js"></script> -->
 </body>
 
 </html>

@@ -7,6 +7,10 @@ html{
     clear: both;
 }
 
+li.menu-li.menu-li-nuoc {
+    background-color: rgb(68, 84, 106);
+}
+
 /* css của sắp xếp */
 select#nuoc__select {
     margin-top: 10px;
@@ -158,9 +162,14 @@ li.nuoc__div {
     border-radius: 10px;
     font-size: 20px;
     border-width: 5px;
-    padding: 2px;
-    background-color: #daeaf3;
+    padding: 2px; 
     margin-right: 5px;
+}
+.nuoc__div--tnuoc{
+    background-color: rgb(68, 84, 106);
+}
+.nuoc__div--ttpcn{
+    background-color: #daeaf3;
 }
 
 .nuoc__form--page{

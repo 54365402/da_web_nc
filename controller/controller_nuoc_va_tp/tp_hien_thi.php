@@ -7,8 +7,8 @@
 
 <div class = "tp__div--hienthi">
 <div  class='tp__div--tap'>
-    <li class="tp__div tp__div--ttp"><a href="../view/nuoc.php">Nước</a></th></li>
-    <li class="tp__div tp__div--ttpcn"><a href="../view/thuc_pham_chuc_nang.php">Thực phẩm chức năng</a></li>
+    <li class="nuoc__div tp__div--tnuoc"><a href="../view/nuoc.php">Nước</a></th></li>
+    <li class="nuoc__div tp__div--ttpcn"><a href="../view/thuc_pham_chuc_nang.php">Thực phẩm chức năng</a></li>
 </div>
     <table class="tp__table--hienthi">
         <tr class="tp__table_row--hienthi tp__table--Tieu_de">
@@ -53,6 +53,7 @@
     </div>
 
 </div>
+<script src='../controller/controller_nuoc_va_tp/tap.js' ></script>
 <?php
 $mysqli -> close();
 ?>
