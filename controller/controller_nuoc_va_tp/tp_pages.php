@@ -2,15 +2,7 @@
 <?php
     include "../controller/connection.php";
 
-    // if(isset($_GET['tp_orderBy']))
-    // {
-
-    //     echo $_POST['tp_orderBy'];
-    // }
-    // else
-    // {
-    //     echo 3;
-    // }
+    include_once "tp_sort.php";
    
     if(isset($_GET['page']))
     {
@@ -25,7 +17,7 @@
     // Sẽ lấy giá trị từ hàng nào
     $perRow = $page * $rowsPerPage - $rowsPerPage;
     $sql = "SELECT * FROM tbl_nuoc_va_thuc_pham WHERE loai_tp LIKE N'T%' 
-    ORDER BY id_nuoc_va_tp DESC LIMIT $perRow, $rowsPerPage";
+    ORDER BY $tp_key $tp_Tang LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);
     // Tổng số sản phẩm
     $sql1 = "SELECT * FROM tbl_nuoc_va_thuc_pham WHERE loai_tp LIKE N'T%'";

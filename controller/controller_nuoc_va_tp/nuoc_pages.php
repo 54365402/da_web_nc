@@ -1,17 +1,8 @@
 <!-- Kết nối CSDL -->
 <?php
     include "../controller/connection.php";
-
-    // if(isset($_GET['nuoc_orderBy']))
-    // {
-
-    //     echo $_POST['nuoc_orderBy'];
-    // }
-    // else
-    // {
-    //     echo 3;
-    // }
-   
+    include_once "nuoc_sort.php";
+  
     if(isset($_GET['page']))
     {
         $page = $_GET['page'];
@@ -24,7 +15,7 @@
     $rowsPerPage=11;
     $perRow = $page * $rowsPerPage - $rowsPerPage;
     $sql = "SELECT * FROM tbl_nuoc_va_thuc_pham WHERE loai_tp LIKE N'N%' 
-    ORDER BY id_nuoc_va_tp DESC LIMIT $perRow, $rowsPerPage";
+    ORDER BY $nuoc_key $nuoc_Tang LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);
     // Tổng số sản phẩm
     $sql1 = "SELECT * FROM tbl_nuoc_va_thuc_pham WHERE loai_tp LIKE N'N%'";
@@ -44,3 +35,4 @@
     }
     
 ?>
+

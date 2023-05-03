@@ -12,7 +12,18 @@ li.menu-li.menu-li-nuoc {
 }
 
 /* css của sắp xếp */
-select#nuoc__select {
+select.nuoc__select {
+    margin-top: 10px;
+    margin-right: 30px;
+    padding: 5px;
+    border: 1px solid #2F528F;
+    border-width: 5px;
+    float: right;
+    border-radius: 10px;
+    background-color: #daeaf3;
+}
+
+input.nuoc--sort {
     margin-top: 10px;
     margin-right: 30px;
     padding: 5px;

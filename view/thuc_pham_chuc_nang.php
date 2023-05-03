@@ -6,12 +6,18 @@ include "header.php";
 
 <!-- tạo giao diện sắp xếp -->
 <div>
-    <select id='tp__select' name='tpSelectName'>
+    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
+    <input class="tp--sort" type="submit" value="Sort">
+    <select class='tp__select' name='tpTang'>
+        <option class='tp__select--sap_xep' value=0>Giảm dần</option>
+        <option class='tp__select--ss_ten' value=1>Tăng dần</option>
+    </select>
+    <select class='tp__select' name='tpSort'>
         <option class='tp__select--sap_xep' value=0>Sắp xếp</option>
         <option class='tp__select--ss_ten' value=1>Tên</option>
         <option class='tp__select--ss_gia_ban' value=2>Giá bán</option>
     </select>
-
+    </form>
 </div>
 
 <?php
