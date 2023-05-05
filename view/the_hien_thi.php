@@ -8,9 +8,9 @@
 <!-- Hien thi bang -->
 <br>
 <div class="the_ten-hienthi">
-   <li><h2 class = "the_ten1 abc">Thẻ tập</h2></li>
+   <li><h2 class = "the_ten1 abc ">Thẻ tập</h2></li>
    <li><div class = "the_ten">     
-            <form action="the_search.php" method="get">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <input class="the_ten1 the_ten-up" type="text" placeholder="Tìm kiếm..." name="cardsearch" height="50px">
             <input class="the_ten-search" type="submit" value="Tìm kiếm">
             </form>
@@ -29,6 +29,11 @@
                 <th>Trạng Thái</th>
             </tr>
         <?php
+            // định nghĩa biến $keyword
+            $keyword = isset($_POST['cardsearch']) ? $_POST['cardsearch'] : "";
+            
+            // hiện thị tìm kiếm
+            $postb =  "WHERE card_id LIKE '%$keyword%' OR types_room LIKE '%$keyword%'";
             // Định nghĩa biến $p
             $p = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
@@ -39,7 +44,7 @@
             $start = ($p - 1) * $limit;
 
             // Câu truy vấn SQL
-            $sqlthe1 = "SELECT * FROM card ORDER BY card_id DESC LIMIT $start, $limit";
+            $sqlthe1 = "SELECT * FROM card  $postb ORDER BY card_id DESC LIMIT $start, $limit";
 
             // Thực thi câu truy vấn
             $query = mysqli_query($mysqli,$sqlthe1);
@@ -72,7 +77,7 @@
         $row_count = mysqli_fetch_array($result_count);
         $total = $row_count["count"];                    // Tổng số dữ liệu
         $page_count = ceil($total / $limit);            // Tổng số trang
-    ?>
+    ?><br>
     <center class = "the_page-hienthi" >
         <?php
             for ($i = 1; $i <= $page_count; $i++) {
@@ -90,37 +95,40 @@
 
 <div class = "the_div-hienthi1"> <form action="/the_action_checkbox.php">
 
-    <table class="the_table-hienthi1" style="border: 3px solid blue;">        
+    <table class="the_table-hienthi1" style="border: 3px solid blue; white-space: nowrap;">        
           <tr><th colspan = "2" ;>Thông tin chi tiết thẻ</th></tr>
           <tr><tr>
-          <tr><td>Họ và Tên: </td><td class = the_gachchan><input type="text_theten" name="input_theten" style="border: none; outline:none "></td></tr>
-          <tr><td>ID: </td><td class = the_gachchan><input type="text_theid" name="input_theid" style="border: none; outline:none "></td></tr>    
+          <tr><td style="padding-right: 30px;">Họ và Tên: </td><td class = the_gachchan><input type="text_theten" name="input_theten" style="border: none; outline:none "></td></tr>
+          <tr><td>ID: </td><td class = the_gachchan><input type="text_theid" name="input_theid" style="border: none; outline:none "></td></tr>  
+          
     </table>
 
-    <div class = "the_table-hienthi2" ><table>
-        <div class = "the_box_types_room1" style="border: 2px solid blue;">     
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Gym">
-            <label for="vehicle1"> Gym</label><br><br>
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Yoga">
-            <label for="vehicle2"> Yoga</label><br><br>
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Aerobic">
-            <label for="vehicle3"> Aerobic</label><br>
-        </div>   
+    <div class = "the_table-hienthi2" >
+        <table>
+            <div class = "the_box_types_room1" style="border: 2px solid blue;">     
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Gym">
+                <label for="vehicle1"> Gym</label><br><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Yoga">
+                <label for="vehicle2"> Yoga</label><br><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Aerobic">
+                <label for="vehicle3"> Aerobic</label><br>
+            </div>   
 
-        <div class = "the_box_types_room2" style="border: 2px solid blue;"> 
-            <input type="checkbox" id="vehicle4" name="vehicle4" value="Boxing">
-            <label for="vehicle4"> Boxing</label><br><br>
-            <input type="checkbox" id="vehicle5" name="vehicle5" value="Dancing">
-            <label for="vehicle5"> Dancing</label><br><br>
-            <input type="checkbox" id="vehicle6" name="vehicle6" value="Swimming">
-            <label for="vehicle6"> Swimming</label><br>
-        </div></table>
+            <div class = "the_box_types_room2" style="border: 2px solid blue;"> 
+                <input type="checkbox" id="vehicle4" name="vehicle4" value="Boxing">
+                <label for="vehicle4"> Boxing</label><br><br>
+                <input type="checkbox" id="vehicle5" name="vehicle5" value="Dancing">
+                <label for="vehicle5"> Dancing</label><br><br>
+                <input type="checkbox" id="vehicle6" name="vehicle6" value="Swimming">
+                <label for="vehicle6"> Swimming</label><br>
+            </div>
+        </table>
     </div>
         
     <div class="the_table-hienthi3" style="border: 3px solid blue;"> 
 
-        <table style="display: flex; align-items: center; ">
-            <tr><td span = "7"><label>Gói tập: </label></td>
+        <table style="white-space: nowrap;">
+            <tr><td colspan = "1" ><label>Gói tập: </label></td>
                 <td class = the_gachchan><input type="text_the1" name="input1" style="border: none; outline:none;"></td></tr>
             <tr><td><label>Số lượng: </label></td>
                 <td class = the_gachchan><input type="text_the1" name="input2" style="border: none; outline: none;"></td></tr>
@@ -132,9 +140,10 @@
                 <td class = the_gachchan><input type="text_the1" name="input5" style="border: none; outline: none;"></td></tr>
             <tr><td><label>Thành tiền: </label></td>
                 <td class = the_gachchan><input type="text_the1" name="input6" style="border: none; outline: none;"></td></tr>
-            <tr><td><label>Lần cuối hoạt động: </label></td>
+            <tr><td style="padding-right: 30px;"><label>Lần cuối hoạt động: </label></td>
                 <td class = the_gachchan><input type="text_the1" name="input7" style="border: none; outline: none;"></td></tr>
-        </table>
+                
+        </table></div>
 </div>  
  
    

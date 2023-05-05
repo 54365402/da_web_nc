@@ -24,3 +24,6 @@ include "the_sap_xep.php"
     <option class='the_select-ss_tien' value=0>Tiền</option>
     </select>
 </div>
+<script src = "the_chucnang.js" >
+    
+</script>

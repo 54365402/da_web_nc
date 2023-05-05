@@ -2,7 +2,7 @@
     include "../controller/connection.php";
 
     // Lấy từ khóa tìm kiếm từ form
-    $keyword = $_GET['cardsearch'];
+    $keyword = $_POST['cardsearch'];
 
     // Câu truy vấn SQL
     $sqlthe2 = "SELECT * FROM card WHERE card_id LIKE '%$keyword%' OR types_room LIKE '%$keyword%'";
