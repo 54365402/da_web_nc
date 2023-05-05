@@ -3,6 +3,11 @@ include "header.php";
 ?>
 <link rel="stylesheet" href="./assets/css/nuoc.css">
 
+<!-- them--popup -->
+
+<?php include "view_nuoc_popup.php"
+?>
+
 
 <!-- tạo giao diện sắp xếp -->
 <div>
@@ -34,10 +39,6 @@ include "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
     ?>
     </center>
 </form>
-<!-- them--popup -->
-
-<?php include "view_nuoc_popup.php"
-?>
 
 <script src="../controller/controller_nuoc_va_tp/nuoc_add.js">
 </script>
