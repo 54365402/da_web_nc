@@ -1,8 +1,8 @@
 <!-- Kết nối CSDL -->
 <?php
     include_once "../connection.php";
-    $nuocID = $_POST['nuocID'];
-    $sql = "DELETE FROM tbl_nuoc_va_thuc_pham WHERE id_nuoc_va_tp='$nuocID'";
+    $dctID = $_POST['dctID'];
+    $sql = "DELETE FROM tbl_dung_cu_tap WHERE id_may ='$dctID'";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
 ?>

@@ -88,7 +88,7 @@ for (var i = 0; i < rows.length; i++) {
       xhttp.send(params+"&"+nuocTen+"&"+nuocLoai+"&"+nuocGiaBan+"&"+nuocGiaNhap
       +"&"+nuocSoLuongNhap+"&"+nuocSoLuongTon+"&"+nuocNhaCungCap
       +"&"+nuocNgayNhap+"&"+nuocNgayHetHan+"&"+nuocTongTien);
-      location.reload(true)
+      location.reload(true);
       }
       }
     }

@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include_once "header.php";
 ?>
 <link rel="stylesheet" href="./assets/css/thucPham.css">
 
@@ -21,7 +21,7 @@ include "header.php";
 </div>
 
 <?php
-include "../controller/controller_nuoc_va_tp/tp_hien_thi.php"
+include_once "../controller/controller_nuoc_va_tp/tp_hien_thi.php"
 ?>
 
 <div class='clear'></div>
@@ -36,7 +36,7 @@ include "../controller/controller_nuoc_va_tp/tp_hien_thi.php"
 </form>
 <!-- them--popup -->
 
-<?php include "view_tp_popup.php"
+<?php include_once "view_tp_popup.php"
 ?>
 
 <script src="../controller/controller_nuoc_va_tp/tp_add.js">
