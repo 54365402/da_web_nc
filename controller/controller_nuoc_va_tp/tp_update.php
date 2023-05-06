@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include "../connection.php";
+    include_once "../connection.php";
     $tpID = $_POST['tpID'];
     $tpTen = $_POST['tpTen'];
     $tpLoai = $_POST['tpLoai'];

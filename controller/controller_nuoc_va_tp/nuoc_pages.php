@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include "../controller/connection.php";
+    include_once "../controller/connection.php";
     include_once "nuoc_sort.php";
   
     if(isset($_GET['page']))

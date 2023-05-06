@@ -1,7 +1,7 @@
 
 <!-- Kết nối CSDL -->
 <?php
-    include "nuoc_pages.php";
+    include_once "nuoc_pages.php";
 ?>
 
 <!-- Hien thi bang -->

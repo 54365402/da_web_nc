@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include "tp_pages.php";
+    include_once "tp_pages.php";
 ?>
 
 <!-- Hien thi bang -->

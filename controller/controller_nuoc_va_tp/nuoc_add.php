@@ -1,6 +1,6 @@
 <?php
     //ket noi
-    include "../connection.php";
+    include_once "../connection.php";
     // lay CSDL
     require_once('../../model/modal_nuoc.php');
     $nuoc = new Nuoc();
@@ -18,25 +18,19 @@
     $query = mysqli_query($mysqli,$sql);
     
     // kiểm tra
-    $check = true;
-    while($row = mysqli_fetch_array($query)){
-        if($row["name"]==$nuoc->get_name())
-        {
-            $check = false;
-        }
-    }
 
+    
     if($nuoc->get_name()==""||$nuoc->get_loai_tp()==""||$nuoc->get_gia_ban()==""||$nuoc->get_gia_nhap()==""||$nuoc->get_so_luong_nhap()==""||$nuoc->get_so_luong_ton()==""||$nuoc->get_nha_cung_cap()==""||$nuoc->get_ngay_nhap()==""||$nuoc->get_ngay_het_han()=="")
     {    
     }
     else{
-        if($check){
+        
     // Thực hiện truy vấn để thêm dữ liệu vào cơ sở dữ liệu
     $sql = "INSERT INTO tbl_nuoc_va_thuc_pham(name,loai_tp,gia_ban,gia_nhap,so_luong_nhap,so_luong_ton,nha_cung_cap,ngay_nhap,ngay_het_han) VALUES('".$nuoc->get_name()."','".$nuoc->get_loai_tp()."','".$nuoc->get_gia_ban()."','".$nuoc->get_gia_nhap()."','".$nuoc->get_so_luong_nhap()."','".$nuoc->get_so_luong_ton()."','".$nuoc->get_nha_cung_cap()."','".$nuoc->get_ngay_nhap()."','".$nuoc->get_ngay_het_han()."')";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
     //điều hướng trang đến nuoc.php để refresh
-    }
+    
     }
     header("Location: ../../view/nuoc.php");
     exit();

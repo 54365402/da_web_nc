@@ -1,7 +1,12 @@
 <?php
-include "header.php";
+include_once "header.php";
 ?>
 <link rel="stylesheet" href="./assets/css/nuoc.css">
+
+<!-- them--popup -->
+
+<?php include_once "view_nuoc_popup.php"
+?>
 
 
 <!-- tạo giao diện sắp xếp -->
@@ -21,7 +26,7 @@ include "header.php";
 </div>
 
 <?php
-include "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
+include_once "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
 ?>
 
 <div class='clear'></div>
@@ -34,10 +39,6 @@ include "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
     ?>
     </center>
 </form>
-<!-- them--popup -->
-
-<?php include "view_nuoc_popup.php"
-?>
 
 <script src="../controller/controller_nuoc_va_tp/nuoc_add.js">
 </script>
