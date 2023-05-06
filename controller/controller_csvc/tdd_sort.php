@@ -10,16 +10,16 @@
     }
 
     if($tdd_key==0){
-        $tdd_key="id_may";
+        $tdd_key="id_wardrobe";
     }
     elseif($tdd_key==1){
-        $tdd_key="ten";
+        $tdd_key="trang_thai";
     }
     elseif($tdd_key==2){
-        $tdd_key="bao_hanh";
+        $tdd_key="id_hv";
     }
     else{
-        $tdd_key="bao_tri";
+        $tdd_key="time_end";
     }
 //  tăng dần hoặc giảm dần
 if(isset($_POST['tddTang']))

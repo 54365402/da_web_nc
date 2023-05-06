@@ -2,35 +2,33 @@
     //ket noi
     include_once "../connection.php";
     // lay CSDL
-    $name = $_POST["tdd__table--add_ten"];
-    $so_luong = $_POST["tdd__table--add_so_luong"];
-    $nha_cung_cap = $_POST["tdd__table--add_nha_cung_cap"];
-    $ngay_nhap = $_POST["tdd__table--add_ngay_nhap"];
-    $gia_nhap = $_POST["tdd__table--add_gia_nhap"];
-    $bao_tri = $_POST["tdd__table--add_bao_tri"];
-    $bao_hanh = $_POST["tdd__table--add_bao_hanh"];
-    $chi_phi_bao_tri = $_POST["tdd__table--add_chi_phi_bao_tri"];
+    $so_tu = $_POST["tdd__table--add_so_tu"];
+    $loai_tu = $_POST["tdd__table--add_loai_tu"];
+    $trang_thai = $_POST["tdd__table--add_trang_thai"];
+    $id_hv = $_POST["tdd__table--add_id_hv"];
+    $time_start = $_POST["tdd__table--add_time_start"];
+    $time_end = $_POST["tdd__table--add_time_end"];
     $ghi_chu = $_POST["tdd__table--add_ghi_chu"];
 
-    $sql = "SELECT * FROM tbl_dung_cu_tap";
+    $sql = "SELECT * FROM wardrobe";
     $query = mysqli_query($mysqli,$sql);
     
     // kiểm tra
 
     
-    if($name==""||$so_luong==""||$nha_cung_cap==""||$ngay_nhap==""||$gia_nhap==""||$bao_tri==""||$bao_hanh==""||$chi_phi_bao_tri==""||$ghi_chu=="")
+    if($so_tu==""||$loai_tu==""||$trang_thai==""||$id_hv==""||$time_start==""||$time_end==""||$ghi_chu=="")
     {    
     }
     else{
         
     // Thực hiện truy vấn để thêm dữ liệu vào cơ sở dữ liệu
-    $sql = "INSERT INTO tbl_dung_cu_tap(ten,so_luong,nha_cung_cap,ngay_nhap,gia_nhap,bao_tri,bao_hanh,chi_phi_bao_tri,ghi_chu) VALUES('".$name."','".$so_luong."','".$nha_cung_cap."','".$ngay_nhap."','".$gia_nhap."','".$bao_tri."','".$bao_hanh."','".$chi_phi_bao_tri."','".$ghi_chu."')";
+    $sql = "INSERT INTO wardrobe(so_tu,loai_tu,trang_thai,id_hv,time_start,time_end,ghi_chu) VALUES('".$so_tu."','".$loai_tu."','".$trang_thai."','".$id_hv."','".$time_start."','".$time_end."','".$ghi_chu."')";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
     //điều hướng trang đến tdd.php để refresh
     
     }
-    header("Location: ../../view/dung_cu_tap.php");
+    header("Location: ../../view/tu_dung_do.php");
     exit();
 ?>
 

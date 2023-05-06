@@ -58,33 +58,29 @@
         currentRow.onkeyup=function(e){
           if(e.which===27){
             this.setAttribute('contenteditable',' ')
-            var cellTen = cells[1].innerHTML;
-            var cellSoLuong = cells[2].innerHTML;
-            var cellNhaCungCap = cells[3].innerHTML;
-            var cellNgayNhap = cells[4].innerHTML;
-            var cellGiaNhap = cells[5].innerHTML;
-            var cellBaoTri = cells[6].innerHTML;
-            var cellBaoHanh = cells[7].innerHTML;
-            var cellChiPhiBaoTri = cells[8].innerHTML;
-            var cellGhiChu = cells[9].innerHTML;
+            var cell_so_tu = cells[1].innerHTML;
+            var cell_loai_tu = cells[2].innerHTML;
+            var cell_trang_thai = cells[3].innerHTML;
+            var cell_id_hv = cells[5].innerHTML;
+            var cell_time_start = cells[6].innerHTML;
+            var cell_time_end = cells[7].innerHTML;
+            var cell_ghi_chu = cells[8].innerHTML;
     
-            var tddTen = "tddTen=" + cellTen;
-            var tddSoLuong = "tddSoLuong=" + cellSoLuong;
-            var tddNhaCungCap = "tddNhaCungCap=" + cellNhaCungCap;
-            var tddNgayNhap = "tddNgayNhap=" + cellNgayNhap;
-            var tddGiaNhap = "tddGiaNhap=" + cellGiaNhap;
-            var tddBaoTri = "tddBaoTri=" + cellBaoTri;
-            var tddBaoHanh = "tddBaoHanh=" + cellBaoHanh;
-            var tddChiPhiBaoTri = "tddChiPhiBaoTri=" + cellChiPhiBaoTri;
-            var tddGhiChu = "tddGhiChu=" + cellGhiChu;
+            var tdd_so_tu = "tdd_so_tu=" + cell_so_tu;
+            var tdd_loai_tu = "tdd_loai_tu=" + cell_loai_tu;
+            var tdd_trang_thai = "tdd_trang_thai=" + cell_trang_thai;
+            var tdd_id_hv = "tdd_id_hv=" + cell_id_hv;
+            var tdd_time_start = "tdd_time_start=" + cell_time_start;
+            var tdd_time_end = "tdd_time_end=" + cell_time_end;
+            var tdd_ghi_chu = "tdd_ghi_chu=" + cell_ghi_chu;
        
           url = "../controller/controller_csvc/tdd_update.php" 
           if(confirm("Bạn có chắc muốn sửa ID "+cellID+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          xhttp.send(tddID+"&"+tddTen+"&"+tddSoLuong+"&"+tddNhaCungCap+"&"+tddNgayNhap+"&"+tddGiaNhap+"&"+tddBaoTri+"&"+tddBaoHanh+"&"+tddChiPhiBaoTri
-          +"&"+tddGhiChu);
+          xhttp.send(tddID+"&"+tdd_so_tu+"&"+tdd_loai_tu+"&"+tdd_trang_thai+"&"+tdd_id_hv+"&"+tdd_time_start+"&"+tdd_time_end
+          +"&"+tdd_ghi_chu);
           location.reload(true);
           }
           }

@@ -24,9 +24,9 @@ include_once "header.php";
     </select>
     <select class='tdd__select' name='tddSort'>
         <option class='tdd__select--sap_xep' value=0> Sắp xếp</option>
-        <option class='tdd__select--ss_ten' value=1>Tên</option>
-        <option class='tdd__select--ss_bao_hanh' value=2>Bảo Hành</option>
-        <option class='tdd__select--ss_bao_tri' value=3>Bảo Trì</option>
+        <option class='tdd__select--ss_ten' value=1>Trạng thái</option>
+        <option class='tdd__select--ss_bao_hanh' value=2>ID hội viên</option>
+        <option class='tdd__select--ss_bao_tri' value=3>Ngày kết thúc</option>
     </select>
     </form>
 </div>

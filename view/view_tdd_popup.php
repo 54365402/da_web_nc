@@ -5,36 +5,28 @@
     <form action="../controller/controller_csvc/tdd_add.php" method="POST">
         <table class='tdd__table--addform'>
             <tr>
-                <td><label for="fname">Tên:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_ten" placeholder="Name...."></td>
+                <td><label for="lname">Số tủ:</label></td>
+                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_so_tu" placeholder="Quantity...."></td>
             </tr>
             <tr>
-                <td><label for="lname">Số lượng:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_so_luong" placeholder="Quantity...."></td>
+            <td><label for="lname">Loại tủ:</label></td>
+                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_loai_tu" placeholder="Supplier...." ></td>
             </tr>
             <tr>
-            <td><label for="lname">Nhà cung cấp:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_nha_cung_cap" placeholder="Supplier...." ></td>
+                <td><label for="lname">Trạng thái:</label></td>
+                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_trang_thai" placeholder="Date Added...."></td>
             </tr>
             <tr>
-                <td><label for="lname">Ngày nhập:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_ngay_nhap" placeholder="Date Added...."></td>
+                <td><label for="lname">ID hội viên:</label></td>
+                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_id_hv" placeholder="Maintenance...."></td>
             </tr>
             <tr>
-                <td><label for="lname">Giá nhập:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_gia_nhap" placeholder="Import Price...."></td>
+                <td><label for="lname">Ngày bắt đầu:</label></td>
+                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_time_start" placeholder="Guarantee...."></td>
             </tr>
             <tr>
-                <td><label for="lname">Bảo trì:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_bao_tri" placeholder="Maintenance...."></td>
-            </tr>
-            <tr>
-                <td><label for="lname">Bảo hành:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_bao_hanh" placeholder="Guarantee...."></td>
-            </tr>
-            <tr>
-                <td><label for="lname">Chi phí bảo trì:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_chi_phi_bao_tri" placeholder="Maintenance Costs...."></td>
+                <td><label for="lname">Ngày kết thúc:</label></td>
+                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_time_end" placeholder="Maintenance Costs...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Ghi chú:</label></td>

@@ -13,7 +13,7 @@
         $tdd_get_data = "";
     }
     // search sql
-    $tdd_search = "WHERE id_may LIKE '%$tdd_get_data%' ";
+    $tdd_search = "WHERE id_wardrobe LIKE '%$tdd_get_data%' ";
 
     if(isset($_GET['page']))
     {
@@ -26,10 +26,10 @@
     // Số hàng một trang
     $rowsPerPage=11;
     $perRow = $page * $rowsPerPage - $rowsPerPage;
-    $sql = "SELECT * FROM tbl_dung_cu_tap $tdd_search ORDER BY $tdd_key $tdd_Tang LIMIT $perRow, $rowsPerPage";
+    $sql = "SELECT * FROM (wardrobe INNER JOIN tbl_hoi_vien ON wardrobe.id_hv = tbl_hoi_vien.id_hv) $tdd_search ORDER BY $tdd_key $tdd_Tang LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);
     // Tổng số sản phẩm
-    $sql1 = "SELECT * FROM tbl_dung_cu_tap";
+    $sql1 = "SELECT * FROM wardrobe";
     $totalRows = mysqli_num_rows(mysqli_query($mysqli,$sql1));
     // Tính tổng số trang pages
     $totalPages = ceil($totalRows/$rowsPerPage);
