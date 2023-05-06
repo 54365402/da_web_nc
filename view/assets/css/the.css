@@ -6,13 +6,14 @@ html{
 
 
 .the_gachchan{
+    width: 100%;
     border-bottom: 1px solid black;
-    padding: 0 10px;
+    padding: 2px 35px;
 }
 
-input[type="text_the1"] {
-   
-  }
+/* input[type="text_the1"] {
+   margin: ;
+  } */
 
 /*CSS của căn chỉnh */
 .the_table-hienthi2{
@@ -24,19 +25,19 @@ input[type="text_the1"] {
 
 .the_box_types_room1{
    float: left;
-   padding: 10px;
+   padding: 16px;
    width: 50%;; 
 }   
 
 .the_box_types_room2{
     float: right;
-    padding: 10px;
+    padding: 16px;
     width: 50%;; 
  } 
 
 .the_table-hienthi1{ 
   /*  border-radius: 19px;*/
-    padding: 10px;
+    padding: 16px;
     width: 100%;
     height: 100px;   
     outline: auto;
@@ -44,7 +45,7 @@ input[type="text_the1"] {
 }
 
 .the_table-hienthi3{
-    padding: 10px;
+    padding: 16px;
     width: 100%;
     margin-top: 5px;
     display: inline-block;
