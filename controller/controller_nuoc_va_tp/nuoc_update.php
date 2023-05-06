@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include "../connection.php";
+    include_once "../connection.php";
     $nuocID = $_POST['nuocID'];
     $nuocTen = $_POST['nuocTen'];
     $nuocLoai = $_POST['nuocLoai'];
