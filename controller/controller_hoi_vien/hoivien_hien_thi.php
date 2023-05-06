@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include "../controller/connection.php";
+    include "hoivien_pages.php";
     $sql = "SELECT * FROM tbl_hoi_vien ORDER BY id_hv DESC";
     $query = mysqli_query($mysqli,$sql);
 ?>
@@ -50,11 +50,48 @@
        }
         ?>
         </table>
+        <table class="hoivien__table-view-health">
+            <tr class="hoivien__table-view-title">
+                <th>ID</th>
+                <th>HỌ VÀ TÊN</th>
+                <th>NGÀY SINH</th>
+                <th>GIỚI TÍNH</th>
+                <th>TUỔI</th>
+                <th>SỐ ĐIỆN THOẠI</th>
+                <th>CMND</th>
+                <th>BIỂN SỐ XE</th>
+                <th>ĐIỂM TÍCH LŨY</th>
+            </tr>
+            <?php
+        // Duyệt qua các phẩn từ trong bảng
+        while($row = mysqli_fetch_array($query))
+       {
+        ?>
+            <tr class="hoivien__table-view--data">
+                <td><?php echo $row["id_hv"]?></td>
+                <td><?php echo $row["name_hv"]?></td>
+                <td><?php echo $row["ngay_sinh"]?></td>
+                <td><?php echo $row["gioi_tinh"]?></td>
+                <td><?php echo $row["tuoi"]?></td>
+                <td><?php echo $row["sdt"]?></td>
+                <td><?php echo $row["cmnd"]?></td>
+                <td><?php echo $row["bien_xe"]?></td>
+                <td><?php echo $row["diem_tich_luy"]?></td>
+                <?php
+       }
+        ?>
+        </table>
+        <!-- tạo chỉ mục trang -->
+        <form class="hoivien__pagination" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+            <center>
+                <?php echo $listPages; ?>
+            </center>
+        </form>
         <!-- tạo giao diện nút thêm, sửa, xóa -->
-        <div class="hoivien__AFD">
-            <button class='hoivien__AFD-btn js-add' type="button" onclick="">Thêm</button>
-            <button class='hoivien__AFD-btn js-fix' type="button" onclick="">Cập nhập</button>
-            <button class='hoivien__AFD-btn js-del hoivien__AFD-btn-del' type="button" onclick="">Xóa</button>
+        <div class="hoivien__AUD">
+            <button class='hoivien__AUD-btn js-add' type="button" onclick="">Thêm</button>
+            <button class='hoivien__AUD-btn js-ud' type="button" onclick="">Cập nhập</button>
+            <button class='hoivien__AUD-btn js-del hoivien__AUD-btn-del' type="button" onclick="">Xóa</button>
         </div>
     </div>
 </div>
