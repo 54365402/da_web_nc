@@ -7,6 +7,7 @@ include "header.php";
 include "the_hien_thi.php"
 ?>
 <div class='the_div-chua_button'>
+    <button class='the_div-button js-chitiet' type="button" onclick="">Chi Tiết</button> 
     <button class='the_div-button js-them' type="button" onclick="">Thêm</button>
     <button class='the_div-button js-sua' type="button" onclick="">Sửa</button>
     <button class='the_div-button js-xoa the_div-button_xoa' type="button" onclick="">Xóa</button>    

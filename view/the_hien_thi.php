@@ -19,12 +19,12 @@
 </div>
 
 <div class='the_div-fixed'>
-<div class="the_div-hienthi">
+    <div class="the_div-hienthi">
 
     <table class="the_table-hienthi">        
             <tr class='the_table_row-hienthi the_table-Tieu_de'>
                 <th>Card ID</th>
-                <th>Tên</th>
+                <th>Họ và Tên</th>
                 <th>Thành Tiền</th>
                 <th>Trạng Thái</th>
             </tr>
@@ -99,7 +99,7 @@
           <tr><th colspan = "2" ;>Thông tin chi tiết thẻ</th></tr>
           <tr><tr>
           <tr><td style="padding-right: 30px;">Họ và Tên: </td><td class = the_gachchan><input type="text_theten" name="input_theten" style="border: none; outline:none "></td></tr>
-          <tr><td>ID: </td><td class = the_gachchan><input type="text_theid" name="input_theid" style="border: none; outline:none "></td></tr>  
+          <tr><td>ID hội viên: </td><td class = the_gachchan><input type="text_theidhv" name="input_theid" style="border: none; outline:none "></td></tr>  
           
     </table>
 
