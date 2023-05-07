@@ -5,6 +5,7 @@ include "header.php";
 <?php
 include "../controller/controller_hoi_vien/hoivien_hien_thi.php"
 ?>
+<!-- tạo chỉ mục trang -->
 
 <?php include "view_hoivien_popup.php"
 ?>

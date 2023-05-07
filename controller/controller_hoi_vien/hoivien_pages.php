@@ -11,7 +11,7 @@
         $page = 1;
     }
     // Số hàng một trang
-    $rowsPerPage=6;
+    $rowsPerPage=1;
     $perRow = $page * $rowsPerPage - $rowsPerPage;
     $sql = "SELECT * FROM tbl_hoi_vien LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);
