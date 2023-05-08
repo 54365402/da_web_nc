@@ -1,7 +1,19 @@
 <!-- Kết nối CSDL -->
 <?php
-    include "../controller/connection.php";
-  
+    include_once "../controller/connection.php";
+    
+    $hoivien_get_data="";
+    if(isset($_POST['hoivien__input-search']))
+    {
+        $hoivien_get_data = $_POST['hoivien__input-search'];
+    }
+    else
+    {
+        $hoivien_get_data = "";
+    }
+    // search sql
+    $hoivien_search = "WHERE id_hv LIKE '%$hoivien_get_data%' ";
+    
     if(isset($_GET['page']))
     {
         $page = $_GET['page'];
@@ -11,9 +23,9 @@
         $page = 1;
     }
     // Số hàng một trang
-    $rowsPerPage=1;
+    $rowsPerPage=9;
     $perRow = $page * $rowsPerPage - $rowsPerPage;
-    $sql = "SELECT * FROM tbl_hoi_vien LIMIT $perRow, $rowsPerPage";
+    $sql = "SELECT * FROM tbl_hoi_vien $hoivien_search LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);
     // Tổng số sản phẩm
     $totalRows = mysqli_num_rows(mysqli_query($mysqli, "SELECT * FROM tbl_hoi_vien"));
