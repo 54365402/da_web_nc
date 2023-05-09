@@ -81,8 +81,6 @@
 }
 .hoivien__search-btn.active {
     background-color: #2F528F;
-    color: black;
-    border: none;
  }
 .hoivien__search-btn:hover {
     background-color:  #2F528F;
@@ -121,8 +119,9 @@ div tr.hoivien__table-view--title {
 .hoivien__table-view--data:nth-of-type(even) {
     background-color: #CFD5EA; 
 }
-.hoivien__table-view td:nth-of-type(1) {
-    width: 8%; 
+.hoivien__table-view th:nth-of-type(1) ,
+.hoivien__table-health-view th:nth-of-type(1) {
+    width: 80px; 
 }
 
 .hoivien__table-view td:nth-of-type(2) {
@@ -238,5 +237,5 @@ div tr.hoivien__table-view--title {
 /* suc khoe hoi vien */
 .hoivien__table-health-view {
     display: none;
-
+    width: 100%;
 }

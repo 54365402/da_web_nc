@@ -93,4 +93,4 @@
 <?php
 $mysqli -> close();
 ?>
-<script src="hoivien_change_table.js"></script>
+<script src="../controller/controller_hoi_vien/hoivien_change_table.js"></script>
