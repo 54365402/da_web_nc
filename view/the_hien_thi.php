@@ -93,7 +93,7 @@
 
 
 
-<div class = "the_div-hienthi1"> <form action="/the_action_checkbox.php">
+<div class = "the_div-hienthi1"> 
 
     <table class="the_table-hienthi1" style="border: 3px solid blue; white-space: nowrap;">        
           <tr><th colspan = "2" ;>Thông tin chi tiết thẻ</th></tr>
@@ -118,7 +118,7 @@
                 <input type="checkbox" id="vehicle4" name="vehicle4" value="Boxing">
                 <label for="vehicle4"> Boxing</label><br><br>
                 <input type="checkbox" id="vehicle5" name="vehicle5" value="Dancing">
-                <label for="vehicle5"> Dancing</label><br><br>
+                <label for="vehicle5"> Dance</label><br><br>
                 <input type="checkbox" id="vehicle6" name="vehicle6" value="Swimming">
                 <label for="vehicle6"> Swimming</label><br>
             </div>

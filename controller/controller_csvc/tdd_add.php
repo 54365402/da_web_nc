@@ -10,8 +10,7 @@
     $time_end = $_POST["tdd__table--add_time_end"];
     $ghi_chu = $_POST["tdd__table--add_ghi_chu"];
 
-    $sql = "SELECT * FROM wardrobe";
-    $query = mysqli_query($mysqli,$sql);
+ 
     
     // kiểm tra
 
