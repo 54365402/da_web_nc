@@ -1,8 +1,7 @@
 <!-- Kết nối CSDL -->
 <?php
-    include "../controller/connection.php";
-    $sql = "SELECT * FROM tbl_hoi_vien ORDER BY id_hv DESC";
-    $query = mysqli_query($mysqli,$sql);
+    include "hoivien_pages.php";
+    
 ?>
 <link rel="stylesheet" href="./assets/css/hoivien.css">
 
@@ -12,7 +11,9 @@
         <h2 class="hoivien__search-heading">Hội Viên</h2>
         <div class="hoivien__search-input">
             <i class="fa-sharp fa-solid fa-magnifying-glass hoivien__search-input--icon"></i>
-            <input type="text" placeholder="Tìm Kiếm">
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                <input class='hoivien__input-search' type="text" name="hoivien__input-search" placeholder="Tìm Kiếm">
+            </form>
         </div>
         <button class="hoivien__search-btn">
             Theo Dõi Sức Khỏe
@@ -50,14 +51,46 @@
        }
         ?>
         </table>
+        <!-- bang theo doi suc khoe -->
+        <table class="hoivien__table-health-view">
+            <tr class="hoivien__table-view--title">
+                <th>ID</th>
+                <th>CHIỀU CAO</th>
+                <th>CÂN NẶNG</th>
+                <th>% MỠ</th>
+                <th>ID PT</th>
+                <th>NGÀY CẬP NHẬT</th>
+            </tr>
+            <?php
+        // Duyệt qua các phẩn từ trong bảng
+        while($row = mysqli_fetch_array($query))
+       {
+        ?>
+            <tr class="hoivien__table-view--data">
+                <td><?php echo $row["id_hv"]?></td>
+                <td><?php echo $row["chieu_cao"]?></td>
+                <td><?php echo $row["can_nang"]?></td>
+                <td><?php echo $row["phan_tram_mo"]?></td>
+                <td><?php echo $row["id_pt"]?></td>
+                <td><?php echo $row["ngay_cap_nhap"]?></td>
+                <?php
+       }
+        ?>
+        </table>
+        <form class="hoivien__pagination" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+            <center>
+                <?php echo $listPages; ?>
+            </center>
+        </form>
         <!-- tạo giao diện nút thêm, sửa, xóa -->
-        <div class="hoivien__AFD">
-            <button class='hoivien__AFD-btn js-add' type="button" onclick="">Thêm</button>
-            <button class='hoivien__AFD-btn js-fix' type="button" onclick="">Cập nhập</button>
-            <button class='hoivien__AFD-btn js-del hoivien__AFD-btn-del' type="button" onclick="">Xóa</button>
+        <div class="hoivien__AUD">
+            <button class='hoivien__AUD-btn js-add' type="button" onclick="">Thêm</button>
+            <button class='hoivien__AUD-btn js-ud' type="button" onclick="">Cập nhập</button>
+            <button class='hoivien__AUD-btn js-del hoivien__AUD-btn-del' type="button" onclick="">Xóa</button>
         </div>
     </div>
 </div>
 <?php
 $mysqli -> close();
 ?>
+<script src="../controller/controller_hoi_vien/hoivien_change_table.js"></script>
