@@ -10,7 +10,9 @@
         <h2 class="hoivien__search-heading">Hội Viên</h2>
         <div class="hoivien__search-input">
             <i class="fa-sharp fa-solid fa-magnifying-glass hoivien__search-input--icon"></i>
-            <input type="text" placeholder="Tìm Kiếm">
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                <input class='hoivien__input-search' type="text" name="hoivien__input-search" placeholder="Tìm Kiếm">
+            </form>
         </div>
         <button class="hoivien__search-btn">
             Theo Dõi Sức Khỏe
@@ -48,8 +50,37 @@
        }
         ?>
         </table>
+<<<<<<< HEAD
         
         <!-- tạo chỉ mục trang -->
+=======
+        <!-- bang theo doi suc khoe -->
+        <table class="hoivien__table-health-view">
+            <tr class="hoivien__table-view--title">
+                <th>ID</th>
+                <th>CHIỀU CAO</th>
+                <th>CÂN NẶNG</th>
+                <th>% MỠ</th>
+                <th>ID PT</th>
+                <th>NGÀY CẬP NHẬT</th>
+            </tr>
+            <?php
+        // Duyệt qua các phẩn từ trong bảng
+        while($row = mysqli_fetch_array($query))
+       {
+        ?>
+            <tr class="hoivien__table-view--data">
+                <td><?php echo $row["id_hv"]?></td>
+                <td><?php echo $row["chieu_cao"]?></td>
+                <td><?php echo $row["can_nang"]?></td>
+                <td><?php echo $row["phan_tram_mo"]?></td>
+                <td><?php echo $row["id_pt"]?></td>
+                <td><?php echo $row["ngay_cap_nhap"]?></td>
+                <?php
+       }
+        ?>
+        </table>
+>>>>>>> 63444144885519dda788e5b2567ddf827a23e133
         <form class="hoivien__pagination" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
             <center>
                 <?php echo $listPages; ?>
@@ -66,3 +97,4 @@
 <?php
 $mysqli -> close();
 ?>
+<script src="../controller/controller_hoi_vien/hoivien_change_table.js"></script>

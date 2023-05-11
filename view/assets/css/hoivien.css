@@ -16,6 +16,16 @@
         transform: scale(1);
     }
 }
+@keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
 /* tim kiem hoi vien */
 .hoivien__search-view {
     width: calc(100% - 83%);
@@ -69,7 +79,9 @@
     cursor: pointer;
     border: 3px solid #2F528F;
 }
-
+.hoivien__search-btn.active {
+    background-color: #2F528F;
+ }
 .hoivien__search-btn:hover {
     background-color:  #2F528F;
 }
@@ -107,8 +119,9 @@ div tr.hoivien__table-view--title {
 .hoivien__table-view--data:nth-of-type(even) {
     background-color: #CFD5EA; 
 }
-.hoivien__table-view td:nth-of-type(1) {
-    width: 8%; 
+.hoivien__table-view th:nth-of-type(1) ,
+.hoivien__table-health-view th:nth-of-type(1) {
+    width: 80px; 
 }
 
 .hoivien__table-view td:nth-of-type(2) {
@@ -165,7 +178,7 @@ div tr.hoivien__table-view--title {
     background-color: lightblue;
     border-radius: 30px;
     border: 5px solid #2F528F;
-    animation: growth linear 0.2s;
+    animation: slide-in 1s forwards;
 }
 .hoivien__modal-popup-header {
     display: flex;
@@ -220,4 +233,9 @@ div tr.hoivien__table-view--title {
 }
 .hoivien_page {
     margin-right: 5px;
+}
+/* suc khoe hoi vien */
+.hoivien__table-health-view {
+    display: none;
+    width: 100%;
 }

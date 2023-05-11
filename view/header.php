@@ -20,14 +20,14 @@
                 <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
                 <li><a href=""><i class="fa-brands fa-square-instagram"></i></i></a></li>
                 <li><a class="hotline" href=""><i class="fa-solid fa-headset"></i> Hotline: 0123456789</a></li>
-                <li><a href=""><i class="fa-solid fa-circle-info"></i></a></li>
+                <li><a href="noticeANDprice.php"><i class="fa-solid fa-circle-info"></i></a></li>
                 <li><a href=""><i class="fa-solid fa-gear"></i></a></li>
                 <li><a href="khach_trang_chu.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
             </div>
         </div>
     
     <div class="menu">
-        <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
+        <li class="menu-li"><a class="menu-a" href="home.php"><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
         <li class="menu-li"><a class="menu-a" href="hoivien.php"><i class="fa-solid fa-person"></i> Hội viên</a></li>
         <li class="menu-li"><a class="menu-a" href="the.php"><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
         <li class="menu-li menu-li-nuoc"><a class="menu-a" href="nuoc.php"><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
