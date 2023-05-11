@@ -11,7 +11,7 @@ include_once "header.php";
 
 <!-- tạo giao diện sắp xếp -->
 <div>
-    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <input class="nuoc--sort" type="submit" value="Sort">
         <select class='nuoc__select' name='nuocTang'>
             <option class='nuoc__select--sap_xep' value=0>Giảm dần</option>

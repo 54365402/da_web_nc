@@ -73,6 +73,7 @@ li.ktc_header__li.ktc_header__li--dang_nhap {
     background-color: #00b63e;
     padding: 7px;
     border-radius: 14px;
+    cursor: pointer;
 }
 a.ktc_header__a.ktc_header__a--dang_nhap {
     color: white;
@@ -82,10 +83,10 @@ a.ktc_header__a.ktc_header__a--dang_ky {
     border: 1px solid #00b63e;
     padding: 7px;
     border-radius: 14px;
-}
-a.ktc_header__a.ktc_header__a--dang_ky {
+    cursor: pointer;
     color: #00b63e;
 }
+
 
 /* slider */
 img.ktc__div--slider__img {

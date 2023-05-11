@@ -18,8 +18,9 @@
             <li class="ktc_header__li"><a class="ktc_header__a" href="#ktc_nhan_vien">Nhân viên</a></li>
             <li class="ktc_header__li"><a class="ktc_header__a" href="#ktc_co_so_vat_chat">Cơ sở vật chất</a></li>
             <li class="ktc_header__li"><a class="ktc_header__a" href="#ktc_goi_tap">Gói tập</a></li>
-            <li class="ktc_header__li ktc_header__li--dang_ky"><a class="ktc_header__a ktc_header__a--dang_ky" href="#">Đăng ký</a></li>
-            <li class="ktc_header__li ktc_header__li--dang_nhap"><a class="ktc_header__a ktc_header__a--dang_nhap" href="#">Đăng nhập</a></li>
+            <li class="ktc_header__li"><a class="ktc_header__a" href="#footer">Liên hệ</a></li>
+            <li class="ktc_header__li ktc_header__li--dang_ky js--dang_ky"><a class="ktc_header__a ktc_header__a--dang_ky" href="dang_ky.php">Đăng ký</a></li>
+            <li class="ktc_header__li ktc_header__li--dang_nhap js--dang_nhap"><a class="ktc_header__a ktc_header__a--dang_nhap" href="dang_nhap.php">Đăng nhập</a></li>
             </div>
         </div>
 </header>
@@ -197,7 +198,7 @@
             </div>
         </div>
         <!-- footer -->
-        <div class="ktc__footer">
+        <div id="footer" class="ktc__footer">
             <div class="ktc__footer__div ktc__footer__div1">
                 <strong class="ktc__footer__strong ktc__footer__strong--">ĐỊA CHỈ</strong>
                 <div class="ktc_footer__div--ke_ngang">  </div>
@@ -228,6 +229,7 @@
         </div>
         <script src="../controller/controller_ktc/ktc_slider.js"></script>
         <script src="../controller/controller_ktc/ktc_goi_tap.js"></script>
+        <script src="../controller/controller_ktc/ktc_dang_nhap.js"></script>
 
     </body>
 </html>
