@@ -1,7 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
     include "hoivien_pages.php";
-    
 ?>
 <link rel="stylesheet" href="./assets/css/hoivien.css">
 
@@ -49,6 +48,8 @@
        }
         ?>
         </table>
+        
+        <!-- tạo chỉ mục trang -->
         <form class="hoivien__pagination" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
             <center>
                 <?php echo $listPages; ?>
