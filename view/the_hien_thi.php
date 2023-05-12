@@ -28,12 +28,14 @@
                 <th>Thành Tiền</th>
                 <th>Trạng Thái</th>
             </tr>
+            <tbody>
         <?php
             // định nghĩa biến $keyword
             $keyword = isset($_POST['cardsearch']) ? $_POST['cardsearch'] : "";
             
             // hiện thị tìm kiếm
-            $postb =  "WHERE card_id LIKE '%$keyword%' OR types_room LIKE '%$keyword%'";
+            $postb =  "WHERE card_id LIKE '%$keyword%' OR name_hv LIKE '%$keyword%'";
+            
             // Định nghĩa biến $p
             $p = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
@@ -44,7 +46,7 @@
             $start = ($p - 1) * $limit;
 
             // Câu truy vấn SQL
-            $sqlthe1 = "SELECT * FROM card  $postb ORDER BY card_id DESC LIMIT $start, $limit";
+            $sqlthe1 = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv $postb ORDER BY card_id DESC LIMIT $start, $limit";
 
             // Thực thi câu truy vấn
             $query = mysqli_query($mysqli,$sqlthe1);
@@ -55,7 +57,7 @@
         ?>
         <tr class="the_table_row-hienthi">
             <td><?php echo $row["card_id"]?></td>
-            <td><?php echo $row["types_room"]?></td>
+            <td><?php echo $row["name_hv"]?></td>
             <td><?php echo $row["total_money"]?></td>
             <td>
                 <?php 
@@ -67,12 +69,13 @@
             </td>
         <?php
        }
-        ?>        
+        ?>
+        </tbody>        
     </table>
 
     <?php
         // Tính toán và hiển thị phân trang
-        $sql_count = "SELECT COUNT(*) as count FROM card";
+        $sql_count = "SELECT COUNT(*) as count FROM card INNER JOIN tbl_hoi_vien ON card.id_hv = tbl_hoi_vien.id_hv $postb";    
         $result_count = mysqli_query($mysqli, $sql_count);
         $row_count = mysqli_fetch_array($result_count);
         $total = $row_count["count"];                    // Tổng số dữ liệu
@@ -84,7 +87,7 @@
                 if ($i == $p) {
                     echo " " . $i . " ";
                 } else {
-                    echo ' <a href="?page=' . $i . '">' . $i . '</a> ';
+                    echo ' <a href="?page=' . $i . '&cardsearch=' . $keyword . '">' . $i . '</a> ';
                 }
             }
         ?>

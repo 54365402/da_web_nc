@@ -14,15 +14,13 @@ include "the_hien_thi.php"
 </div>
 
 <!-- tạo giao diện sắp xếp -->
-<div>
-    
-<?php
-include "the_sap_xep.php"
-?>
+<div> 
     <select id='the_select'>
     <option class='the_select-sap_xep' value=0>Sắp xếp</option>
-    <option class='the_select-ss_ten' value=0>Tên</option>
-    <option class='the_select-ss_tien' value=0>Tiền</option>
+    <option class='the_select-ss_ten' value=0>Tên từ A->Z</option>
+    <option class='the_select-ss_ten' value=0>Tên từ Z->A</option>
+    <option class='the_select-ss_tien' value=0>Tiền tăng dần</option>
+    <option class='the_select-ss_tien' value=0>Tiền giảm dần</option>
     </select>
 </div>
 
@@ -32,4 +30,10 @@ include "the_sap_xep.php"
 </script>
 
 <script src = "../controller/controller_the/the_chuc_nang.js" >   
+</script>
+
+<script src = "../controller/controller_the/the_delete.js" >   
+</script>
+
+<script src = "../controller/controller_the/the_sap_xep.js" >   
 </script>
