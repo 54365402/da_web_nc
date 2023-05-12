@@ -95,7 +95,7 @@ Sign up using Facebook
 Sign up using Google+
 </a>
 </div>
-<a href="login.html" class="text-center">I already have a membership</a>
+<a href="dang_nhap.php" class="text-center">I already have a membership</a>
 </div>
 
 </div>
