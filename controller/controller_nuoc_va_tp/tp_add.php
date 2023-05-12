@@ -27,7 +27,7 @@
         }
     }
 
-    if($tp->get_name()==""||$tp->get_loai_tp()==""||$tp->get_gia_ban()==""||$tp->get_gia_nhap()==""||$tp->get_so_luong_nhap()==""||$tp->get_so_luong_ton()==""||$tp->get_nha_cung_cap()==""||$tp->get_ngay_nhap()==""||$tp->get_ngay_het_han()=="")
+    if($tp->get_name()=="" && $tp->get_loai_tp()=="" && $tp->get_gia_ban()=="" && $tp->get_gia_nhap()=="" && $tp->get_so_luong_nhap()=="" && $tp->get_so_luong_ton()=="" && $tp->get_nha_cung_cap()=="" && $tp->get_ngay_nhap()=="" && $tp->get_ngay_het_han()=="")
     {
         
     }

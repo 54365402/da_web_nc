@@ -20,7 +20,7 @@
     // kiểm tra
 
     
-    if($nuoc->get_name()==""||$nuoc->get_loai_tp()==""||$nuoc->get_gia_ban()==""||$nuoc->get_gia_nhap()==""||$nuoc->get_so_luong_nhap()==""||$nuoc->get_so_luong_ton()==""||$nuoc->get_nha_cung_cap()==""||$nuoc->get_ngay_nhap()==""||$nuoc->get_ngay_het_han()=="")
+    if($nuoc->get_name()=="" && $nuoc->get_loai_tp()=="" && $nuoc->get_gia_ban()=="" && $nuoc->get_gia_nhap()=="" && $nuoc->get_so_luong_nhap()=="" && $nuoc->get_so_luong_ton()=="" && $nuoc->get_nha_cung_cap()=="" && $nuoc->get_ngay_nhap()=="" && $nuoc->get_ngay_het_han()=="")
     {    
     }
     else{

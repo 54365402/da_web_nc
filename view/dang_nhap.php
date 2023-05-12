@@ -65,6 +65,15 @@ Remember Me
     if (isset( $_SESSION['error_login'])){
         echo "<span style='color:red;'>".$_SESSION['error_login']."</span>";
     }
+    if(isset($_SESSION["ktraThanhCong"])){
+        if($_SESSION["ktraThanhCong"]){
+            echo '<script type="text/javascript">
+            window.onload = function () { alert("Đổi mật khẩu thành công!"); }
+            </script>';
+        }
+    }
+    
+    
 ?>
 
 <div class="social-auth-links text-center mb-3">
@@ -78,7 +87,7 @@ Remember Me
 </div>
 
 <p class="mb-1">
-<a href="forgot-password.html">I forgot my password</a>
+<a href="quen_mk.php">I forgot my password</a>
 </p>
 <p class="mb-0">
 <a href="dang_ky.php" class="text-center">Register a new membership</a>
