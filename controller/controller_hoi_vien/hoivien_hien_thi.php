@@ -1,7 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
     include "hoivien_pages.php";
-    
 ?>
 <link rel="stylesheet" href="./assets/css/hoivien.css">
 
@@ -51,6 +50,10 @@
        }
         ?>
         </table>
+<<<<<<< HEAD
+        
+        <!-- tạo chỉ mục trang -->
+=======
         <!-- bang theo doi suc khoe -->
         <table class="hoivien__table-health-view">
             <tr class="hoivien__table-view--title">
@@ -77,6 +80,7 @@
        }
         ?>
         </table>
+>>>>>>> 63444144885519dda788e5b2567ddf827a23e133
         <form class="hoivien__pagination" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
             <center>
                 <?php echo $listPages; ?>
