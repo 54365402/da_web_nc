@@ -1,5 +1,11 @@
+
 <?php
 include_once "header.php";
+?>
+<?php 
+    // Start the session
+    if($_SESSION['login'])
+    {
 ?>
 <link rel="stylesheet" href="./assets/css/nuoc.css">
 
@@ -44,7 +50,12 @@ include_once "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
 </script>
 
 <script src="../controller/controller_nuoc_va_tp/nuoc_delete_update.js"></script>
-
+<?php 
+    }
+    else{
+        header("Location: dang_nhap.php");
+    }
+?>
 </body>
 
 </html>

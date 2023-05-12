@@ -21,7 +21,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
 <div class="login-logo">
-<a href="../../index2.html"><b>HUCE GYM ĐĂNG NHẬP</b></a>
+<a ><b>HUCE GYM ĐĂNG NHẬP</b></a>
 </div>
 
 <div class="card">
