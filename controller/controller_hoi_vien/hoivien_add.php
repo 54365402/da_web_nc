@@ -19,7 +19,7 @@
     // kiểm tra
     $check = true;
     while($row = mysqli_fetch_array($query)){
-        if($row["name_hv"]==$hoivien->get_name() || $row["sdt"]==$hoivien->get_sdt 
+        if($row["name_hv"]==$hoivien->get_name_hv() || $row["sdt"]==$hoivien->get_sdt 
         || $row["cmnd"]=$hoivien->get_cmnd || $row["bien_xe"]==$hoivien->get_bien)
         {
             $check = false;

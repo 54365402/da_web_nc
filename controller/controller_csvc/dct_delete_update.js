@@ -85,7 +85,6 @@
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(dctID+"&"+dctTen+"&"+dctSoLuong+"&"+dctNhaCungCap+"&"+dctNgayNhap+"&"+dctGiaNhap+"&"+dctBaoTri+"&"+dctBaoHanh+"&"+dctChiPhiBaoTri
           +"&"+dctGhiChu);
-          location.reload(true);
           }
           }
         }
