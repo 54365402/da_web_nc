@@ -20,7 +20,7 @@
         var cellID = cells[0].innerHTML;
     
         currentRow = this;
-        this.style.backgroundColor = "yellow";
+        this.style.backgroundColor = "#6996e3";
     
         // Tạo đối tượng XMLHttpRequest
         var xhttp = new XMLHttpRequest();
@@ -84,7 +84,6 @@
           xhttp.send(params+"&"+hoivien_ten+"&"+hoivien_ngay_sinh+"&"+hoivien_gioi_tinh+"&"+hoivien_tuoi
           +"&"+hoivien_sdt+"&"+hoivien_cmnd+"&"+hoivien_bien_xe
           +"&"+hoivien_diem_tich_luy);
-          location.reload(true)
           }
           }
         }

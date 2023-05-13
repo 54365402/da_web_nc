@@ -9,7 +9,7 @@
     $retype_password = $_POST["retype_password"];
     $_SESSION["retype_password"]="";
     $_SESSION["nhap_all"]="";
-    if($name!="" && $email!="" && $password!="" && $check_box=="agree")
+        if($name!=""|| $email!="" || $password!="" || $check_box=="agree")
     {
     if($password==$retype_password){
         $sql = "SELECT * FROM account";

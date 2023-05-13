@@ -81,7 +81,6 @@
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(tddID+"&"+tdd_so_tu+"&"+tdd_loai_tu+"&"+tdd_trang_thai+"&"+tdd_id_hv+"&"+tdd_time_start+"&"+tdd_time_end
           +"&"+tdd_ghi_chu);
-          location.reload(true);
           }
           }
         }
