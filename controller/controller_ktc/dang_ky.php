@@ -21,8 +21,8 @@
             {
                 $_SESSION["retype_password"]="Email đã tồn tại!";
                 $count -=1;
-                break;
                 header("Location: ../../view/dang_ky.php");
+                break;
             }
             if($count)
             {

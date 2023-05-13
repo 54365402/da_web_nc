@@ -88,7 +88,8 @@
           xhttp.send(params+"&"+tpTen+"&"+tpLoai+"&"+tpGiaBan+"&"+tpGiaNhap
           +"&"+tpSoLuongNhap+"&"+tpSoLuongTon+"&"+tpNhaCungCap
           +"&"+tpNgayNhap+"&"+tpNgayHetHan+"&"+tpTongTien);
-          location.reload(true)
+              // Refresh lại trang
+              location.reload(true)
           }
           }
         }

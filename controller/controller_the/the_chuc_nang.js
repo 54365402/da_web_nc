@@ -14,17 +14,11 @@ for (var i = 0; i < rows.length; i++) {
     // Kiểm tra xem một hàng khác đã được chọn trước đó hay chưa
     if (currentRow != null) {
     
-      // Nếu có, đặt lại màu nền của hàng đó
-      currentRow.style.backgroundColor = "";
     }
    
     // Lấy giá trị của các ô trong hàng được kích hoạt
     var cells = this.getElementsByTagName("td");
     var cellID = cells[0].innerHTML;
-
-    currentRow = this;
-    this.style.backgroundColor = "#f25612";
-
 
       // Đặt sự kiện click cho nút Chi tiết
   var btnChiTiet = $('.js-chitiet');

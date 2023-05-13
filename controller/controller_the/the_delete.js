@@ -1,4 +1,4 @@
-const $ = document.querySelector.bind(document);
+{const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 // Lấy tất cả các hàng trong bảng
@@ -51,8 +51,9 @@ for (var i = 0; i < rows.length; i++) {
         xhthe.open(method, url, true);
         xhthe.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhthe.send(card_id);
-        location.reload(true)
+        location.reload(false);
       }
     }
   }
+ }
 }
