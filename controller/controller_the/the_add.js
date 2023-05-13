@@ -15,7 +15,15 @@ function close() {
 theClose[0].addEventListener('click',close)
 
 function themPupUp(e) {
-    theModal.classList.remove('the_modal-popup-open')
+    // Thực hiện thêm ở đây
+    var isSuccess = true; // Thay đổi giá trị này dựa trên kết quả thêm
+    if (isSuccess) {
+        alert('Thêm thành công!');
+        theModal.classList.remove('the_modal-popup-open');
+    } else {
+        alert('Không thêm được!');
+    }
 }
 
 theThemPupUp[0].addEventListener('click',themPupUp)
+

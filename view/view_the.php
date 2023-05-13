@@ -4,22 +4,22 @@
     <div >
     <form action="../controller/controller_the/the_add.php" method="POST">
         <table class='the_table-addform'>
-            <tr>
+            <!-- <tr>
                 <td><label for="fname">Họ và Tên: </label></td>
                 <td><input class='the_table-add_input' type="text"  name="the_table-add_ho_va_ten" placeholder="Full name...."></td>
-            </tr>
+            </tr> -->
 
             <tr>
                 <td><label for="lname">ID hội viên: </label></td>
-                <td><input class='the_table-add_input' type="text"  name="the_table-add_id" placeholder="ID member...."></td>
+                <td><input class='the_table-add_input' type="text"  name="the_table-add_id_hv" placeholder="ID member...."></td>
             </tr>
 
-            tr>
+            <tr>
                 <td><label for="lname">Card ID: </label></td>
                 <td><input class='the_table-add_input' type="text"  name="the_table-add_card_id" placeholder="ID card...."></td>
             </tr>
 
-            tr>
+            <tr>
                 <td><label for="lname">Gói tập: </label></td>
                 <td><input class='the_table-add_input' type="text"  name="the_table-add_goi_tap" placeholder="Packages...."></td>
             </tr>
@@ -32,7 +32,7 @@
             <tr>
                 <td><label for="lname">Lớp: </label></td>
                 <td><input class='the_table-add_input' type="text"  name="the_table-add_lop" placeholder="Class...."></td>
-            </tr>
+            </tr> 
             
             <tr>
                 <td><label for="lname">Ngày bắt đầu:</label></td>

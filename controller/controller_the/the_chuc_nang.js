@@ -25,6 +25,7 @@ for (var i = 0; i < rows.length; i++) {
     currentRow = this;
     this.style.backgroundColor = "#f25612";
 
+
       // Đặt sự kiện click cho nút Chi tiết
   var btnChiTiet = $('.js-chitiet');
   btnChiTiet.onclick = function() {

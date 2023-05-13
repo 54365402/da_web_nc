@@ -64,10 +64,15 @@ html{
 
 .the_ten1 {
     margin-left: 10px;
-    /*border: none;*/
+    border: none;
     border-bottom: 1px solid #333;
-  
+    /*padding-left: 30px; 
+    background-image: url('icon_search.png');
+    background-position: 10px center; 
+    background-repeat: no-repeat; 
+    background-size: 16px 16px;  */
 }
+
 
 .the_ten-up {
     margin-left: 20px;
@@ -118,9 +123,7 @@ div tr.the_table-Tieu_de {
     background-color: #4472C4;
 
 }
-.the_modal_div-popup{
-    width: 100%;
-}
+
 table.the_table-hienthi {
     color: black;
     margin-top: 12px;
@@ -178,7 +181,7 @@ table.the_table-hienthi {
     position: fixed;
     font-size: 22px;
     margin-left: 20px;
-    top: 21%;
+    
 }
 table.the_table-addform {
     margin-top: 94px;
