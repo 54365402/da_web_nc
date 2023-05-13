@@ -19,6 +19,4 @@
     "', tong_tien=". $nuocTongTien.  " WHERE id_nuoc_va_tp=".$nuocID;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    header("Location: ../../view/hoivien.php");
-    exit();
 ?>
