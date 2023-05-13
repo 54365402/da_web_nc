@@ -1,10 +1,10 @@
 <?php
-include "header.php";
+include_once "header.php";
 ?>
 <link rel="stylesheet" href="./assets/css/the.css">
 
 <?php
-include "the_hien_thi.php"
+include_once "the_hien_thi.php"
 ?>
 <div class='the_div-chua_button'>
     <button class='the_div-button js-chitiet' type="button" onclick="">Chi Tiết</button> 
@@ -34,6 +34,5 @@ include "the_hien_thi.php"
 
 <script src = "../controller/controller_the/the_delete.js" >   
 </script>
-
 <script src = "../controller/controller_the/the_sap_xep.js" >   
 </script>

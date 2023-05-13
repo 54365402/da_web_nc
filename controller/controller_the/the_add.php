@@ -1,5 +1,5 @@
 <?php
-    include "../connection.php";
+    include_once "../connection.php";
 
     // lay CSDL
     require_once('../../model/modal_the.php');

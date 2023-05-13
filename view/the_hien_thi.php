@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include "../controller/connection.php";
+    include_once "../controller/connection.php";
 ?>
 
 <link rel="stylesheet" href="./assets/css/the.css">

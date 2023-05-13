@@ -21,8 +21,8 @@
             {
                 $_SESSION["retype_password"]="Email đã tồn tại!";
                 $count -=1;
-                break;
                 header("Location: ../../view/dang_ky.php");
+                break;
             }
             if($count)
             {
@@ -35,6 +35,7 @@
     }
     else {
         $_SESSION["retype_password"]="password and retype_password không giống nhau";
+        header("Location: ../../view/dang_ky.php");
     }
 }
 else{

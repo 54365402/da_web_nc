@@ -1,5 +1,5 @@
 <?php
-    include "../controller/connection.php";
+    include_once "../controller/connection.php";
 
     // Sử dụng INNER JOIN để kết nối bảng tbl_hoi_vien và bảng card
     $sql = "SELECT * FROM card INNER JOIN tbl_hoi_vien ON card.id_hv = tbl_hoi_vien.id_hv $postb ORDER BY card_id DESC LIMIT $start, $limit";
