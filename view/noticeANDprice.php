@@ -22,7 +22,7 @@
         <div class="tab-pane active">
 
             <div class="notice__border">
-                <div class="notice--table notice__text">
+                <div class="notice__table notice__text notice__table--scroll">
                     <h2>Thông báo! </h2>
                     <?php
                         include_once "../controller/controller_notice/NoticeDisplay.php"
@@ -32,7 +32,7 @@
 
                 <form method="POST" action="../controller/controller_notice/NoticeAdd.php">
 
-                    <div class="notice--table notice--table__insert notice__text">
+                    <div class="notice__table notice__table--insert notice__text">
                         <textarea name="content" id=""
                             style="width: 75vh; height: 99.5%; background-color: #d3cff1;"></textarea>
                     </div>

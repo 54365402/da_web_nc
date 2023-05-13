@@ -41,9 +41,10 @@
       border-radius: 10px; 
       display: flex;
       flex-wrap: wrap;
+      
   }
 
-  .notice--table
+  .notice__table
 {
     border: 0.1px solid black;
     background-color: #d3cff1;
@@ -52,18 +53,26 @@
     margin: 28px;
     float: left;
     display: block;
+    
 }
 
-.notice--table__insert
+.notice__table--scroll
+{
+    overflow: scroll;
+}
+
+
+.notice__table--insert
 {
   border: none;
 }
 
-notice--table__text
+notice__table--text
 {
   width: 99%; 
   height: 65.5%; 
   background-color: #d3cff1;
+  overflow: scroll;
 }
 
 .hoivien__AFD {
