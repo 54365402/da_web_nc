@@ -51,11 +51,7 @@ while($row = mysqli_fetch_array($query))
             <tr>
                 <th>Mật khẩu: <?php echo  $_SESSION['pass']?>  </th>
             </tr>
-            <?php
-          
 
-
-            ?>
         </table>
         <button class="card--btn">
             Sửa thông tin cá nhân

@@ -104,4 +104,24 @@ notice__table--text
     margin-left: 16px;
 }
 
+.price__table
+{
+  
+  border: 0.1px solid rgb(80, 76, 189);
+  width: 20%;
+  height: 80vh;
+  
+  float: left;
+  display: block;
+  
+}
+
+.price__text
+{
+    
+    font-size: 20px;
+    line-height: 2.2;
+    text-align: left;
+    text-indent: 10px;
+}
 
