@@ -1,8 +1,8 @@
 
 <!-- Kết nối CSDL -->
 <?php
-include_once "../controller/connection.php";
 include "dct_pages.php";
+
 ?>
 
 <!-- Hien thi bang -->

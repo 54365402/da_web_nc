@@ -44,6 +44,5 @@
             $listPages .= '<input class="dct--page" type="submit" value="'.$i.'" name="page">';
         }
     }
-    
 ?>
 
