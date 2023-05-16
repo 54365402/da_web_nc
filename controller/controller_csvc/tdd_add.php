@@ -15,7 +15,7 @@
     // kiểm tra
 
     
-    if($so_tu==""||$loai_tu==""||$trang_thai==""||$id_hv==""||$time_start==""||$time_end==""||$ghi_chu=="")
+    if($so_tu==""||$loai_tu==""||$trang_thai==""||$id_hv==""||$time_start==""||$time_end=="")
     {    
     }
     else{

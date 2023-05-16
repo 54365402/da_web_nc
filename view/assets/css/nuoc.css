@@ -187,3 +187,30 @@ li.nuoc__div {
 .nuoc__form--page{
     margin-top: 5px;
 }
+
+.nuoc__div--search--sort {
+    float: right;
+    display: flex;
+}
+
+.nuoc__form--search {
+    margin-top: 1.5%;
+    margin-right: 275px;
+}
+
+.nuoc__form__div--search {
+    border-bottom: 2px groove;
+}
+.nuoc__input--search {
+    height: 31px;
+    border: none;
+}
+input.nuoc__input--search {
+    width: 219px;
+}
+button.nuoc__input--search {
+    border: none;
+    background: white;
+    color: blue;
+    font-size: 17px;
+}

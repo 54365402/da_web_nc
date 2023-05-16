@@ -15,7 +15,13 @@ include_once "header.php";
 
 
 <!-- tạo giao diện sắp xếp -->
-<div>
+<div class="nuoc__div--search--sort">
+    <form class="nuoc__form--search" method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
+        <div class="nuoc__form__div--search">
+            <button class='nuoc__input--search' type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input class='nuoc__input--search' type="text" name="nuoc__input--search" placeholder="Search....">
+        </div>
+    </form>
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <input class="nuoc--sort" type="submit" value="Sort">
         <select class='nuoc__select' name='nuocTang'>

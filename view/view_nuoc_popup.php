@@ -35,12 +35,12 @@ Import Price...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Ngày nhập:</label></td>
-                <td><input class='nuoc__table--add_input' type="text"  name="nuoc__table--add_ngay_nhap" placeholder="
+                <td><input class='nuoc__table--add_input' type="date"  name="nuoc__table--add_ngay_nhap" placeholder="
 Date Added...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Ngày hết hạn:</label></td>
-                <td><input class='nuoc__table--add_input' type="text"  name="nuoc__table--add_ngay_het_han" placeholder="
+                <td><input class='nuoc__table--add_input' type="date"  name="nuoc__table--add_ngay_het_han" placeholder="
 Expiration date...."></td>
             </tr>
             <tr>

@@ -1,6 +1,13 @@
 <?php
 include_once "header.php";
 ?>
+
+<?php 
+    // Start the session
+    if($_SESSION['login'])
+    {
+?>
+
 <link rel="stylesheet" href="./assets/css/tu_dung_do.css">
 
 <!-- them--popup -->
@@ -52,6 +59,11 @@ include_once "header.php";
 <script src="../controller/controller_csvc/tdd_delete_update.js"></script>
 
 </body>
-
+<?php 
+    }
+    else{
+        header("Location: dang_nhap.php");
+    }
+?>
 </html>
 

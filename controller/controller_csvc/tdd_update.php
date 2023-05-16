@@ -16,4 +16,5 @@
     "', ghi_chu='".$tdd_ghi_chu."' WHERE id_wardrobe=".$tddID;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
+    header("Location: ../../view/tu_dung_do.php");
 ?>
