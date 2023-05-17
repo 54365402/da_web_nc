@@ -31,8 +31,7 @@ if (isset($_SESSION['chuc_vu']))
                         alt="LOGO"></li>
             </div>
             <div class="ktc_header__div">
-                <li class="ktc_header__li"><a class="ktc_header__a" href="#ktc_hoi_vien">Hội viên</a></li>
-                <li class="ktc_header__li"><a class="ktc_header__a" href="#ktc_nhan_vien">Nhân viên</a></li>
+                <li class="ktc_header__li"><a class="ktc_header__a" href="#ktc_hoi_vien">Hội viên</a></li>               
                 <li class="ktc_header__li"><a class="ktc_header__a" href="#ktc_co_so_vat_chat">Cơ sở vật chất</a></li>
                 <li class="ktc_header__li"><a class="ktc_header__a" href="#ktc_goi_tap">Gói tập</a></li>
                 <li class="ktc_header__li"><a class="ktc_header__a" href="#footer">Liên hệ</a></li>
