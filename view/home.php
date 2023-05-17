@@ -4,7 +4,22 @@ include_once "header.php";
 
 <?php
 
-    if($_SESSION['login'])
+include_once "../controller/connection.php";
+    
+    $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
+    $query = mysqli_query($mysqli,$sql);
+
+while($row = mysqli_fetch_array($query))
+{
+    $_SESSION['chuc_vu']=$row['chuc_vu'];
+    $_SESSION['name']=$row['name'];
+
+}
+?>
+
+<?php
+
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" )
     {
 
 ?>
@@ -22,34 +37,21 @@ include_once "header.php";
 </head>
 
 <body>
-<?php
 
-include_once "../controller/connection.php";
-    
-    $sql = "SELECT * FROM account";
-    $query = mysqli_query($mysqli,$sql);
-
-while($row = mysqli_fetch_array($query))
-{
-    $_SESSION['chuc_vu']=$row['chuc_vu'];
-    $_SESSION['name']=$row['name'];
-
-}
-?>
     <div class="card card--info">
     <img src="./assets/img/avatar.png" alt="">
         <table class="info--text">
             <tr class ="a">
-                <th>Chức vụ: <?php echo  $_SESSION['chuc_vu']?></th>
+                <th>Chức vụ: <input type="text" value="<?php echo  $_SESSION['chuc_vu']?>"> </th>
             </tr>
             <tr class ="a">
-                <th>Họ tên: <?php echo  $_SESSION['name']?> </th>
+                <th>Họ tên: <input type="text" value="<?php echo  $_SESSION['name']?>"> </th>
             </tr>
             <tr class ="a">
-                <th>Tài khoản: <?php echo  $_SESSION['user']?> </th>
+                <th>Tài khoản: <input type="text" value=" <?php echo  $_SESSION['user']?>"> </th>
             </tr>
             <tr class ="a">
-                <th>Mật khẩu: <?php echo  $_SESSION['pass']?>  </th>
+                <th>Mật khẩu: <input type="password" value=" <?php echo  $_SESSION['pass']?>">  </th>
             </tr>
 
         </table>
@@ -83,4 +85,4 @@ while($row = mysqli_fetch_array($query))
 
 </html>
 
-<script src="../controller/controller_notice/InfoUpdate.js"></script>
+<!-- <script src="../controller/controller_notice/InfoUpdate.js"></script> -->

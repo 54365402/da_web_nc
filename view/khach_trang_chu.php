@@ -1,6 +1,20 @@
+<?php 
+    // Start the session
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+// remove all session variables
+//session_unset();
+if (($_SESSION['chuc_vu']==null))
+{
+}
+else
+// destroy the session
+{session_destroy();}
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

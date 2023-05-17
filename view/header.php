@@ -5,6 +5,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +34,14 @@
                 </div>
             </div>
 
+
+
+            <?php
+                echo $_SESSION['chuc_vu'];
+                if ($_SESSION['chuc_vu'] == "Quản lý")
+                {
+            ?>
+
             <div class="menu">
                 <li class="menu-li"><a class="menu-a" href="home.php"><i class="fa-solid fa-house-user"></i> Trang
                         chủ</a></li>
@@ -49,4 +59,26 @@
                         kê</a></li>
 
             </div>
+                
+            <?php
+                }
+                    else if ( $_SESSION['login'] == true && $_SESSION['chuc_vu'] == "Hội viên")
+                    {
+                        ?>
+
+                        <div class="menu" style="justify-content: space-around;">
+                        
+                        <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
+                  
+                        <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
+                       
+        
+                    </div>
+                     
+                    <?php
+                    }
+                    
+                
+                ?>
+
         </div>

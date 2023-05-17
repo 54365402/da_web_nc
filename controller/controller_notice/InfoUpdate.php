@@ -7,7 +7,7 @@
     $HoTenTK = $_POST['HoTenTK'];
     $ChucVuTK = $_POST['ChucVuTK'];
     $sql = "UPDATE account SET username='".$TenTK."',password='".$PassTK."', name = '".$HoTenTK."',
-    chuc_vu='".$ChucVuTK."' WHERE id_hv=".$idTK;
+    chuc_vu='".$ChucVuTK."' WHERE id=".$idTK;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
 ?>
