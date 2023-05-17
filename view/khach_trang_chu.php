@@ -8,12 +8,11 @@
 <?php
 // remove all session variables
 //session_unset();
-if (($_SESSION['chuc_vu']==null))
+if (isset($_SESSION['chuc_vu']))
 {
+    session_destroy();
 }
-else
-// destroy the session
-{session_destroy();}
+
 ?>
 <head>
     <meta charset="UTF-8">
