@@ -12,7 +12,7 @@
     <li class="nuoc__div nuoc__div--ttpcn"><a href="../view/thuc_pham_chuc_nang.php">Thực phẩm chức năng</a></li>
 </div>
     <table class="nuoc__table--hienthi">
-        <tr class="nuoc__table_row--hienthi nuoc__table--Tieu_de">
+        <tr class="nuoc__table_row--hienthi nuoc__table--Tieu_de" style="background-color: #4472C8">
             <th>ID Nước</th>
             <th>TÊN</th>
             <th>LOẠI</th>

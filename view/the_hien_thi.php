@@ -91,6 +91,7 @@
                     echo ' <a href="?page=' . $i . '&cardsearch=' . $keyword . '">' . $i . '</a> ';
                 }
             }
+
         ?>
     </center>
 </div>
@@ -128,10 +129,10 @@ echo 5;}
             <div class = "the_box_types_room2" style="border: 2px solid blue;"> 
                 <input type="checkbox" id="vehicle4" name="vehicle4" value="Boxing">
                 <label for="vehicle4"> Boxing</label><br><br>
-                <input type="checkbox" id="vehicle5" name="vehicle5" value="Dancing">
-                <label for="vehicle5"> Dance</label><br><br>
-                <input type="checkbox" id="vehicle6" name="vehicle6" value="Swimming">
-                <label for="vehicle6"> Swimming</label><br>
+                <input type="checkbox" id="vehicle5" name="vehicle5" value="Swimming">
+                <label for="vehicle5"> Swimming</label><br><br>
+                <input type="checkbox" id="vehicle6" name="vehicle6" value="Khac">
+                <label for="vehicle6"> Khác</label><br>
             </div>
         </table>
     </div>
