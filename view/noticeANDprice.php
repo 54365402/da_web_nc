@@ -64,115 +64,115 @@
                     <tr>
                         <th><h1>Gym</h1></th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>1 lần: <?php echo $row['1_lan'] ?></th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>1 tháng: <?php echo $row['1_thang']  ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>3 tháng: <?php echo $row['3_thang'] ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>6 tháng: <?php echo $row['6_thang'] ?>  </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>1 năm: <?php echo $row['1_nam'] ?>  </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>2 năm: <?php echo $row['2_nam'] ?>  </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>5 năm: <?php echo $row['5_nam'] ?>  </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Huấn luyện viên riêng: <?php echo $row['gym_rieng'] ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th></th>
                     </tr>
                 </table>
 
                 <table class="price__table price__text">
-                <tr>
+                    <tr>
                         <th><h1>Yoga</h1></th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp basic: <?php echo $row['yoga_basic'] ?></th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp average: <?php echo $row['yoga_average'] ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp Advance: <?php echo $row['yoga_advance'] ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Kèm riêng: <?php echo $row['yoga_rieng'] ?>  </th>
                     </tr>
                 </table>
 
                 <table class="price__table price__text">
-                <tr>
+                    <tr>
                         <th><h1>Aerobic</h1></th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp basic: <?php echo $row['aerobic_basic'] ?></th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp average: <?php echo $row['aerobic_average'] ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp Advance: <?php echo $row['aerobic_advance'] ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Kèm riêng: <?php echo $row['aerobic_rieng'] ?>  </th>
                     </tr>
                 </table>
 
                 <table class="price__table price__text">
-                <tr>
+                    <tr>
                         <th><h1>Boxing</h1></th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp basic: <?php echo $row['boxing_basic'] ?></th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp average: <?php echo $row['boxing_average'] ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp Advance: <?php echo $row['boxing_advance'] ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Kèm riêng: <?php echo $row['boxing_rieng'] ?>  </th>
                     </tr>
                 </table>
 
                 <table class="price__table price__text">
-                <tr>
+                    <tr>
                         <th><h1>Swimming</h1></th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp basic: <?php echo $row['swimming_basic'] ?></th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp average: <?php echo $row['swimming_average'] ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Lớp Advance: <?php echo $row['swimming_advance'] ?> </th>
                     </tr>
-                    <tr>
+                    <tr class="p">
                         <th>Kèm riêng: <?php echo $row['swimming_rieng'] ?>  </th>
                     </tr>
                 </table>
                 <div class="hoivien__AFD">
-                        <button class='notice__btn' type="submit" onclick="">Sửa</button>
+                        <button class='notice__btn js-update' type="button" onclick="">Sửa</button>
                 </div>
             </div>
                 <?php
        }
         ?>
         </div>
-
+        
     </div>
 
     
@@ -180,6 +180,7 @@
 </body>
 
 </html>
+
 
 
 
@@ -197,3 +198,5 @@ tabButtons.forEach((button, index) => {
     });
 });
 </script>
+
+<script src="../controller/controller_notice/PriceUpdate.js"></script>
