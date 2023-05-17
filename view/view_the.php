@@ -18,7 +18,12 @@
                 <td><label for="lname">Card ID: </label></td>
                 <td><input class='the_table-add_input' type="text"  name="the_table-add_card_id" placeholder="ID card...."></td>
             </tr>
-
+            
+            <tr>
+                <td><label for="lname">ID nhân viên: </label></td>
+                <td><input class='the_table-add_input' type="text"  name="the_table-add_id_nv" placeholder="ID staff...."></td>
+            </tr>
+        
             <tr>
                 <td><label for="lname">Gói tập: </label></td>
                 <td><input class='the_table-add_input' type="text"  name="the_table-add_goi_tap" placeholder="Packages...."></td>

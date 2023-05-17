@@ -84,6 +84,7 @@
           xhttp.send(params+"&"+hoivien_ten+"&"+hoivien_ngay_sinh+"&"+hoivien_gioi_tinh+"&"+hoivien_tuoi
           +"&"+hoivien_sdt+"&"+hoivien_cmnd+"&"+hoivien_bien_xe
           +"&"+hoivien_diem_tich_luy);
+          location.reload(true);
           }
           }
         }
