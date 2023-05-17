@@ -19,4 +19,5 @@
     "', tong_tien=". $tpTongTien.  " WHERE id_nuoc_va_tp=".$tpID;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
+    header("Location: ../../view/thuc_pham_chuc_nang.php");
 ?>

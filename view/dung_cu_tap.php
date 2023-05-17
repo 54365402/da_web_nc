@@ -1,6 +1,13 @@
 <?php
 include_once "header.php";
 ?>
+
+<?php 
+    // Start the session
+    if($_SESSION['login'])
+    {
+?>
+
 <link rel="stylesheet" href="./assets/css/dung_cu_tap.css">
 
 <!-- them--popup -->
@@ -50,7 +57,12 @@ include_once "header.php";
 </script>
 
 <script src="../controller/controller_csvc/dct_delete_update.js"></script>
-
+<?php 
+    }
+    else{
+        header("Location: dang_nhap.php");
+    }
+?>
 </body>
 
 </html>

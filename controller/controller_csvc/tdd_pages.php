@@ -30,7 +30,15 @@
     $query = mysqli_query($mysqli,$sql);
     // Tổng số sản phẩm
     $sql1 = "SELECT * FROM wardrobe";
-    $totalRows = mysqli_num_rows(mysqli_query($mysqli,$sql1));
+    if($tdd_get_data=="")
+    {
+        $totalRows = mysqli_num_rows(mysqli_query($mysqli,$sql1));
+    }
+    else
+    {
+        $totalRows = mysqli_num_rows(mysqli_query($mysqli,$sql));
+    }
+    
     // Tính tổng số trang pages
     $totalPages = ceil($totalRows/$rowsPerPage);
     // Xây dựng thanh phân trang

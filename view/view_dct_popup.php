@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td><label for="lname">Ngày nhập:</label></td>
-                <td><input class='dct__table--add_input' type="text"  name="dct__table--add_ngay_nhap" placeholder="Date Added...."></td>
+                <td><input class='dct__table--add_input' type="date"  name="dct__table--add_ngay_nhap" placeholder="Date Added...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Giá nhập:</label></td>
@@ -26,11 +26,11 @@
             </tr>
             <tr>
                 <td><label for="lname">Bảo trì:</label></td>
-                <td><input class='dct__table--add_input' type="text"  name="dct__table--add_bao_tri" placeholder="Maintenance...."></td>
+                <td><input class='dct__table--add_input' type="date"  name="dct__table--add_bao_tri" placeholder="Maintenance...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Bảo hành:</label></td>
-                <td><input class='dct__table--add_input' type="text"  name="dct__table--add_bao_hanh" placeholder="Guarantee...."></td>
+                <td><input class='dct__table--add_input' type="date"  name="dct__table--add_bao_hanh" placeholder="Guarantee...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Chi phí bảo trì:</label></td>

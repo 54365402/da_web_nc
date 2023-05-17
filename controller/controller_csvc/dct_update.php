@@ -18,4 +18,5 @@
     "', chi_phi_bao_tri=".$dctChiPhiBaoTri.", ghi_chu='".$dctGhiChu."' WHERE id_may=".$dctID;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
+    header("Location: ../../view/dung_cu_tap.php");
 ?>

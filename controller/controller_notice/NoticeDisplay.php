@@ -8,7 +8,14 @@
          if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-              echo "- " . $row["notice"].  "<br>";
+?>
+
+
+                <tr> <?php echo "- " . $row["notice"].  "<br>";   ?></tr>
+
+                
+<?php
+
             }
           } else {
             echo "0 results";
@@ -19,4 +26,3 @@
 <?php
 $mysqli -> close();
 ?>
-

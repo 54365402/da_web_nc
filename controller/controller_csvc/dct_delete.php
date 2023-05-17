@@ -5,4 +5,5 @@
     $sql = "DELETE FROM tbl_dung_cu_tap WHERE id_may ='$dctID'";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
+    header("Location: ../../view/dung_cu_tap.php");
 ?>

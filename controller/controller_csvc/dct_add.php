@@ -18,7 +18,7 @@
     // kiểm tra
 
     
-    if($name==""||$so_luong==""||$nha_cung_cap==""||$ngay_nhap==""||$gia_nhap==""||$bao_tri==""||$bao_hanh==""||$chi_phi_bao_tri==""||$ghi_chu=="")
+    if($name==""||$so_luong==""||$nha_cung_cap==""||$ngay_nhap==""||$gia_nhap==""||$bao_tri==""||$bao_hanh==""||$chi_phi_bao_tri=="")
     {    
     }
     else{

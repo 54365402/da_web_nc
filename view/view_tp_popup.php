@@ -35,11 +35,11 @@
             </tr>
             <tr>
                 <td><label for="lname">Ngày nhập:</label></td>
-                <td><input class='tp__table--add_input' type="text"  name="tp__table--add_ngay_nhap"></td>
+                <td><input class='tp__table--add_input' type="date"  name="tp__table--add_ngay_nhap"></td>
             </tr>
             <tr>
                 <td><label for="lname">Ngày hết hạn:</label></td>
-                <td><input class='tp__table--add_input' type="text"  name="tp__table--add_ngay_het_han"></td>
+                <td><input class='tp__table--add_input' type="date"  name="tp__table--add_ngay_het_han"></td>
             </tr>
             <tr>
                 <td colspan='2'>

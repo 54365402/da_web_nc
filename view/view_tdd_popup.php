@@ -1,6 +1,6 @@
 <div class='tdd__modal--popup'>
     <div class='tdd__modal__div--popup'>
-        <i><b><u class='tdd__modal__div--u'>Thêm dụng cụ tập</u></b></i>
+        <i><b><u class='tdd__modal__div--u'>Thêm tủ đựng đồ</u></b></i>
     <div >
     <form action="../controller/controller_csvc/tdd_add.php" method="POST">
         <table class='tdd__table--addform'>
@@ -22,11 +22,11 @@
             </tr>
             <tr>
                 <td><label for="lname">Ngày bắt đầu:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_time_start" placeholder="Guarantee...."></td>
+                <td><input class='tdd__table--add_input' type="date"  name="tdd__table--add_time_start" placeholder="Guarantee...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Ngày kết thúc:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_time_end" placeholder="Maintenance Costs...."></td>
+                <td><input class='tdd__table--add_input' type="date"  name="tdd__table--add_time_end" placeholder="Maintenance Costs...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Ghi chú:</label></td>

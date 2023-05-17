@@ -1,11 +1,23 @@
 <?php
 include_once "header.php";
 ?>
+<?php 
+    // Start the session
+    if($_SESSION['login'])
+    {
+?>
+
 <link rel="stylesheet" href="./assets/css/thucPham.css">
 
 
 <!-- tạo giao diện sắp xếp -->
-<div>
+<div class="tp__div--search--sort">
+    <form class="tp__form--search" method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
+        <div class="tp__form__div--search">
+            <button class='tp__input--search' type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input class='tp__input--search' type="text" name="tp__input--search" placeholder="Search....">
+        </div>
+    </form>
     <form method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
     <input class="tp--sort" type="submit" value="Sort">
     <select class='tp__select' name='tpTang'>
@@ -45,5 +57,10 @@ include_once "../controller/controller_nuoc_va_tp/tp_hien_thi.php"
 <script src="../controller/controller_nuoc_va_tp/tp_delete_update.js"></script>
 <!-- <script src="../controller/controller_nuoc_va_tp/tp_sort.js"></script> -->
 </body>
-
+<?php 
+    }
+    else{
+        header("Location: dang_nhap.php");
+    }
+?>
 </html>

@@ -39,21 +39,21 @@ while($row = mysqli_fetch_array($query))
     <div class="card card--info">
     <img src="./assets/img/avatar.png" alt="">
         <table class="info--text">
-            <tr>
+            <tr class ="a">
                 <th>Chức vụ: <?php echo  $_SESSION['chuc_vu']?></th>
             </tr>
-            <tr>
+            <tr class ="a">
                 <th>Họ tên: <?php echo  $_SESSION['name']?> </th>
             </tr>
-            <tr>
+            <tr class ="a">
                 <th>Tài khoản: <?php echo  $_SESSION['user']?> </th>
             </tr>
-            <tr>
+            <tr class ="a">
                 <th>Mật khẩu: <?php echo  $_SESSION['pass']?>  </th>
             </tr>
 
         </table>
-        <button class="card--btn">
+        <button class="card--btn js-update" type="button" onclick="">
             Sửa thông tin cá nhân
         </button>
     </div>
@@ -82,3 +82,5 @@ while($row = mysqli_fetch_array($query))
 </body>
 
 </html>
+
+<script src="../controller/controller_notice/InfoUpdate.js"></script>
