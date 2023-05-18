@@ -49,7 +49,7 @@ while($row = mysqli_fetch_array($query))
 
 
             <?php
-                echo $_SESSION['chuc_vu'];
+               
                 if ($_SESSION['chuc_vu'] == "Quản lý")
                 {
             ?>
