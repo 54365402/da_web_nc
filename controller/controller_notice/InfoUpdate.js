@@ -52,6 +52,7 @@ for (var i = 0; i < rows.length; i++) {
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(params);
+          location.reload(true);
           }
           }
         }

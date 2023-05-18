@@ -22,6 +22,7 @@
             $tieu_de="username";
             break;
     }
+    $_SESSION['user']=$gia_tri;
     $sql = "UPDATE account SET ".$tieu_de."='".$gia_tri."' WHERE id='".$_SESSION['id']."'";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
