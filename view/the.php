@@ -1,7 +1,11 @@
 <?php
 include_once "header.php";
 ?>
-
+<?php 
+    // Start the session
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    {
+?>
 
 <link rel="stylesheet" href="./assets/css/the.css">
 
@@ -39,7 +43,9 @@ include_once "the_hien_thi.php"
 
 <script src = "../controller/controller_the/the_delete.js" ></script>
 
-
-<?php
-
+<?php 
+    }
+    else{
+        header("Location: dang_nhap.php");
+    }
 ?>

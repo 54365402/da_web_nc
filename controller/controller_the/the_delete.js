@@ -20,7 +20,7 @@ for (var i = 0; i < rows.length; i++) {
     var cellID = cells[0].innerHTML;
 
     currentRow = this;
-    this.style.backgroundColor = "yellow";
+    this.style.backgroundColor = "#549dd4";
 
     // Tạo đối tượng XMLHttpRequest
     var xhthe = new XMLHttpRequest();

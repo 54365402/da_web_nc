@@ -55,8 +55,7 @@ html{
 }
 
 .the_ten-hienthi {
-    display: flex;
-    
+    display: flex;   
 }
 
 .abc{
@@ -260,6 +259,10 @@ select.the_table-add_input {
 
 .the_div-button:active {
     background-color: #7ba0e0;
+}
+
+.the_div-button_xoa:active{
+    background-color: rgb(173, 8, 8);
 }
 
 .the_div-chua_button{
