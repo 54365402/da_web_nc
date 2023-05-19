@@ -1,5 +1,6 @@
 <?php
 include_once "header.php";
+
 ?>
 
 <?php
@@ -13,6 +14,8 @@ while($row = mysqli_fetch_array($query))
 {
     $_SESSION['chuc_vu']=$row['chuc_vu'];
     $_SESSION['name']=$row['name'];
+    $_SESSION['id'] = $row['id'];
+    
 
 }
 ?>
@@ -42,16 +45,16 @@ while($row = mysqli_fetch_array($query))
     <img src="./assets/img/avatar.png" alt="">
         <table class="info--text">
             <tr class ="a">
-                <th>Chức vụ: <input type="text" value="<?php echo  $_SESSION['chuc_vu']?>"> </th>
+                <th>Chức vụ: <?php echo  $_SESSION['chuc_vu']?> </th>
+            
+            <tr class ="a">
+                <th>Họ tên: <?php echo  $_SESSION['name']?> </th>
             </tr>
             <tr class ="a">
-                <th>Họ tên: <input type="text" value="<?php echo  $_SESSION['name']?>"> </th>
+                <th>Tài khoản:  <?php echo  $_SESSION['user']?> </th>
             </tr>
             <tr class ="a">
-                <th>Tài khoản: <input type="text" value=" <?php echo  $_SESSION['user']?>"> </th>
-            </tr>
-            <tr class ="a">
-                <th>Mật khẩu: <input type="password" value=" <?php echo  $_SESSION['pass']?>">  </th>
+                <th>Mật khẩu:  <?php echo  $_SESSION['pass']?>  </th>
             </tr>
 
         </table>
@@ -59,6 +62,7 @@ while($row = mysqli_fetch_array($query))
             Sửa thông tin cá nhân
         </button>
     </div>
+    <script src="../controller/controller_notice/InfoUpdate.js"></script>
     <div class=" card card--notice">
         <div >
         <h1> Thông báo </h1>
@@ -85,4 +89,3 @@ while($row = mysqli_fetch_array($query))
 
 </html>
 
-<!-- <script src="../controller/controller_notice/InfoUpdate.js"></script> -->
