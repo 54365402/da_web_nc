@@ -6,5 +6,4 @@
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
     header("Location: ../../view/hoivien.php");
-    exit();
 ?>

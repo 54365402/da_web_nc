@@ -8,6 +8,9 @@ class hoivien{
     private $cmnd;
     private $bien_xe;
     private $diem_tich_luy;
+    private $chieu_cao;
+    private $can_nang;
+    private $phan_tram_mo;
     
     public function set_name_hv($name_hv) {
         $this->name_hv = $name_hv;
@@ -71,6 +74,30 @@ class hoivien{
     
     public function get_diem_tich_luy() {
         return $this->diem_tich_luy;
+    }
+
+    public function set_chieu_cao($chieu_cao){
+        $this->chieu_cao = $chieu_cao;
+    }
+
+    public function get_chieu_cao() {
+        return $this->chieu_cao;
+    }
+
+    public function set_can_nang($can_nang){
+        $this->can_nang = $can_nang;
+    }
+
+    public function get_can_nang() {
+        return $this->can_nang;
+    }
+
+    public function set_phan_tram_mo($phan_tram_mo){
+        $this->phan_tram_mo = $phan_tram_mo;
+    }
+    
+    public function get_phan_tram_mo() {
+        return $this->phan_tram_mo;
     }
 }
 ?>

@@ -17,9 +17,9 @@
                     <td><label for="">Giới tính :</label></td>
                     <td>
                         <select class="hoivien__table-add-input-gioitinh" name="hoivien__table-add-gioi_tinh">
-                            <option value="Nữ">Nam</option>
-                            <option value="female">Nữ</option>
-                            <option value="other">Khác</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                            <option value="Khác">Khác</option>
                         </select>
                     </td>
                 </tr>
@@ -51,6 +51,24 @@
                     <td><label for="">Điểm tích lũy : </label></td>
                     <td><input type="text" class="hoivien__table-add-input" name="hoivien__table-add-diem"
                             placeholder="điểm">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Chiều cao : </label></td>
+                    <td><input type="text" class="hoivien__table-add-input" name="hoivien__table-add-chieu_cao"
+                            placeholder="chiều cao">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Cân nặng : </label></td>
+                    <td><input type="text" class="hoivien__table-add-input" name="hoivien__table-add-can_nang"
+                            placeholder="cân nặng">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Phần trăm mỡ : </label></td>
+                    <td><input type="text" class="hoivien__table-add-input" name="hoivien__table-add-pt_mo"
+                            placeholder="% mỡ">
                     </td>
                 </tr>
                 <tr>
