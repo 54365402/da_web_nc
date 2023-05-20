@@ -5,7 +5,6 @@
     $email = $_POST["email"];
     $password = $_POST["password"];
     $remeber = $_POST["remember"];
-   // $remeber = $_POST["remember"];
 
 
     $sql = "SELECT * FROM account WHERE username='$email' and password='$password'";
@@ -15,7 +14,6 @@
         $_SESSION['user'] = $email;
         $_SESSION['pass'] = $password;
         $_SESSION['error_login'] = "";
-       // $_SESSION['login'] = true;
     }
     else{
         $_SESSION['login'] = false;
