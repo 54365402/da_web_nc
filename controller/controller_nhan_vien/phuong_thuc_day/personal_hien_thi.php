@@ -58,7 +58,7 @@
                 <td  class="personal_table_td-hienthi-td"><?php echo $row["id_hv"]?></td>
                 <td  class="personal_table_td-hienthi-td"><?php echo $row["thoi_luong"]?></td>
                 <td  class="personal_table_td-hienthi-td"><?php echo $row["so_buoi"]?></td>
-                <td  class="personal_table_td-hienthi-td"><?php echo $row["name_nv"]?></td>
+                <td  class="personal_table_td-hienthi-td"><?php echo $row["name"]?></td>
                 <td  class="personal_table_td-hienthi-td"><?php echo $row["id_nv"]?></td>
                 <td  class="personal_table_td-hienthi-td"><?php echo $row["doanh_thu"]?></td>
             <?php

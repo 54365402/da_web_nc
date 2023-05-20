@@ -1,6 +1,6 @@
 <?php
     //ket noi
-    include_once "../connection.php";
+    include_once "../../connection.php";
     // lay CSDL
     $id_class = $_POST["class_table-add_id_class"];
     $id_nv = $_POST["class_table-add_id_nv"];
@@ -28,7 +28,7 @@
 
     //điều hướng trang đến class.php để refresh
     }
-    header("Location: ../../view/class.php");
+    header("Location: ../../../view/class.php");
     exit();
 ?>
 

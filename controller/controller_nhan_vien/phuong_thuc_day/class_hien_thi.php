@@ -1,6 +1,5 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
     include "class_pages.php";
     include_once "view_class_popup.php"
 ?>
@@ -60,7 +59,7 @@
                 <td  class="class_table_td-hienthi-td"><?php echo $row["thoi_luong"]?></td>
                 <td  class="class_table_td-hienthi-td"><?php echo $row["ngay_hoat_dong"]?></td>
                 <td  class="class_table_td-hienthi-td"><?php echo $row["so_luong_hv"]?></td>
-                <td  class="class_table_td-hienthi-td"><?php echo $row["name_nv"]?></td>
+                <td  class="class_table_td-hienthi-td"><?php echo $row["name"]?></td>
                 <td  class="class_table_td-hienthi-td"><?php echo $row["id_nv"]?></td>
                 <td  class="class_table_td-hienthi-td"><?php echo $row["doanh_thu"]?></td>
             <?php

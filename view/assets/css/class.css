@@ -126,7 +126,7 @@ table.class_table-hienthi {
 }
 
 .class_modal-popup-open{
-    display: flex;
+    display: block;
 }
 .class_modal_div-popup {
     width: 500px;
