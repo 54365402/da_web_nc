@@ -20,7 +20,7 @@ for (var i = 0; i < rows.length; i++) {
     var cellID = cells[0].innerHTML;
 
     currentRow = this;
-    this.style.backgroundColor = "yellow";
+    this.style.backgroundColor = "#549dd4";
 
     // Tạo đối tượng XMLHttpRequest
     var xhthe = new XMLHttpRequest();
@@ -51,8 +51,19 @@ for (var i = 0; i < rows.length; i++) {
         xhthe.open(method, url, true);
         xhthe.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhthe.send(card_id);
-        location.reload(false);
+        // location.reload(false);
       }
+     } 
+
+    var url = "../view/the_hien_thi.php";
+    var theChiTiet = $('.js-chi_tiet');
+    
+    theChiTiet.onclick = function(e){
+        xhthe.open(method, url, true);
+        xhthe.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhthe.send(card_id);
+        location.reload(true);
+      
     }
   }
  }

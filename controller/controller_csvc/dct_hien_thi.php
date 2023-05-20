@@ -14,7 +14,7 @@ include "dct_pages.php";
         
 </div>
     <table class="dct__table--hienthi">
-        <tr class="dct__table_row--hienthi dct__table--Tieu_de">
+        <tr class="dct__table_row--hienthi dct__table--Tieu_de" style="background-color: #4472C8">
             <th>ID Máy</th>
             <th>TÊN</th>
             <th>SỐ LƯỢNG</th>

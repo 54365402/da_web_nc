@@ -14,7 +14,7 @@ include "tdd_pages.php";
         
 </div>
     <table class="tdd__table--hienthi">
-        <tr class="tdd__table_row--hienthi tdd__table--Tieu_de">
+        <tr class="tdd__table_row--hienthi tdd__table--Tieu_de" style="background-color: #4472C8">
             <th>ID tủ</th>
             <th>Số tủ</th>
             <th>Loại tủ</th>

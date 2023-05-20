@@ -18,10 +18,10 @@ function themPupUp(e) {
     // Thực hiện thêm ở đây
     var isSuccess = true; // Thay đổi giá trị này dựa trên kết quả thêm
     if (isSuccess) {
-        alert('Thêm thành công!');
+        alert('Tạo thẻ thành công!');
         theModal.classList.remove('the_modal-popup-open');
     } else {
-        alert('Không thêm được!');
+        alert('Tạo thẻ thất bại!');
     }
 }
 
