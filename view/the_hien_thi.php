@@ -11,6 +11,7 @@
    <li><h2 class = "the_ten1 abc ">Thẻ tập</h2></li>
    <li><div class = "the_ten">     
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+            <i class="fa-sharp fa-solid fa-magnifying-glass the_search-input-icon"></i>
             <input class="the_ten1 the_ten-up" type="text" placeholder="Tìm kiếm..." name="cardsearch" height="50px">
             <input class="the_ten-search" type="submit" value="Tìm kiếm">
             </form>
@@ -22,25 +23,25 @@
     <div class="the_div-hienthi">
 
     <table class="the_table-hienthi">        
-            <tr class='the_table_row-hienthi the_table-Tieu_de'>
+            <tr class='the_table_row-hienthi the_table-Tieu_de' style="background-color: #4472C8">
                 <th>Card ID</th>
-                <th>Họ và Tên</th>
-                <th>Thành Tiền</th>
-                <th>Trạng Thái</th>
+                <th id="sort-ten">Họ và Tên</th>
+                <th id="sort-tien">Thành Tiền</th>
+                <th id="sort-status">Trạng Thái</th>
             </tr>
-            <tbody>
+            <tbody id="the_table_body">
         <?php
             // định nghĩa biến $keyword
             $keyword = isset($_POST['cardsearch']) ? $_POST['cardsearch'] : "";
             
             // hiện thị tìm kiếm
-            $postb =  "WHERE card_id LIKE '%$keyword%' OR name_hv LIKE '%$keyword%'";
+            $postb =  "WHERE card_id LIKE '%$keyword%' OR name_hv LIKE '%$keyword%' OR status LIKE '%$keyword%'";
             
             // Định nghĩa biến $p
             $p = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
             // Số lượng dữ liệu hiển thị trên mỗi trang
-            $limit = 14;
+            $limit = 12;
 
             // Tính toán vị trí bắt đầu của dữ liệu trên trang hiện tại
             $start = ($p - 1) * $limit;
@@ -56,10 +57,10 @@
         {
         ?>
         <tr class="the_table_row-hienthi">
-            <td><?php echo $row["card_id"]?></td>
-            <td><?php echo $row["name_hv"]?></td>
-            <td><?php echo $row["total_money"]?></td>
-            <td>
+            <td class ="the_td_hien_thi"><?php echo $row["card_id"]?></td>
+            <td class ="the_td_hien_thi"><?php echo $row["name_hv"]?></td>
+            <td class ="the_td_hien_thi"><?php echo $row["total_money"]?></td>
+            <td class ="the_td_hien_thi">
                 <?php 
                     if ($row["status"] == 1) {
                         echo "Đang hoạt động";  }
@@ -90,20 +91,28 @@
                     echo ' <a href="?page=' . $i . '&cardsearch=' . $keyword . '">' . $i . '</a> ';
                 }
             }
+
         ?>
     </center>
 </div>
 
+<!-- <?php  if(isset($_SESSION['card_id'])){
+    echo $_SESSION['id'];
+}
+else{
+echo 5;}
+    ?> -->
 
 
 <div class = "the_div-hienthi1"> 
 
     <table class="the_table-hienthi1" style="border: 3px solid blue; white-space: nowrap;">        
-          <tr><th colspan = "2" ;>Thông tin chi tiết thẻ</th></tr>
+          <tr><th colspan = "2" style="font-size: 18px;" ;>Thông tin chi tiết thẻ</th></tr>
           <tr><tr>
-          <tr><td style="padding-right: 30px;">Họ và Tên: </td><td class = the_gachchan><input type="text_theten" name="input_theten" style="border: none; outline:none "></td></tr>
-          <tr><td>ID hội viên: </td><td class = the_gachchan><input type="text_theidhv" name="input_theid" style="border: none; outline:none "></td></tr>  
-          
+          <tr><td style="padding-right: 30px;">Họ và Tên: </td><td class = the_gachchan><input type="text_the_name_hv" name="input_theten" style="border: none; outline:none; "></td></tr>
+          <tr><td>ID hội viên: </td><td class = the_gachchan><input type="text_the_id_hv" name="input_the_id" style="border: none; outline:none; "></td></tr>  
+          <tr><td>Card ID: </td><td class = the_gachchan><input type="text_card_id" name="input_the_card_id" style="border: none; outline:none;"></td></tr>
+          <tr><td>ID nhân viên: </td><td class = the_gachchan><input type="text_id_nv" name="input_the_id_nv" style="border: none; outline:none;"></td></tr>
     </table>
 
     <div class = "the_table-hienthi2" >
@@ -120,10 +129,10 @@
             <div class = "the_box_types_room2" style="border: 2px solid blue;"> 
                 <input type="checkbox" id="vehicle4" name="vehicle4" value="Boxing">
                 <label for="vehicle4"> Boxing</label><br><br>
-                <input type="checkbox" id="vehicle5" name="vehicle5" value="Dancing">
-                <label for="vehicle5"> Dance</label><br><br>
-                <input type="checkbox" id="vehicle6" name="vehicle6" value="Swimming">
-                <label for="vehicle6"> Swimming</label><br>
+                <input type="checkbox" id="vehicle5" name="vehicle5" value="Swimming">
+                <label for="vehicle5"> Swimming</label><br><br>
+                <input type="checkbox" id="vehicle6" name="vehicle6" value="Khac">
+                <label for="vehicle6"> Khác</label><br>
             </div>
         </table>
     </div>
@@ -131,20 +140,18 @@
     <div class="the_table-hienthi3" style="border: 3px solid blue;"> 
 
         <table style="white-space: nowrap;">
-            <tr><td colspan = "1" ><label>Gói tập: </label></td>
+            <tr><td ><label>Gói tập: </label></td>
                 <td class = the_gachchan><input type="text_the1" name="input1" style="border: none; outline:none;"></td></tr>
             <tr><td><label>Số lượng: </label></td>
                 <td class = the_gachchan><input type="text_the1" name="input2" style="border: none; outline: none;"></td></tr>
-            <tr><td><label>Lớp: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input3" style="border: none; outline: none;"></td></tr>
             <tr><td><label>Ngày bắt đầu: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input4" style="border: none; outline: none;"></td></tr>
+                <td class = the_gachchan><input type="text_the1" name="input3" style="border: none; outline: none;"></td></tr>
             <tr><td><label>Ngày kết thúc: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input5" style="border: none; outline: none;"></td></tr>
+                <td class = the_gachchan><input type="text_the1" name="input4" style="border: none; outline: none;"></td></tr>
             <tr><td><label>Thành tiền: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input6" style="border: none; outline: none;"></td></tr>
+                <td class = the_gachchan><input type="text_the1" name="input5" style="border: none; outline: none;"></td></tr>
             <tr><td style="padding-right: 30px;"><label>Lần cuối hoạt động: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input7" style="border: none; outline: none;"></td></tr>
+                <td class = the_gachchan><input type="text_the1" name="input6" style="border: none; outline: none;"></td></tr>
                 
         </table></div>
 </div>  

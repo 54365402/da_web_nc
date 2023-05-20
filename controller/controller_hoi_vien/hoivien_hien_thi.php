@@ -54,24 +54,22 @@
         <table class="hoivien__table-health-view">
             <tr class="hoivien__table-view--title">
                 <th>ID</th>
+                <th>HỌ VÀ TÊN</th>
                 <th>CHIỀU CAO</th>
                 <th>CÂN NẶNG</th>
                 <th>% MỠ</th>
-                <th>ID PT</th>
-                <th>NGÀY CẬP NHẬT</th>
             </tr>
             <?php
         // Duyệt qua các phẩn từ trong bảng
-        while($row = mysqli_fetch_array($query))
+        while($row = mysqli_fetch_array($query1))
        {
         ?>
             <tr class="hoivien__table-view--data">
                 <td><?php echo $row["id_hv"]?></td>
+                <td><?php echo $row["name_hv"]?></td>
                 <td><?php echo $row["chieu_cao"]?></td>
                 <td><?php echo $row["can_nang"]?></td>
                 <td><?php echo $row["phan_tram_mo"]?></td>
-                <td><?php echo $row["id_pt"]?></td>
-                <td><?php echo $row["ngay_cap_nhap"]?></td>
                 <?php
        }
         ?>

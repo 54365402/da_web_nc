@@ -132,6 +132,7 @@
                 <?php 
     if (isset( $_SESSION['error_login'])){
         echo "<span style='color:red;'>".$_SESSION['error_login']."</span>";
+        session_destroy();
     }
     if(isset($_SESSION["ktraThanhCong"])){
         if($_SESSION["ktraThanhCong"]){
@@ -139,6 +140,7 @@
             window.onload = function () { alert("Đổi mật khẩu thành công!"); }
             </script>';
         }
+        session_destroy();
     }
     
     

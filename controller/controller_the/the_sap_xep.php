@@ -1,50 +1,38 @@
 <?php
+    include_once "the_hien_thi.php";
+
+    // Kết nối CSDL
     include_once "../controller/connection.php";
 
-    // Sử dụng INNER JOIN để kết nối bảng tbl_hoi_vien và bảng card
-    $sql = "SELECT * FROM card INNER JOIN tbl_hoi_vien ON card.id_hv = tbl_hoi_vien.id_hv $postb ORDER BY card_id DESC LIMIT $start, $limit";
-    
-    $query = mysqli_query($mysqli,$sql);
-    
-    // Kiểm tra kết nối
-    if ($mysqli->connect_errno) {
-        echo "Failed to connect to MySQL: " . $mysqli->connect_error;
-        exit();
+    // Lấy giá trị sắp xếp từ yêu cầu AJAX
+    $sort = $_GET['sort'];
+
+    // Câu truy vấn SQL dựa trên giá trị sắp xếp
+    if ($sort == 'the_select-sap_xep_az') {
+        $sql = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv ORDER BY name_hv ASC";
+    } elseif ($sort == 'the_select-sap_xep_za') {
+        $sql = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv ORDER BY name_hv DESC";
+    } elseif ($sort == 'the_select-ss_tien_tang') {
+        $sql = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv ORDER BY total_money ASC";
+    } elseif ($sort == 'the_select-ss_tien_giam') {
+        $sql = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv ORDER BY total_money DESC";
+    } else {
+        $sql = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv";
     }
-
-    // Định nghĩa biến $keyword
-    $keyword = isset($_POST['cardsearch']) ? $_POST['cardsearch'] : "";
-
-    // Hiển thị tìm kiếm
-    $postb = "WHERE card.card_id LIKE '%$keyword%' OR tbl_hoi_vien.name_hv LIKE '%$keyword%'";
-
-    // Định nghĩa biến $p
-    $p = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-
-    // Số lượng dữ liệu hiển thị trên mỗi trang
-    $limit = 14;
-
-    // Tính toán vị trí bắt đầu của dữ liệu trên trang hiện tại
-    $start = ($p - 1) * $limit;
-
-    // Câu truy vấn SQL
-    $sql = "SELECT card.card_id, tbl_hoi_vien.name_hv, card.total_money, card.status FROM card INNER JOIN tbl_hoi_vien ON card.id_hv = tbl_hoi_vien.id_hv $postb ORDER BY card.card_id DESC LIMIT $start, $limit";
 
     // Thực thi câu truy vấn
-    $query = $mysqli->query($sql);
+    $query = mysqli_query($mysqli, $sql);
 
-    // Duyệt qua các phần tử trong bảng
-    while ($row = $query->fetch_assoc()) {
-        // hiển thị dữ liệu
+    // Tạo các dòng và cột trong bảng
+    $output = '';
+    while ($row = mysqli_fetch_array($query)) {
+        $output .= '<tr class="the_table_row-hienthi">';
+        $output .= '<td class="the_td_hien_thi">' . $row["card_id"] . '</td>';
+        $output .= '<td class="the_td_hien_thi">' . $row["name_hv"] . '</td>';
+        $output .= '<td class="the_td_hien_thi">' . $row["total_money"] . '</td>';
+        $output .= '<td class="the_td_hien_thi">' . ($row["status"] == 1 ? 'Đang hoạt động' : 'Không hoạt động') . '</td>';
+        $output .= '</tr>';
     }
-
-    // Tính toán và hiển thị phân trang
-    $sql_count = "SELECT COUNT(*) as count FROM card INNER JOIN tbl_hoi_vien ON card.id_hv = tbl_hoi_vien.id_hv $postb";
-    $result_count = $mysqli->query($sql_count);
-    $row_count = $result_count->fetch_assoc();
-    $total = $row_count["count"];  // Tổng số dữ liệu
-    $page_count = ceil($total / $limit);  // Tổng số trang
-
-    // Đóng kết nối CSDL
-    $mysqli->close();
+    // Trả về kết quả dưới dạng HTML
+    echo $output;
 ?>

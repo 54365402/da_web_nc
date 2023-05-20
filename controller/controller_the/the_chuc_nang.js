@@ -35,7 +35,7 @@ for (var i = 0; i < rows.length; i++) {
         $('#the_div-chi_tiet').innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "bang_chi_tiet.php?cellID=" + cellID, true);
+    xhttp.open("GET", "the_chi_tiet.php?cellID=" + cellID, true);
     xhttp.send();
   }
 }}}
