@@ -1,7 +1,7 @@
 <!-- Kết nối CSDL -->
 <?php
     include "class_pages.php";
-    include_once "view_class_popup.php"
+
 ?>
 
 <!-- Hien thi bang -->
@@ -15,7 +15,7 @@
             </div>
             <!-- tạo giao diện nút thêm, sửa, xóa -->
             <div class='class_div-chua_button'>
-                <button class='class_div-button js-them' type="button" onclick="">Thêm</button>
+                <button class='class_div-button js-them ' type="button" onclick="">Thêm</button>
                 <button class='class_div-button js-sua' type="button" onclick="">Sửa</button>
                 <button class='class_div-button js-xoa class_div-button_xoa' type="button" onclick="">Xóa</button>    
             </div>  

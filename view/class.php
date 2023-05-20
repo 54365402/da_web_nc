@@ -12,8 +12,8 @@ include_once "header.php";
 
 <!-- them--popup -->
 
-<!-- <?php include_once "view_class_popup.php"
-?> -->
+ <!-- <?php include_once "view_class_popup.php"
+?>  -->
 
 
 <!-- Hiển thị -->

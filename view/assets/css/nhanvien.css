@@ -2,7 +2,7 @@
     clear: both;
 }
 
-.main-hoivien {
+.main-nhanvien {
     display: flex;
     padding: 30px 50px 0 50px;
     height: 560px;
@@ -27,15 +27,15 @@
     }
 }
 /* tim kiem hoi vien */
-.hoivien__search-view {
+.nhanvien__search-view {
     width: calc(100% - 83%);
-    height: 450px;
+    height: 67.1vh;
     border: 4px solid #2F528F;
-    border-radius: 40px;
+    border-radius: 20px;
     float: left;
 }
 
-.hoivien__search-heading {
+.nhanvien__search-heading {
     display: flex;
     justify-content: center;
     font-size: 30px;
@@ -43,18 +43,18 @@
     height: 50px;
 }
 
-.hoivien__search-input--icon {
+.nhanvien__search-input--icon {
     display: flex;
     font-size: 24px;
     padding: 0 8px;
     align-items: center;
 }
 
-.hoivien__search-input {
+.nhanvien__search-input {
     display: flex;
 }
 
-.hoivien__search-input input[type="text"] {
+.nhanvien__search-input input[type="text"] {
     height: 40px;
     width: 167px;
     padding: 5px 10px;
@@ -64,11 +64,11 @@
     outline: none;
 }
 
-.hoivien__search-input input[type="text"]::placeholder {
+.nhanvien__search-input input[type="text"]::placeholder {
     color: #999;
 }
 
-.hoivien__search-btn {
+.nhanvien__search-btn {
     background-color: #dff0f5;
     color: black;
     font-size: 19px;
@@ -79,14 +79,14 @@
     cursor: pointer;
     border: 3px solid #2F528F;
 }
-.hoivien__search-btn.active {
+.nhanvien__search-btn.active {
     background-color: #2F528F;
  }
-.hoivien__search-btn:hover {
+.nhanvien__search-btn:hover {
     background-color:  #2F528F;
 }
 /* bang hoi vien */
-.hoivien__table {
+.nhanvien__table {
     position: relative;
     float: right;
     width: calc(100% - 20%);
@@ -96,48 +96,48 @@
     border-width: 5px;
     margin-left: 30px;
 }
-.hoivien__table-view {
+.nhanvien__table-view {
     width: 100%
 }
 
-.hoivien__table-view--title {
+.nhanvien__table-view--title {
     height: 40px;
 }
 
-div tr.hoivien__table-view--title {
+div tr.nhanvien__table-view--title {
     background-color: #4472C4;
     font-size: 18px;
 }
 
-.hoivien__table-view--data {
+.nhanvien__table-view--data {
     height: 40px;
 }
-.hoivien__table-view--data:nth-of-type(odd) {
+.nhanvien__table-view--data:nth-of-type(odd) {
     background-color: #E9EBF5; 
 }
 
-.hoivien__table-view--data:nth-of-type(even) {
+.nhanvien__table-view--data:nth-of-type(even) {
     background-color: #CFD5EA; 
 }
-.hoivien__table-view th:nth-of-type(1) ,
-.hoivien__table-health-view th:nth-of-type(1) {
+.nhanvien__table-view th:nth-of-type(1) ,
+.nhanvien__table-health-view th:nth-of-type(1) {
     width: 80px; 
 }
 
-.hoivien__table-view td:nth-of-type(2) {
+.nhanvien__table-view td:nth-of-type(2) {
     width: 14%; 
 }
 
-.hoivien__table-view td:nth-of-type(7) {
+.nhanvien__table-view td:nth-of-type(7) {
     width: 15%; 
 }
 /* btn them sua xoa */
-.hoivien__AUD {
+.nhanvien__AUD {
     position: absolute;
     bottom: 0;
     right: 0;
 }
-.hoivien__AUD-btn{ 
+.nhanvien__AUD-btn{ 
     padding: 10px;
     border: 1px solid #2F528F;
     border-width: 5px;
@@ -147,17 +147,17 @@ div tr.hoivien__table-view--title {
     font-size: 21px;
     font-weight: 600;
 }
-.hoivien__AUD-btn:hover ,
-.hoivien__table-add-btn:hover {
+.nhanvien__AUD-btn:hover ,
+.nhanvien__table-add-btn:hover {
     cursor: pointer;
     opacity: 0.8;
 }
-.hoivien__AUD-btn-del {
+.nhanvien__AUD-btn-del {
     margin-right: 30px;
     background-color: red;
 }
 /* popup hoi vien */
-.hoivien__modal-popup {
+.nhanvien__modal-popup {
     position: fixed;
     top: 0;
     right: 0;
@@ -168,29 +168,29 @@ div tr.hoivien__table-view--title {
     justify-content: center;
     align-items: center;
 }
-.hoivien__modal-popup-open {
+.nhanvien__modal-popup-open {
     display: flex;
 }
-.hoivien__modal-popup-overlay {
+.nhanvien__modal-popup-overlay {
     position: relative;
     width: 500px;
-    height: 490px;
+    height: 400px;
     background-color: lightblue;
     border-radius: 30px;
     border: 5px solid #2F528F;
     animation: slide-in 1s forwards;
 }
-.hoivien__modal-popup-header {
+.nhanvien__modal-popup-header {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
     height: 50px;
 }
-.hoivien_addform {
+.nhanvien_addform {
     margin: auto;
 }
-.hoivien__table-add-input {
+.nhanvien__table-add-input {
     height: 30px;
     width: 200px;
     padding: 5px 10px;
@@ -200,24 +200,24 @@ div tr.hoivien__table-view--title {
     border-radius: 6px;
 }
 
-.hoivien__table-add-input::placeholder {
+.nhanvien__table-add-input::placeholder {
     color: #b3aeae;
 }
-.hoivien_addform label {
+.nhanvien_addform label {
     font-size: 20px;
 }
-.hoivien__table-add-input:focus,
-.hoivien__table-add-input-gioitinh {
+.nhanvien__table-add-input:focus,
+.nhanvien__table-add-input-gioitinh {
     border: 3px solid #2F528F;
 }
-.hoivien__table-add-input-gioitinh {
+.nhanvien__table-add-input-gioitinh {
     width: 37%;
     padding: 6px 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
 }
 /* css của button thêm sửa xóa */
-.hoivien__table-add-btn {
+.nhanvien__table-add-btn {
     float: right;
     padding: 5px;
     margin-top: 15px;
@@ -227,15 +227,15 @@ div tr.hoivien__table-view--title {
     font-size: 16px;
     font-weight: 600;
 }
-.hoivien__table-btn-huy {
+.nhanvien__table-btn-huy {
     margin-left: 10px;
     background-color: red;
 }
-.hoivien_page {
+.nhanvien_page {
     margin-right: 5px;
 }
 /* suc khoe hoi vien */
-.hoivien__table-health-view {
+.nhanvien__table-health-view {
     display: none;
     width: 100%;
 }

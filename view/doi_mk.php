@@ -130,9 +130,11 @@
                 <?php
     if (isset( $_SESSION["ssOTP"])){
         echo "<span style='color:red;'>".$_SESSION["ssOTP"]."</span>";
+        session_destroy();
     }
     if (isset( $_SESSION["ssPass"])){
         echo "<span style='color:red;'>".$_SESSION["ssPass"]."</span>";
+        session_destroy();
 }
 ?>
                 <p class="mt-3 mb-1">

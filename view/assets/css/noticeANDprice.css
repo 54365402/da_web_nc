@@ -1,6 +1,13 @@
 .tab-bar {
     display: flex;
+    position: relative;
   }
+
+  .tab-bar a {
+    position: absolute;
+    top: -20;
+    right: 0;
+}
   
   .tab-button {
     width: 16%;
@@ -41,7 +48,6 @@
       border-radius: 10px; 
       display: flex;
       flex-wrap: wrap;
-      
   }
 
   .notice__table
@@ -78,7 +84,7 @@ notice__table--text
 .hoivien__AFD {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 20px;
 }
 .notice__btn{ 
   padding: 10px;
@@ -90,9 +96,15 @@ notice__table--text
   font-size: 21px;
   font-weight: 600;
 }
+
+btn__fix
+{
+  margin-right: 16px;
+}
+
 .notice__btn:hover {
   cursor: pointer;
-  opacity: 0.8;
+  
 }
 .notice__btn-del {
   margin-right: 40px;
@@ -125,3 +137,11 @@ notice__table--text
     text-indent: 10px;
 }
 
+input[type=text]
+{
+  font-family: serif;
+  border: none;
+  font-size: 20px;
+  width: 36%;
+  color: red;
+}

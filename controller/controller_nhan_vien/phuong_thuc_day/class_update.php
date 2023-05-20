@@ -13,7 +13,7 @@
 
     $sql = "UPDATE tbl_class SET ten_lop ='".$ten_lop."',packages =".$packages.",
     thoi_luong ='".$thoi_luong."', ngay_hoat_dong =".$ngay_hoat_dong.",
-    so_luong_hv ='".$so_luong_hv."', name ='".$classTeacher."',
+    so_luong_hv ='".$so_luong_hv."', name ='".$name."',
     id_nv =".$id_nv.", doanh_thu ='".$doanh_thu."' WHERE id_class=".$id_class;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
