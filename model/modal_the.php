@@ -3,6 +3,7 @@ class The{
     //private $ho_va_ten;
     private $id_hv;
     private $card_id;
+    private $id_nv;
     private $goi_tap;
     private $so_luong;
     private $lop;
@@ -33,6 +34,13 @@ class The{
 
     public function get_card_id(){
         return $this->card_id;
+    }
+    public function set_id_nv($id_nv){
+        $this->id_nv = $id_nv;
+    }
+
+    public function get_id_nv(){
+        return $this->id_nv;
     }
 
     public function set_goi_tap($goi_tap){
