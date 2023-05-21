@@ -49,10 +49,6 @@ while($row = mysqli_fetch_array($query))
 
 
             <?php
-<<<<<<< HEAD
-               
-=======
->>>>>>> 83baf972755db3de13dfb0ea6a87e619f64a723c
                 if ($_SESSION['chuc_vu'] == "Quản lý")
                 {
             ?>

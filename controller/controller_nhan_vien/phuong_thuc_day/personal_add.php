@@ -1,12 +1,14 @@
 <?php
     //ket noi
-    include_once "../connection.php";
+    // link kết nối sai
+    include_once "../../connection.php";
     // lay CSDL
     $id_personal = $_POST["personal_table-add_id_personal"];
     $id_nv = $_POST["personal_table-add_id_nv"];
     $id_hv = $_POST["personal_table-add_id_hv"];
     $thoi_luong = $_POST["personal_table-add_thoi_luong"];
-    $so_buoi = $_POST["personal_table-so_buoi"];
+    // chỗ này đặt sai tên biến
+    $so_buoi = $_POST["personal_table-add_so_buoi"];
     $time_start = $_POST["personal_table-add_time_start"];
     $time_end = $_POST["personal_table-add_time_end"];
     $doanh_thu = $_POST["personal_table-add_doanh_thu"];
@@ -28,7 +30,6 @@
     //điều hướng trang đến tdd.php để refresh
     
     }
-    header("Location: ../../../view/personal.php");
-    exit();
+   
 ?>
 
