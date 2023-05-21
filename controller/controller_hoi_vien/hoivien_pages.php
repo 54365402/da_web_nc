@@ -29,7 +29,7 @@
     $query = mysqli_query($mysqli,$sql);
     $sql1 = "SELECT * FROM tbl_hoi_vien $hoivien_search LIMIT $perRow, $rowsPerPage";
     $query1 = mysqli_query($mysqli,$sql1);
-    // Tổng số sản phẩm
+    // Tổng số hội viên
     $totalRows = mysqli_num_rows(mysqli_query($mysqli, "SELECT * FROM tbl_hoi_vien"));
     // Tính tổng số trang pages
     $totalPages = ceil($totalRows/$rowsPerPage);

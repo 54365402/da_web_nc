@@ -88,18 +88,21 @@
             }
             }
           }
-          else if (cells.length === 5){
+          else if (cells.length === 6){
             if(e.which===27){
               this.setAttribute('contenteditable',' ')
               var cell_ten = cells[1].innerHTML;
               var cell_chieu_cao = cells[2].innerHTML;
               var cell_can_nang = cells[3].innerHTML;
               var cell_phan_tram_mo = cells[4].innerHTML;
+              var cell_ngay_cap_nhat = cells[5].innerHTML;
+
       
               var hoivien_ten = "hoivien_ten=" + cell_ten;
               var hoivien_chieu_cao = "hoivien_chieu_cao=" + cell_chieu_cao;
               var hoivien_can_nang = "hoivien_can_nang=" + cell_can_nang;
               var hoivien_phan_tram_mo = "hoivien_phan_tram_mo=" + cell_phan_tram_mo;
+              var hoivien_ngay_cap_nhat = "hoivien_ngay_cap_nhat=" + cell_ngay_cap_nhat;
   
             url = "../controller/controller_hoi_vien/hoivien_update.php" 
             if(confirm("Bạn có chắc muốn sửa ID "+cellID+" không?")){
@@ -107,7 +110,7 @@
             xhttp.open(method, url, true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send(params+"&"+hoivien_ten+"&"+hoivien_chieu_cao
-            +"&"+hoivien_can_nang+"&"+hoivien_phan_tram_mo);
+            +"&"+hoivien_can_nang+"&"+hoivien_phan_tram_mo+"&"+hoivien_ngay_cap_nhat);
             }
             }
           }

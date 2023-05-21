@@ -26,29 +26,29 @@
 
 
 $sql = "SELECT * FROM tbl_nhan_vien WHERE name LIKE N'N%'";
-    $query = mysqli_query($mysqli,$sql);
-    
-    // kiểm tra
-    $check = true;
-    while($row = mysqli_fetch_array($query)){
-        if($row["name"]==$nhanvien->get_name() || $row["sdt"]==$nhanvien->get_sdt 
-        || $row["cmnd"]==$nhanvien->get_cmnd || $row["bien_so_xe"]==$nhanvien->get_bien_so_xe
-        || $row["gmail"]==$nhanvien->get_gmail)
-        {
-            $check = false;
-        }
-    }
+$query = mysqli_query($mysqli,$sql);
 
-    if($nhanvien->get_name()=="" || $nhanvien->get_gioi_tinh()==""
-    || $nhanvien->get_tuoi()=="" || $nhanvien->get_sdt()=="" || $nhanvien->get_cmnd()==""
-    || $nhanvien->get_bien_so_xe()=="" || $nhanvien->get_dia_chi()=="" || $nhanvien->get_chuc_vu()==""
-    || $nhanvien->get_gmail()=="")
-    {    
-    }
-    else{
-        if($check){
-    // Thực hiện truy vấn để thêm dữ liệu vào cơ sở dữ liệu
-    
-    //điều hướng trang đến nhanvien.php để refresh
-    }
-    }
+// kiểm tra
+$check = true;
+while($row = mysqli_fetch_array($query)){
+if($row["name"]==$nhanvien->get_name() || $row["sdt"]==$nhanvien->get_sdt
+|| $row["cmnd"]==$nhanvien->get_cmnd || $row["bien_so_xe"]==$nhanvien->get_bien_so_xe
+|| $row["gmail"]==$nhanvien->get_gmail)
+{
+$check = false;
+}
+}
+
+if($nhanvien->get_name()=="" || $nhanvien->get_gioi_tinh()==""
+|| $nhanvien->get_tuoi()=="" || $nhanvien->get_sdt()=="" || $nhanvien->get_cmnd()==""
+|| $nhanvien->get_bien_so_xe()=="" || $nhanvien->get_dia_chi()=="" || $nhanvien->get_chuc_vu()==""
+|| $nhanvien->get_gmail()=="")
+{
+}
+else{
+if($check){
+// Thực hiện truy vấn để thêm dữ liệu vào cơ sở dữ liệu
+
+//điều hướng trang đến nhanvien.php để refresh
+}
+}
