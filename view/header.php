@@ -49,7 +49,10 @@ while($row = mysqli_fetch_array($query))
 
 
             <?php
+<<<<<<< HEAD
                
+=======
+>>>>>>> 83baf972755db3de13dfb0ea6a87e619f64a723c
                 if ($_SESSION['chuc_vu'] == "Quản lý")
                 {
             ?>
@@ -63,7 +66,7 @@ while($row = mysqli_fetch_array($query))
                 </li>
                 <li class="menu-li menu-li-nuoc"><a class="menu-a" href="nuoc.php"><i
                             class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
-                <li class="menu-li"><a class="menu-a" href="class.php"><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
+                <li class="menu-li"><a class="menu-a" href="nhanvien.php"><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
                 <li class="menu-li menu-li-csvc"><a class="menu-a" href="dung_cu_tap.php"><i
                             class="fa-solid fa-database"></i> Cơ sở vật chất</a></li>
                 <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
@@ -71,23 +74,23 @@ while($row = mysqli_fetch_array($query))
                         kê</a></li>
 
             </div>
-                
+
             <?php
                 }
                     else if ( $_SESSION['login'] == true && $_SESSION['chuc_vu'] == "Hội viên")
                     {
                         ?>
 
-                        <div class="menu" style="justify-content: space-around;">
-                        
-                        <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
-                  
-                        <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
-                       
-        
-                    </div>
-                     
-                    <?php
+            <div class="menu" style="justify-content: space-around;">
+
+                <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
+
+                <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
+
+
+            </div>
+
+            <?php
                     }
                     
                 
