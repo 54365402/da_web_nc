@@ -1,5 +1,5 @@
 
-<div class='bl__modal--popup'>
+<div class='bl__modal--popup '>
     <div class='bl__modal__div--popup'>
         <i><b><u class='bl__modal__div--u'>Thêm lương</u></b></i>
     <div >

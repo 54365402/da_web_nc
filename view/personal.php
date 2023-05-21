@@ -17,6 +17,10 @@ include_once "header.php";
 
 <div class='clear'></div>
 
+<?php include_once "view_personal_popup.php"
+?>
+
+
 <!-- tạo chỉ mục trang -->
 <form class="personal_form-page" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
     <center>

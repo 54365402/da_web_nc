@@ -1,6 +1,5 @@
 <?php
 include_once "header.php";
-
 ?>
 
 <?php
@@ -15,9 +14,8 @@ while($row = mysqli_fetch_array($query))
     $_SESSION['chuc_vu']=$row['chuc_vu'];
     $_SESSION['name']=$row['name'];
     $_SESSION['id'] = $row['id'];
-    
-
 }
+
 ?>
 
 <?php

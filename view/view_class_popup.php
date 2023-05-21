@@ -54,10 +54,8 @@
                 </tr>
                 <tr>
                     <td colspan='2'>
-                        <button class="class_table-add-btn class_table-btn-huy" type="button"
-                            onclick="">Hủy</button>
-                        <button class="class_table-add-btn class_table-btn-them" type="Submit"
-                            onclick="">Thêm</button>
+                        <button class="class_table-add-button class_table-button-huy" type="button" onclick="">Hủy</button>
+                        <button class="class_table-add-button class_table-button-them" type="Submit" onclick="">Thêm</button>
                     </td>
                 </tr>
             </table>
