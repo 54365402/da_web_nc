@@ -54,24 +54,6 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="">Chiều cao : </label></td>
-                    <td><input type="text" class="hoivien__table-add-input" name="hoivien__table-add-chieu_cao"
-                            placeholder="chiều cao">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="">Cân nặng : </label></td>
-                    <td><input type="text" class="hoivien__table-add-input" name="hoivien__table-add-can_nang"
-                            placeholder="cân nặng">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="">Phần trăm mỡ : </label></td>
-                    <td><input type="text" class="hoivien__table-add-input" name="hoivien__table-add-pt_mo"
-                            placeholder="% mỡ">
-                    </td>
-                </tr>
-                <tr>
                     <td colspan='2'>
                         <button class="hoivien__table-add-btn hoivien__table-btn-huy" type="button"
                             onclick="">Hủy</button>

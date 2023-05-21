@@ -51,7 +51,7 @@ class nhanvien{
     }
 
     public function set_bien_so_xe($bien_so_xe) {
-        $this->$bien_so_xe = $bien_so_xe;
+        $this->bien_so_xe = $bien_so_xe;
     }
 
     public function get_bien_so_xe() {

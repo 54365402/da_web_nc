@@ -58,6 +58,7 @@
                 <th>CHIỀU CAO</th>
                 <th>CÂN NẶNG</th>
                 <th>% MỠ</th>
+                <th>NGÀY CẬP NHẬT</th>
             </tr>
             <?php
         // Duyệt qua các phẩn từ trong bảng
@@ -70,6 +71,7 @@
                 <td><?php echo $row["chieu_cao"]?></td>
                 <td><?php echo $row["can_nang"]?></td>
                 <td><?php echo $row["phan_tram_mo"]?></td>
+                <td><?php echo $row["ngay_cap_nhat"]?></td>
                 <?php
        }
         ?>
