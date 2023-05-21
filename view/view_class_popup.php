@@ -26,7 +26,7 @@
                     <td><label for="">Gói : </label></td>
                     <td><input type="text" class="class_table-add-input" name="class_table-add-packages"
                           placeholder="Gói...">
-                    ></td>
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="">Thời lượng :</label></td>
