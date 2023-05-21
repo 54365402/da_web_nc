@@ -13,9 +13,9 @@
                     <td><label for="">Giới tính :</label></td>
                     <td>
                         <select class="nhanvien__table-add-input-gioitinh" name="nhanvien__table-add-gioi_tinh">
-                            <option value="male">Nam</option>
-                            <option value="female">Nữ</option>
-                            <option value="other">Khác</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                            <option value="Khác">Khác</option>
                         </select>
                     </td>
                 </tr>

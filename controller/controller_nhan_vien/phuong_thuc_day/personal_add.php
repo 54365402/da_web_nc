@@ -28,7 +28,7 @@
     //điều hướng trang đến tdd.php để refresh
     
     }
-    header("Location: ../../view/tu_dung_do.php");
+    header("Location: ../../../view/personal.php");
     exit();
 ?>
 

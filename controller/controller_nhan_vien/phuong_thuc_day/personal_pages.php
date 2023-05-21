@@ -26,7 +26,7 @@
     // Số hàng một trang
     $rowsPerPage=11;
     $perRow = $page * $rowsPerPage - $rowsPerPage;
-    $sql = "SELECT * FROM (tbl_personal INNER JOIN tbl_hoi_vien ON tbl_personal.id_hv = tbl_hoi_vien.id_hv INNER JOIN tbl_nhan_vien ON tbl_personal.id_nv = tbl_nhan_vien.id_nv) $personal_search ORDER BY id_personal LIMIT $perRow, $rowsPerPage";
+    $sql = "SELECT * FROM (tbl_personal INNER JOIN tbl_hoi_vien ON tbl_personal.id_hv = tbl_hoi_vien.id_hv) INNER JOIN tbl_nhan_vien ON tbl_personal.id_nv = tbl_nhan_vien.id_nv $personal_search ORDER BY id_personal LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);
 
     // Tổng số sản phẩm

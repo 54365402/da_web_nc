@@ -5,5 +5,5 @@
     $sql = "DELETE FROM tbl_class WHERE id_class ='$classID'";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    header("Location: ../../view/class.php");
+    header("Location: ../../../view/class.php");
 ?>
