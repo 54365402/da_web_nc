@@ -17,36 +17,29 @@
             </tr> -->
             <tr>
                 <td><label for="lname">ID nhân viên:</label></td>
-                <td>
-                <select class='personal_table-add_input' name='personal_table-add_id_nv'>
+                <td><select class='personal_table-add_input' name='personal_table-add_id_nv'>
+                <option value="">-- ID Nhân Viên --</option>
                     <?php
-                    // Duyệt qua các phẩn từ trong bảng
-                    while($row = mysqli_fetch_array($query))
-                        {?>
-                            <option class='view_personal_select-id_nv' value="<?php echo $row["id_nv"]?>"><?php echo $row["id_nv"]?></option>
-                        <?php
+                        // Duyệt qua các phần tử trong bảng
+                        while ($row = mysqli_fetch_array($query)) {
+                            echo "<option value='" . $row["id_nv"] . "'>" . $row["id_nv"] . "</option>";
                         }
-                         ?>   
-                        </select>
-                        
-                        </td> 
+                    ?>
+                </select></td>   
+
                 <!-- <td><input class='personal_table-add_input' type="text"  name="personal_table-add_id_nv" placeholder="ID Nhân viên...."></td> -->
             </tr>
             <<tr>
-                <td><label for="lname">ID hội viên viên:</label></td>
-                <td>
-                <select class='personal_table-add_input' name='personal_table-add_id_hv'>
+                <td><label for="lname">ID hội viên:</label></td>
+                <td><select class='personal_table-add_input' name='personal_table-add_id_hv'>
+                <option value="">-- ID Hội Viên --</option>
                     <?php
-                    // Duyệt qua các phẩn từ trong bảng
-                    while($row = mysqli_fetch_array($query1))
-                        {?>
-                            <option class='view_personal_select-id_hv' value="<?php echo $row["id_hv"]?>"><?php echo $row["id_hv"]?></option>
-                        <?php
+                        // Duyệt qua các phần tử trong bảng
+                        while ($row = mysqli_fetch_array($query1)) {
+                            echo "<option value='" . $row["id_hv"] . "'>" . $row["id_hv"] . "</option>";
                         }
-                         ?>   
-                        </select>
-                        
-                        </td> 
+                    ?>
+                </select></td>   
                 <!-- <td><input class='personal_table-add_input' type="text"  name="personal_table-add_id_hv" placeholder="ID Hội viên...."></td>
             </tr> -->
             <tr>

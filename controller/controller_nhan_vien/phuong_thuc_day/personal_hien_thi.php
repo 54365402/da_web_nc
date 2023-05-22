@@ -11,7 +11,7 @@
     <div class = "personal_div-hienthi1">
         <table >
             <div  class='personal_div-tap'>
-                <li class="personal_div personal_div-class"><a href="../view/class.php">Class</a></th></li>
+                <li class="personal_div personal_div-class"><a href="../view/tbl_class.php">Class</a></th></li>
                 <li class="personal_div personal_div-personal"><a href="../view/personal.php">Personal</a></li>
             </div>
             

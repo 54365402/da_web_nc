@@ -20,6 +20,7 @@
                 <td><label for="lname">ID hội viên:</label></td>
                 <td>
                 <select class='the_table-add_input1' name='the_table-add_id_hv'>
+                <option value="">-- ID member --</option>
                     <?php
                     // Duyệt qua các phẩn từ trong bảng
                     while($row = mysqli_fetch_array($query1))
@@ -43,6 +44,7 @@
                 <td><label for="lname">ID nhân viên:</label></td>
                 <td>
                 <select class='the_table-add_input1' name='the_table-add_id_nv'>
+                <option value="">-- ID staff --</option>
                     <?php
                     // Duyệt qua các phẩn từ trong bảng
                     while($row = mysqli_fetch_array($query))
@@ -68,18 +70,27 @@
             </tr>
 
             <tr>
-                <td><label for="lname">Lớp: </label></td>
-                <td><input class='the_table-add_input' type="text"  name="the_table-add_lop" placeholder="Class...."></td>
+            <td><label for="lname">Lớp: </label></td>
+                <td>
+                    <select name="the_table-add_lop" class="the_table-add_input1">
+                        <option value="gym">Gym</option>
+                        <option value="swimming">Swimming</option>
+                        <option value="yoga">Yoga</option>
+                        <option value="aerobic">Aerobic</option>
+                        <option value="boxing">Boxing</option>
+                    </select>
+                </td>
+               <!--<td><input class='the_table-add_input' type="text"  name="the_table-add_lop" placeholder="Class...."></td> -->
             </tr> 
             
             <tr>
                 <td><label for="lname">Ngày bắt đầu:</label></td>
-                <td><input class='the_table-add_input' type="text"  name="the_table-add_ngay_bat_dau" placeholder="Date start...."></td>
+                <td><input class='the_table-add_input1' type="date"  name="the_table-add_ngay_bat_dau" placeholder="Date start...."></td>
             </tr>
 
             <tr>
                 <td><label for="lname">Ngày kết thúc:</label></td>
-                <td><input class='the_table-add_input' type="text"  name="the_table-add_ngay_ket_thuc" placeholder="Date end...."></td>
+                <td><input class='the_table-add_input1' type="date"  name="the_table-add_ngay_ket_thuc" placeholder="Date end...."></td>
             </tr>
 
             <tr>
