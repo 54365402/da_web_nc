@@ -111,6 +111,7 @@ div tr.hoivien__table-view--title {
 
 .hoivien__table-view--data {
     height: 40px;
+    text-align: center;
 }
 .hoivien__table-view--data:nth-of-type(odd) {
     background-color: #E9EBF5; 
@@ -174,7 +175,7 @@ div tr.hoivien__table-view--title {
 .hoivien__modal-popup-overlay {
     position: relative;
     width: 500px;
-    height: 490px;
+    height: 400px;
     background-color: lightblue;
     border-radius: 30px;
     border: 5px solid #2F528F;

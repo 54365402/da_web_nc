@@ -3,6 +3,7 @@
     const classThem = document.querySelectorAll('.js-them')
     console.log(classThem)
     const classModal = document.querySelector('.class_modal-popup')
+    console.log(classModal)
     const classClose = document.querySelectorAll('.class_table-button_huy')
     const classThemPupUp = document.querySelectorAll('.class_table-button_them')
     function showAdd() {
