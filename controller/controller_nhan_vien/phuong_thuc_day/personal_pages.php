@@ -13,7 +13,7 @@
             $personal_get_data = "";
         }
     // search sql
-    $personal_search = "WHERE id_personal LIKE '%$personal_get_data%' ";
+    $personal_search = "WHERE id_personal LIKE '%$personal_get_data%' or name_hv LIKE '%$personal_get_data%' or name LIKE '%$personal_get_data%' ";
 
     if(isset($_GET['page']))
         {

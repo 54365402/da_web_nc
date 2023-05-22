@@ -13,7 +13,7 @@
             $class_get_data = "";
         }
     // search sql
-    $class_search = "WHERE id_class LIKE '%$class_get_data%' ";
+    $class_search = "WHERE id_class LIKE '%$class_get_data%' or ten_lop LIKE '%$class_get_data%' or name LIKE '%$class_get_data%' ";
 
 
     if(isset($_GET['page']))

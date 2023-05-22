@@ -104,12 +104,12 @@ echo 5;}
     ?> -->
 
 
-<div class = "the_div-hienthi1"> 
+<div class = "the_div-hienthi1" > 
 
     <table class="the_table-hienthi1" style="border: 3px solid blue; white-space: nowrap;">        
           <tr><th colspan = "2" style="font-size: 18px;" ;>Thông tin chi tiết thẻ</th></tr>
           <tr><tr>
-          <tr><td style="padding-right: 30px;">Họ và Tên: </td><td class = the_gachchan><input type="text_the_name_hv" name="input_theten" style="border: none; outline:none; "></td></tr>
+          <tr><td style="padding-right: 30px;">Họ và Tên: </td><td class = the_gachchan><input type="text_the_name_hv"  name="input_theten" style="border: none; outline:none; "></td></tr>
           <tr><td>ID hội viên: </td><td class = the_gachchan><input type="text_the_id_hv" name="input_the_id" style="border: none; outline:none; "></td></tr>  
           <tr><td>Card ID: </td><td class = the_gachchan><input type="text_card_id" name="input_the_card_id" style="border: none; outline:none;"></td></tr>
           <tr><td>ID nhân viên: </td><td class = the_gachchan><input type="text_id_nv" name="input_the_id_nv" style="border: none; outline:none;"></td></tr>
