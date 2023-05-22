@@ -1,3 +1,10 @@
+<?php
+    include_once "../controller/connection.php";
+    $sql = "SELECT * FROM tbl_nhan_vien";
+    $query = mysqli_query($mysqli,$sql);
+    $sql1 = "SELECT * FROM tbl_hoi_vien";
+    $query1 = mysqli_query($mysqli,$sql1);
+    ?>
 <div class='the_modal-popup'>
     <div class='the_modal_div-popup'>
         <i><b><u class='the_modal_div-u'>Tạo Thẻ Mới</u></b></i>
@@ -10,18 +17,44 @@
             </tr> -->
 
             <tr>
-                <td><label for="lname">ID hội viên: </label></td>
-                <td><input class='the_table-add_input' type="text"  name="the_table-add_id_hv" placeholder="ID member...."></td>
+                <td><label for="lname">ID hội viên:</label></td>
+                <td>
+                <select class='the_table-add_input1' name='the_table-add_id_hv'>
+                    <?php
+                    // Duyệt qua các phẩn từ trong bảng
+                    while($row = mysqli_fetch_array($query1))
+                        {?>
+                            <option class='view_the_select-id_hv' value="<?php echo $row["id_hv"]?>"><?php echo $row["id_hv"]?></option>
+                        <?php
+                        }
+                         ?>   
+                        </select>
+                        
+                        </td>
+                <!-- <td><input class='the_table-add_input' type="text"  name="the_table-add_id_hv" placeholder="ID member...."></td> -->
             </tr>
 
-            <tr>
+            <!-- <tr>
                 <td><label for="lname">Card ID: </label></td>
                 <td><input class='the_table-add_input' type="text"  name="the_table-add_card_id" placeholder="ID card...."></td>
-            </tr>
+            </tr> -->
             
             <tr>
-                <td><label for="lname">ID nhân viên: </label></td>
-                <td><input class='the_table-add_input' type="text"  name="the_table-add_id_nv" placeholder="ID staff...."></td>
+                <td><label for="lname">ID nhân viên:</label></td>
+                <td>
+                <select class='the_table-add_input1' name='the_table-add_id_nv'>
+                    <?php
+                    // Duyệt qua các phẩn từ trong bảng
+                    while($row = mysqli_fetch_array($query))
+                        {?>
+                            <option class='view_the_select-id_nv' value="<?php echo $row["id_nv"]?>"><?php echo $row["id_nv"]?></option>
+                        <?php
+                        }
+                         ?>   
+                        </select>
+                        
+                        </td>
+                <!-- <td><input class='the_table-add_input' type="text"  name="the_table-add_id_nv" placeholder="ID staff...."></td> -->
             </tr>
         
             <tr>

@@ -1,6 +1,6 @@
 <?php
     //ket noi
-    include_once "../../connection.php";
+    include_once "../connection.php";
 
     // lay CSDL
     $id_nv = $_POST["class_table-add-id_nv"];

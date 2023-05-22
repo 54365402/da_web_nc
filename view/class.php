@@ -10,10 +10,6 @@ include_once "header.php";
 
 <link rel="stylesheet" href="./assets/css/class.css">
 
-<!-- them--popup -->
-
-
-
 <!-- Hiển thị -->
 <?php
     include_once "../controller/controller_nhan_vien/phuong_thuc_day/class_hien_thi.php";

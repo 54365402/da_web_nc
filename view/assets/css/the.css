@@ -234,6 +234,10 @@ table.the_table-addform {
 .the_table-add_ {
     height: 25px
 }
+.the_table-add_input1{
+    height: 25px;
+    width: 169px;
+}
 
 select.the_table-add_input {
     border-width: 3px;

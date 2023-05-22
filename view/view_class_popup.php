@@ -1,4 +1,8 @@
-<?php include_once "../controller/connection.php";?>
+<?php
+    include_once "../controller/connection.php";
+    $sql = "SELECT * FROM tbl_nhan_vien";
+    $query = mysqli_query($mysqli,$sql);
+    ?>
 <div class='class_modal-popup'>
     <div class='class_modal_div-popup'>
         <i><b><u class='class_modal_div-u'>Thêm PT</u></b></i>
@@ -12,30 +16,28 @@
                     </td>
                 </tr> -->
                 <tr>
-                    <td><label for="">ID Nhân Viên : </label></td>
-                    <td>
-                          
-                                <?php 
-                                    $sql = "SELECT * FROM tbl_nhan_vien";
-                                    $query = mysqli_query($mysqli, $sql);
-                                    while($row = mysqli_fetch_array($query))
-        {
-            ?>
-            <tr class='class_table_row-hienthi'>
-                <td  class="class_table_td-hienthi-td"><?php echo $row["id_class"]?></td>
-            <?php
-        }
-            ?>    
-                          
-                        </td>               
+                <td><label for="lname">ID nhân viên:</label></td>
+                <td>
+                <select class='class_table-add_input op' name='class_table-add__id_nv'>
+                    <?php
+                    // Duyệt qua các phẩn từ trong bảng
+                    while($row = mysqli_fetch_array($query))
+                        {?>
+                            <option class='view_class_select-id_nv' value="<?php echo $row["id_nv"]?>"><?php echo $row["id_nv"]?></option>
+                        <?php
+                        }
+                    ?>   
+                        </select>
+                        
+                        </td>                           
                     
-                    <td><input type="text" class="class_table-add-input" name="class_table-add-id_nv"
+                    <!-- <td><input type="text" class="class_table-add-input" name="class_table-add-id_nv"
                             placeholder="ID Nhân Viên...">
-                    </td>
+                    </td> -->
                 </tr>
                 <tr>
                     <td><label for="">Tên lớp : </label></td>
-                    <td><input type="text" class="class_table-add-input" name="class_table-add-ten_lop"
+                    <td><input type="text" class="class_table-add-input op" name="class_table-add-ten_lop"
                             placeholder="Tên lớp...">
                     </td>
                 </tr>
