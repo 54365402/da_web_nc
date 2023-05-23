@@ -46,7 +46,7 @@
           // Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          xhttp.send(dctID);
+          xhttp.send(lopID);
           // Refresh lại trang
           location.reload(true)
         }
@@ -68,15 +68,15 @@
             var cell_id_nv = cells[8].innerHTML;
             var cell_doanh_thu = cells[9].innerHTML;
             
-            var types_room = "types_room=" + cell_types_room;
-            var ten_lop = "ten_lop=" + cell_ten_lop;
-            var packages = "packages=" + cell_packages;
-            var thoi_luong = "thoi_luong=" + cell_thoi_luong;
-            var ngay_hoat_dong = "ngay_hoat_dong=" + cell_ngay_hoat_dong;
-            var so_luong_hv = "so_luong_hv=" + cell_so_luong_hv;
-            var name = "name=" + cell_name;
-            var id_nv = "id_nv=" + cell_id_nv;
-            var doanh_thu = "doanh_thu=" + cell_doanh_thu;
+            var lop_types_room = "lop_types_room=" + cell_types_room;
+            var lop_ten_lop = "lop_ten_lop=" + cell_ten_lop;
+            var lop_packages = "lop_packages=" + cell_packages;
+            var lop_thoi_luong = "lop_thoi_luong=" + cell_thoi_luong;
+            var lop_ngay_hoat_dong = "lop_ngay_hoat_dong=" + cell_ngay_hoat_dong;
+            var lop_so_luong_hv = "lop_so_luong_hv=" + cell_so_luong_hv;
+            var lop_name = "lop_name=" + cell_name;
+            var lop_id_nv = "lop_id_nv=" + cell_id_nv;
+            var lop_doanh_thu = "lop_doanh_thu=" + cell_doanh_thu;
 
        
           url = "../controller/controller_nhanh_vien/phuong_thuc_day/lop_update.php" 
@@ -84,7 +84,7 @@
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          xhttp.send(types_room+"&"+ten_lop+"&"+packages+"&"+thoi_luong+"&"+ngay_hoat_dong+"&"+so_luong_hv+"&"+name+"&"+id_nv+"&"+doanh_thu);
+          xhttp.send(lop_types_room+"&"+lop_ten_lop+"&"+lop_packages+"&"+lop_thoi_luong+"&"+lop_ngay_hoat_dong+"&"+lop_so_luong_hv+"&"+lop_name+"&"+lop_id_nv+"&"+lop_doanh_thu);
           location.reload(true)
           }
           }

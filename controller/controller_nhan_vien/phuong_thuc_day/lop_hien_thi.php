@@ -7,8 +7,8 @@
 <!-- Hien thi bang -->
 
 <div class = "lop_div-hienthi">
+    <table>
     <div class = "lop_div-hienthi1">
-        <table>
             <div  class='lop_div-tap'>
                 <li class="lop_div lop_div-lop"><a href="../view/lop.php">Class</a></th></li>
                 <li class="lop_div lop_div-personal"><a href="../view/personal.php">Personal</a></li>
@@ -24,8 +24,8 @@
                 <button class='lop_div-button js-sua' type="button" onclick="">Sửa</button>
                 <button class='lop_div-button js-xoa lop_div-button_xoa' type="button" onclick="">Xóa</button>    
             </div>  
-        </table> 
-    </div>
+        </div>
+    </table> 
 
     <div class = "lop_div-hienthi2">
         <!-- tạo giao diện sắp xếp -->

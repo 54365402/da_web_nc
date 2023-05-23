@@ -20,7 +20,7 @@
     else{ 
         
     // Thực hiện truy vấn để thêm dữ liệu vào cơ sở dữ liệu
-    $sql = "INSERT INTO tbl_lop(id_nv,,types_room,ten_lop,packages,thoi_luong,ngay_hoat_dong,so_luong_hv,doanh_thu) VALUES('".$id_nv."','".$types_room."','".$ten_lop."','".$packages."','".$thoi_luong."','".$ngay_hoat_dong."','".$so_luong_hv."','".$doanh_thu."')";
+    $sql = "INSERT INTO tbl_lop(id_nv,types_room,ten_lop,packages,thoi_luong,ngay_hoat_dong,so_luong_hv,doanh_thu) VALUES('".$id_nv."','".$types_room."','".$ten_lop."','".$packages."','".$thoi_luong."','".$ngay_hoat_dong."','".$so_luong_hv."','".$doanh_thu."')";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
 

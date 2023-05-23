@@ -17,7 +17,7 @@
                 </tr> -->
                 <tr>
                 <td><label for="lname">ID nhân viên:</label></td>
-                <td><select class='lop_table-add_input' name='lop_table-add_id_nv'>
+                <td><select class='lop_table-add-input' name='lop_table-add-id_nv'>
                 <option value="">-- ID Nhân Viên --</option>
                     <?php
                         // Duyệt qua các phần tử trong bảng
@@ -32,7 +32,7 @@
                 <tr>
                     <td><label for="">Lớp : </label></td>
                     <td>
-                    <select name="lop_table-add_types_room" class="lop_table-add_input">
+                    <select name="lop_table-add-types_room" class="lop_table-add-input">
                         <option value="gym">Gym</option>
                         <option value="swimming">Swimming</option>
                         <option value="yoga">Yoga</option>
