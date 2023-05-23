@@ -58,15 +58,17 @@
         currentRow.onkeyup=function(e){
           if(e.which===27){
             this.setAttribute('contenteditable',' ')
-            var cell_ten_lop = cells[1].innerHTML;
-            var cell_packages = cells[2].innerHTML;
-            var cell_thoi_luong = cells[3].innerHTML;
-            var cell_ngay_hoat_dong = cells[4].innerHTML;
-            var cell_so_luong_hv = cells[5].innerHTML;
-            var cell_name = cells[6].innerHTML;
-            var cell_id_nv = cells[7].innerHTML;
-            var cell_doanh_thu = cells[8].innerHTML;
-    
+            var cell_types_room = cells[1].innerHTML;
+            var cell_ten_lop = cells[2].innerHTML;
+            var cell_packages = cells[3].innerHTML;
+            var cell_thoi_luong = cells[4].innerHTML;
+            var cell_ngay_hoat_dong = cells[5].innerHTML;
+            var cell_so_luong_hv = cells[6].innerHTML;
+            var cell_name = cells[7].innerHTML;
+            var cell_id_nv = cells[8].innerHTML;
+            var cell_doanh_thu = cells[9].innerHTML;
+            
+            var types_room = "types_room=" + cell_types_room;
             var ten_lop = "ten_lop=" + cell_ten_lop;
             var packages = "packages=" + cell_packages;
             var thoi_luong = "thoi_luong=" + cell_thoi_luong;
@@ -82,7 +84,7 @@
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          xhttp.send(id_lop+"&"+ten_lop+"&"+packages+"&"+thoi_luong+"&"+ngay_hoat_dong+"&"+so_luong_hv+"&"+name+"&"+id_nv+"&"+doanh_thu);
+          xhttp.send(types_room+"&"+ten_lop+"&"+packages+"&"+thoi_luong+"&"+ngay_hoat_dong+"&"+so_luong_hv+"&"+name+"&"+id_nv+"&"+doanh_thu);
           location.reload(true)
           }
           }

@@ -11,6 +11,10 @@ li.menu-li.menu-li-nhan_vien {
     background-color: rgb(68, 84, 106);
 }
 
+td.personal_table_td-hienthi-td {
+    height: 40px;
+}
+
 .personal_table-Tieu_de{
     text-align: center; 
     font-size: 20px;
