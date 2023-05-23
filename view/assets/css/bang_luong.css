@@ -21,7 +21,7 @@ select.bl__select {
 }
 .bl__form--search {
     margin-top: 1.5%;
-    margin-right: 275px;
+    margin-left: 275px;
 }
 
 button.bl__input--search {
@@ -32,8 +32,10 @@ button.bl__input--search {
 }
 
 .bl__div--search--sort {
+    width: 100%;
     float: right;
     display: flex;
+    justify-content: space-between;
 }
 
 .bl__input--search {
@@ -212,4 +214,15 @@ li.bl__div {
 
 .bl__form--page{
     margin-top: 5px;
+}
+
+.bl__icon_back{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+i.fa-solid.fa-arrow-left {
+    font-size: 33px;
+    color: blue;
+    margin-left: 10px;
 }
