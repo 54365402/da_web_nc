@@ -1,8 +1,8 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    // include_once "../controller/connection.php";
     include_once "personal_pages.php";
-    include_once "view_personal_popup.php"
+    // include_once "view_personal_popup.php";
 ?>
 
 <!-- Hien thi bang -->
@@ -11,17 +11,20 @@
     <div class = "personal_div-hienthi1">
         <table >
             <div  class='personal_div-tap'>
-                <li class="personal_div personal_div-class"><a href="../view/class.php">Class</a></th></li>
+                <li class="personal_div personal_div-class"><a href="../view/tbl_class.php">Class</a></th></li>
                 <li class="personal_div personal_div-personal"><a href="../view/personal.php">Personal</a></li>
             </div>
             
-            <!-- tạo giao diện nút thêm, sửa, xóa -->
-            <div class='personal_div-chua_button'>
-                <button class='personal_div-button js-them' type="button" onclick="">Thêm</button>
-                <button class='personal_div-button js-sua' type="button" onclick="">Sửa</button>
-                <button class='personal_div-button js-xoa personal_div-button_xoa' type="button" onclick="">Xóa</button>    
-            </div>
         </table>
+        <?php
+    include_once "view_personal_popup.php";
+?>
+        <!-- tạo giao diện nút thêm, sửa, xóa -->
+        <div class='personal_div-chua_button'>
+            <button class='personal_div-button js-them' type="button" onclick="">Thêm</button>
+            <button class='personal_div-button js-sua' type="button" onclick="">Sửa</button>
+            <button class='personal_div-button js-xoa personal_div-button_xoa' type="button" onclick="">Xóa</button>    
+        </div>
     </div>
 
     <div class = "personal_div-hienthi2">

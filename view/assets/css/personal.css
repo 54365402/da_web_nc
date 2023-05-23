@@ -13,7 +13,7 @@ li.menu-li.menu-li-nhan_vien {
 
 .personal_table-Tieu_de{
     text-align: center; 
-    font-size: 22px;
+    font-size: 20px;
 }
 
 /* css của sắp xếp */
@@ -171,7 +171,8 @@ table.personal_table-addform {
 }
 
 .personal_table-add_input{
-    height: 20px;
+    width: 169px;
+    height: 25px;
 }
 
 .personal_div-button:active {

@@ -28,6 +28,7 @@
     $perRow = $page * $rowsPerPage - $rowsPerPage;
     $sql = "SELECT * FROM (luong INNER JOIN tbl_nhan_vien ON luong.id_nv=tbl_nhan_vien.id_nv) $bl_search ORDER BY $bl_key $bl_Tang LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);
+    
     // Tổng số sản phẩm
     $sql1 = "SELECT * FROM luong";
     if($bl_get_data=="")

@@ -48,7 +48,7 @@
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(personalID);
           // Refresh lại trang
-          
+          location.reload(true)
         }
         }
         var personalUpdate = $('.js-sua');
