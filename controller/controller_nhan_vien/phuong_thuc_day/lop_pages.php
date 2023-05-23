@@ -25,7 +25,7 @@
             $page = 1;
         }
     // Số hàng một trang
-    $rowsPerPage=11;
+    $rowsPerPage=10;
     $perRow = $page * $rowsPerPage - $rowsPerPage;
     $sql = "SELECT * FROM (tbl_lop Inner Join tbl_nhan_vien On tbl_lop.id_nv = tbl_nhan_vien.id_nv) $lop_search ORDER BY id_lop LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);

@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include "lop_pages.php";
+    include_once "lop_pages.php";
 
 ?>
 
@@ -13,13 +13,18 @@
                 <li class="lop_div lop_div-lop"><a href="../view/lop.php">Class</a></th></li>
                 <li class="lop_div lop_div-personal"><a href="../view/personal.php">Personal</a></li>
             </div>
+        
+                <?php
+                   include_once "view_lop_popup.php";
+                ?>  
+                    
             <!-- tạo giao diện nút thêm, sửa, xóa -->
             <div class='lop_div-chua_button'>
                 <button class='lop_div-button js-them ' type="button" onclick="">Thêm</button>
                 <button class='lop_div-button js-sua' type="button" onclick="">Sửa</button>
                 <button class='lop_div-button js-xoa lop_div-button_xoa' type="button" onclick="">Xóa</button>    
             </div>  
-        </table>   
+        </table> 
     </div>
 
     <div class = "lop_div-hienthi2">
@@ -65,6 +70,7 @@
             <?php
         }
             ?>    
+            
         </table>
     </div>
 </div>

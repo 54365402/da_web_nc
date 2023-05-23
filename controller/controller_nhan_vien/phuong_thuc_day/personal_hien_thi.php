@@ -15,16 +15,17 @@
                 <li class="personal_div personal_div-personal"><a href="../view/personal.php">Personal</a></li>
             </div>
             
+            <?php
+                include_once "view_personal_popup.php";
+            ?>
+
+            <!-- tạo giao diện nút thêm, sửa, xóa -->
+            <div class='personal_div-chua_button'>
+                <button class='personal_div-button js-them' type="button" onclick="">Thêm</button>
+                <button class='personal_div-button js-sua' type="button" onclick="">Sửa</button>
+                <button class='personal_div-button js-xoa personal_div-button_xoa' type="button" onclick="">Xóa</button>    
+            </div>
         </table>
-        <?php
-    include_once "view_personal_popup.php";
-?>
-        <!-- tạo giao diện nút thêm, sửa, xóa -->
-        <div class='personal_div-chua_button'>
-            <button class='personal_div-button js-them' type="button" onclick="">Thêm</button>
-            <button class='personal_div-button js-sua' type="button" onclick="">Sửa</button>
-            <button class='personal_div-button js-xoa personal_div-button_xoa' type="button" onclick="">Xóa</button>    
-        </div>
     </div>
 
     <div class = "personal_div-hienthi2">
@@ -37,8 +38,8 @@
                     <input class="personal-sort" type="submit" value="Tìm kiếm"></form>
                     </div>
                 </form>
+            </div>
 
-             </div>
         <table class="personal_table-hienthi">
             <tr class="personal_table_row-hienthi personal_table-Tieu_de" style="background-color: #4472C8">
                 <th>ID Personal</th>
@@ -69,7 +70,6 @@
             ?>    
         </table>
        
-
     </div>
 </div>
     <?php

@@ -1,9 +1,6 @@
-{
-    // document là đại diện cho trang web, muốn lấy gì ở web thì phải qua document
+   // document là đại diện cho trang web, muốn lấy gì ở web thì phải qua document
     const lopThem = document.querySelectorAll('.js-them')
-    // console.log(lopThem)
     const lopModal = document.querySelector('.lop_modal-popup')
-    // console.log(lopModal)
     const lopClose = document.querySelectorAll('.lop_table-button_huy')
     const lopThemPupUp = document.querySelectorAll('.lop_table-button_them')
     function showAdd() {
@@ -22,4 +19,3 @@
     }
 
     lopThemPupUp[0].addEventListener('click',themPupUp)
-}

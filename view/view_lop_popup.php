@@ -30,6 +30,18 @@
                     </td> -->
                 </tr>
                 <tr>
+                    <td><label for="">Lớp : </label></td>
+                    <td>
+                    <select name="lop_table-add_types_room" class="lop_table-add_input">
+                        <option value="gym">Gym</option>
+                        <option value="swimming">Swimming</option>
+                        <option value="yoga">Yoga</option>
+                        <option value="aerobic">Aerobic</option>
+                        <option value="boxing">Boxing</option>
+                    </select>
+                </td>
+                </tr>
+                <tr>
                     <td><label for="">Tên lớp : </label></td>
                     <td><input type="text" class="lop_table-add-input" name="lop_table-add-ten_lop"
                             placeholder="Tên lớp...">
