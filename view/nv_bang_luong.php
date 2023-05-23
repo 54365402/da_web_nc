@@ -16,7 +16,9 @@ include_once "header.php";
 ?>
 
 <!-- tạo giao diện sắp xếp -->
+
 <div class="bl__div--search--sort">
+<li class="bl__icon_back"><a class="bl-a" href="nhanvien.php"><i class="fa-solid fa-arrow-left"></i></a></li>
     <form class="bl__form--search" method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
         <div class="bl__form__div--search">
             <button class='bl__input--search' type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
