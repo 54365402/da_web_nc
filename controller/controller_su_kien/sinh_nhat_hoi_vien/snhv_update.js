@@ -2,8 +2,8 @@
     const $$ = document.querySelectorAll.bind(document);
      
     // Lấy tất cả các hàng trong bảng
-    var rows = $$('.snhv__tasnhve_row--hienthi');
-    
+    var rows = $$('.snhv__table_row--hienthi');
+ 
     // Biến lưu trữ trạng thái hiện tại của bảng
     var currentRow = null;
     
@@ -39,11 +39,11 @@
         
         var snhvUpdate = $('.js-sua');
         snhvUpdate.onclick = function(e){
-        currentRow.setAttribute('contenteditasnhve','');
+        currentRow.setAttribute('contenteditable','');
         alert('Mời bạn tiến hành chỉnh sửa!');
         currentRow.onkeyup=function(e){
           if(e.which===27){
-            this.setAttribute('contenteditasnhve',' ')
+            this.setAttribute('contenteditable',' ')
             var cellid_hv = cells[0].innerHTML;
             var cellname_hv = cells[1].innerHTML;
             var celldiem_tich_luy = cells[2].innerHTML;
@@ -58,8 +58,8 @@
             var snhvid_gift = "snhvid_gift=" + cellid_gift;
             var snhvtrang_thai = "snhvtrang_thai=" + celltrang_thai;
        
-          url = "../controller/controller_nhan_vien/bang_luong/snhv_update.php";
-          if(confirm("Bạn có chắc muốn sửa ID "+cellID+" không?")){
+          url = "../../controller/controller_nhan_vien/bang_luong/snhv_update.php";
+          if(confirm("Bạn có chắc muốn sửa ID "+cellid_hv+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

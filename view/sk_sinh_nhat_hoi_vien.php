@@ -21,19 +21,6 @@ include_once "header.php";
             <input class='snhv__input--search' type="text" name="snhv__input--search" placeholder="Search....">
         </div>
     </form>
-    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
-        <input class="snhv--sort" type="submit" value="Sort">
-        <select class='snhv__select' name='snhvTang'>
-            <option class='snhv__select--sap_xep' value=0>Giảm dần</option>
-            <option class='snhv__select--ss_ten' value=1>Tăng dần</option>
-        </select>
-        <select class='snhv__select' name='snhvSort'>
-            <option class='snhv__select--sap_xep' value=0> Sắp xếp</option>
-            <option class='snhv__select--ss_ten' value=1>Time Start</option>
-            <option class='snhv__select--ss_bao_hanh' value=2>Lương</option>
-            <option class='snhv__select--ss_bao_tri' value=3>Tên</option>
-        </select>
-    </form>
 </div>
 <!-- Hiển thị -->
 <?php
@@ -43,16 +30,10 @@ include_once "header.php";
 <div class='clear'></div>
 
 <!-- tạo chỉ mục trang -->
-<form class="snhv__form--page" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-    <center>
-        <?php
-    echo $listPages;
-    ?>
-    </center>
-</form>
 
 
-<script src="../controller/controller_nhan_vien/snhv/snhv_delete_update.js"></script>
+
+<script src="../controller/controller_su_kien/sinh_nhat_hoi_vien/snhv_update.js"></script>
 <?php 
     }
     else{
