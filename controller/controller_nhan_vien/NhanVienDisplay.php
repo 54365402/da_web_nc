@@ -9,19 +9,22 @@
     <div class="nhanvien__search-view">
         <h2 class="nhanvien__search-heading"><u>Nhân viên</u></h2>
         <form action="NhanVienOption.php" method="post">
-        <select class="nhanvien__search-btn">
-                            <option value="All">All</option>
-                            <option value="Gym">Gym</option>
-                            <option value="Yoga">Yoga</option>
-                            <option value="Aerobic">Aerobic</option>
-                            <option value="Boxing">Boxing</option>
-                            <option value="Swimming">Swimming</option>
-        </select>
+            <select class="nhanvien__search-btn">
+                <option value="All">All</option>
+                <option value="Gym">Gym</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Aerobic">Aerobic</option>
+                <option value="Boxing">Boxing</option>
+                <option value="Swimming">Swimming</option>
+            </select>
         </form>
         <li>
-        <ul><a href="lop.php" class="nhanvien--option"><i class="fa-solid fa-laptop-file fa-2xl" style="color: #2b3e78;"></i>Phương thức dạy</a></ul>
-        <ul><a href="" class="nhanvien--option"><i class="fa-solid fa-calendar-days fa-2xl" style="color: #2b3e78;"></i>Lịch đi làm</a></ul>
-        <ul><a href="nv_bang_luong.php" class="nhanvien--option nhanvien--option__luong"><i class="fa-solid fa-coins fa-2xl" style="color: #2b3e78;"></i>Lương</a></ul>
+            <ul><a href="lop.php" class="nhanvien--option"><i class="fa-solid fa-laptop-file fa-2xl"
+                        style="color: #2b3e78;"></i>Phương thức dạy</a></ul>
+            <ul><a href="lich_di_lam.php" class="nhanvien--option"><i class="fa-solid fa-calendar-days fa-2xl"
+                        style="color: #2b3e78;"></i>Lịch đi làm</a></ul>
+            <ul><a href="nv_bang_luong.php" class="nhanvien--option nhanvien--option__luong"><i
+                        class="fa-solid fa-coins fa-2xl" style="color: #2b3e78;"></i>Lương</a></ul>
         </li>
     </div>
     <div class="nhanvien__table">
@@ -58,22 +61,23 @@
        }
         ?>
         </table>
-    
+
         <form class="nhanvien__pagination" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
             <center>
                 <?php echo $listPages; ?>
             </center>
         </form>
 
-        
+
         <!-- tạo giao diện nút thêm, sửa, xóa -->
         <div class="nhanvien__AUD">
-        <div class="nhanvien__search-input">
-            <i class="fa-sharp fa-solid fa-magnifying-glass nhanvien__search-input--icon"></i>
-            <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                <input class='nhanvien__input-search' type="text" name="nhanvien__input-search" placeholder="Tìm Kiếm">
-            </form>
-        </div>
+            <div class="nhanvien__search-input">
+                <i class="fa-sharp fa-solid fa-magnifying-glass nhanvien__search-input--icon"></i>
+                <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                    <input class='nhanvien__input-search' type="text" name="nhanvien__input-search"
+                        placeholder="Tìm Kiếm">
+                </form>
+            </div>
             <button class='nhanvien__AUD-btn js-add' type="button" onclick="">Thêm</button>
             <button class='nhanvien__AUD-btn js-update' type="button" onclick="">Cập nhập</button>
             <button class='nhanvien__AUD-btn js-del nhanvien__AUD-btn-del' type="button" onclick="">Xóa</button>
@@ -83,4 +87,3 @@
 <?php
 $mysqli -> close();
 ?>
-
