@@ -1,7 +1,7 @@
 <!-- Kết nối CSDL -->
 <?php
     include_once "../connection.php";
-    $id_lop = $_POST['id_lop'];
+    $lopID = $_POST['lopID'];
     $ten_lop = $_POST['ten_lop'];
     $packages = $_POST['packages'];
     $thoi_luong = $_POST['thoi_luong'];

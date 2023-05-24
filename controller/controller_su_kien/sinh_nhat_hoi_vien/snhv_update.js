@@ -2,8 +2,8 @@
     const $$ = document.querySelectorAll.bind(document);
      
     // Lấy tất cả các hàng trong bảng
-    var rows = $$('.bl__table_row--hienthi');
-    
+    var rows = $$('.snhv__table_row--hienthi');
+ 
     // Biến lưu trữ trạng thái hiện tại của bảng
     var currentRow = null;
     
@@ -17,7 +17,6 @@
         }
         // Lấy giá trị của các ô trong hàng được kích hoạt
         var cells = this.getElementsByTagName("td");
-        var cellID = cells[0].innerHTML;
     
         currentRow = this;
         this.style.backgroundColor = "yellow";
@@ -33,49 +32,38 @@
         };
     
         // Chỉ định URL và phương thức HTTP
-        var url = "../controller/controller_nhan_vien/bang_luong/bl_delete.php";
         var method = "POST";
     
         // Chỉ định các tham số để gửi dữ liệu
-        var blID = "blID=" + cellID;
        
-        // Bắt sự kiện xóa
-        var blXoa = $('.js-xoa');
-        blXoa.onclick = function(e){
-        if(confirm("Bạn có chắc muốn xóa ID "+cellID+" không?")){
-          // Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
-          xhttp.open(method, url, true);
-          xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          xhttp.send(blID);
-          // Refresh lại trang
-          location.reload(true)
-        }
-        }
-        var blUpdate = $('.js-sua');
-        blUpdate.onclick = function(e){
+        
+        var snhvUpdate = $('.js-sua');
+        snhvUpdate.onclick = function(e){
         currentRow.setAttribute('contenteditable','');
         alert('Mời bạn tiến hành chỉnh sửa!');
         currentRow.onkeyup=function(e){
           if(e.which===27){
             this.setAttribute('contenteditable',' ')
-            var celltime_start = cells[2].innerHTML;
-            var cellso_cong = cells[3].innerHTML;
-            var cellluong_tren_cong = cells[4].innerHTML;
-            var cellluong = cells[5].innerHTML;
-            var celltrang_thai = cells[6].innerHTML;
-  
-            var bltime_start = "bltime_start=" + celltime_start;
-            var blso_cong = "blso_cong=" + cellso_cong;
-            var blluong_tren_cong = "blluong_tren_cong=" + cellluong_tren_cong;
-            var blluong = "blluong=" + cellluong;
-            var bltrang_thai = "bltrang_thai=" + celltrang_thai;
+            var cellid_hv = cells[0].innerHTML;
+            var cellname_hv = cells[1].innerHTML;
+            var celldiem_tich_luy = cells[2].innerHTML;
+            var celllngay_sinh = cells[3].innerHTML;
+            var cellid_gift = cells[4].innerHTML;
+            var celltrang_thai = cells[5].innerHTML;
+    
+            var snhvid_hv = "snhvid_hv=" + cellid_hv;
+            var snhvname_hv = "snhvname_hv=" + cellname_hv;
+            var snhvdiem_tich_luy = "snhvdiem_tich_luy=" + celldiem_tich_luy;
+            var snhvngay_sinh = "snhvlngay_sinh=" + celllngay_sinh;
+            var snhvid_gift = "snhvid_gift=" + cellid_gift;
+            var snhvtrang_thai = "snhvtrang_thai=" + celltrang_thai;
        
-          url = "../controller/controller_nhan_vien/bang_luong/bl_update.php";
-          if(confirm("Bạn có chắc muốn sửa ID "+cellID+" không?")){
+          url = "../../controller/controller_nhan_vien/bang_luong/snhv_update.php";
+          if(confirm("Bạn có chắc muốn sửa ID "+cellid_hv+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          xhttp.send(blID+"&"+bltime_start+"&"+blso_cong+"&"+blluong_tren_cong+"&"+blluong+"&"+bltrang_thai);
+          xhttp.send(snhvid_hv+"&"+snhvname_hv+"&"+snhvdiem_tich_luy+"&"+snhvngay_sinh+"&"+snhvid_gift+"&"+snhvtrang_thai);
           location.reload(true)
           }
           }

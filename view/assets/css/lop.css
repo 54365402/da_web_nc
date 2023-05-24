@@ -12,6 +12,9 @@ li.menu-li.menu-li-nhan_vien {
 }
 
 /* css của sắp xếp */
+td.lop_table_td-hienthi-td {
+    height: 40px;
+}
 
 .lop_form-search {
     font-size: 20px;
@@ -54,6 +57,7 @@ input.lop_input-search {
 }
 
 .lop_div-hienthi1{
+    float: left;
     text-align: center;
     margin-left: 47px;
     height: 450px;
@@ -64,6 +68,7 @@ input.lop_input-search {
 }
 
 .lop_div-hienthi2{
+    float: right;
     text-align: center;
     margin-left: 62px;
     margin-top: 14px;

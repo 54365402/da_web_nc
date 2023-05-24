@@ -41,7 +41,7 @@
             $p = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
             // Số lượng dữ liệu hiển thị trên mỗi trang
-            $limit = 12;
+            $limit = 11;
 
             // Tính toán vị trí bắt đầu của dữ liệu trên trang hiện tại
             $start = ($p - 1) * $limit;

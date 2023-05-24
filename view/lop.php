@@ -10,17 +10,13 @@ include_once "header.php";
 
 <link rel="stylesheet" href="./assets/css/lop.css">
 
-
-
 <!-- Hiển thị -->
 <?php
     include_once "../controller/controller_nhan_vien/phuong_thuc_day/lop_hien_thi.php";
     ?>
 
 <div class='clear'></div>
-    <!-- them--popup -->
-    <?php include_once "view_lop_popup.php"
-    ?>
+   
 
 
 <!-- tạo chỉ mục trang -->
