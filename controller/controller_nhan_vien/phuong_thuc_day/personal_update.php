@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../connection.php";
+    include_once "../../connection.php";
     $personalID = $_POST['personalID'];
     $personal_name_hv = $_POST['personal_name_hv'];
     $personal_id_hv = $_POST['personal_id_hv'];

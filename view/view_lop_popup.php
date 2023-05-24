@@ -2,10 +2,11 @@
     include_once "../controller/connection.php";
     $sql = "SELECT * FROM tbl_nhan_vien";
     $query = mysqli_query($mysqli,$sql);
-    ?>
+?>
+
 <div class='lop_modal-popup'>
     <div class='lop_modal_div-popup'>
-        <i><b><u class='lop_modal_div-u'>Thêm PT</u></b></i>
+        <i><b><u class='lop_modal_div-u'>Thêm Lớp mới</u></b></i>
         <div >
             <form action="../controller/controller_nhan_vien/phuong_thuc_day/lop_add.php" method="POST">
                 <table class='lop_table-addform'>
@@ -16,30 +17,31 @@
                     </td>
                 </tr> -->
                 <tr>
-                <td><label for="lname">ID nhân viên:</label></td>
-                <td><select class='lop_table-add-input' name='lop_table-add-id_nv'>
-                <option value="">-- ID Nhân Viên --</option>
-                    <?php
-                        // Duyệt qua các phần tử trong bảng
-                        while ($row = mysqli_fetch_array($query)) {
-                            echo "<option value='" . $row["id_nv"] . "'>" . $row["id_nv"] . "</option>";
-                        }
-                    ?>
-                </select></td>                               
-                    <!-- <td><input type="text" class="class_table-add-input" name="class_table-add-id_nv" placeholder="ID Nhân Viên...">
-                    </td> -->
+                    <td><label for="lname">ID nhân viên:</label></td>
+                    <td><select class='lop_table-add-input' name='lop_table-add-id_nv'>
+                            <option value="">-- ID Nhân Viên --</option>
+                                <?php
+                                    // Duyệt qua các phần tử trong bảng
+                                    while ($row = mysqli_fetch_array($query)) {
+                                        echo "<option value='" . $row["id_nv"] . "'>" . $row["id_nv"] . "</option>";
+                                    } 
+                                ?> 
+                        </select>
+                    </td>                               
+                        <!-- <td><input type="text" class="class_table-add-input" name="class_table-add-id_nv" placeholder="ID Nhân Viên...">
+                        </td> -->
                 </tr>
                 <tr>
                     <td><label for="">Lớp : </label></td>
                     <td>
-                    <select name="lop_table-add-types_room" class="lop_table-add-input">
-                        <option value="gym">Gym</option>
-                        <option value="swimming">Swimming</option>
-                        <option value="yoga">Yoga</option>
-                        <option value="aerobic">Aerobic</option>
-                        <option value="boxing">Boxing</option>
-                    </select>
-                </td>
+                        <select name="lop_table-add-types_room" class="lop_table-add-input">
+                            <option value="gym">Gym</option>
+                            <option value="swimming">Swimming</option>
+                            <option value="yoga">Yoga</option>
+                            <option value="aerobic">Aerobic</option>
+                            <option value="boxing">Boxing</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="">Tên lớp : </label></td>

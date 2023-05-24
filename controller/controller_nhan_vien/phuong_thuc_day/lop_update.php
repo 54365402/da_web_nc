@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../connection.php";
+    include_once "../../connection.php";
     $lopID = $_POST['lopID'];
     $ten_lop = $_POST['ten_lop'];
     $packages = $_POST['packages'];

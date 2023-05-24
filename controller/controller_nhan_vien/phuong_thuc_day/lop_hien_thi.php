@@ -1,31 +1,27 @@
 <!-- Kết nối CSDL -->
 <?php
     include_once "lop_pages.php";
-
+    // include_once "view_lop_popup.php";
 ?>
 
 <!-- Hien thi bang -->
 
 <div class = "lop_div-hienthi">
-    <table>
     <div class = "lop_div-hienthi1">
+        <table>
             <div  class='lop_div-tap'>
                 <li class="lop_div lop_div-lop"><a href="../view/lop.php">Class</a></th></li>
                 <li class="lop_div lop_div-personal"><a href="../view/personal.php">Personal</a></li>
             </div>
-        
-                <?php
-                   include_once "view_lop_popup.php";
-                ?>  
-                    
+    
             <!-- tạo giao diện nút thêm, sửa, xóa -->
-            <div class='lop_div-chua_button'>
-                <button class='lop_div-button js-them ' type="button" onclick="">Thêm</button>
+             <div class='lop_div-chua_button'>
+                <button class='lop_div-button js-them' type="button" onclick="">Thêm</button>
                 <button class='lop_div-button js-sua' type="button" onclick="">Sửa</button>
                 <button class='lop_div-button js-xoa lop_div-button_xoa' type="button" onclick="">Xóa</button>    
-            </div>  
-        </div>
-    </table> 
+             </div>  
+        </table> 
+    </div>
 
     <div class = "lop_div-hienthi2">
         <!-- tạo giao diện sắp xếp -->
@@ -49,7 +45,7 @@
                 <th>Sĩ số lớp</th>
                 <th>Teacher</th>
                 <th>ID Nhân viên</th>
-                <th>Doanh thu(m)</th>
+                <th>Doanh thu</th>
             </tr>
             <?php
 
