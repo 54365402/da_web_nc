@@ -2,22 +2,18 @@
 <?php
     // include_once "../controller/connection.php";
     include_once "personal_pages.php";
-    // include_once "view_personal_popup.php";
+
 ?>
 
 <!-- Hien thi bang -->
-
+<li class="personal_icon_back"><a class="personal-abc" href="nhanvien.php"><i class="fa-solid fa-arrow-left"></i></a></li>
 <div class = "personal_div-hienthi">
     <div class = "personal_div-hienthi1">
         <table >
             <div  class='personal_div-tap'>
-                <li class="personal_div personal_div-class"><a href="../view/tbl_class.php">Class</a></th></li>
+                <li class="personal_div personal_div-lop"><a href="../view/lop.php">Class</a></th></li>
                 <li class="personal_div personal_div-personal"><a href="../view/personal.php">Personal</a></li>
             </div>
-            
-            <?php
-                include_once "view_personal_popup.php";
-            ?>
 
             <!-- tạo giao diện nút thêm, sửa, xóa -->
             <div class='personal_div-chua_button'>

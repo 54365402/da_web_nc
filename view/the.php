@@ -33,8 +33,8 @@ include_once "the_hien_thi.php"
     </select>
 </div>
 
-<?php include_once "view_the.php"
-?>
+<?php include_once "view_the.php" ?>
+
 <script src = "../controller/controller_the/the_sap_xep.js" ></script>
 
 <script src="../controller/controller_the/the_add.js"></script>
