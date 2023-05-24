@@ -1,8 +1,8 @@
 // document là đại diện cho trang web, muốn lấy gì ở web thì phải qua document
 const snhvThem = document.querySelectorAll('.js-them')
 const snhvModal = document.querySelector('.snhv__modal--popup')
-const snhvClose = document.querySelectorAll('.snhv__tasnhve--button_huy')
-const snhvThemPupUp = document.querySelectorAll('.snhv__tasnhve--button_them')
+const snhvClose = document.querySelectorAll('.snhv__table--button_huy')
+const snhvThemPupUp = document.querySelectorAll('.snhv__table--button_them')
 function showAdd() {
     snhvModal.classList.add('snhv__modal--popup--open')
 }

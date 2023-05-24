@@ -21,7 +21,7 @@ select.snhv__select {
 }
 .snhv__form--search {
     margin-top: 1.5%;
-    margin-left: 275px;
+    margin-left: 3%;
 }
 
 button.snhv__input--search {
@@ -45,6 +45,7 @@ button.snhv__input--search {
 
 .snhv__form__div--search {
     border-bottom: 2px groove;
+    margin-right: 10px;
 }
 
 input.snhv__input--search {
@@ -69,44 +70,43 @@ input.snhv--sort {
     border: 1px solid white;
 }
 
-.snhv__tasnhve_row--hienthi{
+.snhv__table_row--hienthi{
     height: 30px;
 }
 
-div tr.snhv__tasnhve--Tieu_de {
+div tr.snhv__table--Tieu_de {
     background-color: #4472C4;
 
 }
 .snhv__modal__div--popup{
     width: 100%;
 }
-tasnhve.snhv__tasnhve--hienthi {
-    color: snhvack;
-    margin-top: 12px;
+table.snhv__table--hienthi {
+    color: black;
     width: 100%;
 }
 
-.snhv__tasnhve--hienthi tr:nth-child(even) {
+.snhv__table--hienthi tr:nth-child(even) {
     background-color: #E9EBF5;
   }
 
-.snhv__tasnhve--hienthi tr:nth-child(odd) {
+.snhv__table--hienthi tr:nth-child(odd) {
     background-color: #CFD5EA;
 }
 
-.snhv__tasnhve--hienthi tr th.snhv__tasnhve--pass_tap {
+.snhv__table--hienthi tr th.snhv__table--pass_tap {
     border: 1px solid #2F528F;
     border-radius: 10px;
     font-size: 20px;
     border-width: 5px;
     padding: 2px;
 }
-.snhv__tasnhve--hienthi tr th.snhv__tasnhve--pass_tap a {
-    color: snhvack;
+.snhv__table--hienthi tr th.snhv__table--pass_tap a {
+    color: black;
     width: 100%;
 }
 
-.snhv__tasnhve--hienthi tr th.snhv__tasnhve--pass {
+.snhv__table--hienthi tr th.snhv__table--pass {
     background-color: white;
 }
 
@@ -140,7 +140,7 @@ tasnhve.snhv__tasnhve--hienthi {
     margin-left: 20px;
     top: 3%;
 }
-tasnhve.snhv__tasnhve--addform {
+table.snhv__table--addform {
     margin-top: 76px;
     margin-left: auto;
     margin-right: auto;
@@ -148,7 +148,7 @@ tasnhve.snhv__tasnhve--addform {
     background-color: lightsnhvue;
     
 }
-.snhv__tasnhve--add-button{
+.snhv__table--add-button{
     padding: 5px;
     border: 1px solid #2F528F;
     border-width: 3px;
@@ -159,29 +159,29 @@ tasnhve.snhv__tasnhve--addform {
     float: right;
     margin-top: 12px;
 }
-.snhv__tasnhve--button_huy{
+.snhv__table--button_huy{
     background-color: red;
 }
-.snhv__tasnhve--add_input{
+.snhv__table--add_input{
     height: 20px;
 }
 
 /* css của button thêm sửa xóa */
 .snhv__div--button{
-
+    margin-left: 1%;
     padding: 5px;
     border: 1px solid #2F528F;
     border-width: 5px;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     background-color: #daeaf3;
    
 }
 
 .snhv__div--chua_button{
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    display: flex;
+    width: 69%;
+    justify-content: space-between;
 }
 .snhv__div--button_xoa{
     margin-right: 30px;
@@ -225,4 +225,70 @@ i.fa-solid.fa-arrow-left {
     font-size: 33px;
     color: blue;
     margin-left: 10px;
+}
+
+.snhv__div--quatang {
+    width: 27%;
+    height: 375px;
+    float: right;
+    margin-right: 3px;
+}
+
+.snhv__div--chuatable {
+    width: 71%;
+    display: inline-block;
+}
+
+.snhv__div--chua_button-all {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 6%
+}
+
+.snhv__div--chua_button-gift {
+    width: 27%;
+    display: flex;
+    justify-content: center;
+}
+.snhv__div__div_quatang {
+    border-radius: 13px;
+    border: 1px solid;
+    width: 100%;
+    height: 110px;
+    background-color: #b4c7E7;
+    margin-top: 14px;   
+}
+
+.snhv__div--thanhngan {
+    margin-top: 3px;
+    height: 12px;
+    width: 100%;
+    background-color: #4472C4;
+}
+
+.snhv__div--chuatable-thanhNgang {
+    display: flex;
+}
+
+.snhv__div--thanhDoc {
+    height: 416px;
+    width: 12px;
+    background-color: #4472C4;
+    float:right;
+    margin-right: 6px;
+}
+
+li.snhv__div.snhv__div--skkm {
+     background-color: #DAEAF3;
+}
+
+li.snhv__div.snhv__div--tichDiem {
+    background-color: #DAEAF3;
+}
+
+button.snhv__div--button.js-xoa {
+    background-color: red;
 }
