@@ -6,6 +6,7 @@
 
 <!-- Hien thi bang -->
 
+<li class="lop_icon_back"><a class="lop-abc" href="nhanvien.php"><i class="fa-solid fa-arrow-left"></i></a></li>
 <div class = "lop_div-hienthi">
     <div class = "lop_div-hienthi1">
         <table>
@@ -38,6 +39,7 @@
         <table class="lop_table-hienthi">
             <tr class="lop_table_row-hienthi lop_table-Tieu_de" style="background-color: #4472C8">
                 <th>ID Class</th>
+                <th>Lớp</th>
                 <th>Tên lớp</th>
                 <th>Gói tập</th>
                 <th>Thời lượng(h)</th>
@@ -55,6 +57,7 @@
             ?>
             <tr class='lop_table_row-hienthi'>
                 <td  class="lop_table_td-hienthi-td"><?php echo $row["id_lop"]?></td>
+                <td  class="lop_table_td-hienthi-td"><?php echo $row["types_room"]?></td>
                 <td  class="lop_table_td-hienthi-td"><?php echo $row["ten_lop"]?></td>
                 <td  class="lop_table_td-hienthi-td"><?php echo $row["packages"]?></td>
                 <td  class="lop_table_td-hienthi-td"><?php echo $row["thoi_luong"]?></td>
@@ -70,6 +73,4 @@
         </table>
     </div>
 </div>
-    <?php
-        $mysqli -> close();
-    ?>  
+   

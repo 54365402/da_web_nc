@@ -19,7 +19,7 @@
         </select>
         </form>
         <li>
-        <ul><a href="personal.php" class="nhanvien--option"><i class="fa-solid fa-laptop-file fa-2xl" style="color: #2b3e78;"></i>Phương thức dạy</a></ul>
+        <ul><a href="lop.php" class="nhanvien--option"><i class="fa-solid fa-laptop-file fa-2xl" style="color: #2b3e78;"></i>Phương thức dạy</a></ul>
         <ul><a href="" class="nhanvien--option"><i class="fa-solid fa-calendar-days fa-2xl" style="color: #2b3e78;"></i>Lịch đi làm</a></ul>
         <ul><a href="nv_bang_luong.php" class="nhanvien--option nhanvien--option__luong"><i class="fa-solid fa-coins fa-2xl" style="color: #2b3e78;"></i>Lương</a></ul>
         </li>

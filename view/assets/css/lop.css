@@ -65,7 +65,7 @@ input.lop_input-search {
     text-align: center;
     margin-left: 47px;
     height: 450px;
-    margin-top: 59px;
+    margin-top: 30px;
     width: 13%;
     border: 3px solid rgb(7, 17, 21);
     border-radius: 25px;
@@ -75,7 +75,7 @@ input.lop_input-search {
     float: right;
     text-align: center;
     margin-left: 62px;
-    margin-top: 14px;
+    margin-top: -13px;
     width: 76%;
     border: 1px solid white;
 }
@@ -250,6 +250,11 @@ li.lop_div {
     margin-top: 10px;
     margin-left: 220px;
     cursor: pointer;
-  
 }
 
+i.fa-solid.fa-arrow-left {
+    cursor: pointer;
+    font-size: 33px;
+    color: blue;
+    margin-left: 10px;
+}
