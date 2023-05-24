@@ -13,7 +13,7 @@
             $personal_get_data = "";
         }
     // search sql
-    $personal_search = "WHERE id_personal LIKE '%$personal_get_data%' ";
+    $personal_search = "WHERE id_personal LIKE '%$personal_get_data%' or name_hv LIKE '%$personal_get_data%' or name LIKE '%$personal_get_data%' ";
 
     if(isset($_GET['page']))
         {
@@ -24,7 +24,7 @@
             $page = 1;
         }
     // Số hàng một trang
-    $rowsPerPage=11;
+    $rowsPerPage=10;
     $perRow = $page * $rowsPerPage - $rowsPerPage;
     $sql = "SELECT * FROM (tbl_personal INNER JOIN tbl_hoi_vien ON tbl_personal.id_hv = tbl_hoi_vien.id_hv) INNER JOIN tbl_nhan_vien ON tbl_personal.id_nv = tbl_nhan_vien.id_nv $personal_search ORDER BY id_personal LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);

@@ -1,7 +1,7 @@
 <!-- Kết nối CSDL -->
 <?php
     include_once "../connection.php";
-    $id_class = $_POST['id_class'];
+    $lopID = $_POST['lopID'];
     $ten_lop = $_POST['ten_lop'];
     $packages = $_POST['packages'];
     $thoi_luong = $_POST['thoi_luong'];
@@ -11,11 +11,11 @@
     $id_nv = $_POST['id_nv'];
     $doanh_thu = $_POST['doanh_thu'];
 
-    $sql = "UPDATE tbl_class SET ten_lop ='".$ten_lop."',packages =".$packages.",
+    $sql = "UPDATE tbl_lop SET ten_lop ='".$ten_lop."',packages =".$packages.",
     thoi_luong ='".$thoi_luong."', ngay_hoat_dong =".$ngay_hoat_dong.",
     so_luong_hv ='".$so_luong_hv."', name ='".$name."',
-    id_nv =".$id_nv.", doanh_thu ='".$doanh_thu."' WHERE id_class=".$id_class;
+    id_nv =".$id_nv.", doanh_thu ='".$doanh_thu."' WHERE id_lop=".$id_lop;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    header("Location: ../../../view/class.php");
+    header("Location: ../../../view/tbl_lop.php");
 ?>

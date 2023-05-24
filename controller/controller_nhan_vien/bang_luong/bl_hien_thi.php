@@ -12,8 +12,8 @@ include "bl_pages.php";
         <li class="bl__div bl__div--bl"><a >Bảng lương</a></th></li>
         
 </div>
-    <table class="bl__table--hienthi">
-        <tr class="bl__table_row--hienthi bl__table--Tieu_de">
+    <table class="bl__table--hienthi" >
+        <tr class="bl__table_row--hienthi bl__table--Tieu_de" style="background-color: #4472C8">
             <th>IDNV</th>
             <th>Tên</th>
             <th>Time Start</th>

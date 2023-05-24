@@ -14,5 +14,5 @@
     time_start='".$personal_id_nv."', time_end='".$personal_doanh_thu."' WHERE id_personal=".$personalID;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    header("Location: ../../view/personal.php");
+    header("Location: ../../../view/personal.php");
 ?>

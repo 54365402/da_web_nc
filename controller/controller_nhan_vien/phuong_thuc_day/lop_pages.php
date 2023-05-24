@@ -1,19 +1,19 @@
 <!-- Kết nối CSDL -->
 <?php
     include_once "../controller/connection.php";
-    // include_once "class_sort.php";
+    // include_once "lop_sort.php";
     
-    $class_get_data="";
-    if(isset($_POST['class_input-search']))
+    $lop_get_data="";
+    if(isset($_POST['lop_input-search']))
         {
-            $class_get_data = $_POST['class_input-search'];
+            $lop_get_data = $_POST['lop_input-search'];
         }
     else
         {
-            $class_get_data = "";
+            $lop_get_data = "";
         }
     // search sql
-    $class_search = "WHERE id_class LIKE '%$class_get_data%' ";
+    $lop_search = "WHERE id_lop LIKE '%$lop_get_data%' or ten_lop LIKE '%$lop_get_data%' or name LIKE '%$lop_get_data%' ";
 
 
     if(isset($_GET['page']))
@@ -25,15 +25,14 @@
             $page = 1;
         }
     // Số hàng một trang
-    $rowsPerPage=11;
-    
+    $rowsPerPage=10;
     $perRow = $page * $rowsPerPage - $rowsPerPage;
-    $sql = "SELECT * FROM (tbl_class Inner Join tbl_nhan_vien On tbl_class.id_nv = tbl_nhan_vien.id_nv) $class_search ORDER BY id_class LIMIT $perRow, $rowsPerPage";
+    $sql = "SELECT * FROM (tbl_lop Inner Join tbl_nhan_vien On tbl_lop.id_nv = tbl_nhan_vien.id_nv) $lop_search ORDER BY id_lop LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);
 
     // Tổng số sản phẩm
-    $sql1 = "SELECT * FROM tbl_class";
-    if($class_get_data=="")
+    $sql1 = "SELECT * FROM tbl_lop";
+    if($lop_get_data=="")
         {
             $totalRows = mysqli_num_rows(mysqli_query($mysqli,$sql1));
         }
@@ -51,11 +50,11 @@
     {
         if($page==$i)
             {
-                $listPages .= '<input class="active class-page" type="submit" value="'.$i.'" name="page">';
+                $listPages .= '<input class="active lop-page" type="submit" value="'.$i.'" name="page">';
             }
         else
             {
-                $listPages .= '<input class="class-page" type="submit" value="'.$i.'" name="page">';
+                $listPages .= '<input class="lop-page" type="submit" value="'.$i.'" name="page">';
             }
     }   
 ?>

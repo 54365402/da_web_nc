@@ -1,8 +1,8 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    // include_once "../controller/connection.php";
     include_once "personal_pages.php";
-    include_once "view_personal_popup.php"
+    // include_once "view_personal_popup.php";
 ?>
 
 <!-- Hien thi bang -->
@@ -11,10 +11,14 @@
     <div class = "personal_div-hienthi1">
         <table >
             <div  class='personal_div-tap'>
-                <li class="personal_div personal_div-class"><a href="../view/class.php">Class</a></th></li>
+                <li class="personal_div personal_div-class"><a href="../view/tbl_class.php">Class</a></th></li>
                 <li class="personal_div personal_div-personal"><a href="../view/personal.php">Personal</a></li>
             </div>
             
+            <?php
+                include_once "view_personal_popup.php";
+            ?>
+
             <!-- tạo giao diện nút thêm, sửa, xóa -->
             <div class='personal_div-chua_button'>
                 <button class='personal_div-button js-them' type="button" onclick="">Thêm</button>
@@ -34,8 +38,8 @@
                     <input class="personal-sort" type="submit" value="Tìm kiếm"></form>
                     </div>
                 </form>
+            </div>
 
-             </div>
         <table class="personal_table-hienthi">
             <tr class="personal_table_row-hienthi personal_table-Tieu_de" style="background-color: #4472C8">
                 <th>ID Personal</th>
@@ -66,7 +70,6 @@
             ?>    
         </table>
        
-
     </div>
 </div>
     <?php

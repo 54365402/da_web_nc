@@ -10,15 +10,17 @@ include_once "header.php";
 
 <link rel="stylesheet" href="./assets/css/personal.css">
 
+
+<!-- them--popup -->
+<?php include_once "view_personal_popup.php"
+?>
+
 <!-- Hiển thị -->
 <?php
     include_once "../controller/controller_nhan_vien/phuong_thuc_day/personal_hien_thi.php";
 ?>
 
 <div class='clear'></div>
-
-<?php include_once "view_personal_popup.php"
-?>
 
 
 <!-- tạo chỉ mục trang -->
@@ -42,5 +44,5 @@ include_once "header.php";
         header("Location: dang_nhap.php");
     }
 ?>
-</html>
+
 
