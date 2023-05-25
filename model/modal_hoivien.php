@@ -5,6 +5,7 @@ class hoivien{
     private $gioi_tinh;
     private $tuoi;
     private $sdt;
+    private $email;
     private $cmnd;
     private $bien_xe;
     private $diem_tich_luy;
@@ -50,6 +51,14 @@ class hoivien{
 
     public function get_sdt() {
         return $this->sdt;
+    }
+
+    public function set_email($email) {
+        $this->email = $email;
+    }
+
+    public function get_email() {
+        return $this->email;
     }
 
     public function set_cmnd($cmnd) {
