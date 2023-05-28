@@ -175,7 +175,7 @@ div tr.hoivien__table-view--title {
 .hoivien__modal-popup-overlay {
     position: relative;
     width: 500px;
-    height: 400px;
+    height: 430px;
     background-color: lightblue;
     border-radius: 30px;
     border: 5px solid #2F528F;

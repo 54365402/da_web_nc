@@ -13,7 +13,7 @@
             $lop_get_data = "";
         }
     // search sql
-    $lop_search = "WHERE id_lop LIKE '%$lop_get_data%' or ten_lop LIKE '%$lop_get_data%' or name LIKE '%$lop_get_data%' ";
+    $lop_search = "WHERE id_lop LIKE '%$lop_get_data%' or ten_lop LIKE '%$lop_get_data%' or name LIKE '%$lop_get_data%' or types_room LIKE '%$lop_get_data%' ";
 
 
     if(isset($_GET['page']))

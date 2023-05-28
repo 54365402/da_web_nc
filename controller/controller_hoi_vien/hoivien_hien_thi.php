@@ -27,6 +27,7 @@
                 <th>GIỚI TÍNH</th>
                 <th>TUỔI</th>
                 <th>SỐ ĐIỆN THOẠI</th>
+                <th>EMAIL</th>
                 <th>CMND</th>
                 <th>BIỂN SỐ XE</th>
                 <th>ĐIỂM TÍCH LŨY</th>
@@ -43,6 +44,7 @@
                 <td><?php echo $row["gioi_tinh"]?></td>
                 <td><?php echo $row["tuoi"]?></td>
                 <td><?php echo $row["sdt"]?></td>
+                <td><?php echo $row["email"]?></td>
                 <td><?php echo $row["cmnd"]?></td>
                 <td><?php echo $row["bien_xe"]?></td>
                 <td><?php echo $row["diem_tich_luy"]?></td>
