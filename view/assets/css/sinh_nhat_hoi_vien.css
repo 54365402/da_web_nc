@@ -130,7 +130,7 @@ table.snhv__table--hienthi {
 .snhv__modal__div--popup {
     width: 500px;
     position: relative;
-    background-color: lightsnhvue;
+    background-color: lightblue;
     height: 400px;
     border-radius: 20px;
 }
@@ -145,7 +145,7 @@ table.snhv__table--addform {
     margin-left: auto;
     margin-right: auto;
     font-size: 20px;
-    background-color: lightsnhvue;
+    background-color: lightblue;
     
 }
 .snhv__table--add-button{
@@ -164,6 +164,7 @@ table.snhv__table--addform {
 }
 .snhv__table--add_input{
     height: 20px;
+    width: 266px;
 }
 
 /* css của button thêm sửa xóa */
@@ -254,6 +255,7 @@ i.fa-solid.fa-arrow-left {
     justify-content: center;
 }
 .snhv__div__div_quatang {
+    display: flex;
     border-radius: 13px;
     border: 1px solid;
     width: 100%;
@@ -291,4 +293,122 @@ li.snhv__div.snhv__div--tichDiem {
 
 button.snhv__div--button.js-xoa {
     background-color: red;
+}
+
+select.view__tdd__select {
+    width: 266px;
+    text-align: center;
+}
+textarea.snhv__table--add_input.snhv__table--add_input--text-area {
+    width: 266px;
+    height: 188px;
+}
+
+form.snhv__form--sendDate {
+    display: flex;
+}
+
+button.snhv__table--button_guiDate {
+    /* border: 1px solid #2F528F; */
+    /* border-radius: 10px; */
+    /* border-width: 5px; */
+    margin-left: 1%;
+    padding: 5px;
+    border: 1px solid #2F528F;
+    border-width: 5px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    background-color: #daeaf3;
+}
+
+.snhv__div__div_quatang-baoDong {
+    margin: 17px 0px 0px 8px;
+}
+img.snhv__div__div_quatang__form--showimg {
+    height: 100%;
+    width: 100px;
+}
+input.snhv__div__input--gift {
+    width: 71px;
+}
+
+/* popup gift */
+.view_gift__modal--popup.snhv__modal--popup--open
+{
+    display: flex;
+}
+.view_gift__modal--popup {
+    top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.view_gift__modal__div--popup{
+    width: 100%;
+}
+.view_gift__modal__div--popup {
+    width: 500px;
+    position: relative;
+    background-color: lightblue;
+    height: 400px;
+    border-radius: 20px;
+}
+.view_gift__modal__div--u{  
+    position: absolute;
+    font-size: 22px;
+    margin-left: 20px;
+    top: 3%;
+}
+
+table.view_gift__table--addform {
+    margin-top: 76px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    background-color: lightblue;
+    
+}
+select.view__tdd__select {
+    width: 266px;
+    text-align: center;
+}
+
+.view_gift__table--add_input{
+    height: 20px;
+    width: 266px;
+}
+button.view_gift__table--add-button.view_gift__table--button_huy {
+    background-color: red;
+}
+.view_gift__table--add-button{
+    padding: 5px;
+    border: 1px solid #2F528F;
+    border-width: 3px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #daeaf3;
+    margin-left: 5px;
+    float: right;
+    margin-top: 12px;
+}
+button.view_gift__table--button_guiDate {
+    /* border: 1px solid #2F528F; */
+    /* border-radius: 10px; */
+    /* border-width: 5px; */
+    margin-left: 1%;
+    padding: 5px;
+    border: 1px solid #2F528F;
+    border-width: 5px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    background-color: #daeaf3;
+}
+.snhv__div--showGift {
+    display: flex;
 }

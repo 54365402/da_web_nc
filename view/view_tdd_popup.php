@@ -24,7 +24,7 @@
             <tr>
                 <td><label for="lname">ID hội viên:</label></td>
                 <td>
-                <select class='view__tdd__select' name='view_select_id_hv' onclick="changeSize(this)">
+                <select class='view__tdd__select' name='view_select_id_hv'>
             <?php
             // Duyệt qua các phẩn từ trong bảng
             while($row = mysqli_fetch_array($query))
@@ -61,16 +61,3 @@
     </div>
 </div>
 <div class="clear"></div>
-
-<script>// thao tác chỉnh size của select
-function changeSize(selectElement){
-    selectElement.size="4";
-}
-    const selectElement = document.querySelector('.view__tdd__select')
-    selectElement.onchange = function(e){
-        selectElement.onmouseout = function(e){
-            e.target.size="1";
-        }
-        }
-
-</script>

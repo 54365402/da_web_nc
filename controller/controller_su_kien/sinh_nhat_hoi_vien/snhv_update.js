@@ -33,7 +33,7 @@
     
         // Chỉ định URL và phương thức HTTP
         var method = "POST";
-    
+             
         // Chỉ định các tham số để gửi dữ liệu
        
         
@@ -64,7 +64,7 @@
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(snhvid_hv+"&"+snhvname_hv+"&"+snhvdiem_tich_luy+"&"+snhvngay_sinh+"&"+snhvid_gift+"&"+snhvtrang_thai);
-          location.reload(true)
+          location.reload(true);
           }
           }
         }
