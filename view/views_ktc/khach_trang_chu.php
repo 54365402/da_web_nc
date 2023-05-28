@@ -18,8 +18,8 @@ if (isset($_SESSION['chuc_vu']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/khach_trang_chu.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/khach_trang_chu.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     <title>HUCE GYM NHÓM 6</title>
 </head>
 
@@ -27,7 +27,7 @@ if (isset($_SESSION['chuc_vu']))
     <header>
         <div class="header--title">
             <div class="ktc_header__div--logo">
-                <li class="ktc_header__li--logo"><img class="ktc_header__img--logo" src="./assets/img/logo.png"
+                <li class="ktc_header__li--logo"><img class="ktc_header__img--logo" src="../assets/img/logo.png"
                         alt="LOGO"></li>
             </div>
             <div class="ktc_header__div">
@@ -47,26 +47,26 @@ if (isset($_SESSION['chuc_vu']))
         </div> -->
     <div class="ktc--dem_header"></div>
     <div class="ktc__div--slider">
-        <img class="ktc__div--slider__img" src="./assets/img/coach-là-phải-chuẩn-1920x829.jpg" alt="GYM Image">
+        <img class="ktc__div--slider__img" src="../assets/img/coach-là-phải-chuẩn-1920x829.jpg" alt="GYM Image">
     </div>
     <div class="ktc__div--slider">
-        <img class="ktc__div--slider__img" src="./assets/img/kéo-tạ-kéo-sức-hút-1920x829.jpg" alt="GYM Image">
+        <img class="ktc__div--slider__img" src="../assets/img/kéo-tạ-kéo-sức-hút-1920x829.jpg" alt="GYM Image">
     </div>
     <div class="ktc__div--slider">
-        <img class="ktc__div--slider__img" src="./assets/img/tập-luyện-đúng-kết-quả-thật-1920x829.jpg" alt="GYM Image">
+        <img class="ktc__div--slider__img" src="../assets/img/tập-luyện-đúng-kết-quả-thật-1920x829.jpg" alt="GYM Image">
     </div>
     <div class="ktc__div--slider">
-        <img class="ktc__div--slider__img" src="./assets/img/web-banner-WCL.jpg" alt="GYM Image">
+        <img class="ktc__div--slider__img" src="../assets/img/web-banner-WCL.jpg" alt="GYM Image">
     </div>
     <div id="ktc_hoi_vien">
         <center>
             <p id="ktc_hoi_vien__p" class="ktc_hoi_vien__p">NGƯỜI THỰC - KẾT QUẢ THỰC</p>
         </center>
         <div class="ktc_hoi_vien__div">
-            <img class="ktc_hoi_vien__div__img" src="./assets/img/ktc_hoivien1.jpg" alt="GYM Image">
-            <img class="ktc_hoi_vien__div__img" src="./assets/img/ktc_hoivien2.jpg" alt="GYM Image">
-            <img class="ktc_hoi_vien__div__img" src="./assets/img/ktc_hoivien3.jpg" alt="GYM Image">
-            <img class="ktc_hoi_vien__div__img" src="./assets/img/ktc_hoivien4.jpg" alt="GYM Image">
+            <img class="ktc_hoi_vien__div__img" src="../assets/img/ktc_hoivien1.jpg" alt="GYM Image">
+            <img class="ktc_hoi_vien__div__img" src="../assets/img/ktc_hoivien2.jpg" alt="GYM Image">
+            <img class="ktc_hoi_vien__div__img" src="../assets/img/ktc_hoivien3.jpg" alt="GYM Image">
+            <img class="ktc_hoi_vien__div__img" src="../assets/img/ktc_hoivien4.jpg" alt="GYM Image">
         </div>
         <div class="ktc_hoi_vien__div--thong_so_so">
             <div class="ktc_hoi_vien__div--thong_so--yellow">
@@ -121,22 +121,22 @@ if (isset($_SESSION['chuc_vu']))
         <div class="ktc_co_so_vat_chat__div--anhCSVC">
             <div class="ktc_co_so_vat_chat__div__div">
                 <center>
-                    <img class="ktc_co_so_vat_chat__div__img" src="./assets/img/ktc_csvc1.jpg" alt="GYM Image">
+                    <img class="ktc_co_so_vat_chat__div__img" src="../assets/img/ktc_csvc1.jpg" alt="GYM Image">
                 </center>
             </div>
             <div class="ktc_co_so_vat_chat__div__div">
                 <center>
-                    <img class="ktc_co_so_vat_chat__div__img" src="./assets/img/ktc_csvc2.jpg" alt="GYM Image">
+                    <img class="ktc_co_so_vat_chat__div__img" src="../assets/img/ktc_csvc2.jpg" alt="GYM Image">
                 </center>
             </div>
             <div class="ktc_co_so_vat_chat__div__div">
                 <center>
-                    <img class="ktc_co_so_vat_chat__div__img" src="./assets/img/ktc_csvc3.jpg" alt="GYM Image">
+                    <img class="ktc_co_so_vat_chat__div__img" src="../assets/img/ktc_csvc3.jpg" alt="GYM Image">
                 </center>
             </div>
             <div class="ktc_co_so_vat_chat__div__div">
                 <center>
-                    <img class="ktc_co_so_vat_chat__div__img" src="./assets/img/ktc_csvc4.jpg" alt="GYM Image">
+                    <img class="ktc_co_so_vat_chat__div__img" src="../assets/img/ktc_csvc4.jpg" alt="GYM Image">
                 </center>
             </div>
         </div>
@@ -273,9 +273,9 @@ if (isset($_SESSION['chuc_vu']))
         </div>
 
     </div>
-    <script src="../controller/controller_ktc/ktc_slider.js"></script>
-    <script src="../controller/controller_ktc/ktc_goi_tap.js"></script>
-    <script src="../controller/controller_ktc/ktc_dang_nhap.js"></script>
+    <script src="../assets/js/js_ktc/ktc_slider.js"></script>
+    <script src="../assets/js/js_ktc/ktc_goi_tap.js"></script>
+    <script src="../assets/js/js_ktc/ktc_dang_nhap.js"></script>
 
 </body>
 

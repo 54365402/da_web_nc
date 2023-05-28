@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../connection.php";
+    include_once "../../connection.php";
     $nuocID = $_POST['nuocID'];
     $nuocTen = $_POST['nuocTen'];
     $nuocLoai = $_POST['nuocLoai'];
@@ -19,5 +19,6 @@
     "', tong_tien=". $nuocTongTien.  " WHERE id_nuoc_va_tp=".$nuocID;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    header("Location: ../../view/nuoc.php");
+    header("Location: ../../view/views_nuoc_va_thuc_pham/views_nuoc/nuoc.php");
+
 ?>

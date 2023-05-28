@@ -1,5 +1,5 @@
-<?php 
-session_start();
+<?php
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,17 +7,17 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HUCE GYM FORGOT PASSWORD</title>
+    <title>HUCE GYM RECOVER PASSWORD</title>
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-    <link rel="stylesheet" href="assets/css/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/plugins/fontawesome-free/css/all.min.css">
 
-    <link rel="stylesheet" href="assets/css/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
-    <link rel="stylesheet" href="assets/css/dist/css/adminlte.min.css?v=3.2.0">
-    <script nonce="2c45c58d-d7ba-4c73-a13f-b87bfa141cf4">
+    <link rel="stylesheet" href="../assets/css/dist/css/adminlte.min.css?v=3.2.0">
+    <script nonce="488146bc-ca54-4b65-bc9d-114e05e4c3b8">
     (function(w, d) {
         ! function(dk, dl, dm, dn) {
             dk[dm] = dk[dm] || {};
@@ -87,42 +87,58 @@ session_start();
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../../index2.html"><b>HUCE GYM FORGOT PASSWORD</b></a>
+            <a><b>HUCE GYM RECOVER PASSWORD</b></a>
         </div>
 
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
-
-                <?php 
-    if (isset( $_SESSION["check_email"])){
-        echo "<span style='color:red;'>".$_SESSION["check_email"]."</span>";
-    }
-    session_destroy();
-?>
-
-                <form action="../controller/controller_ktc/email/quen_mk.php" method="post">
+                <p class="login-box-msg">You are only one step a way from your new password, recover your password now.
+                </p>
+                <form action="../../controller/controller_ktc/doi_mk.php" method="post">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email" name="gmail">
+                        <input type="text" class="form-control" name="maOTP" placeholder="OTP">
                         <div class="input-group-append">
                             <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
                             </div>
                         </div>
                     </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" name="confirm_password"
+                            placeholder="Confirm Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row">
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block">Request new password</button>
+                            <button type="submit" class="btn btn-primary btn-block">Change password</button>
                         </div>
-
 
                     </div>
                 </form>
+                <?php
+    if (isset( $_SESSION["ssOTP"])){
+        echo "<span style='color:red;'>".$_SESSION["ssOTP"]."</span>";
+        session_destroy();
+    }
+    if (isset( $_SESSION["ssPass"])){
+        echo "<span style='color:red;'>".$_SESSION["ssPass"]."</span>";
+        session_destroy();
+}
+?>
                 <p class="mt-3 mb-1">
                     <a href="dang_nhap.php">Login</a>
-                </p>
-                <p class="mb-0">
-                    <a href="dang_ky.php" class="text-center">Register a new membership</a>
                 </p>
             </div>
 
@@ -130,11 +146,11 @@ session_start();
     </div>
 
 
-    <script src="assets/css/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/css/plugins/jquery/jquery.min.js"></script>
 
-    <script src="assets/css/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/css/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="assets/css/dist/js/adminlte.min.js?v=3.2.0"></script>
+    <script src="../assets/css/dist/js/adminlte.min.js?v=3.2.0"></script>
 </body>
 
 </html>

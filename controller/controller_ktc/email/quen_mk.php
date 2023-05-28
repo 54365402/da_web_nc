@@ -52,7 +52,7 @@ $_SESSION["check_email"] = "";
     }
     if($_SESSION["check_email"] != "")
     {
-        header("Location: ../../../view/quen_mk.php");
+        header("Location: ../../../view/views_ktc/quen_mk.php");
     }
     
 ?>

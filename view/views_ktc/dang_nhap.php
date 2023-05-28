@@ -14,11 +14,11 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-    <link rel="stylesheet" href="assets/css/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/plugins/fontawesome-free/css/all.min.css">
 
-    <link rel="stylesheet" href="assets/css/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
-    <link rel="stylesheet" href="assets/css/dist/css/adminlte.min.css?v=3.2.0">
+    <link rel="stylesheet" href="../assets/css/dist/css/adminlte.min.css?v=3.2.0">
     <script nonce="015a0f0a-5ed8-49a1-8858-7fb212e493c6">
     (function(w, d) {
         ! function(dk, dl, dm, dn) {
@@ -95,7 +95,7 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
-                <form action="../controller/controller_ktc/dang_nhap.php" method="post">
+                <form action="../../controller/controller_ktc/dang_nhap.php" method="post">
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" name="email" placeholder="Email">
                         <div class="input-group-append">
@@ -163,11 +163,11 @@
     </div>
 
 
-    <script src="assets/css/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/css/plugins/jquery/jquery.min.js"></script>
 
-    <script src="assets/css/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/css/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="assets/css/dist/js/adminlte.min.js?v=3.2.0"></script>
+    <script src="../assets/css/dist/js/adminlte.min.js?v=3.2.0"></script>
 
 </body>
 

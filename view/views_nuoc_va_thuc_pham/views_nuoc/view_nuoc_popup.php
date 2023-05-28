@@ -2,7 +2,7 @@
     <div class='nuoc__modal__div--popup'>
         <i><b><u class='nuoc__modal__div--u'>Thêm sản phẩm</u></b></i>
     <div >
-    <form action="../controller/controller_nuoc_va_tp/nuoc_add.php" method="POST">
+    <form action="../../../controller/controller_nuoc_va_tp/controller_nuoc/nuoc_add.php" method="POST">
         <table class='nuoc__table--addform'>
             <tr>
                 <td><label for="fname">Tên:</label></td>

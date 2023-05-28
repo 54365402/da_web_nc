@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../../controller/connection.php";
     include_once "nuoc_sort.php";
   
     $nuoc_get_data="";

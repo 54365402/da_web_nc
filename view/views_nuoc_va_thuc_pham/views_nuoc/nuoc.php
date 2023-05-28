@@ -1,12 +1,14 @@
+
 <?php
 include_once "header.php";
 ?>
+
 <?php 
     // Start the session
-    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    {
+    // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    // {
 ?>
-<link rel="stylesheet" href="./assets/css/nuoc.css">
+<link rel="stylesheet" href="../../assets/css/nuoc.css">
 
 <!-- them--popup -->
 
@@ -37,7 +39,7 @@ include_once "header.php";
 </div>
 
 <?php
-include_once "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
+include_once "../../../controller/controller_nuoc_va_tp/controller_nuoc/nuoc_hien_thi.php"
 ?>
 
 <div class='clear'></div>
@@ -51,15 +53,19 @@ include_once "../controller/controller_nuoc_va_tp/nuoc_hien_thi.php"
     </center>
 </form>
 
-<script src="../controller/controller_nuoc_va_tp/nuoc_add.js">
-</script>
+<script src="../../assets/js/js_nuoc_va_thuc_pham/js_nuoc/nuoc_add.js"></script>
+<script src="../../assets/js/js_nuoc_va_thuc_pham/js_nuoc/nuoc_delete.js"></script>
+<script src="../../assets/js/js_nuoc_va_thuc_pham/js_nuoc/nuoc_update.js"></script>
 
-<script src="../controller/controller_nuoc_va_tp/nuoc_delete_update.js"></script>
+
+<!-- <script src="../../assets/js/js_nuoc_va_thuc_pham/js_nuoc/nuoc_event.js"></script> -->
+
+<!-- <script src="../../assets/js/js_nuoc_va_thuc_pham/js_nuoc/nuoc_delete_update.js"></script> -->
 <?php 
-    }
-    else{
-        header("Location: dang_nhap.php");
-    }
+    // }
+    // else{
+    //     header("Location: ../../views_ktc/dang_nhap.php");
+    // }
 ?>
 </body>
 

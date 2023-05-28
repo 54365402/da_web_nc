@@ -1,8 +1,8 @@
 <?php
     //ket noi
-    include_once "../connection.php";
+    include_once "../../connection.php";
     // lay CSDL
-    require_once('../../model/modal_nuoc.php');
+    require_once('../../../model/modal_nuoc.php');
     $nuoc = new Nuoc();
     $nuoc->set_name($_POST["nuoc__table--add_ten"]);
     $nuoc->set_loai_tp($_POST["nuoc__table--add_loai_san_pham"]);
@@ -32,7 +32,7 @@
     //điều hướng trang đến nuoc.php để refresh
     
     }
-    header("Location: ../../view/nuoc.php");
+    header("Location: ../../../view/views_nuoc_va_thuc_pham/views_nuoc/nuoc.php");
     exit();
 ?>
 

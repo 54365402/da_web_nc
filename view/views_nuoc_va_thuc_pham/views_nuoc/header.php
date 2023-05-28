@@ -2,7 +2,7 @@
     // Start the session
     session_start();   
 
-    include_once "../controller/connection.php";
+    include_once "../../../controller/connection.php";
     
     $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
     $query = mysqli_query($mysqli,$sql);
@@ -22,8 +22,8 @@ while($row = mysqli_fetch_array($query))
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     <title>GYM HUCE N6 PM1</title>
 </head>
 
@@ -33,7 +33,7 @@ while($row = mysqli_fetch_array($query))
         <div id="header">
             <div class="information">
                 <div class="logo">
-                    <img src="./assets/img/logo.png" alt="LOGO">
+                    <img src="../../assets/img/logo.png" alt="LOGO">
                 </div>
                 <div class="logout">
                         <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
