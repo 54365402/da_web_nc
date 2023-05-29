@@ -48,7 +48,8 @@ for (var i = 0; i < rows.length; i++) {
       xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhttp.send(params);
       // Refresh lại trang
-      location.reload(true)
+      //location.reload(true)
+      window.location="/da_web_nc/view/nuoc.php";
     }
     }
     var nuocUpdate = $('.js-sua');
@@ -88,7 +89,7 @@ for (var i = 0; i < rows.length; i++) {
       xhttp.send(params+"&"+nuocTen+"&"+nuocLoai+"&"+nuocGiaBan+"&"+nuocGiaNhap
       +"&"+nuocSoLuongNhap+"&"+nuocSoLuongTon+"&"+nuocNhaCungCap
       +"&"+nuocNgayNhap+"&"+nuocNgayHetHan+"&"+nuocTongTien);
-      location.reload(true)
+     
       }
       }
     }

@@ -12,6 +12,7 @@ include_once "header.php";
 <?php
 include_once "../controller/controller_the/the_hien_thi.php"
 ?>
+
 <div class='the_div-chua_button'>
     <button class='the_div-button js-chi_tiet' type="button" onclick="">Chi Tiết</button> 
     <button class='the_div-button js-them' type="button" onclick="">Thêm</button>
@@ -30,7 +31,7 @@ include_once "../controller/controller_the/the_hien_thi.php"
         <option value="2">Tên từ Z->A</option>
         <option value="3">Tiền tăng dần</option>
         <option value="4">Tiền giảm dần</option>
-        <option value="999">Như phút ban đầu</option>
+        <option value="999">Như phút ban đầu    </option>
     </select>
     <script>
     document.getElementById('the_select').addEventListener('change', function() {
