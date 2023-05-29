@@ -61,7 +61,7 @@
             var cell_name_hv = cells[1].innerHTML;
             var cell_id_hv = cells[2].innerHTML;
             var cell_thoi_luong = cells[3].innerHTML;
-            var cell_so_buoi = cells[5].innerHTML;
+            var cell_so_buoi = cells[4].innerHTML;
             var cell_id_nv = cells[6].innerHTML;
             var cell_doanh_thu = cells[7].innerHTML;
     

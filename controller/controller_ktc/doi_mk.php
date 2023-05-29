@@ -17,17 +17,17 @@
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
     $_SESSION["ktraThanhCong"]=true;
-    header("Location: ../../view/dang_nhap.php");
+    header("Location: ../../view/views_ktc/dang_nhap.php");
     exit();
         }
         else
         {
             $_SESSION["ssOTP"] = "Mã OTP không chính xác!";
-            header("Location: ../../view/doi_mk.php");
+            header("Location: ../../view/views_ktc/doi_mk.php");
         }
     }
     else{
         $_SESSION["ssPass"] = "Password và confirm_password phải giống nhau!";
-        header("Location: ../../view/doi_mk.php");
+        header("Location: ../../view/views_ktc/doi_mk.php");
     }
 ?>

@@ -36,6 +36,12 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><label for="">Email : </label></td>
+                    <td><input type="text" class="hoivien__table-add-input" name="hoivien__table-add-email"
+                            placeholder="email">
+                    </td>
+                </tr>
+                <tr>
                     <td><label for="">CMND : </label></td>
                     <td><input type="text" class="hoivien__table-add-input" name="hoivien__table-add-cmnd"
                             placeholder="cmnd">

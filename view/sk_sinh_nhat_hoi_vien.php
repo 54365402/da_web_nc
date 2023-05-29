@@ -10,6 +10,20 @@ include_once "header.php";
 
 <link rel="stylesheet" href="./assets/css/sinh_nhat_hoi_vien.css">
 
+<!-- Show Send SMS POPUP -->
+<?php include_once "view_guiSMS_popup.php";
+if(isset($_SESSION['check_success'])){
+    if($_SESSION['check_success'])
+    {
+        echo '<script>alert(Gửi Email thành công!)</script>';
+    }
+    else
+    {
+        echo '<script>alert(Gửi Email thất bại!)</script>';
+    }
+}
+?>
+<?php include_once "view_gift_popup.php"?>
 
 <!-- tạo giao diện sắp xếp -->
 
@@ -22,6 +36,7 @@ include_once "header.php";
         </div>
     </form>
 </div>
+
 <!-- Hiển thị -->
 <?php
     include_once "../controller/controller_su_kien/sinh_nhat_hoi_vien/snhv_hien_thi.php";
@@ -32,7 +47,7 @@ include_once "header.php";
 <!-- tạo chỉ mục trang -->
 
 
-
+<script src="../controller/controller_su_kien/sinh_nhat_hoi_vien/snhv_add.js"></script>
 <script src="../controller/controller_su_kien/sinh_nhat_hoi_vien/snhv_update.js"></script>
 <?php 
     }

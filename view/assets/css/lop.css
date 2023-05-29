@@ -18,7 +18,10 @@ td.lop_table_td-hienthi-td {
 
 .lop_form-search {
     font-size: 20px;
-    
+}
+
+.lop_search-input-icon {
+    font-size: 22px;
 }
 
 button.lop_input-search {
@@ -29,6 +32,7 @@ button.lop_input-search {
 }
 
 .lop_div-search-sort {
+    margin-bottom: 7px;
     display: flex;
 }
 
@@ -61,7 +65,7 @@ input.lop_input-search {
     text-align: center;
     margin-left: 47px;
     height: 450px;
-    margin-top: 49px;
+    margin-top: 30px;
     width: 13%;
     border: 3px solid rgb(7, 17, 21);
     border-radius: 25px;
@@ -71,7 +75,7 @@ input.lop_input-search {
     float: right;
     text-align: center;
     margin-left: 62px;
-    margin-top: 14px;
+    margin-top: -13px;
     width: 76%;
     border: 1px solid white;
 }
@@ -88,6 +92,15 @@ input.lop_input-search {
 .lop_modal_div-popup{
     width: 100%;
 }
+
+.lop_table-hienthi{
+    border-top: 5px solid rgb(80, 118, 243);
+    border-left: 5px solid rgb(60, 92, 198);
+    border-right: 5px solid rgb(44, 67, 145);
+    border-bottom: 5px solid rgb(107, 135, 225);
+    border-radius: 10px;
+}
+
 table.lop_table-hienthi {
     color: black;   
     width: 100%;
@@ -147,6 +160,7 @@ table.lop_table-hienthi {
     margin-left: 20px;
     top: 3%;
 }
+
 table.lop_table-addform {
     margin-top: 76px;
     margin-left: auto;
@@ -181,7 +195,7 @@ table.lop_table-addform {
     background-color: red;
 }
 
-.lop_table-add_input{
+.lop_table-add-input{
     height: 20px;
     width: 169px;
 }
@@ -225,7 +239,7 @@ li.lop_div {
     border-width: 3px;
     padding: 12px; 
 }
-.lop_div-class{
+.lop_div-lop{
     background-color: rgb(106, 135, 176);
 }
 .lop_div-personal{
@@ -233,10 +247,14 @@ li.lop_div {
 }
 
 .lop_form-page{
+    margin-top: 10px;
+    margin-left: 220px;
     cursor: pointer;
-  
 }
 
-.lop_search-input-icon {
-    font-size: 22px;
+i.fa-solid.fa-arrow-left {
+    cursor: pointer;
+    font-size: 33px;
+    color: blue;
+    margin-left: 10px;
 }

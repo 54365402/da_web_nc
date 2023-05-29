@@ -56,7 +56,7 @@
         currentRow.setAttribute('contenteditable','');
         alert('Mời bạn tiến hành chỉnh sửa!');
         currentRow.onkeyup=function(e){
-          if (cells.length === 9){
+          if (cells.length === 10){
             if(e.which===27){
               this.setAttribute('contenteditable',' ')
               var cell_ten = cells[1].innerHTML;
@@ -64,15 +64,17 @@
               var cell_gioi_tinh = cells[3].innerHTML;
               var cell_tuoi = cells[4].innerHTML;
               var cell_sdt = cells[5].innerHTML;
-              var cell_cmnd = cells[6].innerHTML;
-              var cell_bien_xe = cells[7].innerHTML;
-              var cell_diem_tich_luy = cells[8].innerHTML;
+              var cell_email = cells[6].innerHTML;
+              var cell_cmnd = cells[7].innerHTML;
+              var cell_bien_xe = cells[8].innerHTML;
+              var cell_diem_tich_luy = cells[9].innerHTML;
         
               var hoivien_ten = "hoivien_ten=" + cell_ten;
               var hoivien_ngay_sinh = "hoivien_ngay_sinh=" + cell_ngay_sinh;
               var hoivien_gioi_tinh = "hoivien_gioi_tinh=" + cell_gioi_tinh;
               var hoivien_tuoi = "hoivien_tuoi=" + cell_tuoi;
               var hoivien_sdt = "hoivien_sdt=" + cell_sdt;
+              var hoivien_email = "hoivien_email=" + cell_email;
               var hoivien_cmnd = "hoivien_cmnd=" + cell_cmnd;
               var hoivien_bien_xe = "hoivien_bien_xe=" + cell_bien_xe;
               var hoivien_diem_tich_luy = "hoivien_diem_tich_luy=" + cell_diem_tich_luy;
@@ -83,7 +85,7 @@
             xhttp.open(method, url, true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send(params+"&"+hoivien_ten+"&"+hoivien_ngay_sinh+"&"+hoivien_gioi_tinh+"&"+hoivien_tuoi
-            +"&"+hoivien_sdt+"&"+hoivien_cmnd+"&"+hoivien_bien_xe
+            +"&"+hoivien_sdt+"&"+hoivien_email+"&"+hoivien_cmnd+"&"+hoivien_bien_xe
             +"&"+hoivien_diem_tich_luy);
             }
             }
