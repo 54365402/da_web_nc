@@ -61,7 +61,7 @@ try {
     $mail->Subject = $tieuDe;
     $mail->Body    = $noiDung;
     $mail->send();
-    header("Location: ../../../view/sk_sinh_nhat_hoi_vien.php");
+    header("Location: ../../../view//views_su_kien/sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php");
     $_SESSION['check_success'] = "true";
 } catch (Exception $e) {
     $_SESSION['check_success'] = "false";

@@ -9,7 +9,7 @@
     <div class='nuoc__div--tap'>
         <li class="nuoc__div nuoc__div--tnuoc"><a href="../view/views_nuoc_va_thuc_pham/views_nuoc/nuoc.php">Nước</a></th>
         </li>
-        <li class="nuoc__div nuoc__div--ttpcn"><a href="../view/views_nuoc_va_thuc_pham/views_tp/thuc_pham_chuc_nang.php">Thực phẩm chức năng</a></li>
+        <li class="nuoc__div nuoc__div--ttpcn"><a href="../thuc_pham/thuc_pham_chuc_nang.php">Thực phẩm chức năng</a></li>
     </div>
     <table class="nuoc__table--hienthi">
         <tr class="nuoc__table_row--hienthi nuoc__table--Tieu_de" style="background-color: #4472C8">

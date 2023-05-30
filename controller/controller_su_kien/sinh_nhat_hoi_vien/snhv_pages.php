@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../../controller/connection.php";
     include_once "snhv_sort.php";
 
     $snhv_get_data="";
