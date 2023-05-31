@@ -195,7 +195,6 @@ input.snhv--page {
 
 .snhv__div--tap {
     display: flex;
-    margin-left: 7%;
 }
 
 li.snhv__div {
@@ -261,7 +260,7 @@ i.fa-solid.fa-arrow-left {
     width: 100%;
     height: 110px;
     background-color: #b4c7E7;
-    margin-top: 14px;   
+    margin-bottom: 15px;   
 }
 
 .snhv__div--thanhngan {
@@ -284,6 +283,7 @@ i.fa-solid.fa-arrow-left {
 }
 
 li.snhv__div.snhv__div--skkm {
+    margin-left: 30px;
      background-color: #DAEAF3;
 }
 
@@ -411,4 +411,18 @@ button.view_gift__table--button_guiDate {
 }
 .snhv__div--showGift {
     display: flex;
+}
+.snhv__div--hienthi--bocHoiVien {
+    display: contents;
+}
+.snhv__div--chua-hien-thi {
+    display: contents;
+}
+.snhv__div--hienthi--bocQuaTang {
+    display: contents;
+}
+
+a.shnv__div__a-xoaGift {
+    margin-left: 39px;
+    margin-right: 10px;
 }

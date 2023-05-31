@@ -9,7 +9,7 @@
     <div class='nuoc__div--tap'>
         <li class="nuoc__div nuoc__div--tnuoc"><a href="../view/views_nuoc_va_thuc_pham/views_nuoc/nuoc.php">Nước</a></th>
         </li>
-        <li class="nuoc__div nuoc__div--ttpcn"><a href="../view/views_nuoc_va_thuc_pham/views_tp/thuc_pham_chuc_nang.php">Thực phẩm chức năng</a></li>
+        <li class="nuoc__div nuoc__div--ttpcn"><a href="../thuc_pham/thuc_pham_chuc_nang.php">Thực phẩm chức năng</a></li>
     </div>
     <table class="nuoc__table--hienthi">
         <tr class="nuoc__table_row--hienthi nuoc__table--Tieu_de" style="background-color: #4472C8">
@@ -45,8 +45,8 @@
             <td class="nuoc__table_td--hienthi-td"><?php echo $row["ngay_nhap"]?></td>
             <td class="nuoc__table_td--hienthi-td"><?php echo $row["ngay_het_han"]?></td>
             <td class="nuoc__table_td--hienthi-td"><?php echo $row["tong_tien"]?></td>
-            <td class="nuoc__table_td--hienthi-td nuoc__table_td--hienthi-td-xoa" style="display:none; text-align: center;"><a href="../../../controller/controller_nuoc_va_tp/controller_nuoc/nuoc_delete.php?nuocID=<?php echo $row["id_nuoc_va_tp"]?>">Xóa</a></td>
-            <td class="nuoc__table_td--hienthi-td nuoc__table_td--hienthi-td-update" style="display:none; text-align: center;"><a href="">Update</a></td>
+            <td class="nuoc__table_td--hienthi-td nuoc__table_td--hienthi-td-xoa" style="display:none; text-align: center;"><a href="../../../controller/controller_nuoc_va_tp/controller_nuoc/nuoc_delete.php?nuocID=<?php echo $row["id_nuoc_va_tp"]?>"><i class="fa-sharp fa-solid fa-delete-left"></i></a></td>
+            <td class="nuoc__table_td--hienthi-td nuoc__table_td--hienthi-td-update" style="display:none; text-align: center;"><a href="view_update_nuoc_popup.php?nuocID=<?php echo $row["id_nuoc_va_tp"]?>"><i class="fa-solid fa-wrench"></i></a></td>
 
             <?php
        }

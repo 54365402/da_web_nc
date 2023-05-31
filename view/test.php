@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Hiển thị ảnh khi chọn từ input file</title>
+  <style>
+    img {
+      max-width: 300px;
+      max-height: 300px;
+    }
+  </style>
 </head>
 <body>
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
-    <input type="file" name="image_file" accept="image/*">
-    <input type="submit" value="Tải lên">
-</form>
-<?php
-$target_dir = "uploads/"; // Thư mục đích để lưu trữ tệp ảnh tải lên
-$target_file = $target_dir . basename($_FILES["image_file"]["name"]); // Đường dẫn đầy đủ đến tệp ảnh tải lên
+    <div id="imageContainer"></div>
+    <input type="file" id="imageInput">
 
-// Kiểm tra nếu tệp ảnh đã tồn tại
-if (file_exists($target_file)) {
-    echo "Tệp ảnh đã tồn tại.";
-    // Có thể thực hiện các hành động khác ở đây nếu cần thiết
-} else {
-    // Di chuyển tệp ảnh từ vị trí tạm thời đến thư mục đích
-    if (move_uploaded_file($_FILES["image_file"]["tmp_name"], $target_file)) {
-        echo "Tải lên thành công.";
+  <script>
+    // Lấy tham chiếu đến input file và container
+    var imageInput = document.getElementById('imageInput');
+    var imageContainer = document.getElementById('imageContainer');
 
-        // Lưu đường dẫn tệp ảnh vào cơ sở dữ liệu
-        $image_path = $target_file;
-    }}
-    echo $image_path;
-?>
+    // Xử lý sự kiện onchange của input file
+    imageInput.addEventListener('change', function(event) {
+      // Lấy tệp tin ảnh từ input file
+      var file = event.target.files[0];
+      
+      // Tạo đối tượng FileReader
+      var reader = new FileReader();
+      
+      // Xử lý sự kiện load của FileReader
+      reader.onload = function(e) {
+          // Tạo phần tử hình ảnh và gán thuộc tính src
+          var image = document.createElement('img');
+          image.src = e.target.result;
+          
+          // Thêm phần tử hình ảnh vào container
+          imageContainer.innerHTML = '';
+          imageContainer.appendChild(image);
+        };
+        
+      // Đọc nội dung của tệp tin ảnh dưới dạng URL data
+      reader.readAsDataURL(file);
+    });
+  </script>
 </body>
 </html>

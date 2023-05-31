@@ -18,5 +18,5 @@
     " WHERE id_nv=".$idnv;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    header("Location: ../../../view/nv_bang_luong.php");
+    header("Location: ../../view/views_nhan_vien/bang_luong/nv_bang_luong.php");
 ?>

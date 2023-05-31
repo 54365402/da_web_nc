@@ -1,19 +1,20 @@
 <!-- Kết nối CSDL -->
 <?php
     include_once "../../../controller/connection.php";
-    include_once "bl_sort.php";
-    
-    $bl_get_data="";
-    if(isset($_POST['bl__input--search']))
+
+    include_once "tp_sort.php";
+   
+    $tp_get_data="";
+    if(isset($_POST['tp__input--search']))
     {
-        $bl_get_data = $_POST['bl__input--search'];
+        $tp_get_data = $_POST['tp__input--search'];
     }
     else
     {
-        $bl_get_data = "";
+        $tp_get_data = "";
     }
     // search sql
-    $bl_search = " WHERE luong.id_nv LIKE '%$bl_get_data%'";
+    $tp_search = " id_nuoc_va_tp LIKE '%$tp_get_data%' ";
 
     if(isset($_GET['page']))
     {
@@ -25,13 +26,14 @@
     }
     // Số hàng một trang
     $rowsPerPage=11;
+    // Sẽ lấy giá trị từ hàng nào
     $perRow = $page * $rowsPerPage - $rowsPerPage;
-    $sql = "SELECT * FROM (luong INNER JOIN tbl_nhan_vien ON luong.id_nv=tbl_nhan_vien.id_nv) $bl_search ORDER BY $bl_key $bl_Tang LIMIT $perRow, $rowsPerPage";
+    $sql = "SELECT * FROM tbl_nuoc_va_thuc_pham WHERE loai_tp LIKE N'T%' and $tp_search
+    ORDER BY $tp_key $tp_Tang LIMIT $perRow, $rowsPerPage";
     $query = mysqli_query($mysqli,$sql);
-    
     // Tổng số sản phẩm
-    $sql1 = "SELECT * FROM luong";
-    if($bl_get_data=="")
+    $sql1 = "SELECT * FROM tbl_nuoc_va_thuc_pham WHERE loai_tp LIKE N'T%'";
+    if($tp_get_data=="")
     {
         $totalRows = mysqli_num_rows(mysqli_query($mysqli,$sql1));
     }
@@ -39,7 +41,6 @@
     {
         $totalRows = mysqli_num_rows(mysqli_query($mysqli,$sql));
     }
-    
     // Tính tổng số trang pages
     $totalPages = ceil($totalRows/$rowsPerPage);
     // Xây dựng thanh phân trang
@@ -47,11 +48,11 @@
     for ($i=1; $i<=$totalPages; $i++)
     {
         if($page==$i){
-            $listPages .= '<input class="active bl--page" type="submit" value="'.$i.'" name="page">';
+            $listPages .= '<input class="active tp--page" type="submit" value="'.$i.'" name="page">';
         }
         else{
-            $listPages .= '<input class="bl--page" type="submit" value="'.$i.'" name="page">';
+            $listPages .= '<input class="tp--page" type="submit" value="'.$i.'" name="page">';
         }
     }
+    
 ?>
-
