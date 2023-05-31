@@ -3,6 +3,7 @@ const tpThem = document.querySelectorAll('.js-them')
 const tpModal = document.querySelector('.tp__modal--popup')
 const tpClose = document.querySelectorAll('.tp__table--button_huy')
 const tpThemPupUp = document.querySelectorAll('.tp__table--button_them')
+
 function showAdd() {
     tpModal.classList.add('tp__modal--popup--open')
 }

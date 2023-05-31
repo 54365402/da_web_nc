@@ -1,12 +1,14 @@
 <?php
 // lấy tên key
-    if(isset($_POST['nuocTang']))
+    if(isset($_GET['nuocTang']))
     {
-        $nuoc_key = $_POST['nuocSort'];
+        $_SESSION['nuoc_key'] =  $_GET['nuocSort'];
+        $nuoc_key = $_SESSION['nuoc_key'];
     }
     else
     {
-        $nuoc_key = 0;
+        $_SESSION['nuoc_key'] = 0;
+        $nuoc_key = $_SESSION['nuoc_key'];
     }
 
     if($nuoc_key==0){
@@ -19,9 +21,9 @@
         $nuoc_key="gia_ban";
     }
 //  tăng dần hoặc giảm dần
-if(isset($_POST['nuocTang']))
+if(isset($_GET['nuocTang']))
     {
-        $nuoc_Tang = $_POST['nuocTang'];
+        $nuoc_Tang = $_GET['nuocTang'];
     }
     else
     {

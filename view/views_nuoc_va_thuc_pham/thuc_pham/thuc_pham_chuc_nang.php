@@ -51,8 +51,9 @@ include_once "../../../controller/controller_nuoc_va_tp/controller_thuc_pham/tp_
 <?php include_once "view_tp_popup.php"
 ?>
 
-<script src="../../assets/js/js_nuoc_va_thuc_pham/js_thuc_pham/tp_add.js">
-</script>
+<script src="../../assets/js/js_nuoc_va_thuc_pham/js_thuc_pham/tp_add.js"></script>
+<script src="../../assets/js/js_nuoc_va_thuc_pham/js_thuc_pham/tp_delete.js"></script>
+<script src="../../assets/js/js_nuoc_va_thuc_pham/js_thuc_pham/tp_update.js"></script>
 
 <!-- <script src="../controller/controller_nuoc_va_tp/tp_delete_update.js"></script> -->
 <!-- <script src="../controller/controller_nuoc_va_tp/tp_sort.js"></script> -->

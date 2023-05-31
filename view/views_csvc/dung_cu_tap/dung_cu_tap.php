@@ -53,10 +53,11 @@ include_once "../header.php";
     </center>
 </form>
 
-<script src="../../assets/js/js_csvc/js_dung_cu_tap/dct_add.js">
-</script>
-
-<script src="../../assets/js/js_csvc/js_dung_cu_tap/dct_delete_update.js"></script>
+<script src="../../assets/js/js_csvc/js_dung_cu_tap/dct_add.js"></script>
+<script src="../../assets/js/js_csvc/js_dung_cu_tap/dct_delete.js"></script>
+<script src="../../assets/js/js_csvc/js_dung_cu_tap/dct_update.js"></script>
+<script src="../../assets/js/js_csvc/js_dung_cu_tap/dct_sort_page.js"></script>
+<!-- <script src="../../assets/js/js_csvc/js_dung_cu_tap/dct_delete_update.js"></script> -->
 <?php 
     // }
     // else{
