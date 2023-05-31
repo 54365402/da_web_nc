@@ -1,7 +1,8 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
-    
+    include_once "../../../controller/connection.php";
+    include_once "snhv_sort.php";
+
     $snhv_get_data="";
     if(isset($_POST['snhv__input--search']))
     {
@@ -12,7 +13,7 @@
         $snhv_get_data = "";
     }
     // search sql
-    $snhv_search = " WHERE tbl_sinh_nhat_hoi_vien.id_hv LIKE '%$snhv_get_data%' and ngay_sinh=CURDATE()";
+    $snhv_search = " WHERE tbl_sinh_nhat_hoi_vien.id_hv LIKE '%$snhv_get_data%' and ngay_sinh=$snhv_get_date";
 
     if(isset($_GET['page']))
     {

@@ -35,7 +35,7 @@
                     </div>
                 </form>
             </div>
-
+            
         <table class="personal_table-hienthi">
             <tr class="personal_table_row-hienthi personal_table-Tieu_de" style="background-color: #4472C8">
                 <th>ID Personal</th>

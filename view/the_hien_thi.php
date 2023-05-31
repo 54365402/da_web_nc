@@ -1,6 +1,7 @@
 <!-- Kết nối CSDL -->
 <?php
     include_once "../controller/connection.php";
+
 ?>
 
 <link rel="stylesheet" href="./assets/css/the.css">
@@ -31,7 +32,13 @@
             </tr>
             <tbody id="the_table_body">
         <?php
-            // định nghĩa biến $keyword
+        
+
+    // Câu truy vấn SQL dựa trên giá trị sắp xếp
+            // định nghĩa biến $sort để sắp xếp
+            $sort = isset($_GET['sort']) ? $_GET['sort'] : '';
+
+            // định nghĩa biến $keyword để tìm kiếm
             $keyword = isset($_POST['cardsearch']) ? $_POST['cardsearch'] : "";
             
             // hiện thị tìm kiếm
@@ -39,15 +46,25 @@
             
             // Định nghĩa biến $p
             $p = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-
+            
             // Số lượng dữ liệu hiển thị trên mỗi trang
             $limit = 11;
-
+            
             // Tính toán vị trí bắt đầu của dữ liệu trên trang hiện tại
             $start = ($p - 1) * $limit;
-
+            
             // Câu truy vấn SQL
-            $sqlthe1 = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv $postb ORDER BY card_id DESC LIMIT $start, $limit";
+            if ($sort == '1') {
+                $sqlthe1 = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv ORDER BY name_hv ASC LIMIT $start, $limit";
+            } elseif ($sort == '2') {
+                $sqlthe1 = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv ORDER BY name_hv DESC LIMIT $start, $limit";
+            } elseif ($sort == '3') {
+                $sqlthe1 = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv ORDER BY total_money ASC LIMIT $start, $limit";
+            } elseif ($sort == '4') {
+                $sqlthe1 = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv ORDER BY total_money DESC LIMIT $start, $limit";
+            } else {
+                $sqlthe1 = "SELECT * FROM card Inner Join tbl_hoi_vien On card.id_hv = tbl_hoi_vien.id_hv $postb ORDER BY card_id DESC LIMIT $start, $limit";
+            }
 
             // Thực thi câu truy vấn
             $query = mysqli_query($mysqli,$sqlthe1);
@@ -70,7 +87,7 @@
             </td>
         <?php
        }
-        ?>
+       ?>
         </tbody>        
     </table>
 
@@ -81,7 +98,7 @@
         $row_count = mysqli_fetch_array($result_count);
         $total = $row_count["count"];                    // Tổng số dữ liệu
         $page_count = ceil($total / $limit);            // Tổng số trang
-    ?><br>
+        ?><br>
     <center class = "the_page-hienthi" >
         <?php
             for ($i = 1; $i <= $page_count; $i++) {
@@ -92,7 +109,7 @@
                 }
             }
 
-        ?>
+            ?>
     </center>
 </div>
 

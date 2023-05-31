@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../../controller/connection.php";
     include_once "bl_sort.php";
     
     $bl_get_data="";
