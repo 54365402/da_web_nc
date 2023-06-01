@@ -15,7 +15,7 @@ a{
 
 .active{
     cursor: pointer;
-    background-color: rgb(158, 166, 177);
+    /* background-color: rgb(158, 166, 177); */
 }
 
 .information{

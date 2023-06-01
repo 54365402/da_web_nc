@@ -1,18 +1,18 @@
 <?php 
-    // Start the session
-//     session_start();   
+    //Start the session
+    session_start();   
 
-//     include_once "../../../controller/connection.php";
+    include_once "../../controller/connection.php";
     
-//     $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
-//     $query = mysqli_query($mysqli,$sql);
+    $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
+    $query = mysqli_query($mysqli,$sql);
 
-// while($row = mysqli_fetch_array($query))
-// {
-//     $_SESSION['chuc_vu']=$row['chuc_vu'];
-//     $_SESSION['name']=$row['name'];
+while($row = mysqli_fetch_array($query))
+{
+    $_SESSION['chuc_vu']=$row['chuc_vu'];
+    $_SESSION['name']=$row['name'];
 
-// }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,21 +40,21 @@
                         <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-square-instagram"></i></i></a></li>
                         <li><a class="hotline" href=""><i class="fa-solid fa-headset"></i> Hotline: 0123456789</a></li>
-                        <li><a href="../views_home/noticeANDprice.php"><i class="fa-solid fa-circle-info"></i></a></li>
+                        <li><a href="noticeANDprice.php"><i class="fa-solid fa-circle-info"></i></a></li>
                         <li><a href=""><i class="fa-solid fa-gear"></i></a></li>
-                        <li><a href="khach_trang_chu.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                        <li><a href="../views_ktc/khach_trang_chu.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 </div>
             </div>
 
 
 
             <?php
-                // if ($_SESSION['chuc_vu'] == "Quản lý")
-                // {
+                if ($_SESSION['chuc_vu'] == "Quản lý")
+                {
             ?>
 
             <div class="menu">
-                <li class="menu-li"><a class="menu-a" href="../views_home/home.php"><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
+                <li class="menu-li"><a class="menu-a" href="home.php"><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
                 <li class="menu-li"><a class="menu-a" href="hoivien.php"><i class="fa-solid fa-person"></i> Hội viên</a></li>
                 <li class="menu-li"><a class="menu-a" href="the.php"><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
                 <li class="menu-li menu-li-nuoc"><a class="menu-a" href="views_nuoc_va_thuc_pham/views_nuoc/nuoc.php"><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
@@ -67,11 +67,11 @@
             </div>
 
             <?php
-                // }
-                //     else if ( $_SESSION['login'] == true && $_SESSION['chuc_vu'] == "Hội viên")
-                //     {
+                }
+                    else if ( $_SESSION['login'] == true && $_SESSION['chuc_vu'] == "Hội viên")
+                    {
                         ?>
-<!-- 
+
             <div class="menu" style="justify-content: space-around;">
 
                 <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
@@ -79,10 +79,10 @@
                 <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
 
 
-            </div> -->
+            </div>
 
             <?php
-                    // }
+                     }
                     
                 
                 ?>

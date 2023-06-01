@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../controller/connection.php";
     
     $nhanvien_get_data="";
     if(isset($_POST['nhanvien__input-search']))

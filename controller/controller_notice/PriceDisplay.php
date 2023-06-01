@@ -1,5 +1,5 @@
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../controller/connection.php";
 ?>
 
 <?php

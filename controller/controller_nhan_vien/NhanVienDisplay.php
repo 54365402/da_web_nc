@@ -2,7 +2,7 @@
 <?php
     include "NhanVienPage.php";
 ?>
-<link rel="stylesheet" href="./assets/css/nhanvien.css">
+<link rel="stylesheet" href="../assets/css/nhanvien.css">
 
 <!-- Hien thi bang -->
 <div class="main-nhanvien">
