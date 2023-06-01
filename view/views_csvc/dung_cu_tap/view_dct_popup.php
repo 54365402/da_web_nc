@@ -10,7 +10,7 @@
             </tr>
             <tr>
                 <td><label for="lname">Số lượng:</label></td>
-                <td><input class='dct__table--add_input' type="text"  name="dct__table--add_so_luong" placeholder="Quantity...."></td>
+                <td><input class='dct__table--add_input' type="number"  name="dct__table--add_so_luong" placeholder="Quantity...."></td>
             </tr>
             <tr>
             <td><label for="lname">Nhà cung cấp:</label></td>
@@ -22,7 +22,7 @@
             </tr>
             <tr>
                 <td><label for="lname">Giá nhập:</label></td>
-                <td><input class='dct__table--add_input' type="text"  name="dct__table--add_gia_nhap" placeholder="Import Price...."></td>
+                <td><input class='dct__table--add_input' type="number"  name="dct__table--add_gia_nhap" placeholder="Import Price...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Bảo trì:</label></td>
@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <td><label for="lname">Chi phí bảo trì:</label></td>
-                <td><input class='dct__table--add_input' type="text"  name="dct__table--add_chi_phi_bao_tri" placeholder="Maintenance Costs...."></td>
+                <td><input class='dct__table--add_input' type="number"  name="dct__table--add_chi_phi_bao_tri" placeholder="Maintenance Costs...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Ghi chú:</label></td>

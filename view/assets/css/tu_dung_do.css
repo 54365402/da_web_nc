@@ -206,8 +206,11 @@ li.tdd__div {
     padding: 2px; 
     margin-right: 5px;
 }
-.tdd__div--tdd{
+li.tdd__div.tdd__div--tdd.tdd__div.tdd__div--tdd-tdd {
     background-color: rgb(68, 84, 106);
+}
+li.tdd__div.tdd__div--tdd {
+    background-color: #daeaf3;
 }
 .tdd__div--dct{
     background-color: #daeaf3;

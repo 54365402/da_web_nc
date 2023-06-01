@@ -11,7 +11,7 @@
         <table class='tdd__table--addform'>
             <tr>
                 <td><label for="lname">Số tủ:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_so_tu" placeholder="Quantity...."></td>
+                <td><input class='tdd__table--add_input' type="number"  name="tdd__table--add_so_tu" placeholder="Quantity...."></td>
             </tr>
             <tr>
             <td><label for="lname">Loại tủ:</label></td>
@@ -19,7 +19,7 @@
             </tr>
             <tr>
                 <td><label for="lname">Trạng thái:</label></td>
-                <td><input class='tdd__table--add_input' type="text"  name="tdd__table--add_trang_thai" placeholder="Date Added...."></td>
+                <td><input class='tdd__table--add_input' type="number"  name="tdd__table--add_trang_thai" placeholder="Date Added...."></td>
             </tr>
             <tr>
                 <td><label for="lname">ID hội viên:</label></td>

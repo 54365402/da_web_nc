@@ -53,10 +53,12 @@ include_once "../header.php";
     </center>
 </form>
 
-<script src="../../assets/js/js_csvc/js_tu_dung_do/tdd_add.js">
-</script>
+<script src="../../assets/js/js_csvc/js_tu_dung_do/tdd_add.js"></script>
+<script src="../../assets/js/js_csvc/js_tu_dung_do/tdd_delete.js"></script>
+<script src="../../assets/js/js_csvc/js_tu_dung_do/tdd_update.js"></script>
+<script src="../../assets/js/js_csvc/js_tu_dung_do/tdd_sort_page.js"></script>
 
-<script src="../../assets/js/js_csvc/js_tu_dung_do/tdd_delete_update.js"></script>
+<!-- <script src="../../assets/js/js_csvc/js_tu_dung_do/tdd_delete_update.js"></script> -->
 
 </body>
 <?php 

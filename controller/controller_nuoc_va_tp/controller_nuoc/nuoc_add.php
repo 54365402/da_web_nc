@@ -17,7 +17,7 @@
     $sql = "SELECT * FROM tbl_nuoc_va_thuc_pham WHERE loai_tp LIKE N'N%'";
     $query = mysqli_query($mysqli,$sql);
     
-    // kiểm tra
+    // kiểm tra đã nhập hết các trường chưa
 
     
     if($nuoc->get_name()=="" || $nuoc->get_loai_tp()=="" || $nuoc->get_gia_ban()=="" || $nuoc->get_gia_nhap()=="" || $nuoc->get_so_luong_nhap()=="" || $nuoc->get_so_luong_ton()=="" || $nuoc->get_nha_cung_cap()=="" || $nuoc->get_ngay_nhap()=="" || $nuoc->get_ngay_het_han()=="")
