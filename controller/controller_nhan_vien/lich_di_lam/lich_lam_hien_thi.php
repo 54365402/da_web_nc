@@ -1,150 +1,144 @@
-<!-- ket noi csdl -->
-<?php
-    include_once "../controller/controller_nhan_vien/NhanVienPage.php";
+<?php 
+include_once "../controller/connection.php";
+$sql = "SELECT * FROM tbl_lop";
+$query = mysqli_query($mysqli,$sql);
+$sql1 = "SELECT * FROM tbl_nhan_vien";
+$query1 = mysqli_query($mysqli,$sql1);
 ?>
-<!--hien thi ds nv  -->
-<link rel="stylesheet" href="./assets/css/lich_di_lam.css">
+<!DOCTYPE html>
+<html lang="en">
 
-<body>
-    <div class="main-lichlam">
-        <div class="ds-nhanvien">
-            <div class="nhanvien__search-input">
-                <i class="fa-sharp fa-solid fa-magnifying-glass nhanvien__search-input--icon"></i>
-                <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                    <input class='nhanvien__input-search' type="text" name="nhanvien__input-search"
-                        placeholder="Tìm Kiếm">
-                </form>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/lich_di_lam.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/fullcalendar/lib/main.min.css">
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/fullcalendar/lib/main.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <div class="container py-5" id="page-container">
+        <div class="row">
+            <div class="col-md-9">
+                <div id="calendar"></div>
             </div>
-            <div class="nhanvien__table">
-                <table class="nhanvien__table--view">
-                    <tr class="nhanvien__table-view--title">
-                        <th>TYPE</th>
-                        <th>ID NV</th>
-                        <th>NAME</th>
-                    </tr>
-                    <?php
-                    //duyet qua cac phan tu trong mang
-                while ($row = mysqli_fetch_array($query)) 
-                {
-                ?>
-                    <tr class="nhanvien__table-view--data">
-                        <td><?php echo $row["chuc_vu"]?></td>
-                        <td><?php echo $row["id_nv"]?></td>
-                        <td><?php echo $row["name"]?></td>
-                        <?php
-                }
-                ?>
-                </table>
+            <div class="col-md-3">
+                <div class="cardt rounded-0 shadow">
+                    <div class="card-header bg-gradient bg-primary text-light">
+                        <h5 class="card-title">Thêm lịch học</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <form action="lich_lam_save.php" method="post" id="schedule-form">
+                                <input type="hidden" name="id" value="">
+                                <div class="form-group mb-2">
+                                    <label for="lop" class="control-label">Lớp</label>
+                                    <select class="form-control form-control-sm rounded-0" name="lop" id="lop" required>
+                                        <option value="">-- Lớp dạy --</option>
+                                        <?php
+                                    // Duyệt qua các phần tử trong bảng
+                                    while ($row = mysqli_fetch_array($query)) {
+                                            echo "<option value='" . $row["ten_lop"] . "'>" . $row["ten_lop"] . "</option>";
+                                        }
+                                    ?>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="nhan_vien" class="control-label">Nhân viên</label>
+                                    <select class="form-control form-control-sm rounded-0" name="nhan_vien"
+                                        id="nhan_vien" required>
+                                        <option value="">-- Nhân viên --</option>
+                                        <?php
+                                    // Duyệt qua các phần tử trong bảng
+                                    while ($row = mysqli_fetch_array($query1)) {
+                                            echo "<option value='" . $row["name"] . "'>" . $row["name"] . "</option>";
+                                        }
+                                    ?>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="ngay_bat_dau" class="control-label">Ngày bắt đầu</label>
+                                    <input type="datetime-local" class="form-control form-control-sm rounded-0"
+                                        name="ngay_bat_dau" id="ngay_bat_dau" required>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="ngay_ket_thuc" class="control-label">Ngày kết thúc</label>
+                                    <input type="datetime-local" class="form-control form-control-sm rounded-0"
+                                        name="ngay_ket_thuc" id="ngay_ket_thuc" required>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-sm rounded-0" type="submit" form="schedule-form"><i
+                                    class="fa fa-save"></i> Lưu</button>
+                            <button class="btn btn-default border btn-sm rounded-0" type="reset" form="schedule-form"><i
+                                    class="fa fa-reset"></i> Hủy</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <form class="btn__select" action="NhanVienOption.php" method="post">
-                <select class="btn__select--type">
-                    <option value="All" style="text-align:center; font-weight:bold;">All</option>
-                    <option value="Gym" style="text-align:center; font-weight:bold;">Gym</option>
-                    <option value="Yoga" style="text-align:center; font-weight:bold;">Yoga</option>
-                    <option value="Aerobic" style="text-align:center; font-weight:bold;">Aerobic</option>
-                    <option value="Boxing" style="text-align:center; font-weight:bold;">Boxing</option>
-                    <option value="Swimming" style="text-align:center; font-weight:bold;">Swimming</option>
-                </select>
-            </form>
-        </div>
-        <div class="table__lichlam">
-            <table class="table__lichlam--view">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Thứ hai</th>
-                        <th>Thứ ba</th>
-                        <th>Thứ tư</th>
-                        <th>Thứ năm</th>
-                        <th>Thứ sáu</th>
-                        <th>Thứ bảy</th>
-                        <th>Chủ Nhật</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>6h</th>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                    </tr>
-                    <tr>
-                        <th>8h</th>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                    </tr>
-                    <tr>
-                        <th>10h</th>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                    </tr>
-                    <tr>
-                        <th>12h</th>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                    </tr>
-                    <tr>
-                        <th>14h</th>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                    </tr>
-                    <tr>
-                        <th>16h</th>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                    </tr>
-                    <tr>
-                        <th>18h</th>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                    </tr>
-                    <tr>
-                        <th>20h</th>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                        <td><i class="fa-solid fa-user-plus add__lichhoc js-add"></i></td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
+    <!-- Event Details Modal -->
+    <div class="modal fade" tabindex="-1" data-bs-backdrop="static" id="event-details-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0">
+                    <h5 class="modal-title">Thông tin lớp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body rounded-0">
+                    <div class="container-fluid">
+                        <dl>
+                            <dt class="text-muted">Lớp</dt>
+                            <dd id="lop" class="fw-bold fs-4"></dd>
+                            <dt class="text-muted">Nhân viên</dt>
+                            <dd id="nhan_vien" class=""></dd>
+                            <dt class="text-muted">Ngày bắt đầu</dt>
+                            <dd id="ngay_bat_dau" class=""></dd>
+                            <dt class="text-muted">Ngày kết thúc</dt>
+                            <dd id="ngay_ket_thuc" class=""></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="modal-footer rounded-0">
+                    <div class="text-end">
+                        <button type="button" class="btn btn-primary btn-sm rounded-0" id="edit" data-id="">Sửa</button>
+                        <button type="button" class="btn btn-danger btn-sm rounded-0" id="delete"
+                            data-id="">Xóa</button>
+                        <button type="button" class="btn btn-secondary btn-sm rounded-0"
+                            data-bs-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Event Details Modal -->
+
+    <?php 
+$schedules = $mysqli->query("SELECT * FROM `lich_di_lam`");
+$sched_res = [];
+foreach($schedules->fetch_all(MYSQLI_ASSOC) as $row){
+    $row['sdate'] = date("F d, Y h:i A",strtotime($row['ngay_bat_dau']));
+    $row['edate'] = date("F d, Y h:i A",strtotime($row['ngay_ket_thuc']));
+    $sched_res[$row['id']] = $row;
+}
+?>
+    <?php 
+if(isset($mysqli)) $mysqli->close();
+?>
 </body>
+<script>
+var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
+</script>
+<script src="./assets/js/script.js"></script>
+
+</html>

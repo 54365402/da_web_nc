@@ -6,4 +6,5 @@
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
     header("Location: ../../../view/views_nuoc_va_thuc_pham/views_nuoc/nuoc.php");
+    exit();
 ?>

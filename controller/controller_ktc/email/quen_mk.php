@@ -42,7 +42,7 @@ try {
     $_SESSION['OTP'] = rand(100000,999999);
     $mail->Body    = $_SESSION['OTP'];
     $mail->send();
-    header("Location: ../../../view/doi_mk.php");
+    header("Location: ../../../view/views_ktc/doi_mk.php");
 } catch (Exception $e) {
     echo "Sent Failed";
 }
