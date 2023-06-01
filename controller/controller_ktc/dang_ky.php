@@ -22,7 +22,7 @@
             {
                 $_SESSION["check_gmail"]="Email đã tồn tại!";
                 $count -=1;
-                header("Location: ../../view/dang_ky.php");
+                header("Location: ../../view/views_ktc/dang_ky.php");
                 break;
             }}
             if($count)
@@ -30,17 +30,17 @@
                 $sql1 = "INSERT INTO account(username,password,name) VALUES('$email',"."'$password',"."'$name')";
                 $query1 = mysqli_query($mysqli,$sql1);
                 $mysqli->close();             
-                header("Location: ../../view/dang_nhap.php");
+                header("Location: ../../view/views_ktc/dang_nhap.php");
             }      
         }      
     
     else {
         $_SESSION["retype_password"]="password and retype_password không giống nhau";
-        header("Location: ../../view/dang_ky.php");
+        header("Location: ../../view/views_ktc/dang_ky.php");
     }
 }
 else{
     $_SESSION["nhap_all"]="Phải nhập đủ tất cả các trường!";
-    header("Location: ../../view/dang_ky.php");
+    header("Location: ../../view/views_ktc/dang_ky.php");
 }
 ?>

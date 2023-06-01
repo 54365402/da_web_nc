@@ -1,10 +1,10 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../controller/connection.php";
 
 ?>
 
-<link rel="stylesheet" href="./assets/css/the.css">
+<link rel="stylesheet" href="../assets/css/the.css">
 
 <!-- Hien thi bang -->
 <br>

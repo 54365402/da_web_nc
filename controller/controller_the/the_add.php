@@ -1,8 +1,8 @@
 <?php
-    include_once "../connection.php";
+    include_once "../../connection.php";
 
     // lay CSDL
-    require_once('../../model/modal_the.php');
+    require_once('../../../model/modal_the.php');
     $the = new The();
     //$the->set_ho_va_ten($_POST["the_table-add_ho_va_ten"]);
     $the->set_id_hv($_POST["the_table-add_id_hv"]);
@@ -29,7 +29,7 @@
 
     //điều hướng trang đến the.php để refresh
     }
-    header("Location: ../../view/the.php");
+    header("Location: ../../../view/the.php");
     exit();
 ?>
 

@@ -5,5 +5,5 @@
     $sql = "DELETE FROM tbl_personal WHERE id_personal ='$personalID'";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    header("Location: ../../../view/personal.php");
+    header("Location: ../../../view/views_nhan_vien/nv_ptd/personal.php");
 ?>

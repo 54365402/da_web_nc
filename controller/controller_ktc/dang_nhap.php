@@ -32,6 +32,6 @@
         header("Location: ../../view/home.php");
     }
     else{
-        header("Location: ../../view/dang_nhap.php");
+        header("Location: ../../view/views_ktc/dang_nhap.php");
     }
 ?>
