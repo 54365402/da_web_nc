@@ -1,45 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hiển thị ảnh khi chọn từ input file</title>
-  <style>
-    img {
-      max-width: 300px;
-      max-height: 300px;
-    }
-  </style>
+  <title>Ngăn chặn refresh trang khi thay đổi select option</title>
 </head>
 <body>
-    <div id="imageContainer"></div>
-    <input type="file" id="imageInput">
+  <select id="mySelect">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
 
   <script>
-    // Lấy tham chiếu đến input file và container
-    var imageInput = document.getElementById('imageInput');
-    var imageContainer = document.getElementById('imageContainer');
+    var selectElement = document.getElementById("mySelect");
 
-    // Xử lý sự kiện onchange của input file
-    imageInput.addEventListener('change', function(event) {
-      // Lấy tệp tin ảnh từ input file
-      var file = event.target.files[0];
-      
-      // Tạo đối tượng FileReader
-      var reader = new FileReader();
-      
-      // Xử lý sự kiện load của FileReader
-      reader.onload = function(e) {
-          // Tạo phần tử hình ảnh và gán thuộc tính src
-          var image = document.createElement('img');
-          image.src = e.target.result;
-          
-          // Thêm phần tử hình ảnh vào container
-          imageContainer.innerHTML = '';
-          imageContainer.appendChild(image);
-        };
-        
-      // Đọc nội dung của tệp tin ảnh dưới dạng URL data
-      reader.readAsDataURL(file);
-    });
+    selectElement.onchange = function(event) {
+      event.preventDefault();
+      // Xử lý logic khi thay đổi select option tại đây
+      console.log("Đã thay đổi select option");
+    };
   </script>
 </body>
 </html>

@@ -8,8 +8,8 @@ include "tdd_pages.php";
 
 <div class = "tdd__div--hienthi">
     <div  class='tdd__div--tap'>
-        <li class="tdd__div tdd__div--dct"><a href="../dung_cu_tap/dung_cu_tap.php">Dụng cụ tập</a></th></li>
-        <li class="tdd__div tdd__div--tdd"><a href="../tu_dung_do/tu_dung_do.php">Tủ đựng đồ</a></li>
+        <li class="tdd__div tdd__div--tdd"><a href="../../../view/views_csvc/dung_cu_tap/dung_cu_tap.php">Dụng cụ tập</a></th></li>
+        <li class="tdd__div tdd__div--tdd tdd__div tdd__div--tdd-tdd"><a href="../../../view/views_csvc/tu_dung_do/tu_dung_do.php">Tủ đựng đồ</a></li>
         
 </div>
     <table class="tdd__table--hienthi">
@@ -23,6 +23,8 @@ include "tdd_pages.php";
             <th>Ngày bắt đầu</th>
             <th>Ngày kết thúc</th>
             <th>GHI CHÚ</th>
+            <th class="tdd__table_row--tieuDe_Xoa" style="display:none; text-align: center;">XÓA</th>
+            <th class="tdd__table_row--tieuDe_update" style="display:none; text-align: center;">UPDATE</th>
         </tr>
         <?php
         // Duyệt qua các phẩn từ trong bảng
@@ -39,6 +41,8 @@ include "tdd_pages.php";
             <td  class="tdd__table_td--hienthi-td"><?php echo $row["time_start"]?></td>
             <td  class="tdd__table_td--hienthi-td"><?php echo $row["time_end"]?></td>
             <td  class="tdd__table_td--hienthi-td"><?php echo $row["ghi_chu"]?></td>
+            <td class="tdd__table_td--hienthi-td tdd__table_td--hienthi-td-xoa" style="display:none; text-align: center;"><a href="../../../controller/controller_csvc/tu_dung_do/tdd_delete.php?tddID=<?php echo $row["id_wardrobe"]?>"><i class="fa-sharp fa-solid fa-delete-left"></i></a></td>
+            <td class="tdd__table_td--hienthi-td tdd__table_td--hienthi-td-update" style="display:none; text-align: center;"><a href="view_update_tdd_popup.php?tddID=<?php echo $row["id_wardrobe"]?>"><i class="fa-solid fa-wrench"></i></a></td>
 
         <?php
        }

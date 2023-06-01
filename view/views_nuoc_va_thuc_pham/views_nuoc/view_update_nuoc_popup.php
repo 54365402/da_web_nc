@@ -24,20 +24,20 @@
             </tr>
             <tr>
             <td><label for="lname">Giá bán:</label></td>
-                <td><input class='nuoc__table--add_input' type="text"  name="nuoc__table--add_gia_ban" value="<?php echo $rows['gia_ban']?>" placeholder="Price...." ></td>
+                <td><input class='nuoc__table--add_input' type="number"  name="nuoc__table--add_gia_ban" value="<?php echo $rows['gia_ban']?>" placeholder="Price...." ></td>
             </tr>
             <tr>
                 <td><label for="lname">Giá nhập:</label></td>
-                <td><input class='nuoc__table--add_input' type="text"  name="nuoc__table--add_gia_nhap" value="<?php echo $rows['gia_nhap']?>" placeholder="
+                <td><input class='nuoc__table--add_input' type="number"  name="nuoc__table--add_gia_nhap" value="<?php echo $rows['gia_nhap']?>" placeholder="
 Import Price...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Số lượng nhập:</label></td>
-                <td><input class='nuoc__table--add_input' type="text"  name="nuoc__table--add_so_luong_nhap" value="<?php echo $rows['so_luong_nhap']?>" placeholder="The number of import...."></td>
+                <td><input class='nuoc__table--add_input' type="number"  name="nuoc__table--add_so_luong_nhap" value="<?php echo $rows['so_luong_nhap']?>" placeholder="The number of import...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Số lượng tồn:</label></td>
-                <td><input class='nuoc__table--add_input' type="text"  name="nuoc__table--add_so_luong_ton" value="<?php echo $rows['so_luong_ton']?>" placeholder="Quantity in stock...."></td>
+                <td><input class='nuoc__table--add_input' type="number"  name="nuoc__table--add_so_luong_ton" value="<?php echo $rows['so_luong_ton']?>" placeholder="Quantity in stock...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Nhà cung cấp:</label></td>

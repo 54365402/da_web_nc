@@ -55,8 +55,10 @@ include_once "../header.php";
     </center>
 </form>
 
-<script src="../../assets/js/js_nhan_vien/js_bang_luong/bl_add.js">
-</script>
+<script src="../../assets/js/js_nhan_vien/js_bang_luong/bl_add.js"></script>
+<script src="../../assets/js/js_nhan_vien/js_bang_luong/bl_delete.js"></script>
+<script src="../../assets/js/js_nhan_vien/js_bang_luong/bl_update.js"></script>
+<!-- <script src="../../assets/js/js_nhan_vien/js_bang_luong/bl_sort_page.js"></script> -->
 
 <!-- <script src="../../controller/controller_nhan_vien/bang_luong/bl_delete_update.js"></script> -->
 <?php 

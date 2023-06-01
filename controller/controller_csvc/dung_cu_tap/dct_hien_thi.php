@@ -9,8 +9,8 @@ include "dct_pages.php";
 
 <div class = "dct__div--hienthi">
     <div  class='dct__div--tap'>
-        <li class="dct__div dct__div--dct"><a href="../dung_cu_tap/dung_cu_tap.php">Dụng cụ tập</a></th></li>
-        <li class="dct__div dct__div--tdd"><a href="../tu_dung_do/tu_dung_do.php">Tủ đựng đồ</a></li>
+        <li class="dct__div dct__div--dct"><a href="../../../view/views_csvc/dung_cu_tap/dung_cu_tap.php">Dụng cụ tập</a></th></li>
+        <li class="dct__div dct__div--tdd"><a href="../../../view/views_csvc/tu_dung_do/tu_dung_do.php">Tủ đựng đồ</a></li>
         
 </div>
     <table class="dct__table--hienthi">
@@ -25,13 +25,15 @@ include "dct_pages.php";
             <th>BẢO HÀNH</th>
             <th>CHI PHÍ BẢO TRÌ</th>
             <th>GHI CHÚ</th>
+            <th class="dct__table_row--tieuDe_Xoa" style="display:none; text-align: center;">XÓA</th>
+            <th class="dct__table_row--tieuDe_update" style="display:none; text-align: center;">UPDATE</th>
         </tr>
         <?php
         // Duyệt qua các phẩn từ trong bảng
         while($row = mysqli_fetch_array($query))
        {
         ?>
-        <tr class='dct__table_row--hienthi'>
+        <tr class='dct__table_row--hienthi hightLight'>
             <td  class="dct__table_td--hienthi-td"><?php echo $row["id_may"]?></td>
             <td  class="dct__table_td--hienthi-td"><?php echo $row["ten"]?></td>
             <td  class="dct__table_td--hienthi-td"><?php echo $row["so_luong"]?></td>
@@ -42,6 +44,8 @@ include "dct_pages.php";
             <td  class="dct__table_td--hienthi-td"><?php echo $row["bao_hanh"]?></td>
             <td  class="dct__table_td--hienthi-td"><?php echo $row["chi_phi_bao_tri"]?></td>
             <td  class="dct__table_td--hienthi-td"><?php echo $row["ghi_chu"]?></td>
+            <td class="dct__table_td--hienthi-td dct__table_td--hienthi-td-xoa" style="display:none; text-align: center;"><a href="../../../controller/controller_csvc/dung_cu_tap/dct_delete.php?dctID=<?php echo $row["id_may"]?>"><i class="fa-sharp fa-solid fa-delete-left"></i></a></td>
+            <td class="dct__table_td--hienthi-td dct__table_td--hienthi-td-update" style="display:none; text-align: center;"><a href="view_update_dct_popup.php?dctID=<?php echo $row["id_may"]?>"><i class="fa-solid fa-wrench"></i></a></td>
         <?php
        }
         ?>    

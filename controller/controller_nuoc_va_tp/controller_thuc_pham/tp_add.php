@@ -19,28 +19,22 @@
     $query = mysqli_query($mysqli,$sql);
     
     // kiểm tra
-    $check = true;
-    while($row = mysqli_fetch_array($query)){
-        if($row["name"]==$tp->get_name())
-        {
-            $check = false;
-        }
-    }
+  
 
     if($tp->get_name()=="" || $tp->get_loai_tp()=="" || $tp->get_gia_ban()=="" || $tp->get_gia_nhap()=="" || $tp->get_so_luong_nhap()=="" || $tp->get_so_luong_ton()=="" || $tp->get_nha_cung_cap()=="" || $tp->get_ngay_nhap()=="" || $tp->get_ngay_het_han()=="")
     {
         
     }
     else{
-        if($check){
+     
     // Thực hiện truy vấn để thêm dữ liệu vào cơ sở dữ liệu
     $sql = "INSERT INTO tbl_nuoc_va_thuc_pham(name,loai_tp,gia_ban,gia_nhap,so_luong_nhap,so_luong_ton,nha_cung_cap,ngay_nhap,ngay_het_han) VALUES('".$tp->get_name()."','".$tp->get_loai_tp()."','".$tp->get_gia_ban()."','".$tp->get_gia_nhap()."','".$tp->get_so_luong_nhap()."','".$tp->get_so_luong_ton()."','".$tp->get_nha_cung_cap()."','".$tp->get_ngay_nhap()."','".$tp->get_ngay_het_han()."')";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    }
+    
 }
     //điều hướng trang đến tp.php để refresh
-    header("Location: ../../../view/views_nuoc_va_thuc_pham/views_thuc_pham/thuc_pham_chuc_nang.php");
+    header("Location: ../../../view/views_nuoc_va_thuc_pham/thuc_pham/thuc_pham_chuc_nang.php");
     exit();
 ?>
 

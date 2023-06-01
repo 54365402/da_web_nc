@@ -3,6 +3,7 @@ const nuocThem = document.querySelectorAll('.js-them')
 const nuocModal = document.querySelector('.nuoc__modal--popup')
 const nuocClose = document.querySelectorAll('.nuoc__table--button_huy')
 const nuocThemPupUp = document.querySelectorAll('.nuoc__table--button_them')
+
 function showAdd() {
     nuocModal.classList.add('nuoc__modal--popup--open')
 }

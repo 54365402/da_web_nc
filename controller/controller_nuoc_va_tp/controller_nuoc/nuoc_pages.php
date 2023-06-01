@@ -1,4 +1,4 @@
-<!-- Kết nối CSDL -->
+<!-- Kết nối CSDL
 <?php
     include_once "../../../controller/connection.php";
     include_once "nuoc_sort.php";
@@ -17,11 +17,13 @@
 
     if(isset($_GET['page']))
     {
-        $page = $_GET['page'];
+        $_SESSION['page'] = $_GET['page'];
+        $page = $_SESSION['page'];
     }
     else
     {
-        $page = 1;
+        $_SESSION['page'] = 1;
+        $page = $_SESSION['page'];
     }
     // Số hàng một trang
     $rowsPerPage=11;

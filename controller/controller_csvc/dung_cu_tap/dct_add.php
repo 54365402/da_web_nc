@@ -30,7 +30,7 @@
     //điều hướng trang đến dct.php để refresh
     
     }
-    header("Location: ../../../view/views_csvc/dung_cu_tap/view/dung_cu_tap.php");
+    header("Location: ../../../view/views_csvc/dung_cu_tap/dung_cu_tap.php");
     exit();
 ?>
 

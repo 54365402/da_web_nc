@@ -15,19 +15,19 @@
             </tr>
             <tr>
             <td><label for="lname">Giá bán:</label></td>
-                <td><input class='tp__table--add_input' type="text"  name="tp__table--add_gia_ban"></td>
+                <td><input class='tp__table--add_input' type="number"  name="tp__table--add_gia_ban"></td>
             </tr>
             <tr>
                 <td><label for="lname">Giá nhập:</label></td>
-                <td><input class='tp__table--add_input' type="text"  name="tp__table--add_gia_nhap"></td>
+                <td><input class='tp__table--add_input' type="number"  name="tp__table--add_gia_nhap"></td>
             </tr>
             <tr>
                 <td><label for="lname">Số lượng nhập:</label></td>
-                <td><input class='tp__table--add_input' type="text"  name="tp__table--add_so_luong_nhap"></td>
+                <td><input class='tp__table--add_input' type="number"  name="tp__table--add_so_luong_nhap"></td>
             </tr>
             <tr>
                 <td><label for="lname">Số lượng tồn:</label></td>
-                <td><input class='tp__table--add_input' type="text"  name="tp__table--add_so_luong_ton"></td>
+                <td><input class='tp__table--add_input' type="number"  name="tp__table--add_so_luong_ton"></td>
             </tr>
             <tr>
                 <td><label for="lname">Nhà cung cấp:</label></td>
