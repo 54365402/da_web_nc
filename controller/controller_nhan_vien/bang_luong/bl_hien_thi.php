@@ -21,6 +21,9 @@ include "bl_pages.php";
             <th>Lương trên công</th>
             <th>Lương</th>
             <th>Trạng thái</th>
+            <th class="bl__table_row--tieuDe_Xoa" style="display:none; text-align: center;">XÓA</th>
+            <th class="bl__table_row--tieuDe_update" style="display:none; text-align: center;">UPDATE</th>
+
         </tr>
         <?php
         // Duyệt qua các phẩn từ trong bảng
@@ -40,6 +43,9 @@ include "bl_pages.php";
                 echo "Đã thanh toán";
             }
             else{echo "Chưa thanh toán";}?></td>
+            <td class="bl__table_td--hienthi-td bl__table_td--hienthi-td-xoa" style="display:none; text-align: center;"><a href="../../../controller/controller_nhan_vien/bang_luong/bl_delete.php?blID=<?php echo $row["id_nv"]?>"><i class="fa-sharp fa-solid fa-delete-left"></i></a></td>
+            <td class="bl__table_td--hienthi-td bl__table_td--hienthi-td-update" style="display:none; text-align: center;"><a href="view_update_bl_popup.php?blID=<?php echo $row["id_nv"]?>"><i class="fa-solid fa-wrench"></i></a></td>
+
         <?php
        }
         ?>    
