@@ -1,7 +1,7 @@
 <div class="nhanvien__modal-popup">
     <div class="nhanvien__modal-popup-overlay">
         <h4 class="nhanvien__modal-popup-header">Thêm nhân viên</h4>
-        <form action="../controller/controller_nhan_vien/NhanVienAdd.php" method="POST">
+        <form action="../../controller/controller_nhan_vien/NhanVienAdd.php" method="POST">
             <table class="nhanvien_addform">
                 <tr>
                     <td><label for="">Họ và tên : </label></td>

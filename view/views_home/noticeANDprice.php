@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php 
+    // Start the session
+    // if($_SESSION['login'])
+    // {
+?>
 <?php
-    require "../controller/controller_notice/PriceDisplay.php"
+    require "../../controller/controller_notice/PriceDisplay.php"
 ?>
 
 <head>
@@ -10,10 +14,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/noticeANDprice.css">
-    <link rel="stylesheet" href="./assets/css/hoivien.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/noticeANDprice.css">
+    <link rel="stylesheet" href="../assets/css/hoivien.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
 </head>
 
 <body>
@@ -21,7 +25,7 @@
     <div class="tab-bar">
         <button class="fix tab-button active">Thông báo</button>
         <button class="tab-button">Giá cả</button>
-        <a href="home.php"><i class="fa-solid fa-square-xmark fa-2xl" style="color: #2F528F;"></i></a>
+        <a href="javascript:history.go(-1)"><i class="fa-solid fa-square-xmark fa-2xl" style="color: #2F528F;"></i></a>
     </div>
 
     <div class="tab-content">
@@ -31,12 +35,12 @@
                 <div class="notice__table notice__text notice__table--scroll">
                     <h2>Thông báo! </h2>
                     <?php
-                        include_once "../controller/controller_notice/NoticeDisplay.php"
+                        include_once "../../controller/controller_notice/NoticeDisplay.php"
                     ?>
 
                 </div>
 
-                <form method="POST" action="../controller/controller_notice/NoticeAdd.php">
+                <form method="POST" action="../../controller/controller_notice/NoticeAdd.php">
 
                     <div class="notice__table notice__table--insert notice__text">
                         <textarea name="content" id=""
@@ -62,7 +66,7 @@
         
             <div class="notice__border">
                 <table class="price__table price__text">
-                <form action="../controller/controller_notice/PriceUpdate.php" method="post">
+                <form action="../../controller/controller_notice/PriceUpdate.php" method="post">
                     <tr>
                         <th><h1>Gym</h1></th>
                     </tr>
@@ -205,3 +209,9 @@ tabButtons.forEach((button, index) => {
 });
 </script>
 
+<?php 
+    // }
+    // else{
+    //     header("Location: dang_nhap.php");
+    // }
+?>

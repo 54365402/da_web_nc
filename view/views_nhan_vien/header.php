@@ -22,8 +22,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     <title>GYM HUCE N6 PM1</title>
 </head>
 
@@ -33,16 +33,16 @@
         <div id="header">
             <div class="information">
                 <div class="logo">
-                    <img src="../../assets/img/logo.png" alt="LOGO">
+                    <img src="../assets/img/logo.png" alt="LOGO">
                 </div>
                 <div class="logout">
                         <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-square-instagram"></i></i></a></li>
                         <li><a class="hotline" href=""><i class="fa-solid fa-headset"></i> Hotline: 0123456789</a></li>
-                        <li><a href="noticeANDprice.php"><i class="fa-solid fa-circle-info"></i></a></li>
+                        <li><a href="../views_home/noticeANDprice.php"><i class="fa-solid fa-circle-info"></i></a></li>
                         <li><a href=""><i class="fa-solid fa-gear"></i></a></li>
-                        <li><a href="khach_trang_chu.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                        <li><a href="../../views_ktc/khach_trang_chu.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 </div>
             </div>
 
@@ -54,7 +54,7 @@
             ?>
 
             <div class="menu">
-                <li class="menu-li"><a class="menu-a" href="home.php"><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
+                <li class="menu-li"><a class="menu-a" href="../views_home/home.php"><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
                 <li class="menu-li"><a class="menu-a" href="hoivien.php"><i class="fa-solid fa-person"></i> Hội viên</a></li>
 <<<<<<< HEAD
                 <li class="menu-li"><a class="menu-a" href="../../views_the/the.php"><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
@@ -65,11 +65,11 @@
                 <li class="menu-li"><a class="menu-a" href="tk_nuoc.php"><i class="fa-sharp fa-solid fa-money-check"></i> Thống kê</a></li>
 =======
                 <li class="menu-li"><a class="menu-a" href="the.php"><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
-                <li class="menu-li menu-li-nuoc"><a class="menu-a" href="views_nuoc_va_thuc_pham/views_nuoc/nuoc.php"><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
-                <li class="menu-li "><a class="menu-a" href="nhanvien.php"><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
+                <li class="menu-li menu-li-nuoc"><a class="menu-a" href="../../views_nuoc_va_thuc_pham/views_nuoc/nuoc.php"><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
+                <li class="menu-li "><a class="menu-a" href="../views_nhan_vien/nhanvien.php"><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
                 <li class="menu-li menu-li-csvc"><a class="menu-a" href="../../views_csvc/dung_cu_tap/dung_cu_tap.php"><i class="fa-solid fa-database"></i> Cơ sở vật chất</a></li>
                 <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
-                <li class="menu-li"><a class="menu-a" href=""><i class="fa-sharp fa-solid fa-money-check"></i> Thống
+                <li class="menu-li"><a class="menu-a" href="../views_thong_ke/thongke_doanhthu.php"><i class="fa-sharp fa-solid fa-money-check"></i> Thống
                         kê</a></li>
 >>>>>>> 1b4a5e5f39f8d5e7001315f775828f7251cb6665
 

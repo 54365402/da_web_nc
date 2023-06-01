@@ -40,6 +40,6 @@
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
 
-    header("Location: ../../view/noticeANDprice.php");
+    header("Location: ../../view/views_home/noticeANDprice.php");
     exit();
 ?>

@@ -19,7 +19,7 @@
     $sql = "INSERT INTO tbl_nhan_vien(name,gioi_tinh,tuoi,sdt,cmnd,bien_so_xe,dia_chi,chuc_vu,gmail) VALUES('".$nhanvien->get_name()."','".$nhanvien->get_gioi_tinh()."','".$nhanvien->get_tuoi()."','".$nhanvien->get_sdt()."','".$nhanvien->get_cmnd()."','".$nhanvien->get_bien_so_xe()."','".$nhanvien->get_dia_chi()."','".$nhanvien->get_chuc_vu()."','".$nhanvien->get_gmail()."')";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    header("Location: ../../view/nhanvien.php");
+    header("Location: ../../view/views_nhan_vien/nhanvien.php");
     exit();
 ?>
 

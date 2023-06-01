@@ -4,7 +4,7 @@ include_once "header.php";
 
 <?php
 
-include_once "../controller/connection.php";
+include_once "../../controller/connection.php";
     
     $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
     $query = mysqli_query($mysqli,$sql);
@@ -20,7 +20,7 @@ while($row = mysqli_fetch_array($query))
 
 <?php
 
-    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" )
+     if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" )
     {
 
 ?>
@@ -34,13 +34,13 @@ while($row = mysqli_fetch_array($query))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
 </head>
 
 <body>
 
     <div class="card card--info">
-    <img src="./assets/img/avatar.png" alt="">
+    <img src="../assets/img/avatar.png" alt="">
         <table class="info--text">
             <tr class ="a">
                 <th>Chức vụ: <?php echo  $_SESSION['chuc_vu']?> </th>
@@ -60,7 +60,7 @@ while($row = mysqli_fetch_array($query))
             Sửa thông tin cá nhân
         </button>
     </div>
-    <script src="../controller/controller_notice/InfoUpdate.js"></script>
+    <script src="../../controller/controller_notice/InfoUpdate.js"></script>
     <div class=" card card--notice">
         <div >
         <h1> Thông báo </h1>
@@ -68,7 +68,7 @@ while($row = mysqli_fetch_array($query))
         <br>
         <div class="notice__text">
             <?php
-                        include_once "../controller/controller_notice/NoticeDisplay.php"
+                        include_once "../../controller/controller_notice/NoticeDisplay.php"
                     ?>
         </div>
     </div>
@@ -76,10 +76,10 @@ while($row = mysqli_fetch_array($query))
 
 <?php
 
-    }
+     }
     else{
         header("Locaction: dang_nhap.php");
-    }
+     }
 
 ?>
 

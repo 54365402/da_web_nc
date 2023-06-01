@@ -29,7 +29,7 @@
     }
 
     if($_SESSION['login']){
-        header("Location: ../../view/home.php");
+        header("Location: ../../view/views_home/home.php");
     }
     else{
         header("Location: ../../view/views_ktc/dang_nhap.php");
