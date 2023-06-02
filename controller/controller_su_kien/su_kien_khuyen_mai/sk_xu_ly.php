@@ -1,6 +1,6 @@
-<?php
-    require_once '../controller/connection.php'; 
+<?php      
 // Include database configuration file  
+require_once '../../connection.php'; 
  
 // Filter events by calendar date 
 $where_sql = ''; 
