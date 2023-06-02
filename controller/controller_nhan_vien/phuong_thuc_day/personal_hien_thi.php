@@ -11,8 +11,8 @@
     <div class = "personal_div-hienthi1">
         <table >
             <div  class='personal_div-tap'>
-                <li class="personal_div personal_div-lop"><a href="../view/lop.php">Class</a></th></li>
-                <li class="personal_div personal_div-personal"><a href="../view/personal.php">Personal</a></li>
+                <li class="personal_div personal_div-lop"><a href="lop.php">Class</a></th></li>
+                <li class="personal_div personal_div-personal"><a href="personal.php">Personal</a></li>
             </div>
 
             <!-- tạo giao diện nút thêm, sửa, xóa -->

@@ -25,7 +25,7 @@
     $mysqli->close();
 
     //điều hướng trang đến tbl_class.php để refresh
-    header("Location: ../../../view/lop.php");
+    header("Location: ../../../view/views_nhan_vien/nv_ptd/lop.php");
     exit();
      }
 

@@ -60,8 +60,13 @@ while($row = mysqli_fetch_array($query))
                 <li class="menu-li menu-li-nuoc"><a class="menu-a" href="views_nuoc_va_thuc_pham/views_nuoc/nuoc.php"><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
                 <li class="menu-li "><a class="menu-a" href="nhanvien.php"><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
                 <li class="menu-li menu-li-csvc"><a class="menu-a" href="dung_cu_tap.php"><i class="fa-solid fa-database"></i> Cơ sở vật chất</a></li>
+<<<<<<< HEAD
+                <li class="menu-li"><a class="menu-a" href="su_kien.php"><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
+                <li class="menu-li"><a class="menu-a" href="tk_nuoc.php"><i class="fa-sharp fa-solid fa-money-check"></i> Thống
+=======
                 <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
                 <li class="menu-li"><a class="menu-a" href="thongke_doanhthu.php"><i class="fa-sharp fa-solid fa-money-check"></i> Thống
+>>>>>>> c885b8e4ab679ee4580691271f46b2581e93cfa5
                         kê</a></li>
 
             </div>

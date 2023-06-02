@@ -1,5 +1,5 @@
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../../controller/connection.php";
     $sql = "SELECT * FROM tbl_nhan_vien";
     $query = mysqli_query($mysqli,$sql);
     $sql1 = "SELECT * FROM tbl_hoi_vien";

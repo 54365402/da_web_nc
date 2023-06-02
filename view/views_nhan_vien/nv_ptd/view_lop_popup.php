@@ -1,5 +1,5 @@
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../../controller/connection.php";
     $sql = "SELECT * FROM tbl_nhan_vien";
     $query = mysqli_query($mysqli,$sql);
 ?>
@@ -8,7 +8,7 @@
     <div class='lop_modal_div-popup'>
         <i><b><u class='lop_modal_div-u'>Thêm Lớp mới</u></b></i>
         <div >
-            <form action="../controller/controller_nhan_vien/phuong_thuc_day/lop_add.php" method="POST">
+            <form action="../../../controller/controller_nhan_vien/phuong_thuc_day/lop_add.php" method="POST">
                 <table class='lop_table-addform'>
                 <!-- <tr>
                     <td><label for="">ID Class : </label></td>

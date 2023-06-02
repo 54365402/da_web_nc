@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../../controller/connection.php";
     // include_once "personal_sort.php";
     
     $personal_get_data="";

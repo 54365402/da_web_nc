@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../../controller/connection.php";
     // include_once "lop_sort.php";
     
     $lop_get_data="";

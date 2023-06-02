@@ -1,3 +1,16 @@
+CREATE TABLE `card` (
+  `card_id` varchar(50) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 0,
+  `packages` varchar(50) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  `types_room` varchar(50) DEFAULT NULL,
+  `time_start` date DEFAULT NULL,
+  `time_end` date DEFAULT NULL,
+  `id_hv` varchar(50) DEFAULT NULL,
+  `id_nv` varchar(50) DEFAULT NULL,
+  `time_private` float DEFAULT NULL,
+  `total_money` float NOT NULL
+) 
 
 INSERT INTO `card` (`card_id`, `status`, `packages`, `quantity`, `types_room`, `time_start`, `time_end`, `id_hv`, `id_nv`, `time_private`, `total_money`) VALUES
 (1, 1, '2 tháng', 1, 'Gym', '2023-09-02', '2023-11-02', 1, NULL, NULL, 20000),

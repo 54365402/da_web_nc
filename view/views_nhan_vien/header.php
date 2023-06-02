@@ -56,6 +56,14 @@
             <div class="menu">
                 <li class="menu-li"><a class="menu-a" href="../views_home/home.php"><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
                 <li class="menu-li"><a class="menu-a" href="hoivien.php"><i class="fa-solid fa-person"></i> Hội viên</a></li>
+<<<<<<< HEAD
+                <li class="menu-li"><a class="menu-a" href="../../views_the/the.php"><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
+                <li class="menu-li menu-li-nuoc"><a class="menu-a" href="../../views_nuoc_va_thuc_pham/views_nuoc/nuoc.php"><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
+                <li class="menu-li "><a class="menu-a" href="../../views_nhan_vien/nv_ptd/lop.php"><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
+                <li class="menu-li menu-li-csvc"><a class="menu-a" href="dung_cu_tap.php"><i class="fa-solid fa-database"></i> Cơ sở vật chất</a></li>
+                <li class="menu-li"><a class="menu-a" href="su_kien.php"><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
+                <li class="menu-li"><a class="menu-a" href="tk_nuoc.php"><i class="fa-sharp fa-solid fa-money-check"></i> Thống kê</a></li>
+=======
                 <li class="menu-li"><a class="menu-a" href="the.php"><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
                 <li class="menu-li menu-li-nuoc"><a class="menu-a" href="../../views_nuoc_va_thuc_pham/views_nuoc/nuoc.php"><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
                 <li class="menu-li "><a class="menu-a" href="../views_nhan_vien/nhanvien.php"><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
@@ -63,6 +71,7 @@
                 <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
                 <li class="menu-li"><a class="menu-a" href="../views_thong_ke/thongke_doanhthu.php"><i class="fa-sharp fa-solid fa-money-check"></i> Thống
                         kê</a></li>
+>>>>>>> 1b4a5e5f39f8d5e7001315f775828f7251cb6665
 
             </div>
 
@@ -71,8 +80,13 @@
                 //     else if ( $_SESSION['login'] == true && $_SESSION['chuc_vu'] == "Hội viên")
                 //     {
                         ?>
+<<<<<<< HEAD
+
+            <!-- <div class="menu" style="justify-content: space-around;">
+=======
 <!-- 
             <div class="menu" style="justify-content: space-around;">
+>>>>>>> 1b4a5e5f39f8d5e7001315f775828f7251cb6665
 
                 <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
 

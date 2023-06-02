@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Ngăn chặn refresh trang khi thay đổi select option</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <select id="mySelect">
-    <option value="option1">Option 1</option>
-    <option value="option2">Option 2</option>
-    <option value="option3">Option 3</option>
-  </select>
+    <button class="a" style="width:100px; height:100px;"></button>
 
-  <script>
-    var selectElement = document.getElementById("mySelect");
+    <script>
+        const a = document.querySelector(".a");
+        var dem = 0;
+        a.onclick = function(e){
+            dem = dem+1;
+            if(dem%2!=0)
+            {
+                e.target.innerHTML = "<h1>aaaaaa</h1>";
+            }
+            else{
+                e.target.innerHTML = "<h1>bbbb</h1>";
 
-    selectElement.onchange = function(event) {
-      event.preventDefault();
-      // Xử lý logic khi thay đổi select option tại đây
-      console.log("Đã thay đổi select option");
-    };
-  </script>
+            }
+        }
+    </script>
 </body>
 </html>
