@@ -383,3 +383,48 @@ a.ktc_footer_mang_xa_hoi__a {
 strong.ktc__footer__strong.ktc__footer__strong-- {
     color: #fecc09;
 }
+i.fa-solid.ktc_goi_tap_i1--goi_tap--menu.fa-minus {
+    color: white;
+    margin-top: 13px;
+}
+i.fa-solid.ktc_goi_tap_i2--goi_tap--menu.fa-minus {
+    color: white;
+    margin-top: 13px;
+}
+i.fa-solid.ktc_goi_tap_i3--goi_tap--menu.fa-minus {
+    color: white;
+    margin-top: 13px;
+}
+
+.ktc__div--slider--left {
+    position: absolute;
+    top: 48%;
+}
+i.fa-solid.fa-less-than.ktc__div--slider--left--arrow {
+    font-size: 40px;
+    color: white;
+    margin-left: 20px;
+    display: none;
+    cursor: pointer;
+
+}
+.ktc__div--slider--bao_quanh:hover i.fa-solid.fa-less-than.ktc__div--slider--left--arrow {
+    display: block;
+}
+
+.ktc__div--slider--right {
+    position: absolute;
+    top: 48%;
+    right: 0%;
+
+}
+i.fa-solid.fa-greater-than.ktc__div--slider--right--arrow {
+    font-size: 40px;
+    color: white;
+    margin-right: 20px;
+    display: none;
+    cursor: pointer;
+}
+.ktc__div--slider--bao_quanh:hover i.fa-solid.fa-greater-than.ktc__div--slider--right--arrow {
+    display: block;
+}

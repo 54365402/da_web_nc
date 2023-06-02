@@ -45,7 +45,11 @@ if (isset($_SESSION['chuc_vu']))
     <!-- <div class="ktc__div--dang_nhap">
             
         </div> -->
-    <div class="ktc--dem_header"></div>
+    <div class="ktc--dem_header">
+        
+    </div>
+    <div class="ktc__div--slider--bao_quanh">
+    <div class="ktc__div--slider--left"><i class="fa-solid fa-less-than ktc__div--slider--left--arrow"></i></div>
     <div class="ktc__div--slider">
         <img class="ktc__div--slider__img" src="../assets/img/coach-là-phải-chuẩn-1920x829.jpg" alt="GYM Image">
     </div>
@@ -57,6 +61,8 @@ if (isset($_SESSION['chuc_vu']))
     </div>
     <div class="ktc__div--slider">
         <img class="ktc__div--slider__img" src="../assets/img/web-banner-WCL.jpg" alt="GYM Image">
+    </div>
+    <div class="ktc__div--slider--right"><i class="fa-solid fa-greater-than ktc__div--slider--right--arrow"></i></div>
     </div>
     <div id="ktc_hoi_vien">
         <center>
@@ -275,7 +281,7 @@ if (isset($_SESSION['chuc_vu']))
     </div>
     <script src="../assets/js/js_ktc/ktc_slider.js"></script>
     <script src="../assets/js/js_ktc/ktc_goi_tap.js"></script>
-    <script src="../assets/js/js_ktc/ktc_dang_nhap.js"></script>
+    <!-- <script src="../assets/js/js_ktc/ktc_dang_nhap.js"></script> -->
 
 </body>
 

@@ -7,7 +7,7 @@
         // {
     ?>
 
-    <link rel="stylesheet" href="./assets/css/the.css">
+    <link rel="stylesheet" href="../assets/css/the.css">
 
     <?php
     include_once "../../controller/controller_the/the_hien_thi.php"
@@ -41,6 +41,7 @@
     </script>
     </div>
 
+    
     <?php include_once "view_the.php" ?>
 
     <script src="../assets/js/js_the/the_add.js"></script>
