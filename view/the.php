@@ -53,6 +53,6 @@ include_once "../controller/controller_the/the_hien_thi.php"
 <?php 
     }
     else{
-        header("Location: dang_nhap.php");
+        header("Location: views_ktc/dang_nhap.php");
     }
 ?>
