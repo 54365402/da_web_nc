@@ -48,10 +48,9 @@ $mysqli -> close();
 
     <div class="tab-bar" style="top: 20px; bottom:20px;">
         <button class="fix tab-button active">Thông báo</button>
-        <button class="tab-button">Giá cả</button>
-        <button class="tab-button">Giá cả</button>
-        <button class="tab-button">Giá cả</button>
-        <button class="tab-button">Giá cả</button>
+        <button class="tab-button">Lớp và gói tập</button>
+        <button class="tab-button">Nước và thực phẩm</button>
+        <button class="tab-button">Độ tuổi hội viên</button>
 
     </div>
 

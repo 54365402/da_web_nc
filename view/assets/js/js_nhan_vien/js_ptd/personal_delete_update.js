@@ -33,7 +33,7 @@
         };
     
         // Chỉ định URL và phương thức HTTP
-        var url = "../controller/controller_nhan_vien/phuong_thuc_day/personal_delete.php";
+        var url = "../../../controller/controller_nhan_vien/phuong_thuc_day/personal_delete.php";
         var method = "POST";
     
         // Chỉ định các tham số để gửi dữ liệu
@@ -72,7 +72,7 @@
             var personal_id_nv = "personal_id_nv=" + cell_id_nv;
             var personal_doanh_thu = "personal_doanh_thu=" + cell_doanh_thu;
        
-          url = "../controller/controller_nhan_vien/phuong_thuc_day/personal_update.php" 
+          url = "../../controller/controller_nhan_vien/phuong_thuc_day/personal_update.php" 
           if(confirm("Bạn có chắc muốn sửa ID "+cellID+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);

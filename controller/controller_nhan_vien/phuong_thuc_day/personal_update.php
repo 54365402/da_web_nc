@@ -13,5 +13,5 @@
     id_nv='".$personal_id_nv."', doanh_thu='".$personal_doanh_thu."' WHERE id_personal=".$personalID;
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    header("Location: ../../../view/personal.php");
+    header("Location: ../../../view/views_nhan_vien/nv_ptd/personal.php");
 ?>

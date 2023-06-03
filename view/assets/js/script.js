@@ -5,7 +5,7 @@ $(function() {
     if (!!scheds) {
         Object.keys(scheds).map(k => {
             var row = scheds[k]
-            events.push({ id: row.id, title: row.lop, start: row.ngay_bat_dau, end: row.ngay_ket_thuc });
+            events.push({ id: row.id, title: row.lop, start: row.ngay_hoc });
         })
     }
     var date = new Date()
@@ -29,8 +29,7 @@ $(function() {
             if (!!scheds[id]) {
                 _details.find('#lop').text(scheds[id].lop)
                 _details.find('#nhan_vien').text(scheds[id].nhan_vien)
-                _details.find('#ngay_bat_dau').text(scheds[id].sdate)
-                _details.find('#ngay_ket_thuc').text(scheds[id].edate)
+                _details.find('#ngay_hoc').text(scheds[id].sdate)
                 _details.find('#edit,#delete').attr('data-id', id)
                 _details.modal('show')
             } else {
@@ -56,12 +55,11 @@ $(function() {
         var id = $(this).attr('data-id')
         if (!!scheds[id]) {
             var _form = $('#schedule-form')
-            console.log(String(scheds[id].ngay_bat_dau), String(scheds[id].ngay_bat_dau).replace(" ", "\\t"))
+            console.log(String(scheds[id].ngay_hoc), String(scheds[id].ngay_hoc).replace(" ", "\\t"))
             _form.find('[name="id"]').val(id)
             _form.find('[name="lop"]').val(scheds[id].lop)
             _form.find('[name="nhan_vien"]').val(scheds[id].nhan_vien)
-            _form.find('[name="ngay_bat_dau"]').val(String(scheds[id].ngay_bat_dau).replace(" ", "T"))
-            _form.find('[name="ngay_ket_thuc"]').val(String(scheds[id].ngay_ket_thuc).replace(" ", "T"))
+            _form.find('[name="ngay_hoc"]').val(String(scheds[id].ngay_hoc).replace(" ", "T"))
             $('#event-details-modal').modal('hide')
             _form.find('[name="lop"]').focus()
         } else {
@@ -75,7 +73,7 @@ $(function() {
         if (!!scheds[id]) {
             var _conf = confirm("bạn muốn xóa lịch học này?");
             if (_conf === true) {
-                location.href = "./lich_lam_del.php?id=" + id;
+                location.href = "../controller/controller_nhan_vien/lich_di_lam/lich_lam_del.php?id=" + id;
             }
         } else {
             alert("lỗi không xác định");

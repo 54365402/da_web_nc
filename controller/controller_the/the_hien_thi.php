@@ -1,10 +1,11 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../controller/connection.php";
+    
 
 ?>
 
-<link rel="stylesheet" href="./assets/css/the.css">
+<link rel="stylesheet" href="../assets/css/the.css">
 
 <!-- Hien thi bang -->
 <br>
@@ -105,7 +106,7 @@
                 if ($i == $p) {
                     echo " " . $i . " ";
                 } else {
-                    echo ' <a href="?page=' . $i . '&cardsearch=' . $keyword . '">' . $i . '</a> ';
+                    echo ' <a href="?page=' . $i . '&cardsearch=' . $keyword . '&sort=' . $sort . '">' . $i . '</a> ';
                 }
             }
 
