@@ -50,6 +50,7 @@ button.tdd__input--search {
 
 input.tdd__input--search {
     width: 219px;
+    outline: none;
 }
 
 input.tdd--sort {

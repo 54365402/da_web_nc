@@ -1,5 +1,6 @@
 <?php
 include "header.php";
+include_once "../../controller/connection.php";
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +27,25 @@ include "header.php";
 
 <body>
 
+<?php
+         $sql = "SELECT * FROM tbl_lop";
+         $result = $mysqli->query($sql);
+         if ($result->num_rows > 0) {
+            // output data of each row
+            $doanh_thu = array();
+            while($row = $result->fetch_assoc()) {
+                 $doanh_thu[] = $row["doanh_thu"];           
+
+            }
+          } else {
+            echo "0 results";
+          }
+        ?>    
+<?php
+$mysqli -> close();
+?>
+
+
     <div class="tab-bar" style="top: 20px; bottom:20px;">
         <button class="fix tab-button active">Thông báo</button>
         <button class="tab-button">Lớp và gói tập</button>
@@ -37,24 +57,33 @@ include "header.php";
     <div class="tab-content">
         <div class="tab-pane active">
 
+          
+
         <div class="chart-container" style="left:50px; top:50px; position: relative; height:60vh; width:80%">
             <canvas id="myChart"></canvas>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                <script>
-                  const ctx = document.getElementById('myChart');
+        <script>
+        //Set up block
+          //console.log(<?php //echo json_encode($doanh_thu); ?>)
 
-                new Chart(ctx, {
-                  type: 'line',
-                  data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          const doanh_thu = <?php echo json_encode($doanh_thu); ?>;
+
+          const data = {
+        labels: ['Gym', 'Yoga', 'Aerobic', 'Boxing', 'Swimming'],
                     datasets: [{
                       label: '# of Votes',
-                      data: [12, 19, 3, 5, 2, 3],
+                      data: doanh_thu,
                       borderWidth: 1
                     }]
-                  },
+                  };
+
+        //config
+        const config = {
+
+          type: 'line',
+                  data,
                   options: {
                     scales: {
                       y: {
@@ -62,13 +91,22 @@ include "header.php";
                       }
                     }
                   }
-                });
+
+        };
+        //render
+              const myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+              );
+              
                 </script>
 
             </div>
-            <div class=" tab-pane" style="top 20px">
+            <div class=" tab-pane " style="top 20px">
 
-                  haha
+              <?php
+              //include "tk_do_tuoi.php";
+              ?>
             </div>
         </div>
         

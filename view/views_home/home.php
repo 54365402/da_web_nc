@@ -60,7 +60,7 @@ while($row = mysqli_fetch_array($query))
             Sửa thông tin cá nhân
         </button>
     </div>
-    <script src="../../controller/controller_notice/InfoUpdate.js"></script>
+    <script src="../../assets/js/js_noctice/InfoUpdate.js"></script>
     <div class=" card card--notice">
         <div >
         <h1> Thông báo </h1>

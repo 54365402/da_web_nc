@@ -49,6 +49,7 @@ button.bl__input--search {
 
 input.bl__input--search {
     width: 219px;
+    outline: none;
 }
 
 input.bl--sort {

@@ -50,6 +50,7 @@ button.dct__input--search {
 
 input.dct__input--search {
     width: 219px;
+    outline: none;
 }
 
 input.dct--sort {
