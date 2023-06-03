@@ -31,7 +31,7 @@
             <option value="2">Tên từ Z->A</option>
             <option value="3">Tiền tăng dần</option>
             <option value="4">Tiền giảm dần</option>
-            <option value="999">Như phút ban đầu    </option>
+            <option value="999">Như phút ban đầu</option>
         </select>
         <script>
         document.getElementById('the_select').addEventListener('change', function() {

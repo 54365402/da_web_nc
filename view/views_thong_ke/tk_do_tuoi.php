@@ -5,7 +5,6 @@
 <form method="post" action="">
     <select name="range">
         <option value="all">Tất cả</option>
-        <option value="day">Ngày</option>
         <option value="month">Tháng</option>
         <option value="year">Năm</option>
     </select>
@@ -27,9 +26,6 @@
         switch ($selectedRange) {
             case 'all':
                 // Không có điều kiện WHERE
-                break;
-            case 'day':
-                $whereClause = "c.time_start >= '$startDate' AND c.time_end <= '$endDate'";
                 break;
             case 'month':
                 $whereClause = "MONTH(c.time_start) = MONTH('$startDate') AND YEAR(c.time_end) = YEAR('$endDate')";
@@ -58,11 +54,8 @@
                     WHEN h.tuoi BETWEEN 56 AND 60 THEN '56-60'
                     ELSE '60+'
                 END AS age_group,
-                SUM(c.total_money) AS total_amount
-                FROM tbl_hoi_vien h
-                INNER JOIN card c ON h.id_hv = c.id_hv
-                WHERE $whereClause
-                GROUP BY age_group";
+                SUM(c.total_money) AS total_amount FROM tbl_hoi_vien h
+                INNER JOIN card c ON h.id_hv = c.id_hv WHERE $whereClause GROUP BY age_group";
         } else {
             // Mặc định, không có điều kiện WHERE
             $sql = "SELECT
@@ -80,10 +73,8 @@
                     WHEN h.tuoi BETWEEN 56 AND 60 THEN '56-60'
                     ELSE '60+'
                 END AS age_group,
-                SUM(c.total_money) AS total_amount
-                FROM tbl_hoi_vien h
-                INNER JOIN card c ON h.id_hv = c.id_hv
-                GROUP BY age_group";
+                SUM(c.total_money) AS total_amount FROM tbl_hoi_vien h
+                INNER JOIN card c ON h.id_hv = c.id_hv GROUP BY age_group";
         }
     } else {
         // Lấy dữ liệu từ CSDL
@@ -102,10 +93,8 @@
                 WHEN h.tuoi BETWEEN 56 AND 60 THEN '56-60'
                 ELSE '60+'
             END AS age_group,
-            SUM(c.total_money) AS total_amount
-            FROM tbl_hoi_vien h
-            INNER JOIN card c ON h.id_hv = c.id_hv
-            GROUP BY age_group";
+            SUM(c.total_money) AS total_amount FROM tbl_hoi_vien h
+            INNER JOIN card c ON h.id_hv = c.id_hv GROUP BY age_group";
     }
 
     $query = mysqli_query($mysqli, $sql);
