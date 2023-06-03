@@ -2,7 +2,7 @@
 <?php
     include "hoivien_pages.php";
 ?>
-<link rel="stylesheet" href="./assets/css/hoivien.css">
+<link rel="stylesheet" href="../assets/css/hoivien.css">
 
 <!-- Hien thi bang -->
 <div class="main-hoivien">

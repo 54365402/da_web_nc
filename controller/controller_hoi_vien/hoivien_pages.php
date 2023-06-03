@@ -1,6 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
-    include_once "../controller/connection.php";
+    include_once "../../controller/connection.php";
     
     $hoivien_get_data="";
     if(isset($_POST['hoivien__input-search']))
