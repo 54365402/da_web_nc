@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,3 +28,4 @@
     </script>
 </body>
 </html>
+>>>>>>> 78576c2ed954c6ad1f9137a68857ae50ae2c2dd9

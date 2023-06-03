@@ -1,5 +1,5 @@
 <?php 
-require_once('../controller/connection.php');
+require_once('../../../controller/connection.php');
 if($_SERVER['REQUEST_METHOD'] !='POST'){
     $mysqli->close();
     exit;
@@ -8,13 +8,13 @@ extract($_POST);
 $allday = isset($allday);
 
 if(empty($id)){
-    $sql = "INSERT INTO `schedule_list` (`title`,`description`,`start_datetime`,`end_datetime`) VALUES ('$title','$description','$start_datetime','$end_datetime')";
+    $sql = "INSERT INTO `lich_di_lam` (`lop`,`nhan_vien`,`ngay_hoc`) VALUES ('$lop','$nhan_vien','$ngay_hoc')";
 }else{
-    $sql = "UPDATE `schedule_list` set `title` = '{$title}', `description` = '{$description}', `start_datetime` = '{$start_datetime}', `end_datetime` = '{$end_datetime}' where `id` = '{$id}'";
+    $sql = "UPDATE `lich_di_lam` set `lop` = '{$lop}', `nhan_vien` = '{$nhan_vien}', `ngay_hoc` = '{$ngay_hoc}' where `id` = '{$id}'";
 }
 $save = $mysqli->query($sql);
 if($save){
-    echo "<script> alert('thêm lịch học thành công.'); location.replace('./lich_di_lam.php') </script>";
+    echo "<script> alert('thêm lịch học thành công.'); location.replace('../../../view/lich_di_lam.php') </script>";
 }else{
     echo "<pre>";
     echo "An Error occured.<br>";

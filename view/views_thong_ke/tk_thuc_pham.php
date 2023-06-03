@@ -1,11 +1,7 @@
 <?php
 include_once "header.php";
 ?>
-<?php 
-    // Start the session
-    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    {
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -121,8 +117,3 @@ include_once "header.php";
 
 </body>
 </html>
-    <?php 
-        } else {
-            header("Location: dang_nhap.php");
-        }
-    ?>

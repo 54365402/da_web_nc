@@ -35,7 +35,8 @@ $query1 = mysqli_query($mysqli,$sql1);
                     </div>
                     <div class="card-body">
                         <div class="container-fluid">
-                            <form action="lich_lam_save.php" method="post" id="schedule-form">
+                            <form action="../controller/controller_nhan_vien/lich_di_lam/lich_lam_save.php"
+                                method="post" id="schedule-form">
                                 <input type="hidden" name="id" value="">
                                 <div class="form-group mb-2">
                                     <label for="lop" class="control-label">Lớp</label>
@@ -63,14 +64,9 @@ $query1 = mysqli_query($mysqli,$sql1);
                                     </select>
                                 </div>
                                 <div class="form-group mb-2">
-                                    <label for="ngay_bat_dau" class="control-label">Ngày bắt đầu</label>
+                                    <label for="ngay_hoc" class="control-label">Ngày Học</label>
                                     <input type="datetime-local" class="form-control form-control-sm rounded-0"
-                                        name="ngay_bat_dau" id="ngay_bat_dau" required>
-                                </div>
-                                <div class="form-group mb-2">
-                                    <label for="ngay_ket_thuc" class="control-label">Ngày kết thúc</label>
-                                    <input type="datetime-local" class="form-control form-control-sm rounded-0"
-                                        name="ngay_ket_thuc" id="ngay_ket_thuc" required>
+                                        name="ngay_hoc" id="ngay_hoc" required>
                                 </div>
                             </form>
                         </div>
@@ -102,10 +98,8 @@ $query1 = mysqli_query($mysqli,$sql1);
                             <dd id="lop" class="fw-bold fs-4"></dd>
                             <dt class="text-muted">Nhân viên</dt>
                             <dd id="nhan_vien" class=""></dd>
-                            <dt class="text-muted">Ngày bắt đầu</dt>
-                            <dd id="ngay_bat_dau" class=""></dd>
-                            <dt class="text-muted">Ngày kết thúc</dt>
-                            <dd id="ngay_ket_thuc" class=""></dd>
+                            <dt class="text-muted">Ngày học</dt>
+                            <dd id="ngay_hoc" class=""></dd>
                         </dl>
                     </div>
                 </div>
@@ -127,8 +121,7 @@ $query1 = mysqli_query($mysqli,$sql1);
 $schedules = $mysqli->query("SELECT * FROM `lich_di_lam`");
 $sched_res = [];
 foreach($schedules->fetch_all(MYSQLI_ASSOC) as $row){
-    $row['sdate'] = date("F d, Y h:i A",strtotime($row['ngay_bat_dau']));
-    $row['edate'] = date("F d, Y h:i A",strtotime($row['ngay_ket_thuc']));
+    $row['sdate'] = date("F d, Y h:i A",strtotime($row['ngay_hoc']));
     $sched_res[$row['id']] = $row;
 }
 ?>

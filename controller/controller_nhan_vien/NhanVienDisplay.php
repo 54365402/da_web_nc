@@ -19,7 +19,7 @@
             </select>
         </form>
         <li>
-            <ul><a href="lop.php" class="nhanvien--option"><i class="fa-solid fa-laptop-file fa-2xl"
+            <ul><a href="nv_ptd/lop.php" class="nhanvien--option"><i class="fa-solid fa-laptop-file fa-2xl"
                         style="color: #2b3e78;"></i>Phương thức dạy</a></ul>
             <ul><a href="lich_di_lam.php" class="nhanvien--option"><i class="fa-solid fa-calendar-days fa-2xl"
                         style="color: #2b3e78;"></i>Lịch đi làm</a></ul>
