@@ -51,7 +51,7 @@
             $listPages .= '<input class="active dct--page" type="submit" value="'.$i.'" name="page">';
         }
         else{
-            $listPages .= '<input class="dct--page" type="submit" value="'.$i.'" name="page">';
+            $listPages .= '<input style="cursor:pointer; class="dct--page" type="submit" value="'.$i.'" name="page">';
         }
     }
 ?>

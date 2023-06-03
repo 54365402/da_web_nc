@@ -59,7 +59,7 @@
                 <li class="menu-li"><a class="menu-a" href="../../views_the/the.php"><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
                 <li class="menu-li menu-li-nuoc"><a class="menu-a" href="../../views_nuoc_va_thuc_pham/views_nuoc/nuoc.php"><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
                 <li class="menu-li "><a class="menu-a" href="../../views_nhan_vien/nhanvien.php"><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
-                <li class="menu-li menu-li-csvc"><a class="menu-a" href="dung_cu_tap.php"><i class="fa-solid fa-database"></i> Cơ sở vật chất</a></li>
+                <li class="menu-li menu-li-csvc"><a class="menu-a" href="../../views_csvc/dung_cu_tap/dung_cu_tap.php"><i class="fa-solid fa-database"></i> Cơ sở vật chất</a></li>
                 <li class="menu-li"><a class="menu-a" href="su_kien.php"><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
                 <li class="menu-li"><a class="menu-a" href="../views_thong_ke/tk_nuoc.php"><i class="fa-sharp fa-solid fa-money-check"></i> Thống kê</a></li>
 

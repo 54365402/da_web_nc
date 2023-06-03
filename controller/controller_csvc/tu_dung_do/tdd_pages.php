@@ -49,7 +49,7 @@
             $listPages .= '<input class="active tdd--page" type="submit" value="'.$i.'" name="page">';
         }
         else{
-            $listPages .= '<input class="tdd--page" type="submit" value="'.$i.'" name="page">';
+            $listPages .= '<input style="cursor:pointer; class="tdd--page" type="submit" value="'.$i.'" name="page">';
         }
     }
     

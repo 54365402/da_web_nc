@@ -10,6 +10,7 @@ html{
 
 /* css của sắp xếp */
 select.snhv__select {
+    cursor: pointer;
     margin-top: 10px;
     margin-right: 30px;
     padding: 5px;
@@ -53,6 +54,7 @@ input.snhv__input--search {
 }
 
 input.snhv--sort {
+    cursor: pointer;
     margin-top: 10px;
     margin-right: 30px;
     padding: 5px;
@@ -172,6 +174,7 @@ table.snhv__table--addform {
 
 /* css của button thêm sửa xóa */
 .snhv__div--button{
+    cursor: pointer;
     margin-left: 1%;
     padding: 5px;
     border: 1px solid #2F528F;
@@ -201,6 +204,7 @@ input.snhv--page {
 }
 
 li.snhv__div {
+    cursor: pointer;
     border: 1px solid #2F528F;
     border-radius: 10px;
     font-size: 20px;
@@ -312,9 +316,7 @@ form.snhv__form--sendDate {
 }
 
 button.snhv__table--button_guiDate {
-    /* border: 1px solid #2F528F; */
-    /* border-radius: 10px; */
-    /* border-width: 5px; */
+    cursor: pointer;
     margin-left: 1%;
     padding: 5px;
     border: 1px solid #2F528F;

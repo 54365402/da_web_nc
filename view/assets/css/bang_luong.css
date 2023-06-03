@@ -10,6 +10,7 @@ html{
 
 /* css của sắp xếp */
 select.bl__select {
+    cursor: pointer;
     margin-top: 10px;
     margin-right: 30px;
     padding: 5px;
@@ -25,6 +26,7 @@ select.bl__select {
 }
 
 button.bl__input--search {
+    cursor: pointer;
     border: none;
     background: white;
     color: blue;
@@ -53,6 +55,7 @@ input.bl__input--search {
 }
 
 input.bl--sort {
+    cursor: pointer;
     margin-top: 10px;
     margin-right: 30px;
     padding: 5px;
@@ -172,7 +175,7 @@ table.bl__table--addform {
 
 /* css của button thêm sửa xóa */
 .bl__div--button{
-
+    cursor: pointer;
     padding: 5px;
     border: 1px solid #2F528F;
     border-width: 5px;
@@ -202,6 +205,7 @@ input.bl--page {
 }
 
 li.bl__div {
+    cursor: pointer;
     border: 1px solid #2F528F;
     border-radius: 10px;
     font-size: 20px;

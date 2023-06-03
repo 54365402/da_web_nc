@@ -51,7 +51,7 @@
             $listPages .= '<input class="active nuoc--page" type="submit" value="'.$i.'" name="page">';
         }
         else{
-            $listPages .= '<input class="nuoc--page" type="submit" value="'.$i.'" name="page">';
+            $listPages .= '<input style="cursor:pointer;" class="nuoc--page" type="submit" value="'.$i.'" name="page">';
         }
     }
     
