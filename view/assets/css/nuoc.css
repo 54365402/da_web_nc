@@ -209,6 +209,7 @@ li.nuoc__div {
 }
 input.nuoc__input--search {
     width: 219px;
+    outline: none;
 }
 button.nuoc__input--search {
     border: none;
