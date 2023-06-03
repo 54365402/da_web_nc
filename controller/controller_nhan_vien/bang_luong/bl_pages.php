@@ -50,7 +50,7 @@
             $listPages .= '<input class="active bl--page" type="submit" value="'.$i.'" name="page">';
         }
         else{
-            $listPages .= '<input class="bl--page" type="submit" value="'.$i.'" name="page">';
+            $listPages .= '<input style="cursor:pointer; class="bl--page" type="submit" value="'.$i.'" name="page">';
         }
     }
 ?>

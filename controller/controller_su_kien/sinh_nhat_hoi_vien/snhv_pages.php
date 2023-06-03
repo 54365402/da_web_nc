@@ -50,7 +50,7 @@
             $listPages .= '<input class="active snhv--page" type="submit" value="'.$i.'" name="page">';
         }
         else{
-            $listPages .= '<input class="snhv--page" type="submit" value="'.$i.'" name="page">';
+            $listPages .= '<input style="cursor:pointer; class="snhv--page" type="submit" value="'.$i.'" name="page">';
         }
     }
 ?>

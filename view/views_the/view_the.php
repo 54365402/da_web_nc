@@ -4,6 +4,9 @@
     $query = mysqli_query($mysqli,$sql);
     $sql1 = "SELECT * FROM tbl_hoi_vien";
     $query1 = mysqli_query($mysqli,$sql1);
+    $sql2 = "SELECT * FROM tbl_gym";
+    $query2 = mysqli_query($mysqli,$sql2);
+    
     ?>
 <div class='the_modal-popup'>
     <div class='the_modal_div-popup'>
@@ -61,12 +64,16 @@
         
             <tr>
                 <td><label for="lname">Gói tập: </label></td>
-                <td><input class='the_table-add_input' type="text"  name="the_table-add_goi_tap" placeholder="Packages...."></td>
+                <td><select class='the_table-add_input22' name='the_table-add_id_nv' onchange="getValue()">
+                <option value="">-- Gói Tập --</option>
+                <option class='view_the_select-id_nv' value="49000">1 lần</option>
+                <option class='view_the_select-id_nv' value="200000">1 tháng</option>
+                 
             </tr>
             
             <tr>
             <td><label for="lname">Số lượng: </label></td>
-                <td><input class='the_table-add_input' type="text"  name="the_table-add_so_luong" placeholder="Quantity...." ></td>
+                <td><input class='the_table-add_input222' type="text" onchange="getValue1()" name="the_table-add_so_luong" placeholder="Quantity...." ></td>
             </tr>
 
             <tr>
@@ -95,7 +102,7 @@
 
             <tr>
                 <td><label for="lname">Thành tiền: </label></td>
-                <td><input class='the_table-add_input' type="text"  name="the_table-add_thanh_tien" placeholder="Sum money...."></td>
+                <td><input class='the_table-add_input2222' type="text"  name="the_table-add_thanh_tien" placeholder="Sum money...."></td>
             </tr>
             
             <tr>
@@ -111,3 +118,4 @@
     </div>
 </div>
 <div class="clear"></div>
+<script src="../assets/js/js_the/the_tinh_tien.js"></script>

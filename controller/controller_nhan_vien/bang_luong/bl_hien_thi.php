@@ -9,7 +9,7 @@ include "bl_pages.php";
 
 <div class = "bl__div--hienthi">
     <div  class='bl__div--tap'>
-        <li class="bl__div bl__div--bl"><a >Bảng lương</a></th></li>
+        <li class="bl__div bl__div--bl"><a href="#">Bảng lương</a></th></li>
         
 </div>
     <table class="bl__table--hienthi" >
