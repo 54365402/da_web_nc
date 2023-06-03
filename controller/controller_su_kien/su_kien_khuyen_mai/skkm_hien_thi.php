@@ -7,10 +7,10 @@ $query1 = mysqli_query($mysqli,$sql);
 
 <head>
     <meta charset="UTF-8">
-    <script src="./assets/js/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="./assets/fullcalendar/lib/main.css">
-    <script src="./assets/fullcalendar/lib/main.js"></script>
-    <script src="./assets/fullcalendar/lib/locales-all.js"></script>
+    <script src="../../assets/js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="../../assets/fullcalendar/lib/main.css">
+    <script src="../../assets/fullcalendar/lib/main.js"></script>
+    <script src="../../assets/fullcalendar/lib/locales-all.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
@@ -18,7 +18,7 @@ $query1 = mysqli_query($mysqli,$sql);
             locale: 'vi',
             initialView: 'dayGridMonth',
             height: 500,
-            events: '../controller/controller_su_kien/su_kien_khuyen_mai/sk_xu_ly.php',
+            events: '../../../controller/controller_su_kien/su_kien_khuyen_mai/sk_xu_ly.php',
 
             selectable: true,
             select: async function(start, end, allDay) {
@@ -97,7 +97,7 @@ $query1 = mysqli_query($mysqli,$sql);
                 }).then((result) => {
                     if (result.isConfirmed) {
                         // Delete event
-                        fetch("../controller/controller_su_kien/su_kien_khuyen_mai/sk_them_sua_xoa.php", {
+                        fetch("../../../controller/controller_su_kien/su_kien_khuyen_mai/sk_them_sua_xoa.php", {
                                 method: "POST",
                                 headers: {
                                     "Content-Type": "application/json"
@@ -150,7 +150,7 @@ $query1 = mysqli_query($mysqli,$sql);
                         }).then((result) => {
                             if (result.value) {
                                 // Edit event
-                                fetch("../controller/controller_su_kien/su_kien_khuyen_mai/sk_them_sua_xoa.php", {
+                                fetch("../../../controller/controller_su_kien/su_kien_khuyen_mai/sk_them_sua_xoa.php", {
                                         method: "POST",
                                         headers: {
                                             "Content-Type": "application/json"
