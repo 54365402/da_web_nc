@@ -1,7 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
     include_once "lop_pages.php";
-    // include_once "view_lop_popup.php";
 ?>
 
 <!-- Hien thi bang -->
@@ -29,15 +28,14 @@
             <div class="lop_div-search-sort">
                 <form class="lop_form-search" method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
                     <div class="lop_form_div-search">
-                        <button class='lop_input-search' type="submit"><i class="fa-solid fa-magnifying-glass lop_search-input-icon"></i></button>
                         <input class='lop_input-search' type="text" name="lop_input-search" placeholder="Search....">
-                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
-                        <input class="lop-sort" type="submit" value="Tìm kiếm"></form>
+                        <button class='lop_icon-search' type="submit"><i class="fa-solid fa-magnifying-glass lop_search-input-icon"></i></button>
+                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']?>"></form>
                     </div>
                 </form>
             </div>
         <table class="lop_table-hienthi">
-            <tr class="lop_table_row-hienthi lop_table-Tieu_de" style="background-color: #4472C8">
+            <tr class="lop_table_row-hienthi lop_table-Tieu_de" style="background-color: #4470C8">
                 <th>ID Class</th>
                 <th>Lớp</th>
                 <th>Tên lớp</th>

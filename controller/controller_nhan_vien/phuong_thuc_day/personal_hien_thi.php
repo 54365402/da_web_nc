@@ -1,6 +1,5 @@
 <!-- Kết nối CSDL -->
 <?php
-    // include_once "../controller/connection.php";
     include_once "personal_pages.php";
 
 ?>
@@ -28,16 +27,15 @@
             <div class="personal_div-search-sort">
                 <form class="personal_form-search" method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
                     <div class="personal_form_div-search">
-                    <button class='personal_input-search' type="submit"><i class="fa-solid fa-magnifying-glass personal_search-input-icon"></i></button>
-                    <input  class='personal_input-search' type="text"  name="personal_input-search" placeholder="Search....">
-                    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
-                    <input class="personal-sort" type="submit" value="Tìm kiếm"></form>
+                        <input  class='personal_input-search' type="text"  name="personal_input-search" placeholder="Search....">
+                        <button class='personal_icon-search' type="submit"><i class="fa-solid fa-magnifying-glass personal_search-input-icon"></i></button>
+                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']?>"></form>
                     </div>
                 </form>
             </div>
             
         <table class="personal_table-hienthi">
-            <tr class="personal_table_row-hienthi personal_table-Tieu_de" style="background-color: #4472C8">
+            <tr class="personal_table_row-hienthi personal_table-Tieu_de" style="background-color: #4470C8">
                 <th>ID Personal</th>
                 <th>Tên HV</th>
                 <th>ID HV</th>

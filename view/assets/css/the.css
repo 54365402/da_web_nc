@@ -3,10 +3,19 @@ html{
     height: 100%;  
 }
 
-.the_gachchan{
+.the_div-fixed {
+    background: #edf4fd;
+}
+
+.the_box{
+    padding: 2px 59px 1px 3px;
+    font-size: 16px;
+}
+
+.the_gach_chan{
     width: 100%;
     border-bottom: 1px solid black;
-    padding: 2px 35px;
+    padding: 2px 0px 0px 35px;
 }
 
 .the_ten-search{
@@ -46,6 +55,7 @@ html{
 }
 
 .the_table-hienthi3{
+    margin-top: -0.3px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 9px;
@@ -56,18 +66,16 @@ html{
 
 .the_ten-hienthi {
     display: flex;   
-}
-
-.abc{
-    margin-top: 0.99px;
-    border-radius: 6px;
+    background: #478fec;
 }
 
 .the_ten1 {
-    font-size: 30px;
-    margin-left: 10px;
+    font-size: 33px;
+    margin-left: 59px;
     border: none;
-    border-bottom: 1px solid #333;
+    padding: 5px 20px 7px;
+    background: #54b7ed;
+    border-radius: 10px;
     /*padding-left: 30px; 
     background-image: url('icon_search.png');
     background-position: 10px center; 
@@ -76,56 +84,58 @@ html{
 }
 
 .the_search-input-icon{
-    font-size: 20px;
-    margin-left: 59px;
+    font-size: 22px;
+    color: #6fbae9;
+    margin-left: -30px;
 }
 
 .the_ten-up {
-    padding: 0px 9px;
-    margin-left: 0px;
-    margin-top: 9px;
-    height: 25px;
+    border-color: #3c95ed;
+    padding: 15px 39px 14px 15px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 12px;
+    height: 30px;
     width: 245px;
-    font-size: 18px;
+    font-size: 21px;
 }
 
 /* css của sắp xếp */
 #the_select {
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 10px;
     margin-right: 30px;
     padding: 5px;
-    border: 1px solid #2F528F;
-    border-width: 5px;
+    border: 2px solid #2F528F;
     float: left;
     border-radius: 10px;
     background-color: #daeaf3;
     position: fixed;
     bottom: 0;
-    left: 10px;
+    left: 50px;
 }
 
 /* CSS của hiển thị */
 .the_div-hienthi{
     font-size: 18px;
-    padding: 10px;
-    border-collapse: collapse;
-    margin-left: 10px;
+    padding-right: 50px;
+    margin-left: 50px;
     width: 160%;
-    border: 1px solid white;
+    border: none;
 }
 
 .the_div-fixed{
+    background: #ebf3ff;
     display: flex;
 }
 
 .the_div-hienthi1{
     
-    margin-top: 23px;
+    margin-top: 11px;
     width: 100%;
-    margin-right: 10px;
-    border: 1px solid white;
+    margin-right: 50px;
+    border: none;
 }
 
 .the_table_row-hienthi{
@@ -153,10 +163,9 @@ table.the_table-hienthi {
 }
 
 .the_table-hienthi tr th.the_table-pass_tap {
-    border: 1px solid #2F528F;
+    border: 2px solid #2F528F;
     border-radius: 10px;
     font-size: 20px;
-    border-width: 5px;
     padding: 2px;
 }
 
@@ -216,8 +225,7 @@ table.the_table-addform {
     cursor: pointer;
     width: 59px;
     padding: 5px;
-    border: 1px solid #2F528F;
-    border-width: 3px;
+    border: 2px solid #2F528F;
     border-radius: 10px;
     margin-bottom: 10px;
     background-color: #daeaf3;
@@ -240,7 +248,6 @@ table.the_table-addform {
 }
 
 select.the_table-add_input {
-    border-width: 3px;
     border-radius: 10px;
     background-color: #2F528F;
     color: white;
@@ -249,12 +256,15 @@ select.the_table-add_input {
     margin-bottom: auto;
 }
 
+.the_page-hienthi{
+    color: #1564ee;
+}
+
 /* css của button thêm sửa xóa */
 .the_div-button{
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px;
-    border: 1px solid #2F528F;
-    border-width: 5px;
+    border: 2px solid #2F528F;
     border-radius: 10px;
     margin-bottom: 10px;
     background-color: #daeaf3; 
@@ -272,10 +282,9 @@ select.the_table-add_input {
 .the_div-chua_button{
     position: fixed;
     bottom: 0;
-    right: 0;
+    right: 50px;
 }
 
 .the_div-button_xoa{
-    margin-right: 30px;
     background-color: red;
 }

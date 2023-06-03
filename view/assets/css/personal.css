@@ -31,26 +31,32 @@ td.personal_table_td-hienthi-td {
     font-size: 22px;
 }
 
-button.personal_input-search {
-    border: none;
-    background: white;
+.personal_icon-search {
+    cursor: pointer;
+    padding: 10px 0px 0px 0px;
+    margin-right: 10px;
+    background: #4f82e3;
     color: blue;
-    font-size: 17px;
+    font-size: 22px;
+    border: none;
 }
 
 .personal_div-search-sort {
+    margin-left: 80px;
     margin-bottom: 7px;
     display: flex;
 }
 
 .personal_input-search {
+    cursor: pointer;
+    padding: 0px 0px 0px 16px;
     height: 31px;
     border: none;
 }
 
-.personal_form_div-search {
+/* .personal_form_div-search {
     border-bottom: 2px groove;
-}
+} */
 
 input.personal-sort {
     cursor: pointer;
@@ -58,16 +64,19 @@ input.personal-sort {
 }
 
 input.personal_input-search {
+    border-radius: 5px;
     font-size: 20px;
     width: 219px;
 }
 
 /* CSS của hiển thị */
 .personal_div-hienthi{
+    background: #82baff;
     display: flex;
 }
 
 .personal_div-hienthi1{
+    background: #bee2ff;
     text-align: center;
     margin-left: 47px;
     height: 450px;
@@ -78,6 +87,7 @@ input.personal_input-search {
 }
 
 .personal_div-hienthi2{
+    background: #4f82e3;
     text-align: center;
     margin-left: 62px;
     margin-top: -13px;
@@ -86,10 +96,10 @@ input.personal_input-search {
 }
 
 .personal_table-hienthi{
-    border-top: 5px solid rgb(80, 118, 243);
+    /* border-top: 5px solid rgb(80, 118, 243);
     border-left: 5px solid rgb(60, 92, 198);
     border-right: 5px solid rgb(44, 67, 145);
-    border-bottom: 5px solid rgb(19, 29, 61);
+    border-bottom: 5px solid rgb(19, 29, 61); */
     border-radius: 10px;
 }
 

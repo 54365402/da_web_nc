@@ -24,26 +24,32 @@ td.lop_table_td-hienthi-td {
     font-size: 22px;
 }
 
-button.lop_input-search {
-    border: none;
-    background: white;
+.lop_icon-search {
+    cursor: pointer;
+    padding: 10px 0px 0px 0px;
+    margin-right: 10px;
+    background: #4f82e3;
     color: blue;
-    font-size: 17px;
+    font-size: 22px;
+    border: none;
 }
 
 .lop_div-search-sort {
+    margin-left: 80px;
     margin-bottom: 7px;
     display: flex;
 }
 
 .lop_input-search {
+    cursor: pointer;
+    padding: 0px 0px 0px 16px;
     height: 31px;
     border: none;
 }
 
-.lop_form_div-search {
+/* .lop_form_div-search {
     border-bottom: 2px groove;
-}
+} */
 
 input.lop-sort {
     cursor: pointer;
@@ -51,16 +57,19 @@ input.lop-sort {
 }
 
 input.lop_input-search {
+    border-radius: 5px;
     font-size: 20px;
     width: 219px;
 }
 
 /* CSS của hiển thị */
 .lop_div-hienthi{
+    background: #82baff;
     display: flex;
 }
 
 .lop_div-hienthi1{
+    background: #bee2ff;
     float: left;
     text-align: center;
     margin-left: 47px;
@@ -72,12 +81,12 @@ input.lop_input-search {
 }
 
 .lop_div-hienthi2{
+    background: #4f82e3;
     float: right;
     text-align: center;
     margin-left: 62px;
     margin-top: -13px;
     width: 76%;
-    border: 1px solid white;
 }
 
 .lop_table_row-hienthi{
@@ -94,10 +103,10 @@ input.lop_input-search {
 }
 
 .lop_table-hienthi{
-    border-top: 5px solid rgb(80, 118, 243);
+    /* border-top: 5px solid rgb(80, 118, 243);
     border-left: 5px solid rgb(60, 92, 198);
     border-right: 5px solid rgb(44, 67, 145);
-    border-bottom: 5px solid rgb(107, 135, 225);
+    border-bottom: 5px solid rgb(107, 135, 225); */
     border-radius: 10px;
 }
 
@@ -225,6 +234,7 @@ table.lop_table-addform {
 
 input.lop-page {
     text-align: center;
+    cursor: pointer;
 }
 
 .lop_div-tap {

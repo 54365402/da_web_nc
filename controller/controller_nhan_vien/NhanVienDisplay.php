@@ -19,11 +19,11 @@
             </select>
         </form>
         <li>
-            <ul><a href="nv_ptd/lop.php" class="nhanvien--option"><i class="fa-solid fa-laptop-file fa-2xl"
+            <ul><a href="../../views_nhan_vien/nv_ptd/lop.php" class="nhanvien--option"><i class="fa-solid fa-laptop-file fa-2xl"
                         style="color: #2b3e78;"></i>Phương thức dạy</a></ul>
-            <ul><a href="lich_di_lam.php" class="nhanvien--option"><i class="fa-solid fa-calendar-days fa-2xl"
+            <ul><a href="../../views_nhan_vien/lich_di_lam/lich_di_lam.php" class="nhanvien--option"><i class="fa-solid fa-calendar-days fa-2xl"
                         style="color: #2b3e78;"></i>Lịch đi làm</a></ul>
-            <ul><a href="nv_bang_luong.php" class="nhanvien--option nhanvien--option__luong"><i
+            <ul><a href="../../views_nhan_vien/bang_luong/nv_bang_luong.php" class="nhanvien--option nhanvien--option__luong"><i
                         class="fa-solid fa-coins fa-2xl" style="color: #2b3e78;"></i>Lương</a></ul>
         </li>
     </div>

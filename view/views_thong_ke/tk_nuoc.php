@@ -1,7 +1,42 @@
 <?php
-        include_once "header.php";
+include_once "header.php";
+include_once "../../controller/connection.php";
+
+function handleFormSubmission($connection)
+{
+    $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '';
+    $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '';
+
+    $sql = "SELECT name, SUM(tong_tien) AS total_amount FROM tbl_nuoc_va_thuc_pham WHERE loai_tp = 'Nước' AND ngay_nhap BETWEEN '$startDate' AND '$endDate' GROUP BY name";
+    $query = mysqli_query($connection, $sql);
+
+    $data = [];
+    $categories = ['Nước'];
+
+    while ($row = mysqli_fetch_assoc($query)) {
+        $name = $row['name'];
+        $totalAmount = (float) $row['total_amount'];
+        $data[] = [
+            'name' => $name,
+            'data' => [$totalAmount],
+            'color' => '#4472C8'
+        ];
+    }
+
+    return [
+        'data' => $data,
+        'categories' => $categories
+    ];
+}
+
+if (isset($_POST['submit'])) {
+    $chartData = handleFormSubmission($mysqli);
+} else {
+    $chartData = handleFormSubmission($mysqli);
+}
+
+$mysqli->close();
 ?>
-  
 
 <!DOCTYPE html>
 <html>
@@ -15,52 +50,48 @@
             height: 70vh;
             margin: 0 auto;
         }
+
         .tknuoc_hien_thi #chart {
             width: 80%;
         }
+
+        .tk_date {
+        position: fixed;
+        top: 150px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        }
     </style>
+
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.26.0/dist/apexcharts.min.js"></script>
 </head>
 <body>
-    <?php
-    // Kết nối CSDL và lấy dữ liệu thống kê
-    include_once "../../controller/connection.php";
-
-    // Lấy dữ liệu từ CSDL
-    $sql = "SELECT name, SUM(tong_tien) AS total_amount FROM tbl_nuoc_va_thuc_pham WHERE loai_tp = 'Nước' GROUP BY name";
-    $query = mysqli_query($mysqli, $sql);
-
-    // Tạo mảng dữ liệu cho biểu đồ
-    $data = array();
-    while ($row = mysqli_fetch_assoc($query)) {
-        $name = $row['name'];
-        $totalAmount = (float) $row['total_amount'];
-        $data[] = array(
-            'name' => $name,
-            'data' => array($totalAmount),
-            'color' => '#4472C8'
-        );
-    }
-
-    // Đóng kết nối CSDL
-    $mysqli->close();
-    ?>
-
     <div class="tk_nuoc_va_thuc_pham_hien_thi">
-        <div class='tknuoc' name='tknuoc'>
-            <button class="tknuoc_n" onclick="window.location.href='../view/tk_nuoc.php'">Nước</button>
-            <button class="tknuoc_tp" onclick="window.location.href='../view/tk_thuc_pham.php'">Thực phẩm</button>
+    <div class='tktp' name='tktp' >
+            <button onclick="window.location.href='tk_nuoc.php'" style="font-size: 20px; border: 2px solid #3a72ff; border-radius: 50px; color: #2c4dfc; padding: 11px 14px 11px; cursor: pointer;">Nước</button>
+            <button onclick="window.location.href='tk_thuc_pham.php'" style="font-size: 20px; border: 2px solid #3a72ff; border-radius: 50px; color: #2c4dfc; padding: 11px 14px 11px; cursor: pointer;">Thực phẩm</button>
+        </div>  
+
+        <div class="tk_date">
+            <form method="post" action="" style="font-size: 20px" >
+                Từ ngày: <input type="date" name="start_date" style="font-size: 15px; border: none; border-radius: 5px; padding: 6px 6px 6px; cursor: pointer; background: #9cc7f1">
+                Đến ngày: <input type="date" name="end_date" style="font-size: 15px; border: none; border-radius: 5px; padding: 6px 6px 6px; cursor: pointer; background: #9cc7f1">
+                <input type="submit" name="submit" value="Hiển thị" style="font-size: 17px; border: none; border-radius: 5px; background-color: #57a3ee; padding: 6px 19px 6px; cursor: pointer;" >
+            </form>
         </div>
     </div>
+
 
     <div class="tknuoc_hien_thi">
         <div id="chart"></div>
     </div>
 
     <script>
-        // Khởi tạo biểu đồ cột
+        var chartData = <?php echo json_encode($chartData); ?>;
+  
         var options = {
-            series: <?php echo json_encode($data); ?>,
+            series: chartData.data,
             chart: {
                 type: 'bar',
                 height: '100%'
@@ -91,8 +122,7 @@
                 }
             },
             xaxis: {
-                categories: ['Nước']
-            
+                categories: chartData.categories
             },
             yaxis: {
                 title: {
@@ -101,19 +131,16 @@
                     offsetY: -10,
                     style: {
                         fontSize: '14px',
-                            fontWeight: 'bold',
-                            fontFamily: 'Arial',
+                        fontWeight: 'bold',
+                        fontFamily: 'Arial',
                         color: '#333'
                     }
                 }
-            },
+            }
         };
 
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
     </script>
-
-
 </body>
 </html>
-   
