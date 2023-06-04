@@ -1,18 +1,18 @@
 <?php 
     // Start the session
-//     session_start();   
+    session_start();   
 
-//     include_once "../../controller/connection.php";
+    include_once "../../controller/connection.php";
     
-//     $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
-//     $query = mysqli_query($mysqli,$sql);
+    $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
+    $query = mysqli_query($mysqli,$sql);
 
-// while($row = mysqli_fetch_array($query))
-// {
-//     $_SESSION['chuc_vu']=$row['chuc_vu'];
-//     $_SESSION['name']=$row['name'];
+while($row = mysqli_fetch_array($query))
+{
+    $_SESSION['chuc_vu']=$row['chuc_vu'];
+    $_SESSION['name']=$row['name'];
 
-// }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

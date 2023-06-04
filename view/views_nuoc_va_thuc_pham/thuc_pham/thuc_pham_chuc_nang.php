@@ -3,8 +3,8 @@ include_once "../header.php";
 ?>
 <?php 
     // Start the session
-    // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    // {
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    {
 ?>
 
 <link rel="stylesheet" href="../../assets/css/thucPham.css">
@@ -59,9 +59,9 @@ include_once "../../../controller/controller_nuoc_va_tp/controller_thuc_pham/tp_
 <!-- <script src="../controller/controller_nuoc_va_tp/tp_sort.js"></script> -->
 </body>
 <?php 
-    // }
-    // else{
-    //     header("Location: dang_nhap.php");
-    // }
+    }
+    else{
+        header("Location: ../../views_ktc/dang_nhap.php");
+    }
 ?>
 </html>

@@ -4,8 +4,8 @@ include_once "../header.php";
 
 <?php 
     // Start the session
-    // if($_SESSION['login'])
-    // {
+    if($_SESSION['login'])
+    {
 ?>
 
 <link rel="stylesheet" href="../../assets/css/sinh_nhat_hoi_vien.css">
@@ -44,10 +44,10 @@ if(isset($_SESSION['check_success'])){
 <script src="../../assets/js/js_su_kien/sinh_nhat_hoi_vien/snhv_event.js"></script>
 <script src="../../assets/js/js_su_kien/sinh_nhat_hoi_vien/snhv_update.js"></script>
 <?php 
-    // }
-    // else{
-    //     header("Location: dang_nhap.php");
-    // }
+    }
+    else{
+        header("Location: ../../views_ktc/dang_nhap.php");
+    }
 ?>
 </body>
 
