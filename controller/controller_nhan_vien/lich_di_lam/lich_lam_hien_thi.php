@@ -1,5 +1,5 @@
 <?php 
-include_once "../controller/connection.php";
+include_once "../../../controller/connection.php";
 $sql = "SELECT * FROM tbl_lop";
 $query = mysqli_query($mysqli,$sql);
 $sql1 = "SELECT * FROM tbl_nhan_vien";
@@ -14,12 +14,12 @@ $query1 = mysqli_query($mysqli,$sql1);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./assets/css/lich_di_lam.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/fullcalendar/lib/main.min.css">
-    <script src="./assets/js/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/fullcalendar/lib/main.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/lich_di_lam.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/fullcalendar/lib/main.min.css">
+    <script src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/fullcalendar/lib/main.min.js"></script>
 </head>
 
 <body class="bg-light">
@@ -132,6 +132,6 @@ if(isset($mysqli)) $mysqli->close();
 <script>
 var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
-<script src="./assets/js/script.js"></script>
+<script src="../../assets/js/js_nhan_vien/js_lich_di_lam/lich_di_lam_AUD.js"></script>
 
 </html>
