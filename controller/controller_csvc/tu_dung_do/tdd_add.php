@@ -1,5 +1,7 @@
+
+
 <?php
-    //ket noi
+    // //ket noi
     include_once "../../connection.php";
     // lay CSDL
     $so_tu = $_POST["tdd__table--add_so_tu"];

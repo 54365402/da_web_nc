@@ -27,7 +27,7 @@
             </tr>
             <tr>
                 <td><label for="lname">Tiêu đề:</label></td>
-                <td><input class='snhv__table--add_input' type="text"  name="snhv__table--add_tieu_de" placeholder="Tiêu đề...." ></td>
+                <td><input class='snhv__table--add_input' type="text"  name="snhv__table--add_tieu_de" ></td>
             </tr>
             <tr>
                 <td><label for="lname">Nội dung:</label></td>

@@ -58,13 +58,13 @@
             var snhvid_gift = "snhvid_gift=" + cellid_gift;
             var snhvtrang_thai = "snhvtrang_thai=" + celltrang_thai;
        
-          url = "../../controller/controller_nhan_vien/bang_luong/snhv_update.php";
+          url = "/da_web_nc/controller/controller_su_kien/sinh_nhat_hoi_vien/snhv_update.php";
           if(confirm("Bạn có chắc muốn sửa ID "+cellid_hv+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(snhvid_hv+"&"+snhvname_hv+"&"+snhvdiem_tich_luy+"&"+snhvngay_sinh+"&"+snhvid_gift+"&"+snhvtrang_thai);
-          location.reload(true);
+          window.location.href = "/da_web_nc/view/views_su_kien/sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php";
           }
           }
         }

@@ -1,8 +1,8 @@
 
+
 <!-- Kết nối CSDL -->
 <?php
 include "snhv_pages.php";
-
 ?>
 
 <!-- Hien thi bang -->
@@ -65,6 +65,14 @@ include "snhv_pages.php";
 </form>
 </div>
 </div>
+
+<!-- Báo lỗi gift ko tồn tại -->
+<?php
+    if(isset($_SESSION['errorMaGift'])){
+        echo $_SESSION['errorMaGift'];
+    }
+    ?>
+
 <div class = "snhv__div--hienthi--bocQuaTang">
 <div class="snhv__div--quatang">
         <?php 
@@ -111,7 +119,14 @@ include "snhv_pages.php";
             <div class='snhv__div--chua_button-all'>
 
     <div class='snhv__div--chua_button'>
-    <button class='snhv__div--button js-guiSMS' type="button" onclick="">Gửi SMS <i class="fa-solid fa-envelope"></i></button>
+        <div class='snhv__div--chua_button--sua-gui'>
+            <div>
+
+                <button class='snhv__div--button js-guiSMS' type="button" onclick="">Gửi SMS <i class="fa-solid fa-envelope"></i></button>
+            </div>
+        <button class='snhv__div--button js-sua' type="button" onclick="">Sửa</button>
+
+        </div>
     <form  class = "snhv__form--sendDate" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 
             <input class='snhv__div--button js-chonNgay' name="snhv_chonNgay" type="date" >
