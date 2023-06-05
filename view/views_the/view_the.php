@@ -4,8 +4,8 @@
     $query = mysqli_query($mysqli,$sql);
     $sql1 = "SELECT * FROM tbl_hoi_vien";
     $query1 = mysqli_query($mysqli,$sql1);
-    // $sql2 = "SELECT * FROM tbl_gym";
-    // $query2 = mysqli_query($mysqli,$sql2);
+    $sql2 = "SELECT * FROM tbl_gym";
+    $query2 = mysqli_query($mysqli,$sql2);
     
     ?>
 <div class='the_modal-popup'>
@@ -64,7 +64,7 @@
         
             <tr>
                 <td><label for="lname">Gói tập: </label></td>
-                <td><select class='the_table-add_input22' name='the_table-add_id_nv' oninput="getValue()">
+                <td><select class='the_table-add_input22' name='the_table-add_id_nv' onchange="getValue()">
                 <option value="">-- Gói Tập --</option>
                 <option class='view_the_select-id_nv' value="49000">1 lần</option>
                 <option class='view_the_select-id_nv' value="200000">1 tháng</option>
@@ -73,7 +73,7 @@
             
             <tr>
             <td><label for="lname">Số lượng: </label></td>
-                <td><input class='the_table-add_input222' type="text" oninput="getValue1()" name="the_table-add_so_luong" placeholder="Quantity...." ></td>
+                <td><input class='the_table-add_input222' type="text" onchange="getValue1()" name="the_table-add_so_luong" placeholder="Quantity...." ></td>
             </tr>
 
             <tr>

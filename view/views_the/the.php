@@ -1,11 +1,11 @@
-<?php
+    <?php
     include_once "header.php";
     
     ?>
     <?php 
         // Start the session
-        if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-        {
+        // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+        // {
     ?>
 
     <link rel="stylesheet" href="../assets/css/the.css">
@@ -32,7 +32,7 @@
             <option value="2">Tên từ Z->A</option>
             <option value="3">Tiền tăng dần</option>
             <option value="4">Tiền giảm dần</option>
-            <option value="999">Như phút ban đầu</option>
+            <option value="999">Như phút ban đầu    </option>
         </select>
         <script>
         document.getElementById('the_select').addEventListener('change', function() {
@@ -49,10 +49,10 @@
     
 
     <?php 
-        }
-        else{
-            header("Location: ../../views_ktc/dang_nhap.php");
-        }
+        // }
+        // else{
+        //     header("Location: ../dang_nhap.php");
+        // }
         ?>
         
     <script src="../assets/js/js_the/the_add.js"></script>

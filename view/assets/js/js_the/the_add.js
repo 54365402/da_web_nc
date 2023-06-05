@@ -5,6 +5,7 @@ const theClose = document.querySelectorAll('.the_table-button_huy')
 const theThemPupUp = document.querySelectorAll('.the_table-button_them')
 function showAdd() {
     theModal.classList.add('the_modal-popup-open')
+
 }
 theThem[0].addEventListener('click',showAdd)
 
