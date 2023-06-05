@@ -10,13 +10,20 @@ include "snhv_pages.php";
 <div class = "snhv__div--hienthi">
     <div class = "snhv__div--hienthi--bocHoiVien">
     <div class="snhv__div--chua-hien-thi">
-    <div  class='snhv__div--tap'>
+    <nav class="sk__menu">
+    <ul class="sk__menu-header">
+        <li><a href="../su_kien_khuyen_mai/sk_khuyen_mai_hoi_vien.php">Sự kiện khuyến mãi</a></li>
+        <li><a href="../sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php">Sinh nhật hội viên</a></li>
+        <li><a href="#">Tích điểm</a></li>
+    </ul>
+</nav>
+    <!-- <div  class='snhv__div--tap'>
         <li class="snhv__icon_back"><a class="snhv-a" href="nhanvien.php"><i class="fa-solid fa-arrow-left"></i></a></li>
         <li class="snhv__div snhv__div--skkm"><a >Sự kiện khuyến mại</a></th></li>
         <li class="snhv__div snhv__div--snhv"><a >Sinh nhật hội viên</a></th></li>
         <li class="snhv__div snhv__div--tichDiem"><a >Tích điểm</a></th></li>
         
-    </div>
+    </div> -->
     <!-- <div class="snhv__div--thanhngan"></div> -->
     <div class = "snhv__div--chuatable">
     <table class="snhv__table--hienthi" >

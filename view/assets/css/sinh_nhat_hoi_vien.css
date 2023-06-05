@@ -65,9 +65,10 @@ input.snhv--sort {
     background-color: #daeaf3;
 }
 
+
 /* CSS của hiển thị */
 .snhv__div--hienthi{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     width: 100%;
     border: 1px solid white;
 }
@@ -430,4 +431,38 @@ button.view_gift__table--button_guiDate {
 a.shnv__div__a-xoaGift {
     margin-left: 39px;
     margin-right: 10px;
+}
+
+.sk__menu-header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin: 15px 15px 0 15px;
+}
+  
+.sk__menu-header li {
+    float: left;
+
+}
+  
+.sk__menu-header li a {
+    display: block;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 10px 70px;
+    text-decoration: none;
+    background-color: #4472C4;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    cursor: pointer;
+}
+  
+.sk__menu-header li a.small {   
+    opacity: 0.5;
+}
+
+li.menu-li.menu-li-su-kien {
+    background-color: rgb(68, 84, 106);
 }

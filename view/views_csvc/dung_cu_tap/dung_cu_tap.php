@@ -4,8 +4,8 @@ include_once "../header.php";
 
 <?php 
     // Start the session
-    // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    // {
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    {
 ?>
 
 <link rel="stylesheet" href="../../assets/css/dung_cu_tap.css">
@@ -59,10 +59,10 @@ include_once "../header.php";
 <script src="../../assets/js/js_csvc/js_dung_cu_tap/dct_sort_page.js"></script>
 <!-- <script src="../../assets/js/js_csvc/js_dung_cu_tap/dct_delete_update.js"></script> -->
 <?php 
-    // }
-    // else{
-    //     header("Location: dang_nhap.php");
-    // }
+    }
+    else{
+        header("Location: ../../views_ktc/dang_nhap.php");
+    }
 ?>
 </body>
 

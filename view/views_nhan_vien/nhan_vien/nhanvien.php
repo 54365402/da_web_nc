@@ -3,8 +3,8 @@ include "../header.php";
 ?>
 <?php 
     // Start the session
-    // if($_SESSION['login'])
-    // {
+    if($_SESSION['login'])
+    {
 ?>
 <?php
 include "../../../controller/controller_nhan_vien/NhanVienDisplay.php"
@@ -24,8 +24,8 @@ include "../../../controller/controller_nhan_vien/NhanVienDisplay.php"
 </html>
 
 <?php 
-    // }
-    // else{
-    //     header("Location: dang_nhap.php");
-    // }
+    }
+    else{
+        header("Location: ../../views_ktc/dang_nhap.php");
+    }
 ?>

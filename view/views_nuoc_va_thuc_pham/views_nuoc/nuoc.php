@@ -5,8 +5,8 @@ include_once "../header.php";
 
 <?php 
     // // Start the session
-    // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    // {
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    {
 ?>
 <link rel="stylesheet" href="../../assets/css/nuoc.css">
 
@@ -63,10 +63,10 @@ include_once "../../../controller/controller_nuoc_va_tp/controller_nuoc/nuoc_hie
 
 <!-- <script src="../../assets/js/js_nuoc_va_thuc_pham/js_nuoc/nuoc_delete_update.js"></script> -->
 <?php 
-    // }
-    // else{
-    //     header("Location: ../../views_ktc/dang_nhap.php");
-    // }
+    }
+    else{
+        header("Location: ../../views_ktc/dang_nhap.php");
+    }
 ?>
 </body>
 

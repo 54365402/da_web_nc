@@ -4,8 +4,8 @@ include_once "../header.php";
 
 <?php 
     // Start the session
-    // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    // {
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    {
 ?>
 
 <link rel="stylesheet" href="../../assets/css/tu_dung_do.css">
@@ -62,10 +62,10 @@ include_once "../header.php";
 
 </body>
 <?php 
-    // }
-    // else{
-    //     header("Location: dang_nhap.php");
-    // }
+    }
+    else{
+        header("Location: ../../views_ktc/dang_nhap.php");
+    }
 ?>
 </html>
 
