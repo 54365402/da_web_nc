@@ -9,11 +9,13 @@
 
     console.log(inputGoiTap);
     function getValue(){
-        thanhtien = Number(inputGoiTap.value) * Number(inputSoLuong.value);
-        inputThanhTien.value = thanhtien;
+        console.log(inputGoiTap.value);
+        
     }
     function getValue1(){
+        console.log(inputSoLuong.value);
         thanhtien = Number(inputGoiTap.value) * Number(inputSoLuong.value);
+            
         inputThanhTien.value = thanhtien;
     }
 
