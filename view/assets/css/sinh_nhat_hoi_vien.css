@@ -359,6 +359,8 @@ input.snhv__div__input--gift {
     width: 100%;
 }
 .view_gift__modal__div--popup {
+    border: 5px solid #2F528F;
+    animation: slide-in 1s forwards;
     width: 500px;
     position: relative;
     background-color: lightblue;
@@ -465,4 +467,12 @@ a.shnv__div__a-xoaGift {
 
 li.menu-li.menu-li-su-kien {
     background-color: rgb(68, 84, 106);
+}
+
+button.snhv__div--button.js-guiSMS {
+    width: 92px;
+    margin-left: 5px;
+}
+.snhv__div--chua_button--sua-gui {
+    display: flex;
 }
