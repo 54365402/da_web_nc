@@ -6,7 +6,6 @@
     var inputSoLuong = $(".the_table-add_input222");
     var inputThanhTien = $(".the_table-add_input2222");
 
-
     console.log(inputGoiTap);
     function getValue(){
         console.log(inputGoiTap.value);

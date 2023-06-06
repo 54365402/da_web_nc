@@ -1,18 +1,18 @@
 <?php 
     // Start the session
-//     session_start();   
+    session_start();   
 
-//     include_once "../../controller/connection.php";
+    include_once "../../controller/connection.php";
     
-//     $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
-//     $query = mysqli_query($mysqli,$sql);
+    $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
+    $query = mysqli_query($mysqli,$sql);
 
-// while($row = mysqli_fetch_array($query))
-// {
-//     $_SESSION['chuc_vu']=$row['chuc_vu'];
-//     $_SESSION['name']=$row['name'];
+while($row = mysqli_fetch_array($query))
+{
+    $_SESSION['chuc_vu']=$row['chuc_vu'];
+    $_SESSION['name']=$row['name'];
 
-// }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,8 +49,8 @@
 
 
             <?php
-                // if ($_SESSION['chuc_vu'] == "Quản lý")
-                // {
+                if ($_SESSION['chuc_vu'] == "Quản lý")
+                {
             ?>
 
             <div class="menu">
@@ -67,22 +67,22 @@
             </div>
 
             <?php
-                // }
-                //     else if ( $_SESSION['login'] == true && $_SESSION['chuc_vu'] == "Hội viên")
-                //     {
+                }
+                    else if ( $_SESSION['login'] == true && $_SESSION['chuc_vu'] == "Hội viên")
+                    {
                         ?>
 
-            <!-- <div class="menu" style="justify-content: space-around;">
+            <div class="menu" style="justify-content: space-around;">
 
                 <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
 
                 <li class="menu-li"><a class="menu-a" href=""><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
 
 
-            </div> -->
+            </div>
 
             <?php
-                    // }
+                    }
                     
                 
                 ?>

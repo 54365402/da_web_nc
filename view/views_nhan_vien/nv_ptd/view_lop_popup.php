@@ -38,7 +38,7 @@
 
                 <tr>
                     <td><label for="lname">Lớp: </label></td>
-                    <td><select class='lop_table-add-input' name='lop_table-add_lop'>
+                    <td><select class='lop_table-add-input' name='lop_table-add-types_room'>
                                 <option value="">-- Lớp --</option>
                                     <?php
                                         // Mảng để lưu các giá trị đã xuất hiện
@@ -57,18 +57,12 @@
                         </select>        
                     </td>
                 </tr> 
-
+                
                 <tr>
-                    <td><label for="">Tên lớp : </label></td>
-                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-ten_lop" placeholder="Tên lớp...">
-                    </td>
-                </tr>
-
-                <tr>
-                <td><label for="lname">Gói tập: </label></td>
-                <td><select class='lop_table-add-input lop_table-add_input22' name='lop_table-add_packages' onchange="getValue()">
+                    <td><label for="lname">Gói tập: </label></td>
+                    <td><select class='lop_table-add-input lop_table-add_input22' name='lop_table-add-packages' onchange="getValue()">
                         <option value="">-- Gói Tập --</option>
-                            <?php
+                        <?php
                                 // Mảng để lưu các giá trị đã xuất hiện
                                 $uniqueTypes = array();
                                 // Duyệt qua các phẩn từ trong bảng
@@ -78,12 +72,24 @@
                                     $uniqueTypes[] = $row["name_packages"];
                                     ?>
                                         <option class='view_lop_select-packages' value="<?php echo $row["gia_packages"]?>"><?php echo $row["name_packages"]?></option>
-                                    <?php
+                                        <?php
                                     }
                                 }
-                            ?>   
-                    </select>        
-                </td>
+                                ?>   
+                        </select>        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><label for="">Số lượng hội viên : </label></td>
+                    <td><input type="text" class="lop_table-add-input lop_table-add_input222" onchange="getValue1()" name="lop_table-add-so_luong_hv" placeholder="Số lượng hội viên...">
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td><label for="">Tên lớp : </label></td>
+                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-ten_lop" placeholder="Tên lớp...">
+                   </td>
                 </tr>
 
                 <tr>
@@ -91,21 +97,19 @@
                     <td><input type="text" class="lop_table-add-input"  name="lop_table-add-thoi_luong" placeholder="Thời lượng...">
                     </td>
                 </tr>
+
                 <tr>
                     <td><label for="">Ngày hoạt động : </label></td>
                     <td><input type="text" class="lop_table-add-input" name="lop_table-add-ngay_hoat_dong" placeholder="Ngày...">
                     </td>
                 </tr>
-                <tr>
-                    <td><label for="">Số lượng hội viên : </label></td>
-                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-so_luong_hv" placeholder="Số lượng hội viên...">
-                    </td>
-                </tr>
+
                 <tr>
                     <td><label for="">Doanh Thu : </label></td>
-                    <td><input type="text" class="lop_table-add-input lop_table-add_input222" name="lop_table-add-doanh_thu" placeholder="Doanh Thu..." readonly>
+                    <td><input type="text" class="lop_table-add-input lop_table-add_input2222" name="lop_table-add-doanh_thu" style="background-color:#e3e3e3; border:none; outline:none" placeholder="Doanh Thu..." readonly>
                     </td>
                 </tr>
+
                 <tr>
                     <td colspan='2'>
                         <button class="lop_table-add-button lop_table-button_huy" type="button" onclick="">Hủy</button>

@@ -6,9 +6,9 @@ include_once "../../controller/connection.php";
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    // Start the session
-    // if($_SESSION['login'])
-    // {
+    Start the session
+    if($_SESSION['login'])
+    {
 ?>
 <?php
     //require "../../controller/controller_notice/PriceDisplay.php"
@@ -138,10 +138,10 @@ tabButtons.forEach((button, index) => {
 </script>
 
 <?php 
-    // }
-    // else{
-    //     header("Location: dang_nhap.php");
-    // }
+    }
+    else{
+        header("Location: dang_nhap.php");
+    }
 ?>
 
 

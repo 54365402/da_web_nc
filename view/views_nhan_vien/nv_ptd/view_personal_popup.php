@@ -8,17 +8,13 @@
     $query2 = mysqli_query($mysqli,$sql2);
     $sql3 = "SELECT * FROM tbl_packages";
     $query3 = mysqli_query($mysqli,$sql3);
-    ?>
+?>
 <div class='personal_modal-popup'>
     <div class='personal_modal_div-popup'>
         <i><b><u class='personal_modal_div-u'>Thêm PT</u></b></i>
     <div >
-    <form action="../controller/controller_nhan_vien/phuong_thuc_day/personal_add.php" method="POST">
+    <form action="../../../controller/controller_nhan_vien/phuong_thuc_day/personal_add.php" method="POST">
         <table class='personal_table-addform'>   
-            <!-- <tr>
-                <td><label for="lname">ID Personal :</label></td>
-                <td><input class='personal_table-add_input' type="text"  name="personal_table-add_id_personal" placeholder="ID Personal...."></td>
-            </tr> -->
             <tr>
                 <td><label for="lname">ID nhân viên:</label></td>
                 <td><select class='personal_table-add_input' name='personal_table-add_id_nv'>
@@ -29,9 +25,7 @@
                             echo "<option value='" . $row["id_nv"] . "'>" . $row["id_nv"] . "</option>";
                         }
                     ?>
-                </select></td>   
-
-                <!-- <td><input class='personal_table-add_input' type="text"  name="personal_table-add_id_nv" placeholder="ID Nhân viên...."></td> -->
+                </select></td>  
             </tr>
             <tr>
                 <td><label for="lname">ID hội viên:</label></td>
@@ -47,7 +41,7 @@
             <tr>
 
             <td><label for="lname">Thời lượng :</label></td>
-                <td><input class='personal_table-add_input personal_table-add_input22' onchange="getValue()" type="text"  name="personal_table-add_thoi_luong" placeholder="Thời lượng...."></td>
+                <td><input class='personal_table-add_input personal_table-add_input22' onchange="getValue()" type="text" name="personal_table-add_thoi_luong" placeholder="Thời lượng...."></td>
             </tr>
 
             <tr>
@@ -67,13 +61,13 @@
 
             <tr>
                 <td><label for="lname">Doanh thu :</label></td>
-                <td><input class='personal_table-add_input personal_table-add_input222' type="text"  name="personal_table-add_doanh_thu"placeholder="Doanh thu...." readonly></td>
+                <td><input class='personal_table-add_input personal_table-add_input222' type="text"  name="personal_table-add_doanh_thu" style="background-color:#e3e3e3; border:none; outline:none" placeholder="Doanh thu...." readonly></td>
             </tr>
 
             <tr>
                 <td colspan='2'>
                     <button class='personal_table-add-button personal_table-button_huy' type="button" onclick="">Hủy</button>
-                    <button class='personal_table-add-button personal_table-button_them' type="Submit"  onclick="" >Thêm</button>
+                    <button class='personal_table-add-button personal_table-button_them' type="Submit" onclick="" >Thêm</button>
                 </td>
             </tr>
         </table>
@@ -82,3 +76,4 @@
     </div>
 </div>
 <div class="clear"></div>
+<script src="../../assets/js/js_nhan_vien/js_ptd/personal_tt.js"></script>

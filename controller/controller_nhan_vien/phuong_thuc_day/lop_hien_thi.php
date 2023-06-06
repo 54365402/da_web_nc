@@ -4,7 +4,6 @@
 ?>
 
 <!-- Hien thi bang -->
-
 <li class="lop_icon_back"><a class="lop-abc" href="nhanvien.php"><i class="fa-solid fa-arrow-left"></i></a></li>
 <div class = "lop_div-hienthi">
     <div class = "lop_div-hienthi1">
