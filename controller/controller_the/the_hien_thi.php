@@ -1,7 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
     include_once "../../controller/connection.php";
-    
 
 ?>
 
@@ -10,12 +9,11 @@
 <!-- Hien thi bang -->
 <br>
 <div class="the_ten-hienthi">
-   <li><h2 class = "the_ten1 abc ">Thẻ tập</h2></li>
+   <li><h2 class = "the_ten1">Thẻ tập</h2></li>
    <li><div class = "the_ten">     
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+            <input class="the_ten-up" type="text" placeholder="Tìm kiếm..." name="cardsearch" height="50px">
             <i class="fa-sharp fa-solid fa-magnifying-glass the_search-input-icon"></i>
-            <input class="the_ten1 the_ten-up" type="text" placeholder="Tìm kiếm..." name="cardsearch" height="50px">
-            <input class="the_ten-search" type="submit" value="Tìm kiếm">
             </form>
         </div>
     </li>    
@@ -28,6 +26,7 @@
             <tr class='the_table_row-hienthi the_table-Tieu_de' style="background-color: #4472C8">
                 <th>Card ID</th>
                 <th id="sort-ten">Họ và Tên</th>
+                <th id="sort-ten">Lớp</th>
                 <th id="sort-tien">Thành Tiền</th>
                 <th id="sort-status">Trạng Thái</th>
             </tr>
@@ -77,6 +76,7 @@
         <tr class="the_table_row-hienthi">
             <td class ="the_td_hien_thi"><?php echo $row["card_id"]?></td>
             <td class ="the_td_hien_thi"><?php echo $row["name_hv"]?></td>
+            <td class ="the_td_hien_thi"><?php echo $row["types_room"]?></td>
             <td class ="the_td_hien_thi"><?php echo $row["total_money"]?></td>
             <td class ="the_td_hien_thi">
                 <?php 
@@ -114,12 +114,6 @@
     </center>
 </div>
 
-<!-- <?php  if(isset($_SESSION['card_id'])){
-    echo $_SESSION['id'];
-}
-else{
-echo 5;}
-    ?> -->
 
 <?php
 
@@ -129,22 +123,19 @@ echo 5;}
     else{
         $card_id = "";
     }
-    $sqlTung = "Select * FROM card inner JOin tbl_hoi_vien on card.id_hv = tbl_hoi_vien.id_hv WHERE card_id = '".$card_id."'";
-    $queryTung = mysqli_query($mysqli,$sqlTung);
-    $rowTung = mysqli_fetch_array($queryTung);
-
-    
-    
+    $sqldb = "Select * FROM card inner JOin tbl_hoi_vien on card.id_hv = tbl_hoi_vien.id_hv WHERE card_id = '".$card_id."'";
+    $querydb = mysqli_query($mysqli,$sqldb);
+    $rowdb = mysqli_fetch_array($querydb);
 ?>
 <div class = "the_div-hienthi1" > 
 
     <table class="the_table-hienthi1" style="border: 3px solid blue; white-space: nowrap;">        
           <tr><th colspan = "2" style="font-size: 18px;" ;>Thông tin chi tiết thẻ</th></tr>
           <tr><tr>
-          <tr><td style="padding-right: 30px;">Họ và Tên: </td><td class = the_gachchan><input type="text_the_name_hv" value="<?php if(isset($rowTung['name_hv'])){echo $rowTung['name_hv'];}?>"  name="input_theten" style="border: none; outline:none; "></td></tr>
-          <tr><td>ID hội viên: </td><td class = the_gachchan><input type="text_the_id_hv" name="input_the_id" style="border: none; outline:none; "></td></tr>  
-          <tr><td>Card ID: </td><td class = the_gachchan><input type="text_card_id" name="input_the_card_id" value="<?php if(isset($card_id)){ echo $card_id; }?>" style="border: none; outline:none;"></td></tr>
-          <tr><td>ID nhân viên: </td><td class = the_gachchan><input type="text_id_nv" name="input_the_id_nv" style="border: none; outline:none;"></td></tr>
+          <tr><td style="padding-right: 30px;">Họ và Tên: </td><td class = the_gach_chan><input class="the_box" type="text_the_name_hv" value="<?php if(isset($rowdb['name_hv'])){echo $rowdb['name_hv'];}?>"  name="input_theten" style="border: none; outline:none;" readonly></td></tr>
+          <tr><td>ID hội viên: </td><td class = the_gach_chan><input class="the_box" type="text_the_id_hv" name="input_the_id" value="<?php if(isset($rowdb['id_hv'])){ echo $rowdb['id_hv']; }?>" style="border: none; outline:none; "></td></tr>  
+          <tr><td>Card ID: </td><td class = the_gach_chan><input class="the_box" type="text_card_id" name="input_the_card_id" value="<?php if(isset($card_id)){ echo $card_id; }?>" style="border: none; outline:none;"></td></tr>
+          <tr><td>ID nhân viên: </td><td class = the_gach_chan><input class="the_box" type="text_id_nv" name="input_the_id_nv" value="<?php if(isset($rowdb['id_nv'])){echo $rowdb['id_nv'];}?>" style="border: none; outline:none; "></td></tr>
     </table>
 
     <div class = "the_table-hienthi2" >
@@ -173,20 +164,25 @@ echo 5;}
 
         <table style="white-space: nowrap;">
             <tr><td ><label>Gói tập: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input1" style="border: none; outline:none;"></td></tr>
+                <td class = the_gach_chan><input class="the_box" type="text" name="input1"  value="<?php if(isset($rowdb['types_room'])){echo $rowdb['types_room'];}?>" style="border: none; outline:none;"></td></tr>
             <tr><td><label>Số lượng: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input2" style="border: none; outline: none;"></td></tr>
+                <td class = the_gach_chan><input class="the_box" type="text" name="input2"  value="<?php if(isset($rowdb['quantity'])){echo $rowdb['quantity'];}?>" style="border: none; outline: none;"></td></tr>
             <tr><td><label>Ngày bắt đầu: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input3" style="border: none; outline: none;"></td></tr>
+                <td class = the_gach_chan><input class="the_box1" type="date" name="input3"  value="<?php if (isset($rowdb['time_start'])) { echo date('Y-m-d', strtotime($rowdb['time_start'])); } ?>" style="border: none; outline: none;"></td></tr>
             <tr><td><label>Ngày kết thúc: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input4" style="border: none; outline: none;"></td></tr>
+                <td class = the_gach_chan><input class="the_box1" type="date" name="input4"  value="<?php if (isset($rowdb['time_end'])) { echo date('Y-m-d', strtotime($rowdb['time_end'])); } ?>" style="border: none; outline: none;"></td></tr>
             <tr><td><label>Thành tiền: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input5" style="border: none; outline: none;"></td></tr>
-            <tr><td style="padding-right: 30px;"><label>Lần cuối hoạt động: </label></td>
-                <td class = the_gachchan><input type="text_the1" name="input6" style="border: none; outline: none;"></td></tr>
-                
+                <td class = the_gach_chan><input class="the_box" type="text" name="input5"  value="<?php if(isset($rowdb['total_money'])){echo $rowdb['total_money'];}?>" style="border: none; outline: none;"></td></tr>
+            <tr><td style="padding-right: 30px;"><label>Trạng thái hoạt động: </label></td>
+                <td class = the_gach_chan><input class="the_box" type="text" name="input6" 
+                value="<?php if(isset($rowdb['status'])){
+                    if ($rowdb["status"] == 1) {
+                        echo "Đang hoạt động";  }
+                    else {
+                        echo "Không hoạt động";  }} ?>" style="border: none; outline: none;"></td></tr>   
+        
         </table></div>
-</div>  
+</div>    
  
    
 

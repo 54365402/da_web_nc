@@ -2,6 +2,10 @@
     include_once "../../../controller/connection.php";
     $sql = "SELECT * FROM tbl_nhan_vien";
     $query = mysqli_query($mysqli,$sql);
+    $sql2 = "SELECT * FROM tbl_packages";
+    $query2 = mysqli_query($mysqli,$sql2);
+    $sql3 = "SELECT * FROM tbl_packages";
+    $query3 = mysqli_query($mysqli,$sql3);
 ?>
 
 <div class='lop_modal-popup'>
@@ -31,52 +35,75 @@
                         <!-- <td><input type="text" class="class_table-add-input" name="class_table-add-id_nv" placeholder="ID Nhân Viên...">
                         </td> -->
                 </tr>
+
                 <tr>
-                    <td><label for="">Lớp : </label></td>
-                    <td>
-                        <select name="lop_table-add-types_room" class="lop_table-add-input">
-                            <option value="gym">Gym</option>
-                            <option value="swimming">Swimming</option>
-                            <option value="yoga">Yoga</option>
-                            <option value="aerobic">Aerobic</option>
-                            <option value="boxing">Boxing</option>
-                        </select>
+                    <td><label for="lname">Lớp: </label></td>
+                    <td><select class='lop_table-add-input' name='lop_table-add_lop'>
+                                <option value="">-- Lớp --</option>
+                                    <?php
+                                        // Mảng để lưu các giá trị đã xuất hiện
+                                        $uniqueTypes = array();
+                                        // Duyệt qua các phẩn từ trong bảng
+                                        while($row = mysqli_fetch_array($query2)){
+                                        if (!in_array($row["types_room"], $uniqueTypes)) {
+                                            // Nếu chưa tồn tại, thêm giá trị vào danh sách và mảng
+                                            $uniqueTypes[] = $row["types_room"];
+                                            ?>
+                                                <option class='view_lop_select-types_room' value="<?php echo $row["types_room"]?>"><?php echo $row["types_room"]?></option>
+                                            <?php
+                                            }
+                                        }
+                                    ?>   
+                        </select>        
                     </td>
-                </tr>
+                </tr> 
+
                 <tr>
                     <td><label for="">Tên lớp : </label></td>
-                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-ten_lop"
-                            placeholder="Tên lớp...">
+                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-ten_lop" placeholder="Tên lớp...">
                     </td>
                 </tr>
+
                 <tr>
-                    <td><label for="">Gói : </label></td>
-                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-packages"
-                          placeholder="Gói...">
-                    </td>
+                <td><label for="lname">Gói tập: </label></td>
+                <td><select class='lop_table-add-input lop_table-add_input22' name='lop_table-add_packages' onchange="getValue()">
+                        <option value="">-- Gói Tập --</option>
+                            <?php
+                                // Mảng để lưu các giá trị đã xuất hiện
+                                $uniqueTypes = array();
+                                // Duyệt qua các phẩn từ trong bảng
+                                while($row = mysqli_fetch_array($query3)){
+                                if (!in_array($row["name_packages"], $uniqueTypes)) {
+                                    // Nếu chưa tồn tại, thêm giá trị vào danh sách và mảng
+                                    $uniqueTypes[] = $row["name_packages"];
+                                    ?>
+                                        <option class='view_lop_select-packages' value="<?php echo $row["gia_packages"]?>"><?php echo $row["name_packages"]?></option>
+                                    <?php
+                                    }
+                                }
+                            ?>   
+                    </select>        
+                </td>
                 </tr>
+
                 <tr>
                     <td><label for="">Thời lượng :</label></td>
-                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-thoi_luong"
-                            placeholder="Thời lượng...">
+                    <td><input type="text" class="lop_table-add-input"  name="lop_table-add-thoi_luong" placeholder="Thời lượng...">
                     </td>
                 </tr>
                 <tr>
                     <td><label for="">Ngày hoạt động : </label></td>
-                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-ngay_hoat_dong"
-                            placeholder="Ngày...">
+                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-ngay_hoat_dong" placeholder="Ngày...">
                     </td>
                 </tr>
                 <tr>
                     <td><label for="">Số lượng hội viên : </label></td>
-                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-so_luong_hv"
-                            placeholder="Số lượng hội viên...">
+                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-so_luong_hv" placeholder="Số lượng hội viên...">
                     </td>
                 </tr>
                 <tr>
                     <td><label for="">Doanh Thu : </label></td>
-                    <td><input type="text" class="lop_table-add-input" name="lop_table-add-doanh_thu"
-                            placeholder="Doanh Thu...">
+                    <td><input type="text" class="lop_table-add-input lop_table-add_input222" name="lop_table-add-doanh_thu" placeholder="Doanh Thu..." readonly>
                     </td>
                 </tr>
                 <tr>
@@ -90,3 +117,4 @@
     </div>
 </div>
 <div class="clear"></div>
+<script src="../../assets/js/js_nhan_vien/js_ptd/lop_tt.js"></script>

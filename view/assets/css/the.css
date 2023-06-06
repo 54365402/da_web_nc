@@ -8,8 +8,15 @@ html{
 }
 
 .the_box{
-    padding: 2px 59px 1px 3px;
+    padding: 2px 39px 1px 39px;
     font-size: 16px;
+    text-align: center;
+}
+
+.the_box1{
+    padding: 2px 75px 1px 65px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .the_gach_chan{
@@ -85,11 +92,12 @@ html{
 
 .the_search-input-icon{
     font-size: 22px;
-    color: #6fbae9;
+    color: #1583c8;
     margin-left: -30px;
 }
 
 .the_ten-up {
+    outline: none;
     border-color: #3c95ed;
     padding: 15px 39px 14px 15px;
     border-radius: 3px;
@@ -243,6 +251,7 @@ table.the_table-addform {
     height: 25px
 }
 .the_table-add_input1{
+    text-align: center;
     height: 25px;
     width: 169px;
 }

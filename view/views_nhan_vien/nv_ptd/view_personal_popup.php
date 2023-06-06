@@ -4,6 +4,10 @@
     $query = mysqli_query($mysqli,$sql);
     $sql1 = "SELECT * FROM tbl_hoi_vien";
     $query1 = mysqli_query($mysqli,$sql1);
+    $sql2 = "SELECT * FROM tbl_packages";
+    $query2 = mysqli_query($mysqli,$sql2);
+    $sql3 = "SELECT * FROM tbl_packages";
+    $query3 = mysqli_query($mysqli,$sql3);
     ?>
 <div class='personal_modal-popup'>
     <div class='personal_modal_div-popup'>
@@ -29,7 +33,7 @@
 
                 <!-- <td><input class='personal_table-add_input' type="text"  name="personal_table-add_id_nv" placeholder="ID Nhân viên...."></td> -->
             </tr>
-            <<tr>
+            <tr>
                 <td><label for="lname">ID hội viên:</label></td>
                 <td><select class='personal_table-add_input' name='personal_table-add_id_hv'>
                 <option value="">-- ID Hội Viên --</option>
@@ -40,28 +44,32 @@
                         }
                     ?>
                 </select></td>   
-                <!-- <td><input class='personal_table-add_input' type="text"  name="personal_table-add_id_hv" placeholder="ID Hội viên...."></td>
-            </tr> -->
             <tr>
+
             <td><label for="lname">Thời lượng :</label></td>
-                <td><input class='personal_table-add_input' type="text"  name="personal_table-add_thoi_luong" placeholder="Thời lượng...."></td>
+                <td><input class='personal_table-add_input personal_table-add_input22' onchange="getValue()" type="text"  name="personal_table-add_thoi_luong" placeholder="Thời lượng...."></td>
             </tr>
+
             <tr>
                 <td><label for="lname">Số buổi :</label></td>
                 <td><input class='personal_table-add_input' type="text"  name="personal_table-add_so_buoi" placeholder="Số buổi...."></td>
             </tr>
+
             <tr>
                 <td><label for="lname">Ngày bắt đầu:</label></td>
                 <td><input class='personal_table-add_input' type="date"  name="personal_table-add_time_start" placeholder="Ngày bắt đầu...."></td>
             </tr>
+
             <tr>
                 <td><label for="lname">Ngày kết thúc:</label></td>
                 <td><input class='personal_table-add_input' type="date"  name="personal_table-add_time_end" placeholder="Ngày kết thúc...."></td>
             </tr>
+
             <tr>
                 <td><label for="lname">Doanh thu :</label></td>
-                <td><input class='personal_table-add_input' type="text"  name="personal_table-add_doanh_thu"placeholder="Doanh thu...."></td>
+                <td><input class='personal_table-add_input personal_table-add_input222' type="text"  name="personal_table-add_doanh_thu"placeholder="Doanh thu...." readonly></td>
             </tr>
+
             <tr>
                 <td colspan='2'>
                     <button class='personal_table-add-button personal_table-button_huy' type="button" onclick="">Hủy</button>

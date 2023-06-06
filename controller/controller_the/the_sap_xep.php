@@ -22,18 +22,5 @@
 
     // Thực thi câu truy vấn
     $query = mysqli_query($mysqli, $sql);
-   
-    // Tạo các dòng và cột trong bảng
-    // $output = '';
-    // while ($row = mysqli_fetch_array($query)) {
-    //     $output .= '<tr class="the_table_row-hienthi">';
-    //     $output .= '<td class="the_td_hien_thi">' . $row["card_id"] . '</td>';
-    //     $output .= '<td class="the_td_hien_thi">' . $row["name_hv"] . '</td>';
-    //     $output .= '<td class="the_td_hien_thi">' . $row["total_money"] . '</td>';
-    //     $output .= '<td class="the_td_hien_thi">' . ($row["status"] == 1 ? 'Đang hoạt động' : 'Không hoạt động') . '</td>';
-    //     $output .= '</tr>';
-    // }
-    // // Trả về kết quả dưới dạng HTML
-    // echo $output;
     
 ?>
