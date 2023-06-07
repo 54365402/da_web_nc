@@ -54,17 +54,14 @@ for (var i = 0; i < rows.length; i++) {
         // location.reload(false);
       }
      } 
-    //  var card_id1 = "card_id1=" + cellID;
-    // var url = "the.php";
-    // var theChiTiet = $('.js-chi_tiet');
+     var card_id1 = "card_id1=" + cellID;
+    var url = "the_hien_thi.php";
+    var theChiTiet = $('.js-chi_tiet');
     
-    // theChiTiet.onclick = function(e){
-    //     xhthe.open(method, url, true);
-    //     xhthe.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    //     xhthe.send(card_id1);
-    //     // location.reload(true);
+    theChiTiet.onclick = function(e){
+        window.location.href="http://localhost/da_web_nc/view/views_the/the.php?"+card_id1;
       
-    // }
+    }
   }
  }
 }

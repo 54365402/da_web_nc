@@ -1,7 +1,11 @@
 <?php
 include_once "header.php";
 ?>
-
+<?php 
+    // // Start the session
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    {
+?>
 <?php
 
 include_once "../../controller/connection.php";
@@ -18,12 +22,6 @@ while($row = mysqli_fetch_array($query))
 
 ?>
 
-<?php
-
-     if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" )
-    {
-
-?>
 
 
 <!DOCTYPE html>
@@ -60,27 +58,52 @@ while($row = mysqli_fetch_array($query))
             Sửa thông tin cá nhân
         </button>
     </div>
-    <script src="../../assets/js/js_noctice/InfoUpdate.js"></script>
+    <script src="../assets/js/js_notice/InfoUpdate.js"></script>
     <div class=" card card--notice">
         <div >
         <h1> Thông báo </h1>
         </div>
         <br>
         <div class="notice__text">
+        <?php
+            include_once "../../controller/connection.php";
+        ?>
+
+        <?php
+            $sql = "SELECT notice FROM tbl_notice WHERE status=1 ORDER BY addAt";
+            $result = $mysqli->query($sql);
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+        ?>
+                <tr>
+                <td><?php echo "- " . $row["notice"]; ?></td>
+                <td style="text-align: right;">
+                
+                </td>
+                <?php echo "<br>"; ?>
+                </tr>           
+        <?php
+
+            }
+          } else {
+            echo "0 results";
+          }
+        ?>    
+
+
             <?php
-                        include_once "../../controller/controller_notice/NoticeDisplay.php"
-                    ?>
+            $mysqli -> close();
+            ?>
         </div>
     </div>
 
 
-<?php
-
-     }
+    <?php 
+    }
     else{
-        header("Locaction: dang_nhap.php");
-     }
-
+        header("Location: ../views_ktc/dang_nhap.php");
+    }
 ?>
 
 </body>

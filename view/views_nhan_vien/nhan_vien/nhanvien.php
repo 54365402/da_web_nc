@@ -2,8 +2,8 @@
 include "../header.php";
 ?>
 <?php 
-    // Start the session
-    if($_SESSION['login'])
+    // // Start the session
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
     {
 ?>
 <?php
@@ -15,7 +15,8 @@ include "../../../controller/controller_nhan_vien/NhanVienDisplay.php"
 ?>
 
 <script src="../../assets/js/js_nhan_vien/nhanvien_add.js"></script>
-<script src="../../assets/js/js_nhan_vien/nhanvien_delete_update.js"></script>
+<script src="../../assets/js/js_nhan_vien/nhanvien_update.js"></script>
+<script src="../../assets/js/js_nhan_vien/nhanvien_delete.js"></script>
 
 <!-- code tiếp phần thần rồi include ở đây -->
 </div>
@@ -26,6 +27,6 @@ include "../../../controller/controller_nhan_vien/NhanVienDisplay.php"
 <?php 
     }
     else{
-        header("Location: ../../views_ktc/dang_nhap.php");
+        header("Location: ../views_ktc/dang_nhap.php");
     }
 ?>

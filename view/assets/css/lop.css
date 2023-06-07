@@ -57,6 +57,7 @@ input.lop-sort {
 }
 
 input.lop_input-search {
+    outline: none;
     border-radius: 5px;
     font-size: 20px;
     width: 219px;
