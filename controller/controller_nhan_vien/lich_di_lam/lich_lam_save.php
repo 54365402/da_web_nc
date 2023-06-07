@@ -14,7 +14,7 @@ if(empty($id)){
 }
 $save = $mysqli->query($sql);
 if($save){
-    echo "<script> alert('thêm lịch học thành công.'); location.replace('../../../view/lich_di_lam.php') </script>";
+    echo "<script> alert('thêm lịch học thành công.'); location.replace('../../../view/views_nhan_vien/lich_di_lam/lich_di_lam.php') </script>";
 }else{
     echo "<pre>";
     echo "An Error occured.<br>";

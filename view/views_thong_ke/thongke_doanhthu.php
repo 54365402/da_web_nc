@@ -27,7 +27,7 @@ include_once "../../controller/connection.php";
 
 <body>
 
-<?php
+    <?php
          $sql = "SELECT * FROM tbl_lop";
          $result = $mysqli->query($sql);
          if ($result->num_rows > 0) {
@@ -40,8 +40,8 @@ include_once "../../controller/connection.php";
           } else {
             echo "0 results";
           }
-        ?>    
-<?php
+        ?>
+    <?php
 $mysqli -> close();
 ?>
 
@@ -57,63 +57,62 @@ $mysqli -> close();
     <div class="tab-content">
         <div class="tab-pane active">
 
-          
 
-        <div class="chart-container" style="left:50px; top:50px; position: relative; height:60vh; width:80%">
-            <canvas id="myChart"></canvas>
-        </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-        //Set up block
-          //console.log(<?php //echo json_encode($doanh_thu); ?>)
+            <div class="chart-container" style="left:50px; top:50px; position: relative; height:60vh; width:80%">
+                <canvas id="myChart"></canvas>
+            </div>
 
-          const doanh_thu = <?php echo json_encode($doanh_thu); ?>;
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            //Set up block
+            //console.log(<?php //echo json_encode($doanh_thu); ?>)
 
-          const data = {
-        labels: ['Gym', 'Yoga', 'Aerobic', 'Boxing', 'Swimming'],
-                    datasets: [{
-                      label: '# of Votes',
-                      data: doanh_thu,
-                      borderWidth: 1
-                    }]
-                  };
+            const doanh_thu = <?php echo json_encode($doanh_thu); ?>;
 
-        //config
-        const config = {
+            const data = {
+                labels: ['Gym', 'Yoga', 'Aerobic', 'Boxing', 'Swimming'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: doanh_thu,
+                    borderWidth: 1
+                }]
+            };
 
-          type: 'line',
-                  data,
-                  options: {
+            //config
+            const config = {
+
+                type: 'line',
+                data,
+                options: {
                     scales: {
-                      y: {
-                        beginAtZero: true
-                      }
+                        y: {
+                            beginAtZero: true
+                        }
                     }
-                  }
+                }
 
-        };
-        //render
-              const myChart = new Chart(
+            };
+            //render
+            const myChart = new Chart(
                 document.getElementById('myChart'),
                 config
-              );
-              
-                </script>
+            );
+            </script>
 
-            </div>
-            <div class=" tab-pane " style="top 20px">
+        </div>
+        <div class=" tab-pane " style="top 20px">
 
-              <?php
+            <?php
               //include "tk_do_tuoi.php";
               ?>
-            </div>
         </div>
-        
-        
-        
+    </div>
 
-    
+
+
+
+
 
 </body>
 
@@ -143,5 +142,3 @@ tabButtons.forEach((button, index) => {
     //     header("Location: dang_nhap.php");
     // }
 ?>
-
-

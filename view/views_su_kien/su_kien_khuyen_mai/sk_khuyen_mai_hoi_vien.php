@@ -12,5 +12,5 @@
 <script src="../../assets/js/js_su_kien/su_kien_khuyen_mai/xu_ly_header.js">
 </script>
 <?php
-    include_once "../../../controller/controller_su_kien/su_kien_khuyen_mai/skkm_hien_thi.php"
+    include_once "../../../controller/controller_su_kien/su_kien_khuyen_mai/skkm_hien_thi.php";
 ?>

@@ -50,7 +50,7 @@ $query1 = mysqli_query($mysqli,$sql);
 
                 if (formValues) {
                     // Add event
-                    fetch("../controller/controller_su_kien/su_kien_khuyen_mai/sk_them_sua_xoa.php", {
+                    fetch("../../../controller/controller_su_kien/su_kien_khuyen_mai/sk_them_sua_xoa.php", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json"
@@ -231,5 +231,3 @@ $query1 = mysqli_query($mysqli,$sql);
             </div>
         </div>
 </body>
-
-</html>

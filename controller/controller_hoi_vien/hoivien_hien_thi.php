@@ -30,7 +30,9 @@
                 <th>EMAIL</th>
                 <th>CMND</th>
                 <th>BIỂN SỐ XE</th>
-                <th>ĐIỂM TÍCH LŨY</th>
+                <th>ĐIỂM</th>
+                <th class="hoivien__table-title--delete" style="display:none; text-align: center;">XÓA</th>
+                <th class="hoivien__table-title--update" style="display:none; text-align: center;">UPDATE</th>
             </tr>
             <?php
         // Duyệt qua các phẩn từ trong bảng
@@ -48,6 +50,12 @@
                 <td><?php echo $row["cmnd"]?></td>
                 <td><?php echo $row["bien_xe"]?></td>
                 <td><?php echo $row["diem_tich_luy"]?></td>
+                <td class="hoivien__table-view-content--delete" style="display:none; text-align: center;"><a
+                        href="../../controller/controller_hoi_vien/hoivien_delete.php?hoivienID=<?php echo $row["id_hv"]?>"><i
+                            class="fa-sharp fa-solid fa-delete-left"></i></a></td>
+                <td class="hoivien__table-view-content--update" style="display:none; text-align: center;"><a
+                        href="view_update_hoivien_popup.php?hoivienID=<?php echo $row["id_hv"]?>"><i
+                            class="fa-solid fa-wrench"></i></a></td>
                 <?php
        }
         ?>
@@ -61,6 +69,8 @@
                 <th>CÂN NẶNG</th>
                 <th>% MỠ</th>
                 <th>NGÀY CẬP NHẬT</th>
+                <th class="hoivien__table-title--delete2" style="display:none; text-align: center;">XÓA</th>
+                <th class="hoivien__table-title--update2" style="display:none; text-align: center;">UPDATE</th>
             </tr>
             <?php
         // Duyệt qua các phẩn từ trong bảng
@@ -74,6 +84,12 @@
                 <td><?php echo $row["can_nang"]?></td>
                 <td><?php echo $row["phan_tram_mo"]?></td>
                 <td><?php echo $row["ngay_cap_nhat"]?></td>
+                <td class="hoivien__table-view-content--delete" style="display:none; text-align: center;"><a
+                        href="../../controller/controller_hoi_vien/hoivien_delete.php?hoivienID=<?php echo $row["id_hv"]?>"><i
+                            class="fa-sharp fa-solid fa-delete-left"></i></a></td>
+                <td class="hoivien__table-view-content--update" style="display:none; text-align: center;"><a
+                        href="view_update_hoivien_tbl2_popup.php?hoivienID=<?php echo $row["id_hv"]?>"><i
+                            class="fa-solid fa-wrench"></i></a></td>
                 <?php
        }
         ?>
@@ -94,4 +110,3 @@
 <?php
 $mysqli -> close();
 ?>
-<script src="../controller/controller_hoi_vien/hoivien_change_table.js"></script>
