@@ -63,7 +63,7 @@
     </table>
     <!-- tạo giao diện nút thêm, sửa, xóa -->
     <div class='nuoc__div--chua_button'>
-        <button class='nuoc__div--button js-them' type="button" onclick="">Thêm111</button>
+        <button class='nuoc__div--button js-them' type="button" onclick="">Thêm</button>
         <button class='nuoc__div--button js-sua' type="button" onclick="">Cập nhập</button>
         <button class='nuoc__div--button js-xoa nuoc__div--button_xoa' type="button" onclick="">Xóa</button>
     </div>
