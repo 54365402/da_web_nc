@@ -2,8 +2,8 @@
 <html lang="en">
 <?php 
     // // Start the session
-    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    {
+    //if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    //{
 ?>
 <?php
     require "../../controller/controller_notice/PriceDisplay.php"
@@ -209,8 +209,8 @@ tabButtons.forEach((button, index) => {
 </script>
 
 <?php 
-    }
-    else{
-        header("Location: ../views_ktc/dang_nhap.php");
-    }
+    // }
+    // else{
+    //     header("Location: ../views_ktc/dang_nhap.php");
+    // }
 ?>
