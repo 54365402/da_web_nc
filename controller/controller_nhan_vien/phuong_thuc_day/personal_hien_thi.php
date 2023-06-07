@@ -1,7 +1,6 @@
 <!-- Kết nối CSDL -->
 <?php
     include_once "personal_pages.php";
-
 ?>
 
 <!-- Hien thi bang -->
@@ -66,6 +65,4 @@
        
     </div>
 </div>
-    <?php
-    $mysqli -> close();
-    ?>
+    

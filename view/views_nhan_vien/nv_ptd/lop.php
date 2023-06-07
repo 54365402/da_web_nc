@@ -3,9 +3,9 @@ include_once "../header.php";
 ?>
 
 <?php 
-    // Start the session
-    // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    // {
+    //Start the session
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    {
 ?>
 
 <link rel="stylesheet" href="../../assets/css/lop.css">
@@ -17,7 +17,7 @@ include_once "../header.php";
 <form class="lop_form-page" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
     <center>
     <?php
-    echo $listPages;
+         echo $listPages;
     ?>
     </center>
 </form>
@@ -34,10 +34,10 @@ include_once "../header.php";
 
 
 <?php 
-    // }
-    // else{
-    //     header("Location: dang_nhap.php");
-    // }
+    }
+    else{
+        header("Location: dang_nhap.php");
+    }
 ?>
 
 

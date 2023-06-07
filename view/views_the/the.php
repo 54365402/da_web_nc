@@ -3,9 +3,9 @@
     
     ?>
     <?php 
-        // Start the session
-        // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-        // {
+        //Start the session
+        if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+        {
     ?>
 
     <link rel="stylesheet" href="../assets/css/the.css">
@@ -45,21 +45,18 @@
     
     <?php include_once "view_the.php" ?>
 
-    
-    
-
     <?php 
-        // }
-        // else{
-        //     header("Location: ../dang_nhap.php");
-        // }
+        }
+        else{
+            header("Location: ../dang_nhap.php");
+        }
         ?>
         
     <script src="../assets/js/js_the/the_add.js"></script>
 
-    <script src = "../assets/js/js_the/the_chuc_nang.js" ></script>
-
     <script src = "../assets/js/js_the/the_delete.js" ></script>
+
+    <script src = "../assets/js/js_the/the_sua.js" ></script>
     </body>
     
 </html>

@@ -1,12 +1,7 @@
-
 <?php
-// Include necessary files and initialize variables
 include_once "header.php";
-
-// Database connection
 include_once "../../controller/connection.php";
 
-// Function to handle form submission
 function handleFormSubmission($connection)
 {
     $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '';
@@ -57,7 +52,6 @@ $chartData = handleFormSubmission($mysqli);
 $chartData = handleFormSubmission($mysqli);
 }
 
-// Close database connection
 $mysqli->close();
 ?>
 
@@ -102,10 +96,7 @@ $mysqli->close();
 </div>
 
 <script>
-    // Chart data
     var chartData = <?php echo json_encode($chartData); ?>;
-
-    // Chart options
     var options = {
         series: [{
             name: 'Doanh thu',
