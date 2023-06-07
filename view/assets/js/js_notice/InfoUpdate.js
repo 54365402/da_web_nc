@@ -46,7 +46,7 @@ for (var i = 0; i < rows.length; i++) {
             var method = "POST";
             var value = cells[0].innerHTML;
             var params = "value=" + value;
-           url = "../controller/controller_notice/InfoUpdate.php"; 
+           url = "../../controller/controller_notice/InfoUpdate.php"; 
           if(confirm("Bạn có chắc muốn sửa ID "+value+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);

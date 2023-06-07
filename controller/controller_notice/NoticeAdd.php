@@ -5,13 +5,16 @@
 
     $notice = new Notice();
     $notice->set_notice($_POST["content"]);
-
-    $sql = "INSERT INTO tbl_notice(notice) VALUES('".$notice->get_notice()."')";
+    if(is_null($_POST["content"]))
+    {
+        echo '<script>alert("Notice is null")</script>';
+    }
+    else {
+    $sql = "INSERT INTO tbl_notice(notice) VALUES('".$notice->get_notice()."')";}
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
 
-    header("Location: ../../view/home.php");
+    header("Location: ../../view/views_home/home.php");
     exit();
 
 ?>
-

@@ -1,14 +1,18 @@
-<?php
-include "header.php";
-include_once "../../controller/connection.php";
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include "header.php";
+?>
 <?php 
-    // Start the session
-    // if($_SESSION['login'])
+    // // Start the session
+    // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
     // {
+?>
+
+<?php
+include_once "../../controller/connection.php";
 ?>
 <?php
     //require "../../controller/controller_notice/PriceDisplay.php"
@@ -47,15 +51,15 @@ $mysqli -> close();
 
 
     <div class="tab-bar" style="top: 20px; bottom:20px;">
-        <button class="fix tab-button active">Thông báo</button>
-        <button class="tab-button">Lớp và gói tập</button>
+        <button class="fix tab-button active-fix">Doanh thu</button>
+        <button class="tab-button" >Nhườn</button>
         <button class="tab-button">Nước và thực phẩm</button>
         <button class="tab-button">Độ tuổi hội viên</button>
 
     </div>
 
     <div class="tab-content">
-        <div class="tab-pane active">
+        <div class="tab-pane active-fix">
 
           
 
@@ -78,7 +82,6 @@ $mysqli -> close();
                       borderWidth: 1
                     }]
                   };
-
         //config
         const config = {
 
@@ -98,28 +101,23 @@ $mysqli -> close();
                 document.getElementById('myChart'),
                 config
               );
-              
                 </script>
 
             </div>
-            <div class=" tab-pane " style="top 20px">
-
-              <?php
-              //include "tk_do_tuoi.php";
-              ?>
+            <div class=" tab-pane ">
+              
             </div>
         </div>
-        
-        
-        
-
-    
-
 </body>
 
 </html>
 
-
+<?php 
+    // }
+    // else{
+    //     header("Location: ../views_ktc/dang_nhap.php");
+    // }
+?>
 
 
 <script>
@@ -128,20 +126,15 @@ const tabPanes = document.querySelectorAll('.tab-pane');
 
 tabButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-        tabButtons.forEach(button => button.classList.remove('active'));
-        tabPanes.forEach(pane => pane.classList.remove('active'));
+        tabButtons.forEach(button => button.classList.remove('active-fix'));
+        tabPanes.forEach(pane => pane.classList.remove('active-fix'));
 
-        button.classList.add('active');
-        tabPanes[index].classList.add('active');
+        button.classList.add('active-fix');
+        tabPanes[index].classList.add('active-fix');
     });
 });
 </script>
 
-<?php 
-    // }
-    // else{
-    //     header("Location: dang_nhap.php");
-    // }
-?>
+
 
 
