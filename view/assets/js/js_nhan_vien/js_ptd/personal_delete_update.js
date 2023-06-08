@@ -33,7 +33,7 @@
         };
     
         // Chỉ định URL và phương thức HTTP
-        var url = "../../../controller/controller_nhan_vien/phuong_thuc_day/personal_delete.php";
+        var url = "/da_web_nc/controller/controller_nhan_vien/phuong_thuc_day/personal_delete.php";
         var method = "POST";
     
         // Chỉ định các tham số để gửi dữ liệu
@@ -48,9 +48,10 @@
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(personalID);
           // Refresh lại trang
-          location.reload(true)
+          window.location.href = "/da_web_nc/view/views_nhan_vien/nv_ptd/personal.php";
         }
-        }
+      }
+      
         var personalUpdate = $('.js-sua');
         personalUpdate.onclick = function(e){
         currentRow.setAttribute('contenteditable','');
@@ -72,13 +73,13 @@
             var personal_id_nv = "personal_id_nv=" + cell_id_nv;
             var personal_doanh_thu = "personal_doanh_thu=" + cell_doanh_thu;
        
-          url = "../../controller/controller_nhan_vien/phuong_thuc_day/personal_update.php" 
+          url = "/da_web_nc/controller/controller_nhan_vien/phuong_thuc_day/personal_update.php" 
           if(confirm("Bạn có chắc muốn sửa ID "+cellID+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(personalID+"&"+personal_name_hv+"&"+personal_id_hv+"&"+personal_thoi_luong+"&"+personal_so_buoi+"&"+personal_id_nv+"&"+personal_doanh_thu);
-          location.reload(true);
+          window.location.href = "/da_web_nc/view/views_nhan_vien/nv_ptd/personal.php";
           }
           }
         }

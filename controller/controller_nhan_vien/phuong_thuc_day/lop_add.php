@@ -23,10 +23,10 @@
     $sql = "INSERT INTO tbl_lop(id_nv,types_room,ten_lop,packages,thoi_luong,ngay_hoat_dong,so_luong_hv,doanh_thu) VALUES('".$id_nv."','".$types_room."','".$ten_lop."','".$packages."','".$thoi_luong."','".$ngay_hoat_dong."','".$so_luong_hv."','".$doanh_thu."')";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
+    }
 
     //điều hướng trang đến tbl_class.php để refresh
     header("Location: ../../../view/views_nhan_vien/nv_ptd/lop.php");
     exit();
-    }
 ?>
 

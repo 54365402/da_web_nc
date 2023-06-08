@@ -106,7 +106,7 @@
                 if ($i == $p) {
                     echo " " . $i . " ";
                 } else {
-                    echo ' <a href="?page=' . $i . '&cardsearch=' . $keyword . '&sort=' . $sort . '">' . $i . '</a> ';
+                    echo ' <a href="?page=' . $i  .'&sort=' . $sort . '&cardsearch=' . $keyword .'">' . $i . '</a> ';
                 }
             }
 

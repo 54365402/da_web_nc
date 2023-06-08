@@ -6,7 +6,7 @@ include_once "../../controller/connection.php";
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    Start the session
+    //Start the session
     if($_SESSION['login'])
     {
 ?>
@@ -47,12 +47,11 @@ $mysqli -> close();
 
 
     <div class="tab-bar" style="top: 20px; bottom:20px;">
-        <button class="fix tab-button active">Thông báo</button>
-        <button class="tab-button">Lớp và gói tập</button>
-        <button class="tab-button">Nước và thực phẩm</button>
-        <button class="tab-button">Độ tuổi hội viên</button>
-
-    </div>
+        <a href="thongke_doanhthu.php" class="fix tab-button active">Thông báo</a>
+        <a href="tk_lop.php" class="tab-button">Lớp và gói tập</a>
+        <a href="tk_nuoc.php" class="tab-button">Nước và thực phẩm</a>
+        <a href="tk_do_tuoi.php" class="tab-button">Độ tuổi hội viên</a>
+    </div> 
 
     <div class="tab-content">
         <div class="tab-pane active">

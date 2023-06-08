@@ -45,19 +45,29 @@ CREATE TABLE `tbl_lop` (
 -- Đang đổ dữ liệu cho bảng `tbl_lop`
 --
 
-INSERT INTO `tbl_lop` (`id_lop`, `id_nv`, `typres_room`, `ten_lop`, `packages`, `thoi_luong`, `ngay_hoat_dong`, `so_luong_hv`, `time_start`, `time_end`, `doanh_thu`) VALUES
-(0, 4, 'Boxing', 'Boxing oneshot', '2 tháng', 10, 'all', 40, NULL, NULL, 200000),
-(1, 1, 'Gym', 'Gym đi là vạm vỡ', '1 tháng', 10, 't2,t4,t6', 40, '0000-00-00', '0000-00-00', 250000),
-(2, 1, 'Gym', 'Gym đi là vạm vỡ', '1 tháng', 10, 't3,t5,t7', 40, '2023-05-11', '2023-10-11', 250000),
-(3, 3, 'Swimming', 'Swimming tận chân trời', '3', 3, 't2,t4,t6', 3, NULL, NULL, 35000),
-(4, 3, 'Aerobic', 'Aerobic nơi tình yêu bắt đầu', '3', 3, 't3,t5,t7', 3, NULL, NULL, 30000),
-(5, 2, 'Yoga', 'Yoga xập xình', '2 tháng', 10, 't2,t3', 40, NULL, NULL, 25000),
-(6, 1, 'Yoga', 'Yoga tịnh như nước', '2 tháng', 10, 't2,t3', 40, NULL, NULL, 3555),
-(7, 4, 'Boxing', 'Boxing cứng cỏi', '2 tháng', 10, 'all', 40, NULL, NULL, 200000),
-(8, 6, 'Aerobic', 'Aerobic nhịp điệu', 'bacsic', 10, 'all', 50, '2023-05-11', '2023-05-31', 500000),
-(9, 5, 'Yoga', 'Yoga lười biếng', 'bacsic', 20, 't2,t4,t6', 30, NULL, NULL, 20000),
-(10, 4, 'Gym', 'Gym thoát ế', '6 tháng', 3, 'all', 100, NULL, NULL, 80000);
-
+INSERT INTO `tbl_lop` ( `id_nv`, `types_room`, `ten_lop`, `packages`, `thoi_luong`, `ngay_hoat_dong`, `so_luong_hv`, `time_start`, `time_end`, `doanh_thu`) VALUES
+( 4, 'Boxing', 'Boxing oneshot', 'basic', 10, 'all', 40, '2023-01-11', '2023-10-11', 200000),
+( 1, 'Gym', 'Gym đi là vạm vỡ', '1 tháng', 10, 't2,t4,t6', 40, '2022-05-11', '2023-10-11', 250000),
+( 1, 'Gym', 'Gym đi là vạm vỡ', '1 tháng', 10, 't3,t5,t7', 40, '2020-05-11', '2023-01-11', 250000),
+( 3, 'Swimming', 'Swimming tận chân trời', 'advance', 3, 't2,t4,t6', 3, '2023-02-11', '2023-03-11', 35000),
+( 3, 'Aerobic', 'Aerobic nơi tình yêu bắt đầu', 'advance', 3, 't3,t5,t7', 3, '2023-05-11', '2023-06-11', 300000),
+( 2, 'Yoga', 'Yoga xập xình', 'advance', 10, 't2,t3', 40, '2022-07-11', '2023-07-11', 25000),
+( 1, 'Yoga', 'Yoga tịnh như nước', 'advance', 10, 't2,t3', 40, '2023-05-11', '2023-10-11', 30000),
+( 4, 'Boxing', 'Boxing cứng cỏi', 'advance', 10, 'all', 40, '2023-03-11', '2023-10-11', 200000),
+( 6, 'Aerobic', 'Aerobic nhịp điệu', 'basic', 10, 'all', 50, '2023-05-11', '2023-06-31', 500000),
+( 5, 'Yoga', 'Yoga lười biếng', 'basic', 20, 't2,t4,t6', 30, '2023-04-11', '2023-10-11', 20000),
+( 14, 'Boxing', 'Boxing oneshot', 'basic', 10, 'all', 40, '2023-01-11', '2023-10-11', 200000),
+( 1, 'Gym', 'Gym đi là vạm vỡ', '1 tháng', 10, 't2,t4,t6', 40, '2022-05-11', '2023-10-11', 250000),
+( 11, 'Gym', 'Gym thoát ế', '6 tháng', 3, 'all', 100, '2023-02-11', '2023-10-11', 90000);
+( 7, 'Gym', 'Gym đi là vạm vỡ', '1 tháng', 10, 't3,t5,t7', 40, '2023-01-11', '2023-02-11', 250000),
+( 3, 'Aerobic', 'Aerobic nơi tình yêu bắt đầu', 'advance', 3, 't3,t5,t7', 3, '2023-07-11', '2023-06-11', 500000),
+( 8, 'Yoga', 'Yoga xập xình', 'advance', 10, 't2,t4,t6', 40, '2022-06-11', '2023-08-11', 250000),
+( 4, 'Boxing', 'Boxing cứng cỏi', 'advance', 10, 'all', 40, '2023-03-11', '2023-05-11', 200000),
+( 9, 'Swimming', 'Swimming tận chân trời', 'advance', 3, 't3,t5,t7', 3, '2023-02-11', '2023-03-11', 50000),
+( 5, 'Yoga', 'Yoga lười biếng', 'basic', 20, 't2,t4,t6', 30, '2023-07-11', '2023-12-11', 40000),
+( 10, 'Yoga', 'Yoga tịnh như nước', 'advance', 10, 't3,t5,t7', 40, '2023-08-11', '2023-10-11', 100000),
+( 12, 'Aerobic', 'Aerobic nhịp điệu', 'basic', 10, 'all', 50, '2023-05-11', '2023-06-31', 500000),
+( 16, 'Gym', 'Gym thoát ế', '6 tháng', 3, 't3,t5,t7', 100, '2023-03-11', '2023-09-11', 100000);
 --
 -- Chỉ mục cho các bảng đã đổ
 --

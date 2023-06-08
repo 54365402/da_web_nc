@@ -2,7 +2,7 @@
     // Start the session
     session_start();   
 
-    include_once "../../../controller/connection.php";
+    include_once "../../controller/connection.php";
     
     $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
     $query = mysqli_query($mysqli,$sql);
@@ -42,7 +42,7 @@ while($row = mysqli_fetch_array($query))
                         <li><a class="hotline" href=""><i class="fa-solid fa-headset"></i> Hotline: 0123456789</a></li>
                         <li><a href="../views_home/noticeANDprice.php"><i class="fa-solid fa-circle-info"></i></a></li>
                         <li><a href=""><i class="fa-solid fa-gear"></i></a></li>
-                        <li><a href="khach_trang_chu.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                        <li><a href="/da_web_nc/view/views_ktc/khach_trang_chu.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 </div>
             </div>
 

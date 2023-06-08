@@ -49,19 +49,15 @@ INSERT INTO `tbl_packages` (`id_packages`, `types_room`, `name_packages`, `gia_p
 (8, 'Yoga', 'Lớp basic', 50000),
 (9, 'Yoga', 'Lớp average', 70000),
 (10, 'Yoga', 'Lớp advance', 100000),
-(11, 'Yoga', 'Lớp extra', 100000),
 (12, 'Aerobic', 'Lớp basic', 50000),
 (13, 'Aerobic', 'Lớp average', 70000),
 (14, 'Aerobic', 'Lớp advance', 100000),
-(15, 'Aerobic', 'Lớp extra', 100000),
 (16, 'Boxing', 'Lớp basic', 50000),
 (17, 'Boxing', 'Lớp average', 70000),
 (18, 'Boxing', 'Lớp advance', 100000),
-(19, 'Boxing', 'Lớp extra', 100000),
 (20, 'Swimming', 'Lớp basic', 50000),
 (21, 'Swimming', 'Lớp average', 70000),
 (22, 'Swimming', 'Lớp advance', 100000),
-(23, 'Swimming', 'Lớp extra', 100000);
 
 --
 -- Chỉ mục cho các bảng đã đổ

@@ -68,7 +68,8 @@ $mysqli->close();
             height: auto;
         }
         .tk_lop_hien_thi {
-            margin-top: 150px;
+            background: #7cc6f924;
+            margin-top: 100px;
             display: flex;
             justify-content: space-between;
         }
@@ -82,15 +83,48 @@ $mysqli->close();
         }
 
         .tk_date {
-        position: fixed;
-        top: 200px;
-        right: 20px;
-        display: flex;
-        align-items: center;
+            margin-top: 10px;
+            position: fixed;
+            top: 200px;
+            right: 20px;
+            display: flex;
+            align-items: center;
         }
+
+        .tab-bar {
+                position: relative;
+                top: 20px;
+                bottom: 20px;
+            }
+
+            .tab-bar a {
+                text-align: center;
+                display: inline-block;
+                width: 16%;
+                padding: 12px;
+                border: none;
+                background-color: #d3cff1;
+                cursor: pointer;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                color: white;
+                text-decoration: none;
+            }
+
+            .tab-bar a.active {
+                background-color: #5ca1ec;
+            }  
+              
     </style>
 </head>
 <body>
+    <div class="tab-bar" style="top: 20px; bottom:20px;">
+        <a href="thongke_doanhthu.php" class="fix tab-button">Thông báo</a>
+        <a href="tk_lop.php" class="tab-button active">Lớp và gói tập</a>
+        <a href="tk_nuoc.php" class="tab-button">Nước và thực phẩm</a>
+        <a href="tk_do_tuoi.php" class="tab-button">Độ tuổi hội viên</a>
+    </div> 
+
     <div class="tk_date" >
         <form method="post" action="" style="font-size: 20px" >
                 Từ ngày: <input type="date" name="start_date" style="font-size: 15px; border: none; border-radius: 5px; padding: 6px 6px 6px; cursor: pointer; background: #9cc7f1">
@@ -100,11 +134,11 @@ $mysqli->close();
     </div>
 
     <div class="tk_lop_hien_thi">
-        <div style="width: 500px; margin: 0 auto;">
+        <div style="width: 500px; height: 400px; margin: 0 auto;">
             <canvas id="tk_types_room"></canvas>
-        </div>
+        </div> 
 
-        <div style="width: 500px; margin: 0 auto;">
+        <div style="width: 500px; height: 400px; margin: 0 auto;">
             <canvas id="tk_packages"></canvas>
         </div>
     </div>
@@ -133,7 +167,8 @@ $mysqli->close();
                 scale: {
                     ticks: {
                         beginAtZero: true,
-                        display: false
+                        display: false,
+                        fontSize: 20
                     },
                     gridLines: {
                         display: false
@@ -142,6 +177,12 @@ $mysqli->close();
                 plugins: {
                     legend: {
                         display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Hình thức tập',
+                        fontSize: 20, 
+                        fontColor: '#000' 
                     }
                 }
             }
@@ -170,7 +211,8 @@ $mysqli->close();
                 scale: {
                     ticks: {
                         beginAtZero: true,
-                        display: false
+                        display: false,
+                        fontSize: 20
                     },
                     gridLines: {
                         display: false
@@ -179,7 +221,13 @@ $mysqli->close();
                 plugins: {
                     legend: {
                         display: false
-                    }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Gói tập',
+                        fontSize: 20, 
+                        fontColor: '#000' 
+                    }    
                 }
             }
         });
