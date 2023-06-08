@@ -73,7 +73,7 @@ $(function() {
         if (!!scheds[id]) {
             var _conf = confirm("bạn muốn xóa lịch học này?");
             if (_conf === true) {
-                location.href = "../controller/controller_nhan_vien/lich_di_lam/lich_lam_del.php?id=" + id;
+                location.href = "../../../controller/controller_nhan_vien/lich_di_lam/lich_lam_del.php?id=" + id;
             }
         } else {
             alert("lỗi không xác định");

@@ -24,7 +24,7 @@
     background-color: #ddd;
   }
   
-  .tab-button.active {
+  .tab-button.active-fix {
     background-color: #2F528F;
   }
   
@@ -36,7 +36,7 @@
     display: none;
   }
   
-  .tab-pane.active {
+  .tab-pane.active-fix {
     display: block;
   }
   

@@ -35,7 +35,7 @@ $query1 = mysqli_query($mysqli,$sql1);
                     </div>
                     <div class="card-body">
                         <div class="container-fluid">
-                            <form action="../controller/controller_nhan_vien/lich_di_lam/lich_lam_save.php"
+                            <form action="../../../controller/controller_nhan_vien/lich_di_lam/lich_lam_save.php"
                                 method="post" id="schedule-form">
                                 <input type="hidden" name="id" value="">
                                 <div class="form-group mb-2">
@@ -132,6 +132,3 @@ if(isset($mysqli)) $mysqli->close();
 <script>
 var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
-<script src="../../assets/js/js_nhan_vien/js_lich_di_lam/lich_di_lam_AUD.js"></script>
-
-</html>

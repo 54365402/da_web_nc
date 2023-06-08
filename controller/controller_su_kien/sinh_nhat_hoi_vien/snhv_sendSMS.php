@@ -35,7 +35,7 @@
     $sql = "SELECT * FROM tbl_hoi_vien WHERE id_hv = ".$id_hv." ";
     $query = mysqli_query($mysqli, $sql);
     $row = mysqli_fetch_array($query);
-    $gmail = $row['gmail'];  
+    $gmail = $row['email'];  
     
 
     //  Gửi gmail

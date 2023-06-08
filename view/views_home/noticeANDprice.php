@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    // Start the session
-    // if($_SESSION['login'])
-    // {
+    // // Start the session
+    //if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    //{
 ?>
 <?php
     require "../../controller/controller_notice/PriceDisplay.php"
@@ -23,13 +23,13 @@
 <body>
 
     <div class="tab-bar">
-        <button class="fix tab-button active">Thông báo</button>
+        <button class="fix tab-button active-fix">Thông báo</button>
         <button class="tab-button">Giá cả</button>
         <a href="javascript:history.go(-1)"><i class="fa-solid fa-square-xmark fa-2xl" style="color: #2F528F;"></i></a>
     </div>
 
     <div class="tab-content">
-        <div class="tab-pane active">
+        <div class="tab-pane active-fix">
 
             <div class="notice__border">
                 <div class="notice__table notice__text notice__table--scroll">
@@ -44,15 +44,14 @@
 
                     <div class="notice__table notice__table--insert notice__text">
                         <textarea name="content" id=""
-                            style="width: 75vh; height: 99.5%; background-color: #d3cff1;"></textarea>
+                            style="width: 75vh; height: 99.5%; background-color: #d3cff1;"placeholder="nhập thông báo ở đây"></textarea>
                     </div>
 
                     <div class="hoivien__AFD">
                         <button class='notice__btn' type="submit" onclick="">Thêm</button>
-                        <button class='notice__btn notice__btn-del' type="submit" onclick="">Xóa</button>
                     </div>
-
-                </form>
+                    </form>
+                
 
             </div>
         </div>
@@ -200,11 +199,11 @@ const tabPanes = document.querySelectorAll('.tab-pane');
 
 tabButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-        tabButtons.forEach(button => button.classList.remove('active'));
-        tabPanes.forEach(pane => pane.classList.remove('active'));
+        tabButtons.forEach(button => button.classList.remove('active-fix'));
+        tabPanes.forEach(pane => pane.classList.remove('active-fix'));
 
-        button.classList.add('active');
-        tabPanes[index].classList.add('active');
+        button.classList.add('active-fix');
+        tabPanes[index].classList.add('active-fix');
     });
 });
 </script>
@@ -212,6 +211,6 @@ tabButtons.forEach((button, index) => {
 <?php 
     // }
     // else{
-    //     header("Location: dang_nhap.php");
+    //     header("Location: ../views_ktc/dang_nhap.php");
     // }
 ?>
