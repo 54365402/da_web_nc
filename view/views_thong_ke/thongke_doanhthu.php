@@ -6,19 +6,9 @@
 include "header.php";
 ?>
 <?php 
-<<<<<<< HEAD
     //Start the session
-    if($_SESSION['login'])
-    {
-=======
-    // // Start the session
-    // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    // {
-?>
-
-<?php
-include_once "../../controller/connection.php";
->>>>>>> b8e24b0632e255988a142b2dadba19807944b2d8
+        // if($_SESSION['login'])
+        // {
 ?>
 <?php
     //require "../../controller/controller_notice/PriceDisplay.php"
@@ -57,20 +47,11 @@ $mysqli -> close();
 
 
     <div class="tab-bar" style="top: 20px; bottom:20px;">
-<<<<<<< HEAD
         <a href="thongke_doanhthu.php" class="fix tab-button active">Thông báo</a>
         <a href="tk_lop.php" class="tab-button">Lớp và gói tập</a>
         <a href="tk_nuoc.php" class="tab-button">Nước và thực phẩm</a>
         <a href="tk_do_tuoi.php" class="tab-button">Độ tuổi hội viên</a>
     </div> 
-=======
-        <button class="fix tab-button active-fix">Doanh thu</button>
-        <button class="tab-button" >Nhườn</button>
-        <button class="tab-button">Nước và thực phẩm</button>
-        <button class="tab-button">Độ tuổi hội viên</button>
-
-    </div>
->>>>>>> b8e24b0632e255988a142b2dadba19807944b2d8
 
     <div class="tab-content">
         <div class="tab-pane active-fix">
@@ -86,7 +67,6 @@ $mysqli -> close();
             //Set up block
             //console.log(<?php //echo json_encode($doanh_thu); ?>)
 
-<<<<<<< HEAD
             const doanh_thu = <?php echo json_encode($doanh_thu); ?>;
 
             const data = {
@@ -97,18 +77,6 @@ $mysqli -> close();
                     borderWidth: 1
                 }]
             };
-=======
-          const data = {
-        labels: ['Gym', 'Yoga', 'Aerobic', 'Boxing', 'Swimming'],
-                    datasets: [{
-                      label: '# of Votes',
-                      data: doanh_thu,
-                      borderWidth: 1
-                    }]
-                  };
-        //config
-        const config = {
->>>>>>> 229b2c6ac2c6015ed57bef833d7b1ed508fc10e3
 
             //config
             const config = {
@@ -128,7 +96,6 @@ $mysqli -> close();
             const myChart = new Chart(
                 document.getElementById('myChart'),
                 config
-<<<<<<< HEAD
             );
             </script>
 
@@ -146,16 +113,6 @@ $mysqli -> close();
 
 
 
-=======
-              );
-                </script>
-
-            </div>
-            <div class=" tab-pane ">
-              
-            </div>
-        </div>
->>>>>>> 229b2c6ac2c6015ed57bef833d7b1ed508fc10e3
 </body>
 
 </html>
@@ -183,14 +140,9 @@ tabButtons.forEach((button, index) => {
 });
 </script>
 
-<<<<<<< HEAD
 <?php 
     // }
     // else{
     //     header("Location: dang_nhap.php");
     // }
 ?>
-=======
-
-
->>>>>>> 229b2c6ac2c6015ed57bef833d7b1ed508fc10e3

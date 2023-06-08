@@ -4,8 +4,8 @@ include_once "../../controller/connection.php";
 
 function handleFormSubmission($connection)
 {
-    $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '';
-    $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '';
+    $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '0001-01-01';
+    $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '9999-12-31';
 
 $sql = "SELECT
     CASE
@@ -39,9 +39,9 @@ while ($row = mysqli_fetch_assoc($query)) {
 }
 
 return [
-    'data' => $data,
-    'ageCategories' => $ageCategories
-];
+        'data' => $data,
+        'ageCategories' => $ageCategories
+        ];
 }
 
 // Handle form submission if it exists
