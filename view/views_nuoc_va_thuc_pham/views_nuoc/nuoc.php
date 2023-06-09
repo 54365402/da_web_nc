@@ -45,11 +45,14 @@ include_once "../../../controller/controller_nuoc_va_tp/controller_nuoc/nuoc_hie
 <div class='clear'></div>
 
 <!-- tạo chỉ mục trang -->
+
 <form class="nuoc__form--page" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
     <center>
+
         <?php
             echo $listPages;
         ?>
+
     </center>
 </form>
 
@@ -67,6 +70,7 @@ include_once "../../../controller/controller_nuoc_va_tp/controller_nuoc/nuoc_hie
     else{
         header("Location: ../../views_ktc/dang_nhap.php");
     }
+    $mysqli -> close();
 ?>
 </body>
 
