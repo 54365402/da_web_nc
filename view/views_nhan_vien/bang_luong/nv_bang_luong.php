@@ -12,7 +12,8 @@ include_once "../header.php";
 
 <!-- them--popup -->
 
-<?php include_once "view_bang_luong.php"
+<?php 
+include_once "view_bang_luong.php"
 ?>
 
 <!-- tạo giao diện sắp xếp -->

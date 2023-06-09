@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `tbl_lop` (
   `id_lop` int(50) NOT NULL,
   `id_nv` int(50) NOT NULL,
-  `typres_room` varchar(50) NOT NULL,
+  `types_room` varchar(50) NOT NULL,
   `ten_lop` varchar(50) NOT NULL,
   `packages` varchar(50) DEFAULT NULL,
   `thoi_luong` int(50) NOT NULL,
