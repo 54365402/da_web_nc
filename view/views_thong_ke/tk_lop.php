@@ -7,8 +7,8 @@ include_once "../../controller/connection.php";
 // Function to handle form submission
 function handleFormSubmission($connection)
 {
-    $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '';
-    $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '';
+    $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '0001-01-01';
+    $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '9999-12-31';
 
     // Truy vấn CSDL để lấy tổng total_money của mỗi package trong khoảng thời gian
     $sqlPackages = "SELECT packages, SUM(total_money) AS total FROM card WHERE time_start >= '$startDate' AND time_end <= '$endDate' GROUP BY packages";

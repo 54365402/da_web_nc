@@ -4,8 +4,8 @@ include_once "../../controller/connection.php";
 
 function handleFormSubmission($connection)
 {
-    $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '';
-    $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '';
+    $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '0001-01-01';
+    $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '9999-12-31';
 
     $sql = "SELECT name, SUM(tong_tien) AS total_amount FROM tbl_nuoc_va_thuc_pham WHERE loai_tp = 'Thực phẩm' AND ngay_nhap BETWEEN '$startDate' AND '$endDate' GROUP BY name";
     $query = mysqli_query($connection, $sql);

@@ -40,9 +40,9 @@ while($row = mysqli_fetch_array($query))
                         <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-square-instagram"></i></i></a></li>
                         <li><a class="hotline" href=""><i class="fa-solid fa-headset"></i> Hotline: 0123456789</a></li>
-                        <li><a href="noticeANDprice.php"><i class="fa-solid fa-circle-info"></i></a></li>
+                        <li><a href="../views_home/noticeANDprice.php"><i class="fa-solid fa-circle-info"></i></a></li>
                         <li><a href=""><i class="fa-solid fa-gear"></i></a></li>
-                        <li><a href="khach_trang_chu.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                        <li><a href="/da_web_nc/view/views_ktc/khach_trang_chu.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 </div>
             </div>
 
@@ -61,8 +61,7 @@ while($row = mysqli_fetch_array($query))
                 <li class="menu-li "><a class="menu-a" href="../views_nhan_vien/nv_ptd/lop.php"><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>
                 <li class="menu-li menu-li-csvc"><a class="menu-a" href="../views_csvc/dung_cu_tap/dung_cu_tap.php"><i class="fa-solid fa-database"></i> Cơ sở vật chất</a></li>
                 <li class="menu-li"><a class="menu-a" href="../views_su_kien/su_kien_khuyen_mai/sk_khuyen_mai_hoi_vien.php"><i class="fa-solid fa-calendar-days"></i> Sự kiện</a></li>
-                <li class="menu-li"><a class="menu-a" href="../views_thong_ke/tk_nuoc.php"><i class="fa-sharp fa-solid fa-money-check"></i> Thống
-                        kê</a></li>
+                <li class="menu-li"><a class="menu-a" href="../views_thong_ke/tk_nuoc.php"><i class="fa-sharp fa-solid fa-money-check"></i> Thống kê</a></li>
 
             </div>
 
