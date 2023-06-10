@@ -39,7 +39,7 @@
         
         }
         
-        header("Location: ../../../view/views_su_kien/sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php");
+        header("Location: ../../../view/views_su_kien/sk_tich_diem/sk_tich_diem.php");
         exit();
     
     ?>

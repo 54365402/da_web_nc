@@ -1,13 +1,13 @@
 <?php
 // lấy tên key
-$snhv_get_date="";
-if(isset($_POST['snhv_chonNgay']))
+$td_get_date="";
+if(isset($_POST['td_chonNgay']))
 {
-    $snhv_get_date = "'".$_POST['snhv_chonNgay']."'";
+    $td_get_date = "'".$_POST['td_chonNgay']."'";
 }
 else
 {
-    $snhv_get_date = "CURDATE()";
+    $td_get_date = "CURDATE()";
 }
 
 

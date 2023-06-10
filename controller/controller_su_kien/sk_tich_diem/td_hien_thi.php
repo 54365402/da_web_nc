@@ -103,14 +103,14 @@ include "td_pages.php";
                     </div>
                     <div class="td__div__div_quatang-baoDong">
                         <div class="td__div--showGift">
-                            <!-- <form action="../controller/controller_su_kien/sinh_nhat_hoi_vien/snhv_delete_gift.php" class="td__form--gift" method="POST"> -->
+                            <!-- <form action="../controller/controller_su_kien/sk_tich_diem/td_delete_gift.php" class="td__form--gift" method="POST"> -->
                             <label for="">ID:</label>
                             <input class="td__div__input--gift" type="text" value="<?php echo $quatangs['id_gift']?>"
                                 disabled style="background-color:#b4c7E7;border:#b4c7E7">
                             <a class="td__div__a-xoaGift"
-                                href="../../../controller/controller_su_kien/sinh_nhat_hoi_vien/snhv_delete_gift.php?idGift=<?php echo $quatangs['id_gift']?>">Xóa</a>
+                                href="../../../controller/controller_su_kien/sk_tich_diem/td_delete_gift.php?idGift=<?php echo $quatangs['id_gift']?>">Xóa</a>
                             <a class="td__div__a-updateGift"
-                                href="../../../view/views_su_kien/sinh_nhat_hoi_vien/view_gift_popup_update.php?idGift=<?php echo $quatangs['id_gift']?>">Sửa</a>
+                                href="../../../view/views_su_kien/sk_tich_diem/view_gift_popup_update.php?idGift=<?php echo $quatangs['id_gift']?>">Sửa</a>
                         </div>
                         <div class="td__div--showGift">
                             <label for="">Tên:</label>
