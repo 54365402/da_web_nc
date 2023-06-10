@@ -12,9 +12,9 @@ include "snhv_pages.php";
     <div class="snhv__div--chua-hien-thi">
     <nav class="sk__menu">
     <ul class="sk__menu-header">
-        <li><a href="../su_kien_khuyen_mai/sk_khuyen_mai_hoi_vien.php">Sự kiện khuyến mãi</a></li>
+        <li><a style='background-color:#a1b8e1' href="../su_kien_khuyen_mai/sk_khuyen_mai_hoi_vien.php">Sự kiện khuyến mãi</a></li>
         <li><a href="../sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php">Sinh nhật hội viên</a></li>
-        <li><a href="../sk_tich_diem/sk_tich_diem.php">Tích điểm</a></li>
+        <li><a style='background-color:#a1b8e1' href="../sk_tich_diem/sk_tich_diem.php">Tích điểm</a></li>
     </ul>
 </nav>
     <!-- <div  class='snhv__div--tap'>

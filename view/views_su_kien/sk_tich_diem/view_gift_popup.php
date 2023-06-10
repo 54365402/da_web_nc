@@ -3,7 +3,7 @@
     $sql = "SELECT * FROM tbl_hoi_vien";
     $query = mysqli_query($mysqli,$sql);
     ?>
-<div class='view_td__modal--popup'>
+<div class='td__modal--popup'>
     <div class='view_td__modal__div--popup'>
         <i><b><u class='view_td__modal__div--u'>Thêm quà tặng</u></b></i>
     <div >

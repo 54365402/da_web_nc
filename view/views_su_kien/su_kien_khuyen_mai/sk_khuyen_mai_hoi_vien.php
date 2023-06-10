@@ -6,7 +6,7 @@
     <ul class="sk__menu-header">
         <li><a href="#">Sự kiện khuyến mãi</a></li>
         <li><a href="../sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php">Sinh nhật hội viên</a></li>
-        <li><a href="#">Tích điểm</a></li>
+        <li><a href="../sk_tich_diem/sk_tich_diem.php">Tích điểm</a></li>
     </ul>
 </nav>
 <script src="../../assets/js/js_su_kien/su_kien_khuyen_mai/xu_ly_header.js">
