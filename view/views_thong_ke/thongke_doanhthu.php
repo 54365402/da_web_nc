@@ -1,157 +1,220 @@
+<?php
+include_once "header.php";
+include_once "../../controller/connection.php";
 
+function handleFormSubmission($connection)
+{
+    $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '0001-01-01';
+    $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '9999-12-31';
+
+$sql = "SELECT
+    CASE
+        WHEN h.tuoi BETWEEN 0 AND 15 THEN '0-15'
+        WHEN h.tuoi BETWEEN 16 AND 18 THEN '16-18'
+        WHEN h.tuoi BETWEEN 19 AND 22 THEN '19-22'
+        WHEN h.tuoi BETWEEN 23 AND 25 THEN '23-25'
+        WHEN h.tuoi BETWEEN 26 AND 29 THEN '26-29'
+        WHEN h.tuoi BETWEEN 30 AND 35 THEN '30-35'
+        WHEN h.tuoi BETWEEN 36 AND 40 THEN '36-40'
+        WHEN h.tuoi BETWEEN 41 AND 45 THEN '41-45'
+        WHEN h.tuoi BETWEEN 46 AND 50 THEN '46-50'
+        WHEN h.tuoi BETWEEN 51 AND 55 THEN '51-55'
+        WHEN h.tuoi BETWEEN 56 AND 60 THEN '56-60'
+        ELSE '60+'
+    END AS age_group,
+    SUM(c.total_money) AS total_amount
+    FROM tbl_hoi_vien h INNER JOIN card c ON h.id_hv = c.id_hv
+    WHERE c.time_start >= '$startDate' AND c.time_end <= '$endDate' GROUP BY age_group";
+
+$query = mysqli_query($connection, $sql);
+
+$data = [];
+$ageCategories = [];
+
+while ($row = mysqli_fetch_assoc($query)) {
+    $ageGroup = $row['age_group'];
+    $totalAmount = (float) $row['total_amount'];
+    $data[] = $totalAmount;
+    $ageCategories[] = $ageGroup;
+}
+
+return [
+        'data' => $data,
+        'ageCategories' => $ageCategories
+        ];
+}
+
+// Handle form submission if it exists
+if (isset($_POST['submit'])) {
+$chartData = handleFormSubmission($mysqli);
+} else {
+// Fetch default data
+$chartData = handleFormSubmission($mysqli);
+}
+
+$mysqli->close();
+?>
 
 <!DOCTYPE html>
-<html lang="en">
-<?php
-include "header.php";
-?>
-<?php 
-    //Start the session
-    if($_SESSION['login'])
-    {
-?>
-<?php
-    //require "../../controller/controller_notice/PriceDisplay.php"
-?>
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/noticeANDprice.css">
-    <link rel="stylesheet" href="../assets/css/hoivien.css">
-    <link rel="stylesheet" href="../assets/css/home.css">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
-</head>
-
-<body>
-
-    <?php
-         $sql = "SELECT * FROM tbl_lop";
-         $result = $mysqli->query($sql);
-         if ($result->num_rows > 0) {
-            // output data of each row
-            $doanh_thu = array();
-            while($row = $result->fetch_assoc()) {
-                 $doanh_thu[] = $row["doanh_thu"];           
-
+    
+        <style>
+            .tkdt_hien_thi {
+                background: #7cc6f924;
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 67vh;
             }
-          } else {
-            echo "0 results";
-          }
-        ?>
-    <?php
-$mysqli -> close();
-?>
+
+            .tkdt_hien_thi #chart {
+                width: 80%;
+            }
+
+            .tk_date {
+                position: fixed;
+                top: 210px;
+                right: 20px;
+                display: flex;
+                align-items: center;
+            }
+        
+            .tab-bar {
+                position: relative;
+                top: 20px;
+                bottom: 20px;
+            }
+
+            .tab-bar a {
+                text-align: center;
+                display: inline-block;
+                width: 16%;
+                padding: 12px;
+                border: none;
+                background-color: #d3cff1;
+                cursor: pointer;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                color: white;
+                text-decoration: none;
+            }
+
+            .tab-bar a.active {
+                background-color: #5ca1ec;
+            }
+            </style>
 
 
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.26.0/dist/apexcharts.min.js"></script>
+</head>
+<body>
     <div class="tab-bar" style="top: 20px; bottom:20px;">
-        <a href="thongke_doanhthu.php" class="fix tab-button active">Thông báo</a>
+        <a href="thongke_doanhthu.php" class="fix tab-button active">Doanh thu</a>
         <a href="tk_lop.php" class="tab-button">Lớp và gói tập</a>
         <a href="tk_nuoc.php" class="tab-button">Nước và thực phẩm</a>
-        <a href="tk_do_tuoi.php" class="tab-button">Độ tuổi hội viên</a>
+        <a href="tk_do_tuoi.php" class="tab-button ">Độ tuổi hội viên</a>
     </div> 
 
-    <div class="tab-content">
-        <div class="tab-pane active-fix">
+    <div class="tk_date" >
+        <form method="post" action="" style="font-size: 20px;" >
+                Từ ngày: <input type="date" name="start_date" style="font-size: 15px; border: none; border-radius: 5px; padding: 6px 6px 6px; cursor: pointer; background: #9cc7f1">
+                Đến ngày: <input type="date" name="end_date" style="font-size: 15px; border: none; border-radius: 5px; padding: 6px 6px 6px; cursor: pointer; background: #9cc7f1">
+                <input type="submit" name="submit" value="Hiển thị" style="font-size: 17px; border: none; border-radius: 5px; background-color: #57a3ee; padding: 6px 19px 6px; cursor: pointer;" >
+        </form>
+    </div> 
 
-          
-
-        <div class="chart-container" style="left:50px; top:50px; position: relative; height:10%; width:80%">
-            <canvas id="myChart"></canvas>
-        </div>
-
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script>
-            //Set up block
-            //console.log(<?php //echo json_encode($doanh_thu); ?>)
-
-          const data = {
-        labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4 ', 'Tháng 5' , 'Tháng 6' , 'Tháng 7' , 'Tháng 8' , 'Tháng 9' , 'Tháng 10' , 'Tháng 11' , 'Tháng 12'],
-                    datasets: [{
-                      label: '# of Votes',
-                      data: doanh_thu,
-                      borderWidth: 1
-                    }]
-                  };
-        //config
-        const config = {
-
-            const data = {
-                labels: ['Gym', 'Yoga', 'Aerobic', 'Boxing', 'Swimming'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: doanh_thu,
-                    borderWidth: 1
-                }]
-            };
-
-            //config
-            const config = {
-
-                type: 'line',
-                data,
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-
-            };
-            //render
-            const myChart = new Chart(
-                document.getElementById('myChart'),
-                config
-            );
-            </script>
-
-        </div>
-        <div class=" tab-pane " style="top 20px">
-
-            <?php
-              //include "tk_do_tuoi.php";
-              ?>
-        </div>
+    <div class="tkdt_hien_thi">
+        <div id="chart"></div>
     </div>
 
+    <script>
+        var chartData = <?php echo json_encode($chartData); ?>;
+        var options = {
+            series: [{
+                name: 'Doanh thu',
+                data: chartData.data
+            }],
+            chart: {
+                type: 'line',
+                height: '90%',
+                width: '90%',
+                toolbar: {
+                    show: false
+                }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    dataLabels: {
+                        position: 'top',
+                    },
+                    colors: {
+                        ranges: [
+                            { from: 0, to: 499999, color: '#4472C8' },
+                            { from: 500000, to: 999999, color: '#4472C8' },
+                            { from: 1000000, to: 1999999, color: '#4472C8' },
+                            { from: 2000000, to: 4999999, color: '#4472C8' },
+                            { from: 5000000, to: 9999999, color: '#4472C8' },
+                            { from: 10000000, to: Infinity, color: '#4472C8' }
+                        ]
+                    }
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                formatter: function (val) {
+                    if (val >= 1000000) {
+                        return (val / 1000000).toFixed(1) + 'tr';
+                    } else if (val >= 1000) {
+                        return (val / 1000).toFixed(1) + 'k';
+                    } else {
+                        return val;
+                    }
+                },
+                offsetY: -20,
+                style: {
+                    fontSize: '14px',
+                    colors: ["#304758"]
+                }
+            },
+            yaxis: {
+                title: {
+                    text: 'Doanh thu',
+                    offsetX: 0,
+                    offsetY: -10,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'bold',
+                        fontFamily: 'Arial',
+                        color: '#333'
+                    }
+                }
+            },
+            xaxis: {
+                categories: chartData.ageCategories,
+                title: {
+                    text: 'Độ tuổi',
+                    offsetX: 10,
+                    offsetY: 0,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'bold'
+                    }
+                },
+                labels: {
+                    style: {
+                        fontSize: '14px'
+                    }
+                }
+            }
+        };
 
-
-
-
-
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
 </body>
-
 </html>
-
-<?php 
-    // }
-    // else{
-    //     header("Location: ../views_ktc/dang_nhap.php");
-    // }
-?>
-
-
-<script>
-const tabButtons = document.querySelectorAll('.tab-button');
-const tabPanes = document.querySelectorAll('.tab-pane');
-
-tabButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        tabButtons.forEach(button => button.classList.remove('active-fix'));
-        tabPanes.forEach(pane => pane.classList.remove('active-fix'));
-
-        button.classList.add('active-fix');
-        tabPanes[index].classList.add('active-fix');
-    });
-});
-</script>
-
-<?php 
-    }
-    else{
-        header("Location: dang_nhap.php");
-    }
-?>

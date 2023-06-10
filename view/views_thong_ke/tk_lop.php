@@ -119,7 +119,7 @@ $mysqli->close();
 </head>
 <body>
     <div class="tab-bar" style="top: 20px; bottom:20px;">
-        <a href="thongke_doanhthu.php" class="fix tab-button">Thông báo</a>
+        <a href="thongke_doanhthu.php" class="fix tab-button">Doanh thu</a>
         <a href="tk_lop.php" class="tab-button active">Lớp và gói tập</a>
         <a href="tk_nuoc.php" class="tab-button">Nước và thực phẩm</a>
         <a href="tk_do_tuoi.php" class="tab-button">Độ tuổi hội viên</a>

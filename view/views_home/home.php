@@ -3,7 +3,7 @@ include_once "header.php";
 ?>
 <?php 
     // Start the session
-    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" || $_SESSION['chuc_vu']=="Hội viên")
     {
 ?>
 <?php
@@ -38,19 +38,19 @@ while($row = mysqli_fetch_array($query))
 <body>
 
     <div class="card card--info">
-    <img src="../assets/img/avatar.png" alt="">
+        <img src="../assets/img/avatar.png" alt="">
         <table class="info--text">
-            <tr class ="a">
+            <tr class="a">
                 <th>Chức vụ: <?php echo  $_SESSION['chuc_vu']?> </th>
-            
-            <tr class ="a">
+
+            <tr class="a">
                 <th>Họ tên: <?php echo  $_SESSION['name']?> </th>
             </tr>
-            <tr class ="a">
-                <th>Tài khoản:  <?php echo  $_SESSION['user']?> </th>
+            <tr class="a">
+                <th>Tài khoản: <?php echo  $_SESSION['user']?> </th>
             </tr>
-            <tr class ="a">
-                <th>Mật khẩu:  <?php echo  $_SESSION['pass']?>  </th>
+            <tr class="a">
+                <th>Mật khẩu: <?php echo  $_SESSION['pass']?> </th>
             </tr>
 
         </table>
@@ -60,36 +60,36 @@ while($row = mysqli_fetch_array($query))
     </div>
     <script src="../assets/js/js_notice/InfoUpdate.js"></script>
     <div class=" card card--notice">
-        <div >
-        <h1> Thông báo </h1>
+        <div>
+            <h1> Thông báo </h1>
         </div>
         <br>
         <div class="notice__text">
-        <?php
+            <?php
             include_once "../../controller/connection.php";
         ?>
 
-        <?php
+            <?php
             $sql = "SELECT notice FROM tbl_notice WHERE status=1 ORDER BY addAt";
             $result = $mysqli->query($sql);
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
         ?>
-                <tr>
+            <tr>
                 <td><?php echo "- " . $row["notice"]; ?></td>
                 <td style="text-align: right;">
-                
+
                 </td>
                 <?php echo "<br>"; ?>
-                </tr>           
-        <?php
+            </tr>
+            <?php
 
             }
           } else {
             echo "0 results";
           }
-        ?>    
+        ?>
 
 
             <?php
@@ -109,4 +109,3 @@ while($row = mysqli_fetch_array($query))
 </body>
 
 </html>
-
