@@ -28,6 +28,6 @@ if (
     $mysqli->close();
     }
     //điều hướng trang đến hoivien.php để refresh
-    header("Location: ../../view/hoivien.php");
+    header("Location: ../../view/views_hoi_vien/hoivien.php");
     exit();
 ?>

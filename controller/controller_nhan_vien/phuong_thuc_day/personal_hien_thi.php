@@ -4,7 +4,7 @@
 ?>
 
 <!-- Hien thi bang -->
-<li class="personal_icon_back"><a class="personal-abc" href="nhanvien.php"><i class="fa-solid fa-arrow-left"></i></a></li>
+<li class="personal_icon_back"><a class="personal-abc" href="/da_web_nc/view/views_nhan_vien/nhan_vien/nhanvien.php"><i class="fa-solid fa-arrow-left"></i></a></li>
 <div class = "personal_div-hienthi">
     <div class = "personal_div-hienthi1">
         <table >

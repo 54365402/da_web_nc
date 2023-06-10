@@ -33,7 +33,7 @@
         };
     
         // Chỉ định URL và phương thức HTTP
-        var url = "../controller/controller_nhan_vien/phuong_thuc_day/lop_delete.php";
+        var url = "/da_web_nc/controller/controller_nhan_vien/phuong_thuc_day/lop_delete.php";
         var method = "POST";
     
         // Chỉ định các tham số để gửi dữ liệu
@@ -48,7 +48,7 @@
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(lopID);
           // Refresh lại trang
-          location.reload(true)
+          window.location.href = "/da_web_nc/view/views_nhan_vien/nv_ptd/lop.php";
         }
         }
         var lopUpdate = $('.js-sua');
@@ -79,13 +79,13 @@
             var lop_doanh_thu = "doanh_thu=" + cell_doanh_thu;
 
        
-          url = "../controller/controller_nhan_vien/phuong_thuc_day/lop_update.php" 
+          url = "/da_web_nc/controller/controller_nhan_vien/phuong_thuc_day/lop_update.php" 
           if(confirm("Bạn có chắc muốn sửa ID "+cellID+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(lopID+"&"+lop_types_room+"&"+lop_ten_lop+"&"+lop_packages+"&"+lop_thoi_luong+"&"+lop_ngay_hoat_dong+"&"+lop_so_luong_hv+"&"+lop_name+"&"+lop_id_nv+"&"+lop_doanh_thu);
-          location.reload(true)
+          window.location.href = "/da_web_nc/view/views_nhan_vien/nv_ptd/lop.php";
           }
           }
         }

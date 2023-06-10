@@ -4,7 +4,7 @@
 
 .main-hoivien {
     display: flex;
-    padding: 30px 50px 0 50px;
+    padding: 30px 15px 0 15px;
     height: 560px;
 }
 /* animation */
@@ -96,7 +96,7 @@
     margin-left: 30px;
 }
 .hoivien__table-view {
-    width: 100%
+    width: 100%;
 }
 
 .hoivien__table-view--title {
@@ -118,18 +118,6 @@ div tr.hoivien__table-view--title {
 
 .hoivien__table-view--data:nth-of-type(even) {
     background-color: #CFD5EA; 
-}
-.hoivien__table-view th:nth-of-type(1) ,
-.hoivien__table-health-view th:nth-of-type(1) {
-    width: 80px; 
-}
-
-.hoivien__table-view td:nth-of-type(2) {
-    width: 14%; 
-}
-
-.hoivien__table-view td:nth-of-type(7) {
-    width: 15%; 
 }
 /* btn them sua xoa */
 .hoivien__AUD {

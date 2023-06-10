@@ -6,13 +6,9 @@
 include "header.php";
 ?>
 <?php 
-    // // Start the session
-    // if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    // {
-?>
-
-<?php
-include_once "../../controller/connection.php";
+    //Start the session
+    if($_SESSION['login'])
+    {
 ?>
 <?php
     //require "../../controller/controller_notice/PriceDisplay.php"
@@ -31,7 +27,7 @@ include_once "../../controller/connection.php";
 
 <body>
 
-<?php
+    <?php
          $sql = "SELECT * FROM tbl_lop";
          $result = $mysqli->query($sql);
          if ($result->num_rows > 0) {
@@ -44,19 +40,18 @@ include_once "../../controller/connection.php";
           } else {
             echo "0 results";
           }
-        ?>    
-<?php
+        ?>
+    <?php
 $mysqli -> close();
 ?>
 
 
     <div class="tab-bar" style="top: 20px; bottom:20px;">
-        <button class="fix tab-button active-fix">Doanh thu</button>
-        <button class="tab-button" >Nhườn</button>
-        <button class="tab-button">Nước và thực phẩm</button>
-        <button class="tab-button">Độ tuổi hội viên</button>
-
-    </div>
+        <a href="thongke_doanhthu.php" class="fix tab-button active">Thông báo</a>
+        <a href="tk_lop.php" class="tab-button">Lớp và gói tập</a>
+        <a href="tk_nuoc.php" class="tab-button">Nước và thực phẩm</a>
+        <a href="tk_do_tuoi.php" class="tab-button">Độ tuổi hội viên</a>
+    </div> 
 
     <div class="tab-content">
         <div class="tab-pane active-fix">
@@ -67,12 +62,10 @@ $mysqli -> close();
             <canvas id="myChart"></canvas>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-        //Set up block
-          //console.log(<?php //echo json_encode($doanh_thu); ?>)
-
-          const doanh_thu = <?php echo json_encode($doanh_thu); ?>;
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            //Set up block
+            //console.log(<?php //echo json_encode($doanh_thu); ?>)
 
           const data = {
         labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4 ', 'Tháng 5' , 'Tháng 6' , 'Tháng 7' , 'Tháng 8' , 'Tháng 9' , 'Tháng 10' , 'Tháng 11' , 'Tháng 12'],
@@ -85,29 +78,50 @@ $mysqli -> close();
         //config
         const config = {
 
-          type: 'line',
-                  data,
-                  options: {
-                    scales: {
-                      y: {
-                        beginAtZero: true
-                      }
-                    }
-                  }
+            const data = {
+                labels: ['Gym', 'Yoga', 'Aerobic', 'Boxing', 'Swimming'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: doanh_thu,
+                    borderWidth: 1
+                }]
+            };
 
-        };
-        //render
-              const myChart = new Chart(
+            //config
+            const config = {
+
+                type: 'line',
+                data,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+
+            };
+            //render
+            const myChart = new Chart(
                 document.getElementById('myChart'),
                 config
-              );
-                </script>
+            );
+            </script>
 
-            </div>
-            <div class=" tab-pane ">
-              
-            </div>
         </div>
+        <div class=" tab-pane " style="top 20px">
+
+            <?php
+              //include "tk_do_tuoi.php";
+              ?>
+        </div>
+    </div>
+
+
+
+
+
+
 </body>
 
 </html>
@@ -135,5 +149,9 @@ tabButtons.forEach((button, index) => {
 });
 </script>
 
-
-
+<?php 
+    }
+    else{
+        header("Location: dang_nhap.php");
+    }
+?>

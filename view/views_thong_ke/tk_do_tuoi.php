@@ -4,8 +4,8 @@ include_once "../../controller/connection.php";
 
 function handleFormSubmission($connection)
 {
-    $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '';
-    $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '';
+    $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '0001-01-01';
+    $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '9999-12-31';
 
 $sql = "SELECT
     CASE
@@ -39,9 +39,9 @@ while ($row = mysqli_fetch_assoc($query)) {
 }
 
 return [
-    'data' => $data,
-    'ageCategories' => $ageCategories
-];
+        'data' => $data,
+        'ageCategories' => $ageCategories
+        ];
 }
 
 // Handle form submission if it exists
@@ -58,14 +58,17 @@ $mysqli->close();
 <!DOCTYPE html>
 <html>
 <head>
+    
         <style>
             .tkdt_hien_thi {
+                background: #7cc6f924;
+                margin-top: 50px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                height: 80vh;
+                height: 67vh;
             }
 
             .tkdt_hien_thi #chart {
@@ -74,111 +77,144 @@ $mysqli->close();
 
             .tk_date {
                 position: fixed;
-                top: 200px;
+                top: 210px;
                 right: 20px;
                 display: flex;
                 align-items: center;
-                justify-content: flex-end;
             }
-        </style>
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.26.0/dist/apexcharts.min.js"></script>
+        
+            .tab-bar {
+                position: relative;
+                top: 20px;
+                bottom: 20px;
+            }
+
+            .tab-bar a {
+                text-align: center;
+                display: inline-block;
+                width: 16%;
+                padding: 12px;
+                border: none;
+                background-color: #d3cff1;
+                cursor: pointer;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                color: white;
+                text-decoration: none;
+            }
+
+            .tab-bar a.active {
+                background-color: #5ca1ec;
+            }
+            </style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.26.0/dist/apexcharts.min.js"></script>
 </head>
 <body>
-    <div clas="tk_date">
-        <form method="post" action="" style="font-size: 20px; " >
+    <div class="tab-bar" style="top: 20px; bottom:20px;">
+        <a href="thongke_doanhthu.php" class="fix tab-button">Thông báo</a>
+        <a href="tk_lop.php" class="tab-button">Lớp và gói tập</a>
+        <a href="tk_nuoc.php" class="tab-button">Nước và thực phẩm</a>
+        <a href="tk_do_tuoi.php" class="tab-button active">Độ tuổi hội viên</a>
+    </div> 
+
+    <div class="tk_date" >
+        <form method="post" action="" style="font-size: 20px;" >
                 Từ ngày: <input type="date" name="start_date" style="font-size: 15px; border: none; border-radius: 5px; padding: 6px 6px 6px; cursor: pointer; background: #9cc7f1">
                 Đến ngày: <input type="date" name="end_date" style="font-size: 15px; border: none; border-radius: 5px; padding: 6px 6px 6px; cursor: pointer; background: #9cc7f1">
                 <input type="submit" name="submit" value="Hiển thị" style="font-size: 17px; border: none; border-radius: 5px; background-color: #57a3ee; padding: 6px 19px 6px; cursor: pointer;" >
         </form>
-    </div>    
-<div class="tkdt_hien_thi">
-    <div id="chart"></div>
-</div>
+    </div> 
 
-<script>
-    var chartData = <?php echo json_encode($chartData); ?>;
-    var options = {
-        series: [{
-            name: 'Doanh thu',
-            data: chartData.data
-        }],
-        chart: {
-            type: 'bar',
-            height: '90%',
-            width: '90%',
-            toolbar: {
-                show: false
-            }
-        },
-        plotOptions: {
-            bar: {
-                horizontal: false,
-                dataLabels: {
-                    position: 'top',
+    <div class="tkdt_hien_thi">
+        <div id="chart"></div>
+    </div>
+
+    <script>
+        var chartData = <?php echo json_encode($chartData); ?>;
+        var options = {
+            series: [{
+                name: 'Doanh thu',
+                data: chartData.data
+            }],
+            chart: {
+                type: 'bar',
+                height: '90%',
+                width: '90%',
+                toolbar: {
+                    show: false
+                }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    dataLabels: {
+                        position: 'top',
+                    },
+                    colors: {
+                        ranges: [
+                            { from: 0, to: 499999, color: '#4472C8' },
+                            { from: 500000, to: 999999, color: '#4472C8' },
+                            { from: 1000000, to: 1999999, color: '#4472C8' },
+                            { from: 2000000, to: 4999999, color: '#4472C8' },
+                            { from: 5000000, to: 9999999, color: '#4472C8' },
+                            { from: 10000000, to: Infinity, color: '#4472C8' }
+                        ]
+                    }
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                formatter: function (val) {
+                    if (val >= 1000000) {
+                        return (val / 1000000).toFixed(1) + 'tr';
+                    } else if (val >= 1000) {
+                        return (val / 1000).toFixed(1) + 'k';
+                    } else {
+                        return val;
+                    }
                 },
-                colors: {
-                    ranges: [
-                        { from: 0, to: 49999, color: '#4472C8' },
-                        { from: 50000, to: 99999, color: '#4472C8' },
-                        { from: 100000, to: 199999, color: '#4472C8' },
-                        { from: 200000, to: 499999, color: '#4472C8' },
-                        { from: 500000, to: 999999, color: '#4472C8' },
-                        { from: 1000000, to: Infinity, color: '#4472C8' }
-                    ]
-                }
-            }
-        },
-        dataLabels: {
-            enabled: true,
-            formatter: function (val) {
-                if (val >= 1000000) {
-                    return (val / 1000000).toFixed(1) + 'tr';
-                } else if (val >= 1000) {
-                    return (val / 1000).toFixed(1) + 'k';
-                } else {
-                    return val;
-                }
-            },
-            offsetY: -20,
-            style: {
-                fontSize: '14px',
-                colors: ["#304758"]
-            }
-        },
-        yaxis: {
-            title: {
-                text: 'Doanh thu',
-                offsetX: 0,
-                offsetY: -10,
+                offsetY: -20,
                 style: {
                     fontSize: '14px',
-                    fontWeight: 'bold',
-                    fontFamily: 'Arial',
-                    color: '#333'
-                }
-            }
-        },
-        xaxis: {
-            categories: chartData.ageCategories,
-            title: {
-                text: 'Độ tuổi',
-                offsetX: 10,
-                offsetY: 0,
-                style: {
-                    fontSize: '14px',
-                    fontWeight: 'bold'
+                    colors: ["#304758"]
                 }
             },
-            labels: {
-                style: {
-                    fontSize: '14px'
+            yaxis: {
+                title: {
+                    text: 'Doanh thu',
+                    offsetX: 0,
+                    offsetY: -10,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'bold',
+                        fontFamily: 'Arial',
+                        color: '#333'
+                    }
+                }
+            },
+            xaxis: {
+                categories: chartData.ageCategories,
+                title: {
+                    text: 'Độ tuổi',
+                    offsetX: 10,
+                    offsetY: 0,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'bold'
+                    }
+                },
+                labels: {
+                    style: {
+                        fontSize: '14px'
+                    }
                 }
             }
-        }
-    };
+        };
 
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-</script>
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
 </body>
 </html>

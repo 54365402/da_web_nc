@@ -28,6 +28,10 @@ $query1 = mysqli_query($mysqli,$sql1);
             <div class="col-md-9">
                 <div id="calendar"></div>
             </div>
+            <?php
+                    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" )
+                {
+                    ?>
             <div class="col-md-3">
                 <div class="cardt rounded-0 shadow">
                     <div class="card-header bg-gradient bg-primary text-light">
@@ -35,7 +39,7 @@ $query1 = mysqli_query($mysqli,$sql1);
                     </div>
                     <div class="card-body">
                         <div class="container-fluid">
-                            <form action="../controller/controller_nhan_vien/lich_di_lam/lich_lam_save.php"
+                            <form action="../../../controller/controller_nhan_vien/lich_di_lam/lich_lam_save.php"
                                 method="post" id="schedule-form">
                                 <input type="hidden" name="id" value="">
                                 <div class="form-group mb-2">
@@ -81,8 +85,13 @@ $query1 = mysqli_query($mysqli,$sql1);
                     </div>
                 </div>
             </div>
+            <?php 
+            }
+                else{}
+                ?>
         </div>
     </div>
+
     <!-- Event Details Modal -->
     <div class="modal fade" tabindex="-1" data-bs-backdrop="static" id="event-details-modal">
         <div class="modal-dialog modal-dialog-centered">
@@ -103,6 +112,10 @@ $query1 = mysqli_query($mysqli,$sql1);
                         </dl>
                     </div>
                 </div>
+                <?php
+                    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" )
+                {
+                    ?>
                 <div class="modal-footer rounded-0">
                     <div class="text-end">
                         <button type="button" class="btn btn-primary btn-sm rounded-0" id="edit" data-id="">Sửa</button>
@@ -112,6 +125,10 @@ $query1 = mysqli_query($mysqli,$sql1);
                             data-bs-dismiss="modal">Đóng</button>
                     </div>
                 </div>
+                <?php 
+                    }
+                else{}
+                ?>
             </div>
         </div>
     </div>
@@ -132,6 +149,3 @@ if(isset($mysqli)) $mysqli->close();
 <script>
 var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
-<script src="../../assets/js/js_nhan_vien/js_lich_di_lam/lich_di_lam_AUD.js"></script>
-
-</html>

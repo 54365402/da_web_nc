@@ -1,4 +1,14 @@
 
+<?php 
+    include_once "../../../controller/connection.php";
+    $sqlNv = "SELECT * FROM tbl_nhan_vien";
+    $sqlBl = "SELECT * FROM luong";
+
+    $queryNv = mysqli_query($mysqli,$sqlNv);
+    $queryBl = mysqli_query($mysqli,$sqlBl);
+
+?> 
+
 <div class='bl__modal--popup '>
     <div class='bl__modal__div--popup'>
         <i><b><u class='bl__modal__div--u'>Thêm lương</u></b></i>
@@ -7,7 +17,34 @@
         <table class='bl__table--addform'>
             <tr>
                 <td><label for="fname">IDNV:</label></td>
-                <td><input class='bl__table--add_input' type="text"  name="bl__table--add_idnv" placeholder="IDNV....">
+                <td>
+                    <!-- <input class='bl__table--add_input' type="text"  name="bl__table--add_idnv" placeholder="IDNV...."> -->
+                    <select>
+                        <option value="">-- Mã nhân viên --</option>
+                    <?php
+                    while($rowsNv = mysqli_fetch_array($queryNv)) 
+                    {
+                        // Đặt con trỏ về lại đầu bảng lương
+                        mysqli_data_seek($queryBl,0);
+                        // Dùng để đếm xem có thằng nào giống không
+                        $count = 0;
+                        while($rowsBl = mysqli_fetch_array($queryBl))
+                        {
+                            if($rowsNv['id_nv']==$rowsBl['id_nv'])
+                            {
+                                $count++;
+                            }
+                        }
+                        // Nếu count == 0 => không tồn tại id này ở bảng lương
+                        if(!$count)
+                        {
+                                ?>
+                                <option value=""><?php echo $rowsNv['id_nv']?></option>
+                                <?php
+                        }
+                    }
+                    ?>
+                    </select>
                     <!-- <button class='' type="Submit"  onclick="" >Thêm</button> -->
                 </td>
             </tr>
