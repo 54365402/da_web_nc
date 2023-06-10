@@ -52,11 +52,11 @@
         }
         ?>
         
-    <script src="../assets/js/js_the/the_add.js"></script>
+    <script src = "/da_web_nc/view/assets/js/js_the/the_add.js"></script>
 
-    <script src = "../assets/js/js_the/the_delete.js" ></script>
+    <script src = "/da_web_nc/view/assets/js/js_the/the_delete.js" ></script>
 
-    <script src = "../assets/js/js_the/the_sua.js" ></script>
+    <script src = "/da_web_nc/view/assets/js/js_the/the_sua.js" ></script>
     </body>
     
 </html>

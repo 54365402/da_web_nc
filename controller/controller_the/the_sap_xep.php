@@ -1,7 +1,6 @@
 <?php
     // Kết nối CSDL
     include_once "../../controller/connection.php";
-    include_once "the_hien_thi.php";
 
     // Lấy giá trị sắp xếp từ yêu cầu AJAX
     $sort = isset($_GET['sort']) ? $_GET['sort'] : '';

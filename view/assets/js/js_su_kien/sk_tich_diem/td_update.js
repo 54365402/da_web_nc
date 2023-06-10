@@ -2,7 +2,7 @@
     const $$ = document.querySelectorAll.bind(document);
      
     // Lấy tất cả các hàng trong bảng
-    var rows = $$('.snhv__table_row--hienthi');
+    var rows = $$('.td__table_row--hienthi');
  
     // Biến lưu trữ trạng thái hiện tại của bảng
     var currentRow = null;
@@ -37,8 +37,8 @@
         // Chỉ định các tham số để gửi dữ liệu
        
         
-        var snhvUpdate = $('.js-sua');
-        snhvUpdate.onclick = function(e){
+        var tdUpdate = $('.js-sua');
+        tdUpdate.onclick = function(e){
         currentRow.setAttribute('contenteditable','');
         alert('Mời bạn tiến hành chỉnh sửa!');
         currentRow.onkeyup=function(e){
@@ -51,19 +51,19 @@
             var cellid_gift = cells[4].innerHTML;
             var celltrang_thai = cells[5].innerHTML;
     
-            var snhvid_hv = "snhvid_hv=" + cellid_hv;
-            var snhvname_hv = "snhvname_hv=" + cellname_hv;
-            var snhvdiem_tich_luy = "snhvdiem_tich_luy=" + celldiem_tich_luy;
-            var snhvngay_sinh = "snhvlngay_sinh=" + celllngay_sinh;
-            var snhvid_gift = "snhvid_gift=" + cellid_gift;
-            var snhvtrang_thai = "snhvtrang_thai=" + celltrang_thai;
+            var tdid_hv = "tdid_hv=" + cellid_hv;
+            var tdname_hv = "tdname_hv=" + cellname_hv;
+            var tddiem_tich_luy = "tddiem_tich_luy=" + celldiem_tich_luy;
+            var tdngay_sinh = "tdlngay_sinh=" + celllngay_sinh;
+            var tdid_gift = "tdid_gift=" + cellid_gift;
+            var tdtrang_thai = "tdtrang_thai=" + celltrang_thai;
        
-          url = "../../controller/controller_nhan_vien/bang_luong/snhv_update.php";
+          url = "../../controller/controller_nhan_vien/bang_luong/td_update.php";
           if(confirm("Bạn có chắc muốn sửa ID "+cellid_hv+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          xhttp.send(snhvid_hv+"&"+snhvname_hv+"&"+snhvdiem_tich_luy+"&"+snhvngay_sinh+"&"+snhvid_gift+"&"+snhvtrang_thai);
+          xhttp.send(tdid_hv+"&"+tdname_hv+"&"+tddiem_tich_luy+"&"+tdngay_sinh+"&"+tdid_gift+"&"+tdtrang_thai);
           location.reload(true);
           }
           }

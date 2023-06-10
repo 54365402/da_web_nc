@@ -4,7 +4,7 @@
     var buttonSuaGift = $$(".button_sua_gift");
     for(const value of buttonSuaGift){
         value.onclick = function(e){
-            const allowUpdateGift = $$(".snhv__div__input--gift");
+            const allowUpdateGift = $$(".td__div__input--gift");
             alert("Mời bạn tiến hành chỉnh sửa!");
             for(var i=0; i<allowUpdateGift.length;i++)
             {
@@ -14,9 +14,9 @@
                 console.log(e.which)
                 if(e.which===27)
                 {
-                    const buttonSuaGiftName = $(".snhv__div__input--gift--name"+e.target.value);
-                    const buttonSuaGiftDiem = $(".snhv__div__input--gift--diem"+e.target.value);
-                    const buttonSuaGiftSoLuong = $(".snhv__div__input--gift--so_luong"+e.target.value);
+                    const buttonSuaGiftName = $(".td__div__input--gift--name"+e.target.value);
+                    const buttonSuaGiftDiem = $(".td__div__input--gift--diem"+e.target.value);
+                    const buttonSuaGiftSoLuong = $(".td__div__input--gift--so_luong"+e.target.value);
                     var base_name_gift = buttonSuaGiftName.value;
                     var base_diem_gift = buttonSuaGiftDiem.value;
                     var base_so_luong_gift = buttonSuaGiftSoLuong.value;
@@ -35,7 +35,7 @@
                     };
                 
                     var method = "POST";
-                    var url = "../../controller/controller_su_kien/sinh_nhat_hoi_vien/snhv_update.php";
+                    var url = "../../controller/controller_su_kien/sk_tich_diem/td_update.php";
                      
                     if(confirm("Bạn có chắc muốn sửa ID "+base_id_gift+" không?"))
                     {

@@ -1,6 +1,6 @@
 {
-    const chooseFile = document.querySelector(".snhv__div__div_quatang__form--chooseimg");
-    const showImg = document.querySelector(".snhv__div__div_quatang__form--showimg");
+    const chooseFile = document.querySelector(".td__div__div_quatang__form--chooseimg");
+    const showImg = document.querySelector(".td__div__div_quatang__form--showimg");
 
     function handleFileInputChange(){
         // Kiếm tra file không rỗng và có ít nhất một tệp
