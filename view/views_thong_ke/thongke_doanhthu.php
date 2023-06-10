@@ -63,7 +63,7 @@ $mysqli -> close();
 
           
 
-        <div class="chart-container" style="left:50px; top:50px; position: relative; height:60vh; width:80%">
+        <div class="chart-container" style="left:50px; top:50px; position: relative; height:10%; width:80%">
             <canvas id="myChart"></canvas>
         </div>
 
@@ -75,7 +75,7 @@ $mysqli -> close();
           const doanh_thu = <?php echo json_encode($doanh_thu); ?>;
 
           const data = {
-        labels: ['Gym', 'Yoga', 'Aerobic', 'Boxing', 'Swimming'],
+        labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4 ', 'Tháng 5' , 'Tháng 6' , 'Tháng 7' , 'Tháng 8' , 'Tháng 9' , 'Tháng 10' , 'Tháng 11' , 'Tháng 12'],
                     datasets: [{
                       label: '# of Votes',
                       data: doanh_thu,

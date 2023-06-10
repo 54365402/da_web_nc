@@ -2,7 +2,7 @@
     // Start the session
     session_start();   
 
-    include_once "../../../controller/connection.php";
+    include_once "../../controller/connection.php";
     
     $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
     $query = mysqli_query($mysqli,$sql);
