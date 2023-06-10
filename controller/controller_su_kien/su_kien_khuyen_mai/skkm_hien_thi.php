@@ -196,6 +196,11 @@ $query1 = mysqli_query($mysqli,$sql);
         <div class="wrapper">
             <div id="calendar"></div>
         </div>
+        <?php 
+    // Start the session
+        if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    {
+        ?>
         <div class="wrapper-2">
             <div class="sk__search-input">
                 <i class="fa-sharp fa-solid fa-magnifying-glass sk__search-input--icon"></i>
@@ -230,4 +235,7 @@ $query1 = mysqli_query($mysqli,$sql);
                 </form>
             </div>
         </div>
+        <?php 
+    }
+?>
 </body>
