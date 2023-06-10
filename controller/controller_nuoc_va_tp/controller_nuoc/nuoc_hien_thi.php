@@ -69,7 +69,3 @@
     </div>
 
 </div>
-
-<?php 
-$mysqli -> close();
-?>

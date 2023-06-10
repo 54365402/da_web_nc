@@ -2,7 +2,7 @@
 include_once "header.php";
 ?>
 <?php 
-    // // Start the session
+    // Start the session
     if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
     {
 ?>

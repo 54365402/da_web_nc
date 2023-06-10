@@ -266,3 +266,23 @@ ul
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
 }
+
+.nhon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60%;
+    height: 80%;
+    background-color: lightblue;
+    border-radius: 30px;
+    border: 5px solid #2F528F;
+}
+
+.nhon2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

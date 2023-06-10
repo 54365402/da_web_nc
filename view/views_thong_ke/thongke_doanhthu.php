@@ -7,8 +7,8 @@ include "header.php";
 ?>
 <?php 
     //Start the session
-        // if($_SESSION['login'])
-        // {
+    if($_SESSION['login'])
+    {
 ?>
 <?php
     //require "../../controller/controller_notice/PriceDisplay.php"
@@ -56,18 +56,27 @@ $mysqli -> close();
     <div class="tab-content">
         <div class="tab-pane active-fix">
 
+          
 
-
-            <div class="chart-container" style="left:50px; top:50px; position: relative; height:60vh; width:80%">
-                <canvas id="myChart"></canvas>
-            </div>
+        <div class="chart-container" style="left:50px; top:50px; position: relative; height:10%; width:80%">
+            <canvas id="myChart"></canvas>
+        </div>
 
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
             //Set up block
             //console.log(<?php //echo json_encode($doanh_thu); ?>)
 
-            const doanh_thu = <?php echo json_encode($doanh_thu); ?>;
+          const data = {
+        labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4 ', 'Tháng 5' , 'Tháng 6' , 'Tháng 7' , 'Tháng 8' , 'Tháng 9' , 'Tháng 10' , 'Tháng 11' , 'Tháng 12'],
+                    datasets: [{
+                      label: '# of Votes',
+                      data: doanh_thu,
+                      borderWidth: 1
+                    }]
+                  };
+        //config
+        const config = {
 
             const data = {
                 labels: ['Gym', 'Yoga', 'Aerobic', 'Boxing', 'Swimming'],
@@ -141,8 +150,8 @@ tabButtons.forEach((button, index) => {
 </script>
 
 <?php 
-    // }
-    // else{
-    //     header("Location: dang_nhap.php");
-    // }
+    }
+    else{
+        header("Location: dang_nhap.php");
+    }
 ?>

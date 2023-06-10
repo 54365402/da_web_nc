@@ -21,10 +21,9 @@ if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" )
                         placeholder="Tìm Kiếm">
                 </form>
             </div>
-        <form action="NhanVienOption.php" method="post">
-            <select class="nhanvien__search-btn">
-                <option value="All">All</option>
-                <option value="Gym">Gym</option>
+        <form action="../../../controller/controller_nhan_vien/NhanVienOption.php" method="get">
+            <select class="nhanvien__search-btn" name="nhanvien__option">
+                <option value="Gym" type="submit">Gym</option>
                 <option value="Yoga">Yoga</option>
                 <option value="Aerobic">Aerobic</option>
                 <option value="Boxing">Boxing</option>

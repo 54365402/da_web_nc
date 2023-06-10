@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../../assets/css/nhanvien.css">
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+
 <?php
     include_once "../../../controller/connection.php";
     $nhanvienID = $_REQUEST['id_nv'];
@@ -6,11 +9,11 @@
     while($rows = mysqli_fetch_array($query)){
 ?>
 
-<div class="nhanvien__modal-popup">
-    <div class="nhanvien__modal-popup-overlay">
+<div class="nhon">
+    <div class="">
         <h4 class="nhanvien__modal-popup-header">Sửa thông tin nhân viên</h4>
-        <form action="../../../controller/controller_nhan_vien/NhanVienUpdate.php?id_nv=<?php echo $nhanvienID?>" method="POST">
-            <table class="nhanvien_addform">
+        <form class="nhon2" action="../../../controller/controller_nhan_vien/NhanVienUpdate.php?id_nv=<?php echo $nhanvienID?>" method="POST">
+            <table class="">
                 <tr>
                     <td><label for="">Họ và tên : </label></td>
                     <td><input type="text" class="nhanvien__table-add-input" name="nhanvien__table-add-ten"
@@ -77,10 +80,11 @@
                 </tr>
                 <tr>
                     <td colspan='2'>
-                        <button class="nhanvien__table-add-btn nhanvien__table-btn-them" type="Submit"
-                            onclick="">Cập nhật</button>
+                        
                         <a href="javascript:history.go(-1)"><button class="nhanvien__table-add-btn nhanvien__table-btn-huy" type="button"
                             onclick="">Hủy</button></a>
+                            <button class="nhanvien__table-add-btn nhanvien__table-btn-them" type="Submit"
+                            onclick="">Cập nhật</button>
                     </td>
                 </tr>
             </table>

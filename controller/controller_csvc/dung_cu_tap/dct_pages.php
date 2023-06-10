@@ -47,12 +47,40 @@
     $listPages = "";
     for ($i=1; $i<=$totalPages; $i++)
     {
-        if($page==$i){
-            $listPages .= '<input class="active dct--page" type="submit" value="'.$i.'" name="page">';
+        // Lấy nút đầu và cuối
+
+        if($i==1 || $i==$totalPages)
+        {
+            $listPages .= '<input style="cursor:pointer;" class="nuoc--page" type="submit" value="'.$i.'" name="page">';  
         }
+
+        // Xử lý các nút còn lại
         else{
-            $listPages .= '<input style="cursor:pointer; class="dct--page" type="submit" value="'.$i.'" name="page">';
+        if($page==$i){
+            $listPages .= '<input class="active nuoc--page" type="submit" value="'.$i.'" name="page">';
         }
+        else
+        {
+            if($page<$i+3){
+                if($page<$i)
+                {
+                    if($page>$i-3)
+                    {
+                        $listPages .= '<input style="cursor:pointer;" class="nuoc--page" type="submit" value="'.$i.'" name="page">';  
+                    }
+                    else{
+                        $listPages .= '<input style="cursor:pointer;" class="nuoc--page" type="button" value="..." name="page">';
+                    }
+                }
+                else{
+                    $listPages .= '<input style="cursor:pointer;" class="nuoc--page" type="submit" value="'.$i.'" name="page">';  
+                }
+            }
+            else{
+                $listPages .= '<input style="cursor:pointer;" class="nuoc--page" type="button" value="..." name="page">';
+            }
     }
+    }
+}
 ?>
 
