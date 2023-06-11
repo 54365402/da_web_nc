@@ -1,15 +1,11 @@
 <?php
 include_once "../../../controller/connection.php";
 
-$td_get_data = "";
-
-if (isset($_POST['td__input--search'])) {
-    $td_get_data = $_POST['td__input--search'];
-}
-
 $td_search = "";
 
-if (!empty($td_get_data)) {
+if (isset($_POST['td_chonNgay'])) {
+    $td_get_data = $_POST['td_chonNgay'];
+
     // Kiểm tra xem chuỗi tìm kiếm có phải là một ngày hợp lệ hay không
     if (strtotime($td_get_data) !== false) {
         $td_search .= " WHERE DATE(tbl_qua_tang.time_start) = '$td_get_data'";
