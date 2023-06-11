@@ -117,8 +117,8 @@
 
 <?php
 
-    if(isset($_REQUEST['card_id1'])){
-        $card_id = $_REQUEST['card_id1'];
+    if(isset($_REQUEST['hien_thi'])){
+        $card_id = $_REQUEST['hien_thi'];
     }
     else{
         $card_id = "";
@@ -130,7 +130,7 @@
 <div class = "the_div-hienthi1" > 
 
     <table class="the_table-hienthi1" style="border: 3px solid blue; white-space: nowrap;">        
-          <tr><th colspan = "2" style="font-size: 18px;" ;>Thông tin chi tiết thẻ</th></tr>
+          <tr><th colspan = "2" style="font-size: 18px;">Thông tin chi tiết thẻ</th></tr>
           <tr><tr>
           <tr><td style="padding-right: 30px;">Họ và Tên: </td><td class = the_gach_chan><input class="the_box" type="text_the_name_hv" value="<?php if(isset($rowdb['name_hv'])){echo $rowdb['name_hv'];}?>"  name="input_theten" style="border: none; outline:none;" readonly></td></tr>
           <tr><td>ID hội viên: </td><td class = the_gach_chan><input class="the_box" type="text_the_id_hv" name="input_the_id_hv" value="<?php if(isset($rowdb['id_hv'])){ echo $rowdb['id_hv']; }?>" style="border: none; outline:none; "></td></tr>  

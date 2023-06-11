@@ -51,15 +51,16 @@ for (var i = 0; i < rows.length; i++) {
         xhthe.open(method, url, true);
         xhthe.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhthe.send(card_id);
-        // location.reload(false);
+        window.location.href="http://localhost/da_web_nc/view/views_the/the.php?";
+
       }
      } 
-     var card_id1 = "card_id1=" + cellID;
+    var hien_thi = "hien_thi=" + cellID;
     var url = "the_hien_thi.php";
     var theChiTiet = $('.js-chi_tiet');
     
     theChiTiet.onclick = function(e){
-        window.location.href="http://localhost/da_web_nc/view/views_the/the.php?"+card_id1;
+        window.location.href="http://localhost/da_web_nc/view/views_the/the.php?"+hien_thi;
       
     }
   }
