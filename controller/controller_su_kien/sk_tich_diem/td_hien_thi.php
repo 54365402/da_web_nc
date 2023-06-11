@@ -67,16 +67,16 @@ include "td_pages.php";
         ?>    
     </table>
     <form class="td__form--page" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-    <center>
-        <?php
-    echo $listPages;
-    ?>
+                <center>
+                    <?php
+                echo $listPages;
+                ?>
                     </center>
                 </form>
             </div>
         </div>
         <div class="td__div--hienthi--bocQuaTang">
-            <div class="tddiv--quatang">
+            <div class="td__div--quatang">
                 <?php 
                 $sqlquatang = "Select * from tbl_qua_tang";
                 $queryquatang = mysqli_query($mysqli,$sqlquatang);
@@ -128,58 +128,27 @@ include "td_pages.php";
                 <?php
         }?>
             </div>
-        </div>
-        <!-- <div class="snhv__div--thanhDoc"></div> -->
-        <!-- tạo giao diện nút thêm, sửa, xóa -->
-        <div class='snhv__div--chua_button-all'>
+        </div> 
 
-            <div class='snhv__div--chua_button'>
-                <button class='snhv__div--button js-guiSMS' type="button" onclick="">Gửi SMS <i
-                        class="fa-solid fa-envelope"></i></button>
-                <form class="snhv__form--sendDate" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
-                    method="POST">
+    <div class='td__div--chua_button-all'>
 
-                    <input class='snhv__div--button js-chonNgay' name="snhv_chonNgay" type="date">
-                    <button class="snhv__table--button_guiDate" type="Submit" onclick="">Search</button>
+        <div class='td__div--chua_button'>
+            <div class='td__div--chua_button--sua-gui'><button class='td__div--button js-sua' type="button" onclick="">Sửa</button></div>
+                <form  class = "td__form--sendDate" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 
-
+                        <input class='td__div--button js-chonNgay' name="td_chonNgay" type="date" >
+                        <button class="td__table--button_guiDate" type="Submit"  onclick="" >Search</button>
                 </form>
-            </div>
-
-            <div class='snhv__div--chua_button-gift'>
-                <!-- <div class="snhv__div--search--sort">
-    <form class="snhv__form--search" method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
-        <div class="snhv__form__div--search">
-            <button class='snhv__input--search' type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input class='snhv__input--search' type="text" name="snhv__input--search" placeholder="Search....">
-        </div>
- <div class="td__div--thanhDoc"></div> -->
-            <!-- tạo giao diện nút thêm, sửa, xóa -->
-            <div class='td__div--chua_button-all'>
-
-    <div class='td__div--chua_button'>
-    <div class='td__div--chua_button--sua-gui'>
-        <button class='td__div--button js-sua' type="button" onclick="">Sửa</button></div>
-    <form  class = "td__form--sendDate" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-
-            <input class='td__div--button js-chonNgay' name="td_chonNgay" type="date" >
-               <button class="td__table--button_guiDate" type="Submit"  onclick="" >Search</button>
-                     
-        
-    </form>
-    </div> 
-                <button class='snhv__div--button js-them' type="button" onclick="">Thêm</button>
-
-
-            </div>
-
-        </div>
+        </div> 
+        <div class='td__div--chua_button-gift'><button class='td__div--button js-them' type="button" onclick="">Thêm</button></div>
 
     </div>
+
+    
 
 
     <?php
 $mysqli -> close();
 ?>
-    <script src="../../assets/js/js_su_kien/sinh_nhat_hoi_vien/snhv_gioi_han_gift.js"></script>
-    <script src="../../assets/js/js_su_kien/sinh_nhat_hoi_vien/snhv_sx_gift.js"></script>
+    <script src="../../assets/js/js_su_kien/sk_tich_diem/td_gioi_han_gift.js"></script>
+    <script src="../../assets/js/js_su_kien/sk_tich_diem/td_sx_gift.js"></script>
