@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 30, 2023 at 04:22 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th6 10, 2023 lúc 07:38 PM
+-- Phiên bản máy phục vụ: 10.4.28-MariaDB
+-- Phiên bản PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,50 +18,56 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `doanwebnc`
+-- Cơ sở dữ liệu: `doanwebnc`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_qua_tang`
+-- Cấu trúc bảng cho bảng `tbl_qua_tang`
 --
 
 CREATE TABLE `tbl_qua_tang` (
   `id_gift` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
+  `time_start` date DEFAULT NULL,
   `diem` float NOT NULL,
   `so_luong` int(11) NOT NULL,
   `image` mediumtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_qua_tang`
+-- Đang đổ dữ liệu cho bảng `tbl_qua_tang`
 --
 
-INSERT INTO `tbl_qua_tang` (`id_gift`, `name`, `diem`, `so_luong`, `image`) VALUES
-(15, '2', 5000, 100, '../../../controller/controller_su_kien/sinh_nhat_hoi_vien/upload/book.jpg'),
-(16, '123', 13, 123, '../../../controller/controller_su_kien/sinh_nhat_hoi_vien/upload/book.jpg');
+INSERT INTO `tbl_qua_tang` (`id_gift`, `name`, `time_start`, `diem`, `so_luong`, `image`) VALUES
+(15, '2', '2023-06-07', 5000, 100, '../../../controller/controller_su_kien/sinh_nhat_hoi_vien/upload/book.jpg'),
+(16, '123', '2022-06-04', 13, 123, '../../../controller/controller_su_kien/sinh_nhat_hoi_vien/upload/book.jpg'),
+(17, '2', '2023-10-02', 5000, 100, '../../../controller/controller_su_kien/sinh_nhat_hoi_vien/upload/286726960_754293565600055_8298832806698565642_n.png'),
+(18, '3', '2023-07-02', 500, 100, '../../../controller/controller_su_kien/sinh_nhat_hoi_vien/upload/anh1.png'),
+(19, '8', '2023-04-02', 20, 100, '../../../controller/controller_su_kien/sinh_nhat_hoi_vien/upload/anh.png'),
+(20, '923', '2023-04-02', 13, 123, '../../../controller/controller_su_kien/sinh_nhat_hoi_vien/upload/IMG_3294.jpeg'),
+(21, '323', '2023-01-02', 13, 123, '../../../controller/controller_su_kien/sinh_nhat_hoi_vien/upload/IMG_5043.jpg');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `tbl_qua_tang`
+-- Chỉ mục cho bảng `tbl_qua_tang`
 --
 ALTER TABLE `tbl_qua_tang`
   ADD PRIMARY KEY (`id_gift`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `tbl_qua_tang`
+-- AUTO_INCREMENT cho bảng `tbl_qua_tang`
 --
 ALTER TABLE `tbl_qua_tang`
-  MODIFY `id_gift` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_gift` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

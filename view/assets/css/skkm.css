@@ -100,36 +100,25 @@ div tr.sk__table-view--title {
     width: 40%; 
 }
 /* header menu */
-.sk__menu-header {
-    list-style-type: none;  
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    margin: 15px 15px 0 15px;
+.tab-bar {
+    margin-top: 10px;
+    margin-left: 10px;
 }
-  
-.sk__menu-header li {
-    float: left;
 
-}
-  
-.sk__menu-header li a {
-    display: block;
-    font-size: 16px;
-    color: white;
+.tab-bar a {
     text-align: center;
-    padding: 10px 70px;
-    text-decoration: none;
-    background-color: #4472C4;
+    display: inline-block;
+    width: 16%;
+    padding: 12px;
+    border: none;
+    background-color: #d3cff1;
+    cursor: pointer;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    cursor: pointer;
-}
-  
-.sk__menu-header li a.small {   
-    opacity: 0.5;
+    color: white;
+    text-decoration: none;
 }
 
-li.menu-li.menu-li-su-kien {
-    background-color: rgb(68, 84, 106);
+.tab-bar a.active {
+    background-color: #5ca1ec;
 }
