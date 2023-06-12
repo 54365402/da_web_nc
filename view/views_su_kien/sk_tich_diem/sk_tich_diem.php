@@ -3,7 +3,7 @@ include_once "../header.php";
 ?>
 
 <?php 
-    // Start the session
+    // Sxart the session
     if($_SESSION['login'])
     {
 ?>

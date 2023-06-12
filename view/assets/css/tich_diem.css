@@ -68,7 +68,6 @@ input.td--sort {
 
 /* CSS của hiển thị */
 .td__div--hienthi{
-    /* margin-top: 30px; */
     width: 100%;
     border: 1px solid white;
 }
@@ -327,6 +326,10 @@ button.td__table--button_guiDate {
     background-color: #daeaf3;
 }
 
+.td__table_img--gift{
+    width: 60px;
+}
+
 .td__div__div_quatang-baoDong {
     margin: 17px 0px 0px 8px;
 }
@@ -335,7 +338,7 @@ img.td__div__div_quatang__form--showimg {
     width: 100px;
 }
 input.td__div__input--gift {
-    width: 71px;
+    width: 95px;
 }
 
 /* popup gift */
@@ -429,7 +432,6 @@ button.view_gift__table--button_guiDate {
 }
 
 a.td__div__a-xoaGift {
-    margin-left: 39px;
     margin-right: 10px;
 }
 

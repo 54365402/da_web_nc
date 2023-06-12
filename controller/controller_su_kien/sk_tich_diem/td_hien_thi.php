@@ -29,66 +29,54 @@ include "td_pages.php";
 </style>
 <!-- Hien thi bang -->
 
-<div class="td__div--hienthi">
-    <div class="td__div--hienthi--bocHoiVien">
-        <div class="td__div--chua-hien-thi">
-            <div class="tab-bar" style="bottom:20px;">
-                <a href="../su_kien_khuyen_mai/sk_khuyen_mai_hoi_vien.php" class="tab-button">Sự kiện khuyến
-                    mãi</a>
-                <a href="../sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php" class="tab-button">Sinh nhật hội viên</a>
-                <a href="../sk_tich_diem/sk_tich_diem.php" class="tab-button active">Tích điểm</a>
-            </div>
+<div class = "td__div--hienthi">
+    <div class = "td__div--hienthi--bocHoiVien">
+    <div class="td__div--chua-hien-thi">
+    <nav class="sk__menu">
+    <ul class="sk__menu-header">
+        <li><a style='background-color:#a1b8e1' href="../su_kien_khuyen_mai/sk_khuyen_mai_hoi_vien.php">Sự kiện khuyến mãi</a></li>
+        <li><a style='background-color:#a1b8e1' href="../sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php">Sinh nhật hội viên</a></li>
+        <li><a href="../sk_tich_diem/sk_tich_diem.php">Tích điểm</a></li>
+    </ul>
+</nav>
 
-            <!-- <div  class='td__div--tap'>
-        <li class="td__icon_back"><a class="td-a" href="nhanvien.php"><i class="tdolid fa-arrow-left"></i></a></li>
-        <li class="td__div snhv__div--skkm"><a >Sự kiện khuyến mại</a></th></li>
-        <li class="td__div snhv__div--snhv"><a >Sinh nhật hội viên</a></th></li>
-        <li class="td__div snhv__div--tichDiem"><a >Tích điểm</a></th></li>
-        
-    </div> -->
-            <!-- <div class="td__div--thanhngan"></div> -->
-            <div class="td__div--chuatable">
-                <table class="tdtable--hienthi">
-                    <tr class="tdtable_row--hienthi td__table--Tieu_de" style="background-color: #4472C8">
-                        <th>ID HV</th>
-                        <th>Tên HV</th>
-                        <th>Điểm tích lũy</th>
-                        <th>Ngày sinh</th>
-                        <th>Mã quà tặng</th>
-                        <th>Trạng thái</th>
-                    </tr>
-                    <?php
+    <!-- <div class="td__div--thanhngan"></div> -->
+    <div class = "td__div--chuatable">
+    <table class="td__table--hienthi" >
+        <tr class="td__table_row--hienthi td__table--Tieu_de" style="background-color: #4472C8">
+            <th>ID Gift</th>
+            <th>Tên Gift</th>
+            <th>Điểm Cần</th>
+            <th>Ngày bắt đầu</th>
+            <th>Số lượng</th>
+            <th>Ảnh Gift</th>
+        </tr>
+        <?php
         // Duyệt qua các phẩn từ trong bảng
         while($row = mysqli_fetch_array($query))
        {
         ?>
-                    <tr align="center" class='tdtable_row--hienthi'>
-                        <td class="tdtable_td--hienthi-td"><?php echo $row["id_hv"]?></td>
-                        <td class="tdtable_td--hienthi-td"><?php echo $row["ten_hv"]?></td>
-                        <td class="tdtable_td--hienthi-td"><?php echo $row["diem_tich_luy"]?></td>
-                        <td class="tdtable_td--hienthi-td"><?php echo $row["ngay_sinh"]?></td>
-                        <td class="tdtable_td--hienthi-td"><?php echo $row["id_gift"]?></td>
-                        <td class="tdtable_td--hienthi-td"><?php 
-            if($row["trang_thai"]==1)
-            {
-                echo "Đã gửi quà";
-            }
-            else{echo "Chưa gửi quà";}?></td>
-                        <?php
-       }
-        ?>
-                </table>
-                <form class="tdform--page" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                    <center>
-                        <?php
-    echo $listPages;
-    ?>
+        <tr align="center" class='td__table_row--hienthi'>
+            <td  class="td__table_td--hienthi-td"><?php echo $row["id_gift"]?></td>
+            <td  class="td__table_td--hienthi-td"><?php echo $row["name"]?></td>
+            <td  class="td__table_td--hienthi-td"><?php echo $row["diem"]?></td>
+            <td  class="td__table_td--hienthi-td"><?php echo $row["time_start"]?></td>
+            <td  class="td__table_td--hienthi-td"><?php echo $row["so_luong"]?></td>
+            <td  class="td__table_td--hienthi-td "><img src="<?php echo $row['image'] ?>" alt="Gift Image" class="td__table_img--gift"></td>
+      <?php }
+        ?>    
+    </table>
+    <form class="td__form--page" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                <center>
+                    <?php
+                echo $listPages;
+                ?>
                     </center>
                 </form>
             </div>
         </div>
         <div class="td__div--hienthi--bocQuaTang">
-            <div class="tddiv--quatang">
+            <div class="td__div--quatang">
                 <?php 
                 $sqlquatang = "Select * from tbl_qua_tang";
                 $queryquatang = mysqli_query($mysqli,$sqlquatang);
@@ -127,57 +115,40 @@ include "td_pages.php";
                                 style="background-color:#b4c7E7;border:#b4c7E7">
                         </div>
                         <div class="td__div--showGift">
-                            <label for="">Số lượng tồn:</label>
-                            <input
-                                class="td__div__input--gift td__div__input--gift--so_luong<?php echo $quatangs['id_gift']?>"
-                                type="text" value="<?php echo $quatangs['so_luong']?>" disabled
-                                style="background-color:#b4c7E7;border:#b4c7E7">
+                        <label for="">Ngày bắt đầu:</label>
+                        <input class="td__div__input--gift td__div__input--gift--time_start<?php echo $quatangs['id_gift']?>" type="date" value="<?php echo $quatangs['time_start']?>" disabled style="background-color:#b4c7E7;border:#b4c7E7">
                         </div>
+                        <div class="td__div--showGift">
+                        <label for="">Số lượng tồn:</label>
+                        <input class="td__div__input--gift td__div__input--gift--so_luong<?php echo $quatangs['id_gift']?>" type="text" value="<?php echo $quatangs['so_luong']?>" disabled style="background-color:#b4c7E7;border:#b4c7E7">
+                        </div> 
                         </form>
                     </div>
                 </div>
                 <?php
         }?>
             </div>
-        </div>
-        <!-- <div class="snhv__div--thanhDoc"></div> -->
-        <!-- tạo giao diện nút thêm, sửa, xóa -->
-        <div class='snhv__div--chua_button-all'>
+        </div> 
 
-            <div class='snhv__div--chua_button'>
-                <button class='snhv__div--button js-guiSMS' type="button" onclick="">Gửi SMS <i
-                        class="fa-solid fa-envelope"></i></button>
-                <form class="snhv__form--sendDate" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
-                    method="POST">
+    <div class='td__div--chua_button-all'>
 
-                    <input class='snhv__div--button js-chonNgay' name="snhv_chonNgay" type="date">
-                    <button class="snhv__table--button_guiDate" type="Submit" onclick="">Search</button>
+        <div class='td__div--chua_button'>
+            <div class='td__div--chua_button--sua-gui'><button class='td__div--button js-sua' type="button" onclick="">Sửa</button></div>
+                <form  class = "td__form--sendDate" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 
-
+                        <input class='td__div--button js-chonNgay' name="td_chonNgay" type="date" >
+                        <button class="td__table--button_guiDate" type="Submit"  onclick="" >Search</button>
                 </form>
-            </div>
-
-            <div class='snhv__div--chua_button-gift'>
-                <!-- <div class="snhv__div--search--sort">
-    <form class="snhv__form--search" method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
-        <div class="snhv__form__div--search">
-            <button class='snhv__input--search' type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input class='snhv__input--search' type="text" name="snhv__input--search" placeholder="Search....">
-        </div>
-    </form>
-    </div> -->
-                <button class='snhv__div--button js-them' type="button" onclick="">Thêm</button>
-
-
-            </div>
-
-        </div>
+        </div> 
+        <div class='td__div--chua_button-gift'><button class='td__div--button js-them' type="button" onclick="">Thêm</button></div>
 
     </div>
+
+    
 
 
     <?php
 $mysqli -> close();
 ?>
-    <script src="../../assets/js/js_su_kien/sinh_nhat_hoi_vien/snhv_gioi_han_gift.js"></script>
-    <script src="../../assets/js/js_su_kien/sinh_nhat_hoi_vien/snhv_sx_gift.js"></script>
+    <script src="../../assets/js/js_su_kien/sk_tich_diem/td_gioi_han_gift.js"></script>
+    <script src="../../assets/js/js_su_kien/sk_tich_diem/td_sx_gift.js"></script>
