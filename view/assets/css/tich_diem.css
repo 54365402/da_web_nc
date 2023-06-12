@@ -187,8 +187,8 @@ table.td__table--addform {
 
 .td__div--chua_button{
     display: flex;
-    width: 69%;
-    justify-content: space-between;
+    width: 72%;
+
 }
 .td__div--button_xoa{
     margin-right: 30px;
@@ -254,11 +254,14 @@ i.fa-solid.fa-arrow-left {
     width: 100%;
     height: 6%
 }
+.td__div--chua_button--sua-gui{
+    width: 80%;
+    display: flex;
+}
 
 .td__div--chua_button-gift {
-    width: 27%;
+   
     display: flex;
-    justify-content: center;
 }
 .td__div__div_quatang {
     display: flex;

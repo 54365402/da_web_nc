@@ -96,9 +96,9 @@ include "td_pages.php";
                             <input class="td__div__input--gift" type="text" value="<?php echo $quatangs['id_gift']?>"
                                 disabled style="background-color:#b4c7E7;border:#b4c7E7">
                             <a class="td__div__a-xoaGift"
-                                href="../../../controller/controller_su_kien/sk_tich_diem/td_delete_gift.php?idGift=<?php echo $quatangs['id_gift']?>">Xóa</a>
+                                href="/da_web_nc/controller/controller_su_kien/sk_tich_diem/td_delete_gift.php?idGift=<?php echo $quatangs['id_gift']?>">Xóa</a>
                             <a class="td__div__a-updateGift"
-                                href="../../../view/views_su_kien/sk_tich_diem/view_gift_popup_update.php?idGift=<?php echo $quatangs['id_gift']?>">Sửa</a>
+                                href="/da_web_nc/view/views_su_kien/sk_tich_diem/view_gift_popup_update.php?idGift=<?php echo $quatangs['id_gift']?>">Sửa</a>
                         </div>
                         <div class="td__div--showGift">
                             <label for="">Tên:</label>
@@ -133,6 +133,7 @@ include "td_pages.php";
     <div class='td__div--chua_button-all'>
 
         <div class='td__div--chua_button'>
+            <div class='td__div--chua_button-gift'><button class='td__div--button js-them' type="button" onclick="">Thêm</button></div>
             <div class='td__div--chua_button--sua-gui'><button class='td__div--button js-sua' type="button" onclick="">Sửa</button></div>
                 <form  class = "td__form--sendDate" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 
@@ -140,15 +141,11 @@ include "td_pages.php";
                         <button class="td__table--button_guiDate" type="Submit"  onclick="" >Search</button>
                 </form>
         </div> 
-        <div class='td__div--chua_button-gift'><button class='td__div--button js-them' type="button" onclick="">Thêm</button></div>
 
     </div>
 
-    
-
-
     <?php
-$mysqli -> close();
-?>
+         $mysqli -> close();
+    ?>
     <script src="../../assets/js/js_su_kien/sk_tich_diem/td_gioi_han_gift.js"></script>
     <script src="../../assets/js/js_su_kien/sk_tich_diem/td_sx_gift.js"></script>

@@ -7,7 +7,7 @@
     $sql = "DELETE FROM tbl_qua_tang WHERE id_gift =$idGift";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
-    header("Location: ../../../view/views_su_kien/sk_td/sk_tich_diem.php");
+    header("Location: /da_web_nc/view/views_su_kien/sk_tich_diem/sk_tich_diem.php");
     exit();
 ?>
 

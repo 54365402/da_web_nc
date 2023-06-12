@@ -3,7 +3,6 @@ include_once "../header.php";
 ?>
 
 <?php 
-    // Sxart the session
     if($_SESSION['login'])
     {
 ?>
@@ -23,6 +22,7 @@ include_once "../header.php";
 
 <script src="../../assets/js/js_su_kien/sk_tich_diem/td_event.js"></script>
 <script src="../../assets/js/js_su_kien/sk_tich_diem/td_update.js"></script>
+
 <?php 
     }
     else{

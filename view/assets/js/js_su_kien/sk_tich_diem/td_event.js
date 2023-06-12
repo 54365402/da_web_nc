@@ -20,18 +20,4 @@ function closePopupGift(){
 }
 getHuyGiftPopup.addEventListener('click',closePopupGift);
 
-const tdClose = document.querySelectorAll('.td__table--button_huy')
-const tdThemPupUp = document.querySelectorAll('.td__table--button_gui')
-
-// bắt sự kiện nút ở trong popup
-function close() {
-    tdModalSMS.classList.remove('td__modal--popup--open')
 }
-tdClose[0].addEventListener('click',close)
-
-function guiPopUp(e) {
-    tdModalSMS.classList.remove('td__modal--popup--open')
-}
-tdThemPupUp[0].addEventListener('click',guiPopUp)
-}
-

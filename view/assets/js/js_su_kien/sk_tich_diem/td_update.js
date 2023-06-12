@@ -19,7 +19,7 @@
         var cells = this.getElementsByTagName("td");
     
         currentRow = this;
-        this.style.backgroundColor = "yellow";
+        this.style.backgroundColor = "#549dd4";
     
         // Tạo đối tượng XMLHttpRequest
         var xhttp = new XMLHttpRequest();
@@ -44,27 +44,26 @@
         currentRow.onkeyup=function(e){
           if(e.which===27){
             this.setAttribute('contenteditable',' ')
-            var cellid_hv = cells[0].innerHTML;
-            var cellname_hv = cells[1].innerHTML;
-            var celldiem_tich_luy = cells[2].innerHTML;
-            var celllngay_sinh = cells[3].innerHTML;
-            var cellid_gift = cells[4].innerHTML;
-            var celltrang_thai = cells[5].innerHTML;
+            var cellid_gift = cells[0].innerHTML;
+            var cellname = cells[1].innerHTML;
+            var celldiem = cells[2].innerHTML;
+            var celltime_start = cells[3].innerHTML;
+            var cellso_luong = cells[4].innerHTML;
     
-            var tdid_hv = "tdid_hv=" + cellid_hv;
-            var tdname_hv = "tdname_hv=" + cellname_hv;
-            var tddiem_tich_luy = "tddiem_tich_luy=" + celldiem_tich_luy;
-            var tdngay_sinh = "tdlngay_sinh=" + celllngay_sinh;
-            var tdid_gift = "tdid_gift=" + cellid_gift;
-            var tdtrang_thai = "tdtrang_thai=" + celltrang_thai;
+            var id_gift = "id_gift=" + cellid_gift;
+            var name = "name=" + cellname;
+            var diem = "diem=" + celldiem;  
+            var time_start = "time_start=" + celltime_start;
+            var so_luong = "so_luong=" + cellso_luong;
        
-          url = "../../controller/controller_nhan_vien/bang_luong/td_update.php";
-          if(confirm("Bạn có chắc muốn sửa ID "+cellid_hv+" không?")){
+          url = "../../controller/controller_su_kien/sk_tich_diem/td_update.php";
+          if(confirm("Bạn có chắc muốn sửa ID "+cellid_gift+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          xhttp.send(tdid_hv+"&"+tdname_hv+"&"+tddiem_tich_luy+"&"+tdngay_sinh+"&"+tdid_gift+"&"+tdtrang_thai);
-          location.reload(true);
+          xhttp.send(id_gift+"&"+name+"&"+diem+"&"+time_start+"&"+so_luong);
+          window.location.href = "/da_web_nc/view/views_su_kien/sk_tich_diem/sk_tich_diem.php";
+
           }
           }
         }
