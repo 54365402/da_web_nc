@@ -84,15 +84,16 @@ include "snhv_pages.php";
     ?>
                         </center>
                     </form>
-                </div>
-        </div>
-
         <!-- Báo lỗi gift ko tồn tại -->
         <?php
     if(isset($_SESSION['errorMaGift'])){
         echo $_SESSION['errorMaGift'];
+        unset($_SESSION['errorMaGift']);
     }
     ?>
+                </div>
+        </div>
+
 
         <div class="snhv__div--hienthi--bocQuaTang">
             <div class="snhv__div--quatang">

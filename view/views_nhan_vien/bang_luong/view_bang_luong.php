@@ -19,7 +19,7 @@
                 <td><label for="fname">IDNV:</label></td>
                 <td>
                     <!-- <input class='bl__table--add_input' type="text"  name="bl__table--add_idnv" placeholder="IDNV...."> -->
-                    <select>
+                    <select name="bl__table--add_idnv">
                         <option value="">-- Mã nhân viên --</option>
                     <?php
                     while($rowsNv = mysqli_fetch_array($queryNv)) 
@@ -39,7 +39,7 @@
                         if(!$count)
                         {
                                 ?>
-                                <option value=""><?php echo $rowsNv['id_nv']?></option>
+                                <option value="<?php echo $rowsNv['id_nv']?>"><?php echo $rowsNv['id_nv']?></option>
                                 <?php
                         }
                     }

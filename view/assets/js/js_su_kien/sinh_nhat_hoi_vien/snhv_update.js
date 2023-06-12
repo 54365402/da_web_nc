@@ -64,7 +64,8 @@
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(snhvid_hv+"&"+snhvname_hv+"&"+snhvdiem_tich_luy+"&"+snhvngay_sinh+"&"+snhvid_gift+"&"+snhvtrang_thai);
-          window.location.href = "/da_web_nc/view/views_su_kien/sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php";
+          window.location.href = "/da_web_nc/view/views_su_kien/sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php?page=1";
+          location.reload();
           }
           }
         }
