@@ -23,7 +23,7 @@
     $query = mysqli_query($mysqli,$sql);
     
     }
-    // header("Location: ../../../view/views_nhan_vien/bang_luong/nv_bang_luong.php");
-    // exit();
+    header("Location: ../../../view/views_nhan_vien/bang_luong/nv_bang_luong.php");
+    exit();
 ?>
 

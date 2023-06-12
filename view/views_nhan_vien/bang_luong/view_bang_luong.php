@@ -58,15 +58,15 @@
             </tr>
             <tr>
             <td><label for="lname">Số công:</label></td>
-                <td><input class='bl__table--add_input' type="text"  name="bl__table--add_so_cong" placeholder="Số công...." ></td>
+                <td><input class='bl__table--add_input22' type="text"  name="bl__table--add_so_cong" onchange="getValue1()" placeholder="Số công...." ></td>
             </tr>
             <tr>
                 <td><label for="lname">Lương trên công:</label></td>
-                <td><input class='bl__table--add_input' type="text"  name="bl__table--add_luong_tren_cong" placeholder="Lương trên công...."></td>
+                <td><input class='bl__table--add_input222' type="text"  name="bl__table--add_luong_tren_cong" onchange="getValue1()" placeholder="Lương trên công...."></td>
             </tr>
             <tr>
                 <td><label for="lname">Lương:</label></td>
-                <td><input class='bl__table--add_input' type="text"  name="bl__table--add_luong" placeholder="Lương...."></td>
+                <td><input class='bl__table--add_input1 bl__table--add_input2222' type="text"  name="bl__table--add_luong" readonly placeholder="Lương...." onchange="getValue()"></td>
             </tr>
             <tr>
                 <td><label for="lname">Trạng thái:</label></td>
@@ -85,3 +85,5 @@
     </div>
 </div>
 <div class="clear"></div>
+<script src="../../assets/js/js_nhan_vien/js_bang_luong/bl_tinh_tien.js"></script>
+
