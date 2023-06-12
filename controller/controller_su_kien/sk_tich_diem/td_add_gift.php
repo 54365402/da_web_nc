@@ -7,7 +7,7 @@
     $url = "../../../controller/controller_su_kien/sinh_nhat_hoi_vien/upload/";
     $imageUrl = $url.$imageName;
     // Di chuyển file ảnh được thêm vào vào folder img
-    if(move_uploaded_file($_FILES["view_gift__table--add_image"]["tmp_name"], "upload/".$imageName))
+    if(move_uploaded_file($_FILES["view_gift__table--add_image"]["tmp_name"], "../sinh_nhat_hoi_vien/upload/".$imageName))
     {
         $so_luong = $_POST["view_gift__table--add_so_luong"];
         $diem = $_POST["view_gift__table--add_diem"];
@@ -19,17 +19,16 @@
         
         // kiểm tra
 
-        
         if($imageUrl==""||$so_luong==""||$diem==""||$time_start==""||$name=="")
-        {    
+        {       
         }
         else{
             
-        // Thực hiện truy vấn để thêm dữ liệu vào cơ sở dữ liệu
-        $sql = "INSERT INTO tbl_qua_tang(image,so_luong,diem,name) VALUES('".$imageUrl."','".$so_luong."','".$diem."','".$time_start."','".$name."')";
-        echo $sql;
-        $query = mysqli_query($mysqli,$sql);
-        $mysqli->close();
+            // Thực hiện truy vấn để thêm dữ liệu vào cơ sở dữ liệu
+            $sql = "INSERT INTO tbl_qua_tang(image,so_luong,diem,time_start,name) VALUES('".$imageUrl."','".$so_luong."','".$diem."','".$time_start."','".$name."')";
+            echo $sql;
+            $query = mysqli_query($mysqli,$sql);
+            $mysqli->close();
         // điều hướng trang đến dct.php để refresh
         
         }

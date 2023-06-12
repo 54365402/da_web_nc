@@ -61,6 +61,6 @@ function suaCard() {
     }
   };
   xhthe.send(data);
-  window.location.href="http://localhost/da_web_nc/view/views_the/the.php?";
+  // window.location.href="http://localhost/da_web_nc/view/views_the/the.php?";
 
 }
