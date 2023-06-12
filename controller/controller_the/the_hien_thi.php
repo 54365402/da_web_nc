@@ -117,8 +117,8 @@
 
 <?php
 
-    if(isset($_REQUEST['card_id1'])){
-        $card_id = $_REQUEST['card_id1'];
+    if(isset($_REQUEST['hien_thi'])){
+        $card_id = $_REQUEST['hien_thi'];
     }
     else{
         $card_id = "";
@@ -130,41 +130,41 @@
 <div class = "the_div-hienthi1" > 
 
     <table class="the_table-hienthi1" style="border: 3px solid blue; white-space: nowrap;">        
-          <tr><th colspan = "2" style="font-size: 18px;" ;>Thông tin chi tiết thẻ</th></tr>
+          <tr><th colspan = "2" style="font-size: 18px;">Thông tin chi tiết thẻ</th></tr>
           <tr><tr>
           <tr><td style="padding-right: 30px;">Họ và Tên: </td><td class = the_gach_chan><input class="the_box" type="text_the_name_hv" value="<?php if(isset($rowdb['name_hv'])){echo $rowdb['name_hv'];}?>"  name="input_theten" style="border: none; outline:none;" readonly></td></tr>
-          <tr><td>ID hội viên: </td><td class = the_gach_chan><input class="the_box" type="text_the_id_hv" name="input_the_id" value="<?php if(isset($rowdb['id_hv'])){ echo $rowdb['id_hv']; }?>" style="border: none; outline:none; "></td></tr>  
+          <tr><td>ID hội viên: </td><td class = the_gach_chan><input class="the_box" type="text_the_id_hv" name="input_the_id_hv" value="<?php if(isset($rowdb['id_hv'])){ echo $rowdb['id_hv']; }?>" style="border: none; outline:none; "></td></tr>  
           <tr><td>Card ID: </td><td class = the_gach_chan><input class="the_box" type="text_card_id" name="input_the_card_id" value="<?php if(isset($card_id)){ echo $card_id; }?>" style="border: none; outline:none;"></td></tr>
           <tr><td>ID nhân viên: </td><td class = the_gach_chan><input class="the_box" type="text_id_nv" name="input_the_id_nv" value="<?php if(isset($rowdb['id_nv'])){echo $rowdb['id_nv'];}?>" style="border: none; outline:none; "></td></tr>
     </table>
 
-    <div class = "the_table-hienthi2" >
-        <table>
-            <div class = "the_box_types_room1" style="border: 2px solid blue;">     
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Gym">
-                <label for="vehicle1"> Gym</label><br><br>
-                <input type="checkbox" id="vehicle2" name="vehicle2" value="Yoga">
-                <label for="vehicle2"> Yoga</label><br><br>
-                <input type="checkbox" id="vehicle3" name="vehicle3" value="Aerobic">
-                <label for="vehicle3"> Aerobic</label><br>
-            </div>   
+    <div class="the_table-hienthi2">
+    <table>
+        <div class="the_box_types_room1" style="border: 2px solid blue;">
+            <input type="checkbox" id="vehicle1" class="vehicle1" name="vehicle1" value="Gym" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Gym') !== false) echo 'checked'; ?>>
+            <label for="vehicle1">Gym</label><br><br>
+            <input type="checkbox" id="vehicle2" class="vehicle2" name="vehicle2" value="Yoga" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Yoga') !== false) echo 'checked'; ?>>
+            <label for="vehicle2">Yoga</label><br><br>
+            <input type="checkbox" id="vehicle3" class="vehicle3" name="vehicle3" value="Aerobic" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Aerobic') !== false) echo 'checked'; ?>>
+            <label for="vehicle3">Aerobic</label><br>
+        </div>
 
-            <div class = "the_box_types_room2" style="border: 2px solid blue;"> 
-                <input type="checkbox" id="vehicle4" name="vehicle4" value="Boxing">
-                <label for="vehicle4"> Boxing</label><br><br>
-                <input type="checkbox" id="vehicle5" name="vehicle5" value="Swimming">
-                <label for="vehicle5"> Swimming</label><br><br>
-                <input type="checkbox" id="vehicle6" name="vehicle6" value="Khac">
-                <label for="vehicle6"> Khác</label><br>
-            </div>
-        </table>
-    </div>
+        <div class="the_box_types_room2" style="border: 2px solid blue;">
+            <input type="checkbox" id="vehicle4" class="vehicle4" name="vehicle4" value="Boxing" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Boxing') !== false) echo 'checked'; ?>>
+            <label for="vehicle4">Boxing</label><br><br>
+            <input type="checkbox" id="vehicle5" class="vehicle5" name="vehicle5" value="Swimming" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Swimming') !== false) echo 'checked'; ?>>
+            <label for="vehicle5">Swimming</label><br><br>
+            <input type="checkbox" id="vehicle6" class="vehicle6" name="vehicle6" value="Khac" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Khac') !== false) echo 'checked'; ?>>
+            <label for="vehicle6">Khác</label><br>
+        </div>
+    </table>
+</div>
         
     <div class="the_table-hienthi3" style="border: 3px solid blue;"> 
 
         <table style="white-space: nowrap;">
             <tr><td ><label>Gói tập: </label></td>
-                <td class = the_gach_chan><input class="the_box" type="text" name="input1"  value="<?php if(isset($rowdb['types_room'])){echo $rowdb['types_room'];}?>" style="border: none; outline:none;"></td></tr>
+                <td class = the_gach_chan><input class="the_box" type="text" name="input1"  value="<?php if(isset($rowdb['packages'])){echo $rowdb['packages'];}?>" style="border: none; outline:none;"></td></tr>
             <tr><td><label>Số lượng: </label></td>
                 <td class = the_gach_chan><input class="the_box" type="text" name="input2"  value="<?php if(isset($rowdb['quantity'])){echo $rowdb['quantity'];}?>" style="border: none; outline: none;"></td></tr>
             <tr><td><label>Ngày bắt đầu: </label></td>
@@ -182,8 +182,5 @@
                         echo "Không hoạt động";  }} ?>" style="border: none; outline: none;"></td></tr>   
         
         </table></div>
-</div>    
- 
-   
-
+    </div>    
 </div>

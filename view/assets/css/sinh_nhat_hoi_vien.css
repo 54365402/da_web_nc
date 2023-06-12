@@ -476,3 +476,26 @@ button.snhv__div--button.js-guiSMS {
 .snhv__div--chua_button--sua-gui {
     display: flex;
 }
+
+.tab-bar {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.tab-bar a {
+    text-align: center;
+    display: inline-block;
+    width: 16%;
+    padding: 12px;
+    border: none;
+    background-color: #d3cff1;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.tab-bar a.active {
+    background-color: #5ca1ec;
+}

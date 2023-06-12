@@ -101,7 +101,7 @@ div tr.sk__table-view--title {
 }
 /* header menu */
 .sk__menu-header {
-    list-style-type: none;  
+    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -132,4 +132,12 @@ div tr.sk__table-view--title {
 
 li.menu-li.menu-li-su-kien {
     background-color: rgb(68, 84, 106);
+}
+
+button.snhv__div--button.js-guiSMS {
+    width: 92px;
+    margin-left: 5px;
+}
+.snhv__div--chua_button--sua-gui {
+    display: flex;
 }

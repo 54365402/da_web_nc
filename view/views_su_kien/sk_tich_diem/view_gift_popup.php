@@ -7,7 +7,7 @@
     <div class='view_gift__modal__div--popup'>
         <i><b><u class='view_gift__modal__div--u'>Thêm quà tặng</u></b></i>
     <div >
-    <form action="../../../controller/controller_su_kien/sinh_nhat_hoi_vien/snhv_add_gift.php" method="POST" enctype="multipart/form-data">
+    <form action="../../../controller/controller_su_kien/sk_tich_diem/td_add_gift.php" method="POST" enctype="multipart/form-data">
         <table class='view_gift__table--addform'>
             <tr>
                 <td><label for="lname">Image:</label></td>
@@ -20,6 +20,10 @@
             <tr>
                 <td><label for="lname">Điểm:</label></td>
                 <td><input class='view_gift__table--add_input' type="text"  name="view_gift__table--add_diem" placeholder="Giá...."></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Ngày bắt đầu:</label></td>
+                <td><input class='view_gift__table--add_input' type="date"  name="view_gift__table--add_time_start" ></td>
             </tr>
             <tr>
                 <td><label for="lname">Số lượng:</label></td>

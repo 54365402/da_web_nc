@@ -1,6 +1,6 @@
 {
-    const divBaoQuat = document.querySelector(".snhv__div--quatang");
-    const divBaoGift = document.querySelectorAll(".snhv__div__div_quatang");
+    const divBaoQuat = document.querySelector(".td__div--quatang");
+    const divBaoGift = document.querySelectorAll(".td__div__div_quatang");
 
     
     const numVisibleItem = 3;

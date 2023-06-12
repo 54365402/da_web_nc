@@ -34,7 +34,7 @@ while($row = mysqli_fetch_array($query))
                     <img src="../../assets/img/logo.png" alt="LOGO">
                 </div>
                 <div class="logout">
-                        <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                        <li><a href="https://mail.google.com/mail/u/0/" target="blank"><i class="fa-solid fa-envelope"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-square-instagram"></i></i></a></li>
                         <li><a class="hotline" href=""><i class="fa-solid fa-headset"></i> Hotline: 0123456789</a></li>

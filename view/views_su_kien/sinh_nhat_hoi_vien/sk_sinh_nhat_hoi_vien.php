@@ -9,7 +9,6 @@ include_once "../header.php";
 ?>
 
 <link rel="stylesheet" href="../../assets/css/sinh_nhat_hoi_vien.css">
-
 <!-- Show Send SMS POPUP -->
 <?php 
 include_once "view_guiSMS_popup.php";

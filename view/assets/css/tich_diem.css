@@ -68,7 +68,6 @@ input.td--sort {
 
 /* CSS của hiển thị */
 .td__div--hienthi{
-    /* margin-top: 30px; */
     width: 100%;
     border: 1px solid white;
 }
@@ -188,8 +187,8 @@ table.td__table--addform {
 
 .td__div--chua_button{
     display: flex;
-    width: 69%;
-    justify-content: space-between;
+    width: 72%;
+
 }
 .td__div--button_xoa{
     margin-right: 30px;
@@ -213,7 +212,7 @@ li.td__div {
     padding: 2px; 
     margin-right: 5px;
 }
-.td__div--snhv{
+.td__div--td{
     background-color: rgb(68, 84, 106);
 }
 .td__div--tdd{
@@ -255,11 +254,14 @@ i.fa-solid.fa-arrow-left {
     width: 100%;
     height: 6%
 }
+.td__div--chua_button--sua-gui{
+    width: 80%;
+    display: flex;
+}
 
 .td__div--chua_button-gift {
-    width: 27%;
+   
     display: flex;
-    justify-content: center;
 }
 .td__div__div_quatang {
     display: flex;
@@ -271,7 +273,7 @@ i.fa-solid.fa-arrow-left {
     margin-bottom: 15px;   
 }
 
-.snhv__div--thanhngan {
+.td__div--thanhngan {
     margin-top: 3px;
     height: 12px;
     width: 100%;
@@ -327,6 +329,10 @@ button.td__table--button_guiDate {
     background-color: #daeaf3;
 }
 
+.td__table_img--gift{
+    width: 60px;
+}
+
 .td__div__div_quatang-baoDong {
     margin: 17px 0px 0px 8px;
 }
@@ -335,11 +341,11 @@ img.td__div__div_quatang__form--showimg {
     width: 100px;
 }
 input.td__div__input--gift {
-    width: 71px;
+    width: 95px;
 }
 
 /* popup gift */
-.view_gift__modal--popup.snhv__modal--popup--open
+.view_gift__modal--popup.td__modal--popup--open
 {
     display: flex;
 }
@@ -429,7 +435,6 @@ button.view_gift__table--button_guiDate {
 }
 
 a.td__div__a-xoaGift {
-    margin-left: 39px;
     margin-right: 10px;
 }
 

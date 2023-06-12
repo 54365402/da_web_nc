@@ -2,7 +2,6 @@
 class The{
     //private $ho_va_ten;
     private $id_hv;
-    private $card_id;
     private $id_nv;
     private $goi_tap;
     private $so_luong;
@@ -11,15 +10,6 @@ class The{
     private $ngay_ket_thuc;
     private $thanh_tien;
 
-
-    // public function set_ho_va_ten($ho_va_ten){
-    //     $this->ho_va_ten = $ho_va_ten;
-    // }
-
-    // public function get_ho_va_ten(){
-    //     return $this->ho_va_ten;
-    // }
-
     public function set_id_hv($id_hv){
         $this->id_hv = $id_hv;
     }
@@ -27,14 +17,7 @@ class The{
     public function get_id_hv(){
         return $this->id_hv;
     }
-    
-    public function set_card_id($card_id){
-        $this->card_id = $card_id;
-    }
 
-    public function get_card_id(){
-        return $this->card_id;
-    }
     public function set_id_nv($id_nv){
         $this->id_nv = $id_nv;
     }
