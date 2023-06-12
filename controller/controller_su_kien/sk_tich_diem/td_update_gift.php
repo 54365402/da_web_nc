@@ -35,7 +35,6 @@
         echo $sql;
         $query = mysqli_query($mysqli,$sql);
         $mysqli->close();
-        // điều hướng trang đến dct.php để refresh
         
         }
         

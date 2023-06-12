@@ -28,6 +28,10 @@
                 <td><input class='view_gift__table--add_input' type="text"  name="view_gift__table--add_diem" value="<?php echo $rows['diem']?>" placeholder="Giá...."></td>
             </tr>
             <tr>
+                <td><label for="lname">Ngày bắt đầu:</label></td>
+                <td><input class='view_gift__table--add_input' type="date"  name="view_gift__table--add_time_start" value="<?php echo $rows['time_start']?>" readonly ></td>
+            </tr>
+            <tr>
                 <td><label for="lname">Số lượng:</label></td>
                 <td><input class='view_gift__table--add_input' type="text"  name="view_gift__table--add_so_luong" value="<?php echo $rows['so_luong']?>" placeholder="Số lượng tồn...."></td>
             </tr>                    
