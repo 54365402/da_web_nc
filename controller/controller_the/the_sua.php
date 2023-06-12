@@ -1,8 +1,8 @@
 <?php
-include_once "/da_web_nc/controller/connection.php";
+include_once "../connection.php";
 
 // Kiểm tra xem có dữ liệu được gửi từ biểu mẫu hay không
-if (isset($_POST['card_id'], $_POST['id_hv'], $_POST['id_nv'], $_POST['types_room'], $_POST['packages'], $_POST['quantity'], $_POST['time_start'], $_POST['time_end'], $_POST['total_money'], $_POST['status'])) {
+if (isset($_POST['card_id'], $_POST['id_hv'], $_POST['id_nv'], $_POST['types_room'], $_POST['packages'], $_POST['quantity'], $_POST['time_start'], $_POST['time_end'], $_POST['total_money'],$_POST['status'])) {
     $card_id = $_POST['card_id'];
     $id_hv = $_POST['id_hv'];
     $id_nv = $_POST['id_nv'];
@@ -32,7 +32,7 @@ if (isset($_POST['card_id'], $_POST['id_hv'], $_POST['id_nv'], $_POST['types_roo
 
     // Xây dựng câu truy vấn sửa thông tin
     $sql = "UPDATE card SET id_hv='$id_hv', id_nv='$id_nv', types_room='$types_room', packages='$packages', quantity='$quantity', time_start='$time_start', time_end='$time_end', total_money='$total_money', status='$status' WHERE card_id='$card_id'";
-
+    echo $sql;
     // Thực thi truy vấn
     if (mysqli_query($mysqli, $sql)) {
         echo "Thông tin người dùng đã được cập nhật thành công.";

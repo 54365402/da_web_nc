@@ -141,20 +141,20 @@
     <div class="the_table-hienthi2">
     <table>
         <div class="the_box_types_room1" style="border: 2px solid blue;">
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Gym" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Gym') !== false) echo 'checked'; ?>>
+            <input type="checkbox" id="vehicle1" class="vehicle1" name="vehicle1" value="Gym" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Gym') !== false) echo 'checked'; ?>>
             <label for="vehicle1">Gym</label><br><br>
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Yoga" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Yoga') !== false) echo 'checked'; ?>>
+            <input type="checkbox" id="vehicle2" class="vehicle2" name="vehicle2" value="Yoga" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Yoga') !== false) echo 'checked'; ?>>
             <label for="vehicle2">Yoga</label><br><br>
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Aerobic" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Aerobic') !== false) echo 'checked'; ?>>
+            <input type="checkbox" id="vehicle3" class="vehicle3" name="vehicle3" value="Aerobic" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Aerobic') !== false) echo 'checked'; ?>>
             <label for="vehicle3">Aerobic</label><br>
         </div>
 
         <div class="the_box_types_room2" style="border: 2px solid blue;">
-            <input type="checkbox" id="vehicle4" name="vehicle4" value="Boxing" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Boxing') !== false) echo 'checked'; ?>>
+            <input type="checkbox" id="vehicle4" class="vehicle4" name="vehicle4" value="Boxing" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Boxing') !== false) echo 'checked'; ?>>
             <label for="vehicle4">Boxing</label><br><br>
-            <input type="checkbox" id="vehicle5" name="vehicle5" value="Swimming" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Swimming') !== false) echo 'checked'; ?>>
+            <input type="checkbox" id="vehicle5" class="vehicle5" name="vehicle5" value="Swimming" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Swimming') !== false) echo 'checked'; ?>>
             <label for="vehicle5">Swimming</label><br><br>
-            <input type="checkbox" id="vehicle6" name="vehicle6" value="Khac" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Khac') !== false) echo 'checked'; ?>>
+            <input type="checkbox" id="vehicle6" class="vehicle6" name="vehicle6" value="Khac" <?php if(isset($rowdb['types_room']) && strpos($rowdb['types_room'], 'Khac') !== false) echo 'checked'; ?>>
             <label for="vehicle6">Khác</label><br>
         </div>
     </table>
