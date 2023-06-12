@@ -3,7 +3,7 @@ include_once "header.php";
 ?>
 <?php 
     // Start the session
-    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" || $_SESSION['chuc_vu']=="Hội viên")
     {
 ?>
 <?php
