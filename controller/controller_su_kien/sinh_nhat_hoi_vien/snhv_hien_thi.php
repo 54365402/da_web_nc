@@ -2,84 +2,61 @@
 <?php
 include "snhv_pages.php";
 ?>
-<style>
-.tab-bar {
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.tab-bar a {
-    text-align: center;
-    display: inline-block;
-    width: 16%;
-    padding: 12px;
-    border: none;
-    background-color: #d3cff1;
-    cursor: pointer;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    color: white;
-    text-decoration: none;
-}
-
-.tab-bar a.active {
-    background-color: #5ca1ec;
-}
-</style>
 <!-- Hien thi bang -->
 
-<div class = "snhv__div--hienthi">
-    <div class = "snhv__div--hienthi--bocHoiVien">
-    <div class="snhv__div--chua-hien-thi">
-    <nav class="sk__menu">
-    <ul class="sk__menu-header">
-        <li><a style='background-color:#a1b8e1' href="../su_kien_khuyen_mai/sk_khuyen_mai_hoi_vien.php">Sự kiện khuyến mãi</a></li>
-        <li><a href="../sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php">Sinh nhật hội viên</a></li>
-        <li><a style='background-color:#a1b8e1' href="../sk_tich_diem/sk_tich_diem.php">Tích điểm</a></li>
-    </ul>
-</nav>
-    <!-- <div  class='snhv__div--tap'>
+<div class="snhv__div--hienthi">
+    <div class="snhv__div--hienthi--bocHoiVien">
+        <div class="snhv__div--chua-hien-thi">
+            <nav class="sk__menu">
+                <ul class="sk__menu-header">
+                    <li><a style='background-color:#a1b8e1' href="../su_kien_khuyen_mai/sk_khuyen_mai_hoi_vien.php">Sự
+                            kiện khuyến mãi</a></li>
+                    <li><a href="../sinh_nhat_hoi_vien/sk_sinh_nhat_hoi_vien.php">Sinh nhật hội viên</a></li>
+                    <li><a style='background-color:#a1b8e1' href="../sk_tich_diem/sk_tich_diem.php">Tích điểm</a></li>
+                </ul>
+            </nav>
+            <!-- <div  class='snhv__div--tap'>
         <li class="snhv__icon_back"><a class="snhv-a" href="nhanvien.php"><i class="fa-solid fa-arrow-left"></i></a></li>
         <li class="snhv__div snhv__div--skkm"><a >Sự kiện khuyến mại</a></th></li>
         <li class="snhv__div snhv__div--snhv"><a >Sinh nhật hội viên</a></th></li>
         <li class="snhv__div snhv__div--tichDiem"><a >Tích điểm</a></th></li>
         
     </div> -->
-                <!-- <div class="snhv__div--thanhngan"></div> -->
-                <div class="snhv__div--chuatable">
-                    <table class="snhv__table--hienthi">
-                        <tr class="snhv__table_row--hienthi snhv__table--Tieu_de" style="background-color: #4472C8">
-                            <th>ID HV</th>
-                            <th>Tên HV</th>
-                            <th>Điểm tích lũy</th>
-                            <th>Ngày sinh</th>
-                            <th>Mã quà tặng</th>
-                            <th>Trạng thái</th>
-                        </tr>
-                        <?php
+            <!-- <div class="snhv__div--thanhngan"></div> -->
+            <div class="snhv__div--chuatable">
+                <table class="snhv__table--hienthi">
+                    <tr class="snhv__table_row--hienthi snhv__table--Tieu_de" style="background-color: #4472C8">
+                        <th>ID HV</th>
+                        <th>Tên HV</th>
+                        <th>Điểm tích lũy</th>
+                        <th>Ngày sinh</th>
+                        <th>Mã quà tặng</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                    <?php
         // Duyệt qua các phẩn từ trong bảng
         while($row = mysqli_fetch_array($query))
        {
         ?>
-                        <tr align="center" class='snhv__table_row--hienthi'>
-                            <td class="snhv__table_td--hienthi-td"><?php echo $row["id_hv"]?></td>
-                            <td class="snhv__table_td--hienthi-td"><?php echo $row["ten_hv"]?></td>
-                            <td class="snhv__table_td--hienthi-td"><?php echo $row["diem_tich_luy"]?></td>
-                            <td class="snhv__table_td--hienthi-td"><?php echo $row["ngay_sinh"]?></td>
-                            <td class="snhv__table_td--hienthi-td"><?php echo $row["id_gift"]?></td>
-                            <td class="snhv__table_td--hienthi-td"><?php 
+                    <tr align="center" class='snhv__table_row--hienthi'>
+                        <td class="snhv__table_td--hienthi-td"><?php echo $row["id_hv"]?></td>
+                        <td class="snhv__table_td--hienthi-td"><?php echo $row["ten_hv"]?></td>
+                        <td class="snhv__table_td--hienthi-td"><?php echo $row["diem_tich_luy"]?></td>
+                        <td class="snhv__table_td--hienthi-td"><?php echo $row["ngay_sinh"]?></td>
+                        <td class="snhv__table_td--hienthi-td"><?php echo $row["id_gift"]?></td>
+                        <td class="snhv__table_td--hienthi-td"><?php 
             if($row["trang_thai"]==1)
             {
                 echo "Đã gửi quà";
             }
             else{echo "Chưa gửi quà";}?></td>
-                            <?php
+                        <?php
        }
         ?>
-                    </table>
-                    <form class="snhv__form--page" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                        <center>
-                            <?php
+                </table>
+                <form class="snhv__form--page" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                    <center>
+                        <?php
     echo $listPages;
     ?>
                         </center>
