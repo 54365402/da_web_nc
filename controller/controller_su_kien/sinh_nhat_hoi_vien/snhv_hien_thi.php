@@ -92,7 +92,7 @@ include "snhv_pages.php";
                             <label for="">ID:</label>
                             <input class="snhv__div__input--gift" type="text" value="<?php echo $quatangs['id_gift']?>"
                                 disabled style="background-color:#b4c7E7;border:#b4c7E7">
-                            <a class="shnv__div__a-xoaGift"
+                            <a onclick="return confirm('Are u sure about that ?')" class="shnv__div__a-xoaGift"
                                 href="../../../controller/controller_su_kien/sinh_nhat_hoi_vien/snhv_delete_gift.php?idGift=<?php echo $quatangs['id_gift']?>">Xóa</a>
                             <a class="shnv__div__a-updateGift"
                                 href="../../../view/views_su_kien/sinh_nhat_hoi_vien/view_gift_popup_update.php?idGift=<?php echo $quatangs['id_gift']?>">Sửa</a>
