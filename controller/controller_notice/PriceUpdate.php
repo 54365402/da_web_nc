@@ -35,7 +35,7 @@
     , 1_nam='$g1_nam' , 2_nam='$g2_nam' , 5_nam='$g5_nam' , gym_rieng='$gym_rieng'
     , yoga_basic='$yoga_basic' , yoga_average='$yoga_average' , yoga_advance='$yoga_advance' , yoga_rieng='$yoga_rieng'
     , aerobic_basic='$aerobic_basic' , aerobic_average='$aerobic_average' , aerobic_advance ='$aerobic_advance' , aerobic_rieng='$aerobic_rieng'
-    , boxing_basic='$boxing_basic' , boxing_average='$boxing_average' , boxing_advance='$boxing_advance' , boxing_advance='$boxing_advance'
+    , boxing_basic='$boxing_basic' , boxing_average='$boxing_average' , boxing_advance='$boxing_advance' , boxing_rieng='$boxing_rieng'
     , swimming_basic='$swimming_basic' , swimming_average='$swimming_average' , swimming_advance='$swimming_advance' , swimming_rieng='$swimming_rieng'";
     $query = mysqli_query($mysqli,$sql);
     $mysqli->close();
