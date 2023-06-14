@@ -22,6 +22,10 @@ $query1 = mysqli_query($mysqli,$sql);
 
             selectable: true,
             select: async function(start, end, allDay) {
+                <?php
+                        if ($_SESSION['login'] && $_SESSION['chuc_vu'] == "Quản lý" || $_SESSION['chuc_vu'] =="Nhân viên")
+                            {
+                    ?>
                 const {
                     value: formValues
                 } = await Swal.fire({
@@ -47,7 +51,9 @@ $query1 = mysqli_query($mysqli,$sql);
                         ]
                     }
                 });
-
+                <?php
+                        }
+                    ?>
                 if (formValues) {
                     // Add event
                     fetch("../../../controller/controller_su_kien/su_kien_khuyen_mai/sk_them_sua_xoa.php", {
@@ -78,11 +84,13 @@ $query1 = mysqli_query($mysqli,$sql);
             },
 
             eventClick: function(info) {
+                <?php
+                    if ($_SESSION['login'] && $_SESSION['chuc_vu'] == "Quản lý")
+                        {
+                ?>
                 info.jsEvent.preventDefault();
-
                 // change the border color
                 info.el.style.borderColor = 'red';
-
                 Swal.fire({
                     title: info.event.title,
                     html: '<p>' + info.event.extendedProps.noi_dung +
@@ -183,6 +191,21 @@ $query1 = mysqli_query($mysqli,$sql);
                         Swal.close();
                     }
                 });
+                <?php
+                }
+                    else if ( $_SESSION['login'] && $_SESSION['chuc_vu'] == "Hội viên")
+                    {
+                        ?>
+                info.jsEvent.preventDefault();
+                Swal.fire({
+                    title: info.event.title,
+                    html: '<p>' + info.event.extendedProps.noi_dung +
+                        '</p><br> <p>Người tạo : ' + info.event.extendedProps.nguoi_tao +
+                        '</p>',
+                })
+                <?php
+                    }
+                ?>
             }
         });
 
@@ -198,7 +221,7 @@ $query1 = mysqli_query($mysqli,$sql);
         </div>
         <?php 
     // Start the session
-        if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+        if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" || $_SESSION['chuc_vu']=="Nhân viên")
     {
         ?>
         <div class="wrapper-2">
