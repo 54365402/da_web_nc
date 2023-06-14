@@ -54,12 +54,6 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="">Điểm tích lũy : </label></td>
-                    <td><input type="text" class="hoivien__table-add-input" name="hoivien__table-add-diem"
-                            placeholder="điểm">
-                    </td>
-                </tr>
-                <tr>
                     <td colspan='2'>
                         <button class="hoivien__table-add-btn hoivien__table-btn-huy" type="button"
                             onclick="">Hủy</button>

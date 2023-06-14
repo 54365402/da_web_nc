@@ -7,24 +7,28 @@ function handleFormSubmission($connection)
     $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '0001-01-01';
     $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '9999-12-31';
 
-$sql = "SELECT
+    $sql = "SELECT
+    CONCAT(YEAR(c.time_start), '-', LPAD(MONTH(c.time_start), 2, '0')) AS month_year_group,
     CASE
-        WHEN h.tuoi BETWEEN 0 AND 15 THEN '0-15'
-        WHEN h.tuoi BETWEEN 16 AND 18 THEN '16-18'
-        WHEN h.tuoi BETWEEN 19 AND 22 THEN '19-22'
-        WHEN h.tuoi BETWEEN 23 AND 25 THEN '23-25'
-        WHEN h.tuoi BETWEEN 26 AND 29 THEN '26-29'
-        WHEN h.tuoi BETWEEN 30 AND 35 THEN '30-35'
-        WHEN h.tuoi BETWEEN 36 AND 40 THEN '36-40'
-        WHEN h.tuoi BETWEEN 41 AND 45 THEN '41-45'
-        WHEN h.tuoi BETWEEN 46 AND 50 THEN '46-50'
-        WHEN h.tuoi BETWEEN 51 AND 55 THEN '51-55'
-        WHEN h.tuoi BETWEEN 56 AND 60 THEN '56-60'
-        ELSE '60+'
-    END AS age_group,
-    SUM(c.total_money) AS total_amount
-    FROM tbl_hoi_vien h INNER JOIN card c ON h.id_hv = c.id_hv
-    WHERE c.time_start >= '$startDate' AND c.time_end <= '$endDate' GROUP BY age_group";
+        WHEN MONTH(c.time_start) = 1 THEN 'Tháng 1'
+        WHEN MONTH(c.time_start) = 2 THEN 'Tháng 2'
+        WHEN MONTH(c.time_start) = 3 THEN 'Tháng 3'
+        WHEN MONTH(c.time_start) = 4 THEN 'Tháng 4'
+        WHEN MONTH(c.time_start) = 5 THEN 'Tháng 5'
+        WHEN MONTH(c.time_start) = 6 THEN 'Tháng 6'
+        WHEN MONTH(c.time_start) = 7 THEN 'Tháng 7'
+        WHEN MONTH(c.time_start) = 8 THEN 'Tháng 8'
+        WHEN MONTH(c.time_start) = 9 THEN 'Tháng 9'
+        WHEN MONTH(c.time_start) = 10 THEN 'Tháng 10'
+        WHEN MONTH(c.time_start) = 11 THEN 'Tháng 11'
+        WHEN MONTH(c.time_start) = 12 THEN 'Tháng 12'
+    END AS month_group,
+    SUM(c.total_money - n.tong_tien) AS total_amount
+FROM card c
+INNER JOIN tbl_nuoc_va_thuc_pham n ON YEAR(c.time_start) = YEAR(n.ngay_nhap) AND MONTH(c.time_start) = MONTH(n.ngay_nhap) 
+WHERE c.time_start >= '$startDate' AND c.time_end <= '$endDate'
+GROUP BY month_year_group, month_group";
+
 
 $query = mysqli_query($connection, $sql);
 
@@ -32,7 +36,7 @@ $data = [];
 $ageCategories = [];
 
 while ($row = mysqli_fetch_assoc($query)) {
-    $ageGroup = $row['age_group'];
+    $ageGroup = $row['month_group'];
     $totalAmount = (float) $row['total_amount'];
     $data[] = $totalAmount;
     $ageCategories[] = $ageGroup;
@@ -197,7 +201,7 @@ $mysqli->close();
             xaxis: {
                 categories: chartData.ageCategories,
                 title: {
-                    text: 'Độ tuổi',
+                    text: 'Tháng',
                     offsetX: 10,
                     offsetY: 0,
                     style: {

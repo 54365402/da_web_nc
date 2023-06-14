@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../../assets/css/nhanvien.css">
-    <link rel="stylesheet" href="../../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+<link rel="stylesheet" href="../../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
 
 <?php
     include_once "../../../controller/connection.php";
@@ -12,7 +12,9 @@
 <div class="nhon">
     <div class="">
         <h4 class="nhanvien__modal-popup-header">Sửa thông tin nhân viên</h4>
-        <form class="nhon2" action="../../../controller/controller_nhan_vien/NhanVienUpdate.php?id_nv=<?php echo $nhanvienID?>" method="POST">
+        <form class="nhon2"
+            action="../../../controller/controller_nhan_vien/NhanVienUpdate.php?id_nv=<?php echo $nhanvienID?>"
+            method="POST">
             <table class="">
                 <tr>
                     <td><label for="">Họ và tên : </label></td>
@@ -64,11 +66,9 @@
                     <td><label for="">Chức vụ :</label></td>
                     <td>
                         <select class="nhanvien__table-add-input-chuc_vu" name="nhanvien__table-add-chuc_vu">
-                            <option value="Gym">Gym</option>
-                            <option value="Yoga">Yoga</option>
-                            <option value="Aerobic">Aerobic</option>
-                            <option value="Boxing">Boxing</option>
-                            <option value="Swimming">Swimming</option>
+                            <option value="PT">PT</option>
+                            <option value="Lao công">Lao công</option>
+                            <option value="Lễ tân">Lễ tân</option>
                         </select>
                     </td>
                 </tr>
@@ -80,11 +80,12 @@
                 </tr>
                 <tr>
                     <td colspan='2'>
-                        
-                        <a href="javascript:history.go(-1)"><button class="nhanvien__table-add-btn nhanvien__table-btn-huy" type="button"
-                            onclick="">Hủy</button></a>
-                            <button class="nhanvien__table-add-btn nhanvien__table-btn-them" type="Submit"
-                            onclick="">Cập nhật</button>
+
+                        <a href="javascript:history.go(-1)"><button
+                                class="nhanvien__table-add-btn nhanvien__table-btn-huy" type="button"
+                                onclick="">Hủy</button></a>
+                        <button class="nhanvien__table-add-btn nhanvien__table-btn-them" type="Submit" onclick="">Cập
+                            nhật</button>
                     </td>
                 </tr>
             </table>

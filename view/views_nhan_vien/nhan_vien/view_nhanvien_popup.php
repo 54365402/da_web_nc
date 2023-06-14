@@ -53,11 +53,9 @@
                     <td><label for="">Chức vụ :</label></td>
                     <td>
                         <select class="nhanvien__table-add-input-chuc_vu" name="nhanvien__table-add-chuc_vu">
-                            <option value="Gym">Gym</option>
-                            <option value="Yoga">Yoga</option>
-                            <option value="Aerobic">Aerobic</option>
-                            <option value="Boxing">Boxing</option>
-                            <option value="Swimming">Swimming</option>
+                            <option value="PT">PT</option>
+                            <option value="Lao công">Lao công</option>
+                            <option value="Lễ tân">Lễ tân</option>
                         </select>
                     </td>
                 </tr>

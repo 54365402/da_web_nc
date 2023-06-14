@@ -2,12 +2,14 @@
     include_once "../../controller/connection.php";
     $sql = "SELECT * FROM tbl_nhan_vien";
     $query = mysqli_query($mysqli,$sql);
-    $sql1 = "SELECT * FROM tbl_hoi_vien";
+    $sql1 = "SELECT * FROM tbl_hoi_vien ";
     $query1 = mysqli_query($mysqli,$sql1);
     $sql2 = "SELECT * FROM tbl_packages";
     $query2 = mysqli_query($mysqli,$sql2);
     $sql3 = "SELECT * FROM tbl_packages";
     $query3 = mysqli_query($mysqli,$sql3);
+    $sql4 = "SELECT * FROM card ";
+    $query4 = mysqli_query($mysqli,$sql4);
     ?>
 <div class='the_modal-popup'>
     <div class='the_modal_div-popup'>
@@ -21,13 +23,31 @@
                     <select class='the_table-add_input1' name='the_table-add_id_hv'>
                         <option value="">-- ID member --</option>
                             <?php
-                            // Duyệt qua các phẩn từ trong bảng
-                            while($row = mysqli_fetch_array($query1))
-                                {?>
-                                    <option class='view_the_select-id_hv' value="<?php echo $row["id_hv"]?>"><?php echo $row["id_hv"]?></option>
-                                <?php
+                            while($rows1 = mysqli_fetch_array($query1)) 
+                            {
+                                // Đặt con trỏ về lại đầu bảng lương
+                                mysqli_data_seek($query4,0);
+                                // Dùng để đếm xem có thằng nào giống không
+                                $count = 0;
+                                while($rows4 = mysqli_fetch_array($query4))
+                                {
+                                    if($rows1['id_hv']==$rows4['id_hv'])
+                                    {
+                                        $count++;
+                                    }
                                 }
-                                ?>   
+                                // Nếu count == 0 => không tồn tại id này ở bảng lương
+                                if(!$count)
+                                {
+                            // Duyệt qua các phẩn từ trong bảng
+                            
+                                ?>
+                                    <option class='view_the_select-id_hv' value="<?php echo $rows1["id_hv"]?>"><?php echo $rows1["id_hv"]?></option>
+                                <?php
+                                }}
+                                
+                                ?>  
+                             
                     </select>                      
                 </td>
                 <!-- <td><input class='the_table-add_input' type="text"  name="the_table-add_id_hv" placeholder="ID member...."></td> -->

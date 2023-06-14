@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    // // Start the session
-    //if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
-    //{
+    session_start();   
+
+    // Start the session
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
+    {
 ?>
 <?php
     require "../../controller/controller_notice/PriceDisplay.php"
@@ -172,7 +174,7 @@
 
                 
                 <div class="hoivien__AFD">
-                        <button class='notice__btn btn__fix' type="submit" onclick="">Sửa</button>
+                        <button class='notice__btn btn__fix' type="submit" onclick="return alert('Sửa thành công')">Sửa</button>
                 </div>
                 </form>
 
@@ -191,7 +193,12 @@
 </html>
 
 
-
+<?php 
+    }
+    else{
+        header("Location: ../views_ktc/dang_nhap.php");
+    }
+?>
 
 <script>
 const tabButtons = document.querySelectorAll('.tab-button');
@@ -208,9 +215,3 @@ tabButtons.forEach((button, index) => {
 });
 </script>
 
-<?php 
-    // }
-    // else{
-    //     header("Location: ../views_ktc/dang_nhap.php");
-    // }
-?>

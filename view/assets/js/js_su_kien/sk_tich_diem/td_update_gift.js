@@ -46,7 +46,7 @@
                         xhttp.open(method, url, true);
                         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                         xhttp.send(id_gift+"&"+name_gift+"&"+diem_gift+"&"+time_start_gift+"&"+so_luong_gift);
-                        // window.location.href = "/da_web_nc/view/views_su_kien/sk_tich_diem/sk_tich_diem.php";
+                        window.location.href = "/da_web_nc/view/views_su_kien/sk_tich_diem/sk_tich_diem.php";
                 
                     }
                     else{

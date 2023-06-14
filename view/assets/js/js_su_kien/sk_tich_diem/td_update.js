@@ -56,13 +56,13 @@
             var time_start = "time_start=" + celltime_start;
             var so_luong = "so_luong=" + cellso_luong;
        
-          url = "../../controller/controller_su_kien/sk_tich_diem/td_update.php";
+          url = "/da_web_nc/controller/controller_su_kien/sk_tich_diem/td_update.php";
           if(confirm("Bạn có chắc muốn sửa ID "+cellid_gift+" không?")){
           //Mở kết nối đến máy chủ và gửi yêu cầu HTTP POST
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(id_gift+"&"+name+"&"+diem+"&"+time_start+"&"+so_luong);
-          window.location.href = "/da_web_nc/view/views_su_kien/sk_tich_diem/sk_tich_diem.php";
+          // window.location.href = "/da_web_nc/view/views_su_kien/sk_tich_diem/sk_tich_diem.php";
 
           }
           }
