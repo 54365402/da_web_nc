@@ -123,7 +123,7 @@
             
             <tr>
             <td><label for="lname">Số lượng: </label></td>
-                <td><input class='the_table-add_input1 the_table-add_input222' type="text" onchange="getValue1()" name="the_table-add_so_luong" placeholder="Quantity...." ></td>
+                <td><input class='the_table-add_input1 the_table-add_input222' type="number" onchange="getValue1()" name="the_table-add_so_luong" placeholder="Quantity...." ></td>
             </tr>
             
             <tr>
