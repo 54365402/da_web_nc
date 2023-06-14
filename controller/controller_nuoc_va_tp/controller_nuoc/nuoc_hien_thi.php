@@ -49,7 +49,7 @@
             <td class="nuoc__table_td--hienthi-td"><?php echo $row["ngay_het_han"]?></td>
             <td class="nuoc__table_td--hienthi-td"><?php echo $row["tong_tien"]?></td>
             <td class="nuoc__table_td--hienthi-td nuoc__table_td--hienthi-td-xoa"
-                style="display:none; text-align: center;"><a
+                style="display:none; text-align: center;"><a onclick="return confirm('Are u sure about that ?')" 
                     href="../../../controller/controller_nuoc_va_tp/controller_nuoc/nuoc_delete.php?nuocID=<?php echo $row["id_nuoc_va_tp"]?>"><i
                         class="fa-sharp fa-solid fa-delete-left"></i></a></td>
             <td class="nuoc__table_td--hienthi-td nuoc__table_td--hienthi-td-update"
