@@ -41,7 +41,7 @@ include "tdd_pages.php";
             <td  class="tdd__table_td--hienthi-td"><?php echo $row["time_start"]?></td>
             <td  class="tdd__table_td--hienthi-td"><?php echo $row["time_end"]?></td>
             <td  class="tdd__table_td--hienthi-td"><?php echo $row["ghi_chu"]?></td>
-            <td class="tdd__table_td--hienthi-td tdd__table_td--hienthi-td-xoa" style="display:none; text-align: center;"><a href="../../../controller/controller_csvc/tu_dung_do/tdd_delete.php?tddID=<?php echo $row["id_wardrobe"]?>"><i class="fa-sharp fa-solid fa-delete-left"></i></a></td>
+            <td class="tdd__table_td--hienthi-td tdd__table_td--hienthi-td-xoa" style="display:none; text-align: center;"><a onclick="return confirm('Are u sure about that ?')" href="../../../controller/controller_csvc/tu_dung_do/tdd_delete.php?tddID=<?php echo $row["id_wardrobe"]?>"><i class="fa-sharp fa-solid fa-delete-left"></i></a></td>
             <td class="tdd__table_td--hienthi-td tdd__table_td--hienthi-td-update" style="display:none; text-align: center;"><a href="view_update_tdd_popup.php?tddID=<?php echo $row["id_wardrobe"]?>"><i class="fa-solid fa-wrench"></i></a></td>
 
         <?php

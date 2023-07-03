@@ -5,10 +5,12 @@
     $query = mysqli_query($mysqli,$sql);
     while($rows = mysqli_fetch_array($query)){
 ?>
+<link rel="stylesheet" href="../assets/css/hoivien_viewUpdate.css">
 <div class="hoivien__modal-popup">
     <div class="hoivien__modal-popup-overlay">
-        <h4 class="hoivien__modal-popup-header">Thêm hội viên</h4>
-        <form action="../../controller/controller_hoi_vien/hoivien_update.php?hoivienID=<?php echo $hoivienID ?>"
+        <h4 class="hoivien__modal-popup-header">Sửa thông tin</h4>
+        <form class="hoivien__popup-table"
+            action="../../controller/controller_hoi_vien/hoivien_update.php?hoivienID=<?php echo $hoivienID ?>"
             method="POST">
             <table class="hoivien_addform">
                 <tr>

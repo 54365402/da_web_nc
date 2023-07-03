@@ -51,8 +51,9 @@
           xhthe.open(method, url, true);
           xhthe.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhthe.send(card_id);
-          window.location.href="http://localhost/da_web_nc/view/views_the/the.php?";
-          location.reload();
+          // window.location.href="http://localhost/da_web_nc/view/views_the/the.php?";
+          // location.reload();
+
 
         }
       } 
@@ -61,7 +62,7 @@
       var theChiTiet = $('.js-chi_tiet');
       
       theChiTiet.onclick = function(e){
-          window.location.href="http://localhost/da_web_nc/view/views_the/the.php?"+hien_thi;
+      window.location.href="http://localhost/da_web_nc/view/views_the/the.php?"+hien_thi;
         
       }
     }

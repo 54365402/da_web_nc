@@ -43,7 +43,7 @@
             <td  class="tp__table_td--hienthi-td"><?php echo $row["ngay_nhap"]?></td>
             <td  class="tp__table_td--hienthi-td"><?php echo $row["ngay_het_han"]?></td>
             <td  class="tp__table_td--hienthi-td"><?php echo $row["tong_tien"]?></td>
-            <td class="tp__table_td--hienthi-td tp__table_td--hienthi-td-xoa" style="display:none; text-align: center;"><a href="../../../controller/controller_nuoc_va_tp/controller_thuc_pham/tp_delete.php?tpID=<?php echo $row["id_nuoc_va_tp"]?>"><i class="fa-sharp fa-solid fa-delete-left"></i></a></td>
+            <td class="tp__table_td--hienthi-td tp__table_td--hienthi-td-xoa" style="display:none; text-align: center;"><a onclick="return confirm('Are u sure about that ?')" href="../../../controller/controller_nuoc_va_tp/controller_thuc_pham/tp_delete.php?tpID=<?php echo $row["id_nuoc_va_tp"]?>"><i class="fa-sharp fa-solid fa-delete-left"></i></a></td>
             <td class="tp__table_td--hienthi-td tp__table_td--hienthi-td-update" style="display:none; text-align: center;"><a href="view_update_tp_popup.php?tpID=<?php echo $row["id_nuoc_va_tp"]?>"><i class="fa-solid fa-wrench"></i></a></td>
         <?php
        }

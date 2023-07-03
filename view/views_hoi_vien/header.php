@@ -56,7 +56,7 @@ while($row = mysqli_fetch_array($query))
 
             <div class="menu">
                 <li class="menu-li"><a class="menu-a" href="../views_home/home.php"><i class="fa-solid fa-house-user"></i> Trang chủ</a></li>
-                <li class="menu-li"><a class="menu-a" href="../views_hoi_vien/hoivien.php"><i class="fa-solid fa-person"></i> Hội viên</a></li>
+                <li class="menu-li" style="background-color: rgb(68, 84, 106);"><a class="menu-a" href="../views_hoi_vien/hoivien.php"><i class="fa-solid fa-person"></i> Hội viên</a></li>
                 <li class="menu-li"><a class="menu-a" href="../views_the/the.php"><i class="fa-solid fa-address-card"></i> Thẻ</a></li>
                 <li class="menu-li menu-li-nuoc"><a class="menu-a" href="../views_nuoc_va_thuc_pham/views_nuoc/nuoc.php"><i class="fa-solid fa-bottle-water"></i> Nước và thực phẩm</a></li>
                 <li class="menu-li "><a class="menu-a" href="../views_nhan_vien/nhan_vien/nhanvien.php"><i class="fa-solid fa-people-roof"></i> Nhân viên</a></li>

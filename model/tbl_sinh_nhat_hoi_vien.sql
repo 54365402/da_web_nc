@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 31, 2023 at 02:05 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th6 12, 2023 lúc 02:19 PM
+-- Phiên bản máy phục vụ: 10.4.28-MariaDB
+-- Phiên bản PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `doanwebnc`
+-- Cơ sở dữ liệu: `doanwebnc`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_sinh_nhat_hoi_vien`
+-- Cấu trúc bảng cho bảng `tbl_sinh_nhat_hoi_vien`
 --
 
 CREATE TABLE `tbl_sinh_nhat_hoi_vien` (
@@ -37,16 +37,27 @@ CREATE TABLE `tbl_sinh_nhat_hoi_vien` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_sinh_nhat_hoi_vien`
+-- Đang đổ dữ liệu cho bảng `tbl_sinh_nhat_hoi_vien`
 --
 
 INSERT INTO `tbl_sinh_nhat_hoi_vien` (`id_hv`, `ten_hv`, `diem_tich_luy`, `ngay_sinh`, `id_gift`, `trang_thai`) VALUES
+('0', 'kien', 1, '2023-05-25', NULL, 0),
 ('1', '1', 1, '2023-05-23', 1, 1),
-('7', '7', 7, '0000-00-00', NULL, 0),
 ('10', '10', 10, '2023-05-24', NULL, 0),
 ('11', '454', 1, '2023-05-24', NULL, 0),
 ('50', 'Kiên', 53434500, '2013-05-01', NULL, 0),
-('0', 'kien', 1, '2023-05-25', NULL, 0);
+('7', '7', 7, '0000-00-00', NULL, 0),
+('94', 'Vương Chiến ', 12, '2023-06-14', NULL, 0);
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `tbl_sinh_nhat_hoi_vien`
+--
+ALTER TABLE `tbl_sinh_nhat_hoi_vien`
+  ADD UNIQUE KEY `id_hv` (`id_hv`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

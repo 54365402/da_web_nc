@@ -100,11 +100,18 @@
             </center>
         </form>
         <!-- tạo giao diện nút thêm, sửa, xóa -->
+        <?php
+            if ($_SESSION['login'] && $_SESSION['chuc_vu'] == "Quản lý")
+        {
+            ?>
         <div class="hoivien__AUD">
             <button class='hoivien__AUD-btn js-add' type="button" onclick="">Thêm</button>
             <button class='hoivien__AUD-btn js-ud' type="button" onclick="">Cập nhập</button>
             <button class='hoivien__AUD-btn js-del hoivien__AUD-btn-del' type="button" onclick="">Xóa</button>
         </div>
+        <?php
+            }
+        ?>
     </div>
 </div>
 <?php

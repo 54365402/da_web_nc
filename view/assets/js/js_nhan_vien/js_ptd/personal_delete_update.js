@@ -48,7 +48,7 @@
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(personalID);
           // Refresh lại trang
-          window.location.href = "/da_web_nc/view/views_nhan_vien/nv_ptd/personal.php";
+          // window.location.href = "/da_web_nc/view/views_nhan_vien/nv_ptd/personal.php";
         }
       }
       
@@ -79,7 +79,7 @@
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(personalID+"&"+personal_name_hv+"&"+personal_id_hv+"&"+personal_thoi_luong+"&"+personal_so_buoi+"&"+personal_id_nv+"&"+personal_doanh_thu);
-          window.location.href = "/da_web_nc/view/views_nhan_vien/nv_ptd/personal.php";
+          // window.location.href = "/da_web_nc/view/views_nhan_vien/nv_ptd/personal.php";
           }
           }
         }

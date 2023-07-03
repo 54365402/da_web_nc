@@ -11,7 +11,12 @@ if (isset($_POST['card_id'], $_POST['id_hv'], $_POST['id_nv'], $_POST['types_roo
     $quantity = $_POST['quantity'];
     $time_start = $_POST['time_start'];
     $time_end = $_POST['time_end'];
-    $total_money = $_POST['total_money'];
+
+    $sql1 = "Select*from tbl_packages Where name_packages='$packages' and types_room='$types_room'";
+    $query1=mysqli_query($mysqli, $sql1);
+    $row = mysqli_fetch_array($query1);
+  
+    $total_money = (int)$row['gia_packages']*(int)$quantity;
     $status = $_POST['status'];
 
     // Xử lý chuỗi nhập vào để tránh lỗ hổng SQL injection
