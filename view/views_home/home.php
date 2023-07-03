@@ -10,7 +10,7 @@ include_once "header.php";
 
 include_once "../../controller/connection.php";
     
-    $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
+    $sql = "SELECT * FROM account ";
     $query = mysqli_query($mysqli,$sql);
 
 while($row = mysqli_fetch_array($query))
@@ -18,6 +18,8 @@ while($row = mysqli_fetch_array($query))
     $_SESSION['chuc_vu']=$row['chuc_vu'];
     $_SESSION['name']=$row['name'];
     $_SESSION['id'] = $row['id'];
+    $_SESSION['username'] = $row['username'];
+
 }
 
 ?>
@@ -47,7 +49,7 @@ while($row = mysqli_fetch_array($query))
                 <th>Họ tên: <?php echo  $_SESSION['name']?> </th>
             </tr>
             <tr class="a">
-                <th>Tài khoản: <?php echo  $_SESSION['user']?> </th>
+                <th>Tài khoản: <?php echo  $_SESSION['username']?> </th>
             </tr>
             <tr class="a">
                 <th>Mật khẩu: <?php echo  $_SESSION['pass']?> </th>
@@ -65,37 +67,33 @@ while($row = mysqli_fetch_array($query))
         </div>
         <br>
         <div class="notice__text">
-            <?php
-            include_once "../../controller/connection.php";
-        ?>
+    <?php
+    include_once "../../controller/connection.php";
 
-            <?php
-            $sql = "SELECT notice FROM tbl_notice WHERE status=1 ORDER BY addAt";
-            $result = $mysqli->query($sql);
-            if ($result->num_rows > 0) {
-                // output data of each row
-                while($row = $result->fetch_assoc()) {
-        ?>
-            <tr>
-                <td><?php echo "- " . $row["notice"]; ?></td>
-                <td style="text-align: right;">
+    $sql = "SELECT * FROM `tbl_notice` WHERE status = 1 ORDER BY `tbl_notice`.`addAt` DESC;";
+    $result = $mysqli->query($sql);
 
-                </td>
-                <?php echo "<br>"; ?>
-            </tr>
-            <?php
+    if ($result->num_rows > 0) {
+        echo '<table>';
 
-            }
-          } else {
-            echo "0 results";
-          }
-        ?>
+        // output data of each row
+        while ($row = $result->fetch_assoc()) {
+            echo '<tr>';
+            echo '<td style="width: 600px; word-break: break-all;">' . $row["notice"] . '</td>';
 
+            echo '<td style="position: fixed; left: 1375px; font-size: 10px;">' . $row["addAt"] . '</td>';
+            echo '</tr>';
+        }
 
-            <?php
-            $mysqli -> close();
-            ?>
-        </div>
+        echo '</table>';
+    } else {
+        echo "0 results";
+    }
+
+    $mysqli->close();
+    ?>
+</div>
+
     </div>
 
 
