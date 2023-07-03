@@ -21,16 +21,7 @@ if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" )
                         placeholder="Tìm Kiếm">
                 </form>
             </div>
-        <form action="../../../controller/controller_nhan_vien/NhanVienOption.php" method="get">
-            <select class="nhanvien__search-btn" name="nhanvien__option">
-                <option value="Gym" type="submit">Gym</option>
-                <option value="Yoga">Yoga</option>
-                <option value="Aerobic">Aerobic</option>
-                <option value="Boxing">Boxing</option>
-                <option value="Swimming">Swimming</option>
-            </select>
-        </form>
-        <li>
+        <li style ="margin-top: 190px;">
             <ul><a href="../../views_nhan_vien/nv_ptd/lop.php" class="nhanvien--option"><i class="fa-solid fa-laptop-file fa-2xl"
                         style="color: #2b3e78;"></i>Phương thức dạy</a></ul>
             <ul><a href="../../views_nhan_vien/lich_di_lam/lich_di_lam.php" class="nhanvien--option"><i class="fa-solid fa-calendar-days fa-2xl"
