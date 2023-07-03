@@ -2,7 +2,7 @@
     include_once "../../controller/connection.php";
 ?>
 <?php
-         $sql = "SELECT * FROM tbl_notice WHERE status=1 ORDER BY addAt";
+         $sql = "SELECT * FROM tbl_notice WHERE status=1 ORDER BY addAt asc";
          $result = $mysqli->query($sql);
          if ($result->num_rows > 0) {
             // output data of each row
