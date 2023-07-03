@@ -19,7 +19,7 @@
             // Duyệt qua các phẩn từ trong bảng
             while($row = mysqli_fetch_array($query))
             {?>
-                <option class='view__tdd__select--sap_xep' value="<?php echo $row["id_hv"]."-".$row["ten_hv"]?>"><?php echo $row["id_hv"]."-".$row["ten_hv"]."-".$row["ngay_sinh"]?></option>
+                <option class='view__tdd__select--sap_xep' value="<?php echo $row["id_hv"]."-".$row["ten_hv"]?>"><?php echo $row["id_hv"]."  ".$row["ten_hv"]."  ".$row["ngay_sinh"]?></option>
             <?php
             }   
             ?>
