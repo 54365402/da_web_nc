@@ -29,10 +29,6 @@ if (
 if ($add) {
     echo "<script> alert('Thêm hội viên thành công.'); location.replace('../../view/views_hoi_vien/hoivien.php') </script>";
 } else {
-    echo "<pre>";
-    echo "An Error occured.<br>";
-    echo "Error: " . $mysqli->error . "<br>";
-    echo "SQL: " . $sql . "<br>";
-    echo "</pre>";
+    echo "<script> alert('Vui lòng nhập đầy đủ thông tin'); location.replace('../../view/views_hoi_vien/hoivien.php') </script>";
 }
 exit();
