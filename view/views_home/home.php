@@ -3,14 +3,14 @@ include_once "header.php";
 ?>
 <?php 
     // Start the session
-    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý" || $_SESSION['chuc_vu']=="Hội viên")
+    if($_SESSION['login'] && $_SESSION['chuc_vu']=="Quản lý")
     {
 ?>
 <?php
 
 include_once "../../controller/connection.php";
     
-    $sql = "SELECT * FROM account ";
+    $sql = "SELECT * FROM account where username ='".$_SESSION['user']."'";
     $query = mysqli_query($mysqli,$sql);
 
 while($row = mysqli_fetch_array($query))

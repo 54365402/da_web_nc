@@ -52,8 +52,11 @@ for (var i = 0; i < rows.length; i++) {
           xhttp.open(method, url, true);
           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhttp.send(params);
-          location.reload(true);
+          window.location.href = "http://localhost/da_web_nc/view/views_ktc/dang_nhap.php";
+          alert("Vui lòng đăng nhập lại");
+          
           }
+          location.reload(true);
           }
         }
       }
